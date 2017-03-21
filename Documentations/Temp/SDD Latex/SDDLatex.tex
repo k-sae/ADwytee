@@ -11,47 +11,47 @@
 
 \section{Introduction}
 \subsection{Purpose}
-This software design document describes the architecture and system design of (Adwytee)
+This software design document describes the architecture and system design of (ADwytee)
 
 
 \subsection{Scope}
-Our project will target mainly three users (Normal User, Pharmacy and company)
+Our project will target mainly two users (Normal User, Pharmacy)
 \newline
 \newline
 \textbf{\underline{Normal User}}
 \newline
 \newline
-1-he will able to search for a certain medicine on our web application and our database server will provide him with the location of the near pharmacies in 			ascending order
+1-He will able to search for a certain medicine on our web application and our database server will provide him with the location of the near pharmacies in 			ascending order
 \newline
-2-he will be able to track certain medicine and server will notify him whenever its available
+2-He will be able to track certain medicine and server will notify him whenever its available
 \newline
-3-he will be able to set schedule and server will notify and provide him with the the available pharmacies
+3-He will be able to set schedule and server will notify and provide him with the the available pharmacies
 \newline
-4-he will be able to view alternatives in ascending according to the highest recommendation
+4-He will be able to view alternatives in ascending according to the highest recommendation
+\newline
+5-He will be able to print a card containing his unique key
+\newline
+6-Every user will have a patient profile for view only
 \newline
 \newline
 \textbf{\underline{Pharmacy}}
 \newline
 \newline
-1-registered pharmacies will be able to provide users with their location and brief details about the pharmacy
+1-Registered pharmacies will be able to provide users with their location and brief details about the pharmacy
 \newline
-2-it will provide the server with available medicines real time
+2-It will provide the server with available medicines real time
 \newline
-3-it will be able to add or remove medicine from its database
+3-It will be able to add or remove medicine from its database
 \newline
-4-it will be able to add new medicine to the database and provide	brief details about it
+4-It will be able to add new medicine to the database and provide brief details about it
 \newline
-5-pharmacy will be able to edit medicine info 
+5-It will be able to edit medicine info 
 \newline
-6-pharmacy will be able to set alternatives to medicines
+6-It will be able to set alternatives to medicines
 \newline
+7-It will be able to to edit the patient profile using the unique key of the patient
 \newline
-\textbf{\underline{Company}}
-\newline
-\newline
-1-company will be able to add medicine
-\newline
-2-company will be able to lock an owned medicine to prevent editing
+8-It will be able to bind a patient using his unique key 
 
 
 \subsection{Overview}
@@ -67,7 +67,7 @@ Our project will target mainly three users (Normal User, Pharmacy and company)
 ...
 
 \section{System Overview}
-...
+The system will depends mainly on our API server where it will be responsible for the connections with the database server and the database interactions in order to maintain this process we have to separate the API section from the web application server provider   
 
 \section{System Architecture}
 \subsection{Architectural Design}
@@ -96,7 +96,24 @@ Our project will target mainly three users (Normal User, Pharmacy and company)
 \section{Humnan Interface Design}
 
 \subsection {Overview of User Interface}
-...
+On the home page user will be able to search for certain medicine the system will try to predict his location
+\newline
+On failure the website will ask him to enter it manually
+\newline
+The results will be displayed on the next page (Results page) it will provide him with location of the pharmacies have  medicines the user will be able to select either medicine or the pharmacy providing it.
+\newline
+Upon selecting the medicine he will be able to know its info and the alternatives to that medicine.
+\newline
+Upon selecting the pharmacy he will get info about it and its location on map.
+\newline
+\newline
+Registered user will able to set a schedule from a drop down menu or even track a medicine.
+\newline
+Upon tracking a medicine the website will notify him whenever the medicine is available.
+\newline
+\newline
+Registered pharmacy will choose either manage medicines (add or remove) , bind a user , view and edit patient profile from the drop down menu
+\newline
 
 \subsection {Screen Images}
 ...
