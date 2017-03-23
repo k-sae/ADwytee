@@ -21,13 +21,13 @@ Our project will target mainly two users (Normal User, Pharmacy)
 \textbf{\underline{Normal User}}
 \newline
 \newline
-1-He will able to search for a certain medicine on our web application and our database server will provide him with the location of the near pharmacies in 			ascending order
+1-He will be able to search for a certain medicine on our web application and our database server will provide him with the location of the nearest pharmacies in ascending order
 \newline
-2-He will be able to track certain medicine and server will notify him whenever its available
+2-He will be able to track certain medicine and the server will notify him whenever it's available
 \newline
-3-He will be able to set schedule and server will notify and provide him with the the available pharmacies
+3-He will be able to set schedule and the server will notify and provide him with the available pharmacies
 \newline
-4-He will be able to view alternatives in ascending according to the highest recommendation
+4-He will be able to view alternatives in ascending order according to the highest recommendation
 \newline
 5-He will be able to print a card containing his unique key
 \newline
@@ -45,17 +45,17 @@ Our project will target mainly two users (Normal User, Pharmacy)
 \newline
 4-It will be able to add new medicine to the database and provide brief details about it
 \newline
-5-It will be able to edit medicine info 
+5-It will be able to edit medicine info
 \newline
-6-It will be able to set alternatives to medicines
+6-It will be able to set medicines alternatives
 \newline
-7-It will be able to to edit the patient profile using the unique key of the patient
+7-It will be able to edit the patient profile using the unique key of the patient
 \newline
-8-It will be able to bind a patient using his unique key 
+8-It will be able to bind a patient using his unique key
 
 
 \subsection{Overview}
-...
+This document will go over the design of various aspects of the project including architectural, software components, interface, database design and steps on how the users will interact with the system 
 
 
 
@@ -84,7 +84,7 @@ The system will depends mainly on our API server where it will be responsible fo
 
 \section{Data Design}
 \subsection{Data Description}
-...
+The major data or system entities are stored with MySQL database using PHP Scripts installed on the local web server.
 
 \subsection {Data Dictionary}
 ...
@@ -96,31 +96,37 @@ The system will depends mainly on our API server where it will be responsible fo
 \section{Humnan Interface Design}
 
 \subsection {Overview of User Interface}
-On the home page user will be able to search for certain medicine the system will try to predict his location
+On the home page user will be able to search for certain medicine, the system will try to predict his location
 \newline
 On failure the website will ask him to enter it manually
 \newline
-The results will be displayed on the next page (Results page) it will provide him with location of the pharmacies have  medicines the user will be able to select either medicine or the pharmacy providing it.
+The results will be displayed on the next page (Results page) it will provide him with location of the pharmacies that have medicines, the user will be able to select either medicine or the pharmacy providing it.
 \newline
-Upon selecting the medicine he will be able to know its info and the alternatives to that medicine.
+Upon selecting the medicine he will be able to know it's info and the alternatives to that medicine.
 \newline
-Upon selecting the pharmacy he will get info about it and its location on map.
+Upon selecting the pharmacy he will get info about it and it's location on map.
 \newline
 \newline
-Registered user will able to set a schedule from a drop down menu or even track a medicine.
+Registered user will be able to set a schedule from a drop down menu or even track a medicine.
 \newline
 Upon tracking a medicine the website will notify him whenever the medicine is available.
 \newline
 \newline
-Registered pharmacy will choose either manage medicines (add or remove) , bind a user , view and edit patient profile from the drop down menu
+Registered pharmacy will choose either manage medicines (add or remove), bind a user, view and edit patient profile from the drop down menu
 \newline
 
 \subsection {Screen Images}
-...
+
+\begin{figure}[tbh]
+\centering
+\includegraphics[width=0.5\linewidth]{./Home}
+\caption{Screen Images}
+\label{fig:image}
+\end{figure}
 
 
 \subsection {Screen Objects and Actions}
-...
+The Home page provides you with links to the other pages within the web application and displays an overview of what is expected of the application and provides a search bar to search for a specific medicine.
 
 
 \section{Requirements Matrix}
