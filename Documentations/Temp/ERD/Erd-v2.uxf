@@ -55,8 +55,8 @@ drawPolygon(p);</custom_code>
   <element>
     <id>UMLUseCase</id>
     <coordinates>
-      <x>470</x>
-      <y>320</y>
+      <x>480</x>
+      <y>210</y>
       <w>120</w>
       <h>40</h>
     </coordinates>
@@ -66,8 +66,8 @@ drawPolygon(p);</custom_code>
   <element>
     <id>UMLUseCase</id>
     <coordinates>
-      <x>550</x>
-      <y>400</y>
+      <x>560</x>
+      <y>290</y>
       <w>120</w>
       <h>40</h>
     </coordinates>
@@ -77,8 +77,8 @@ drawPolygon(p);</custom_code>
   <element>
     <id>UMLUseCase</id>
     <coordinates>
-      <x>590</x>
-      <y>320</y>
+      <x>600</x>
+      <y>210</y>
       <w>120</w>
       <h>40</h>
     </coordinates>
@@ -110,8 +110,8 @@ drawPolygon(p);</custom_code>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>540</x>
-      <y>350</y>
+      <x>550</x>
+      <y>240</y>
       <w>60</w>
       <h>70</h>
     </coordinates>
@@ -121,8 +121,8 @@ drawPolygon(p);</custom_code>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>600</x>
-      <y>350</y>
+      <x>610</x>
+      <y>240</y>
       <w>50</w>
       <h>70</h>
     </coordinates>
@@ -132,13 +132,13 @@ drawPolygon(p);</custom_code>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>610</x>
-      <y>430</y>
-      <w>80</w>
-      <h>50</h>
+      <x>620</x>
+      <y>320</y>
+      <w>70</w>
+      <h>160</h>
     </coordinates>
     <panel_attributes>lt=-</panel_attributes>
-    <additional_attributes>10.0;10.0;60.0;30.0</additional_attributes>
+    <additional_attributes>10.0;10.0;50.0;140.0</additional_attributes>
   </element>
   <element>
     <id>UMLUseCase</id>
@@ -1560,33 +1560,6 @@ for(String textline : textlines) {
     <additional_attributes>10.0;10.0;130.0;30.0</additional_attributes>
   </element>
   <element>
-    <type>CustomElementImpl</type>
-    <coordinates>
-      <x>1180</x>
-      <y>790</y>
-      <w>81</w>
-      <h>81</h>
-    </coordinates>
-    <panel_attributes>Has
-bg=green</panel_attributes>
-    <additional_attributes/>
-    <custom_code>height = 80;
-width = 80;
-int y=(height/2 - textHeight() + 5) * textlines.size() * 1/2;
-
-for(String textline : textlines) {
-	y += y + textHeight();
-	printCenter(textline,y);
-}
-
-Polygon p = new Polygon();
-p.addPoint(width/2,0);
-p.addPoint(width, height/2);
-p.addPoint(width/2, height);
-p.addPoint(0, height/2);
-drawPolygon(p);</custom_code>
-  </element>
-  <element>
     <id>Relation</id>
     <coordinates>
       <x>1030</x>
@@ -1609,30 +1582,6 @@ M</panel_attributes>
     <panel_attributes>lt=-
 M</panel_attributes>
     <additional_attributes>10.0;10.0;10.0;180.0</additional_attributes>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>1120</x>
-      <y>860</y>
-      <w>120</w>
-      <h>200</h>
-    </coordinates>
-    <panel_attributes>lt=-
-M</panel_attributes>
-    <additional_attributes>100.0;10.0;10.0;180.0</additional_attributes>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>1210</x>
-      <y>730</y>
-      <w>40</w>
-      <h>80</h>
-    </coordinates>
-    <panel_attributes>lt=-
-M</panel_attributes>
-    <additional_attributes>20.0;10.0;10.0;60.0</additional_attributes>
   </element>
   <element>
     <type>CustomElementImpl</type>
@@ -1686,75 +1635,25 @@ M</panel_attributes>
     <additional_attributes>10.0;180.0;100.0;10.0</additional_attributes>
   </element>
   <element>
-    <type>CustomElementImpl</type>
+    <id>UMLUseCase</id>
     <coordinates>
-      <x>1210</x>
-      <y>590</y>
-      <w>81</w>
-      <h>81</h>
+      <x>390</x>
+      <y>330</y>
+      <w>160</w>
+      <h>40</h>
     </coordinates>
-    <panel_attributes>Make
-bg=green</panel_attributes>
+    <panel_attributes>M:TrackedMedecines</panel_attributes>
     <additional_attributes/>
-    <custom_code>height = 80;
-width = 80;
-int y=(height/2 - textHeight() + 5) * textlines.size() * 1/2;
-
-for(String textline : textlines) {
-	y += y + textHeight();
-	printCenter(textline,y);
-}
-
-Polygon p = new Polygon();
-p.addPoint(width/2,0);
-p.addPoint(width, height/2);
-p.addPoint(width/2, height);
-p.addPoint(0, height/2);
-drawPolygon(p);</custom_code>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>700</x>
-      <y>500</y>
-      <w>570</w>
-      <h>110</h>
+      <x>470</x>
+      <y>360</y>
+      <w>200</w>
+      <h>120</h>
     </coordinates>
-    <panel_attributes>lt=-
-</panel_attributes>
-    <additional_attributes>10.0;10.0;550.0;90.0</additional_attributes>
-  </element>
-  <element>
-    <type>CustomElementImpl</type>
-    <coordinates>
-      <x>1170</x>
-      <y>690</y>
-      <w>151</w>
-      <h>51</h>
-    </coordinates>
-    <panel_attributes>Tracked Medecins</panel_attributes>
-    <additional_attributes/>
-    <custom_code>height = 50;
-width = 150;
-int y=(height/2 - textHeight() + 5) * textlines.size() * 1/2;
-
-for(String textline : textlines) {
-	y += y + textHeight();
-	printCenter(textline,y);
-}
-
-drawRectangle(0,0,width,height);</custom_code>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>1240</x>
-      <y>660</y>
-      <w>40</w>
-      <h>50</h>
-    </coordinates>
-    <panel_attributes>lt=-
-M</panel_attributes>
-    <additional_attributes>10.0;10.0;10.0;30.0</additional_attributes>
+    <panel_attributes>lt=-</panel_attributes>
+    <additional_attributes>10.0;10.0;180.0;100.0</additional_attributes>
   </element>
 </diagram>
