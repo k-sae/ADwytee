@@ -720,11 +720,11 @@ bg=gray</panel_attributes>
     <coordinates>
       <x>1170</x>
       <y>1060</y>
-      <w>200</w>
-      <h>180</h>
+      <w>180</w>
+      <h>140</h>
     </coordinates>
     <panel_attributes>lt=-</panel_attributes>
-    <additional_attributes>180.0;160.0;10.0;10.0</additional_attributes>
+    <additional_attributes>160.0;120.0;10.0;10.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
