@@ -5,7 +5,7 @@
     <type>CustomElementImpl</type>
     <coordinates>
       <x>530</x>
-      <y>610</y>
+      <y>670</y>
       <w>101</w>
       <h>101</h>
     </coordinates>
@@ -32,7 +32,7 @@ drawPolygon(p);</custom_code>
     <id>Relation</id>
     <coordinates>
       <x>530</x>
-      <y>700</y>
+      <y>760</y>
       <w>70</w>
       <h>90</h>
     </coordinates>
@@ -44,7 +44,7 @@ drawPolygon(p);</custom_code>
     <id>Relation</id>
     <coordinates>
       <x>570</x>
-      <y>500</y>
+      <y>560</y>
       <w>160</w>
       <h>130</h>
     </coordinates>
@@ -55,8 +55,8 @@ drawPolygon(p);</custom_code>
   <element>
     <id>UMLUseCase</id>
     <coordinates>
-      <x>480</x>
-      <y>210</y>
+      <x>450</x>
+      <y>260</y>
       <w>120</w>
       <h>40</h>
     </coordinates>
@@ -67,7 +67,7 @@ drawPolygon(p);</custom_code>
     <id>UMLUseCase</id>
     <coordinates>
       <x>560</x>
-      <y>290</y>
+      <y>350</y>
       <w>120</w>
       <h>40</h>
     </coordinates>
@@ -77,8 +77,8 @@ drawPolygon(p);</custom_code>
   <element>
     <id>UMLUseCase</id>
     <coordinates>
-      <x>600</x>
-      <y>210</y>
+      <x>570</x>
+      <y>260</y>
       <w>120</w>
       <h>40</h>
     </coordinates>
@@ -89,7 +89,7 @@ drawPolygon(p);</custom_code>
     <id>UMLUseCase</id>
     <coordinates>
       <x>480</x>
-      <y>440</y>
+      <y>500</y>
       <w>120</w>
       <h>40</h>
     </coordinates>
@@ -97,43 +97,32 @@ drawPolygon(p);</custom_code>
     <additional_attributes/>
   </element>
   <element>
-    <id>UMLUseCase</id>
+    <id>Relation</id>
     <coordinates>
-      <x>500</x>
-      <y>500</y>
-      <w>120</w>
-      <h>40</h>
+      <x>520</x>
+      <y>290</y>
+      <w>90</w>
+      <h>80</h>
     </coordinates>
-    <panel_attributes>D::Age</panel_attributes>
-    <additional_attributes/>
+    <panel_attributes>lt=-</panel_attributes>
+    <additional_attributes>10.0;10.0;70.0;60.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>550</x>
-      <y>240</y>
-      <w>60</w>
-      <h>70</h>
+      <x>600</x>
+      <y>290</y>
+      <w>40</w>
+      <h>80</h>
     </coordinates>
     <panel_attributes>lt=-</panel_attributes>
-    <additional_attributes>10.0;10.0;40.0;50.0</additional_attributes>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>610</x>
-      <y>240</y>
-      <w>50</w>
-      <h>70</h>
-    </coordinates>
-    <panel_attributes>lt=-</panel_attributes>
-    <additional_attributes>30.0;10.0;10.0;50.0</additional_attributes>
+    <additional_attributes>10.0;10.0;20.0;60.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
       <x>620</x>
-      <y>320</y>
+      <y>380</y>
       <w>70</w>
       <h>160</h>
     </coordinates>
@@ -144,7 +133,7 @@ drawPolygon(p);</custom_code>
     <id>UMLUseCase</id>
     <coordinates>
       <x>730</x>
-      <y>360</y>
+      <y>420</y>
       <w>120</w>
       <h>40</h>
     </coordinates>
@@ -155,7 +144,7 @@ drawPolygon(p);</custom_code>
     <id>Relation</id>
     <coordinates>
       <x>730</x>
-      <y>430</y>
+      <y>490</y>
       <w>100</w>
       <h>50</h>
     </coordinates>
@@ -166,7 +155,7 @@ drawPolygon(p);</custom_code>
     <id>UMLUseCase</id>
     <coordinates>
       <x>760</x>
-      <y>400</y>
+      <y>460</y>
       <w>120</w>
       <h>40</h>
     </coordinates>
@@ -177,7 +166,7 @@ drawPolygon(p);</custom_code>
     <id>Relation</id>
     <coordinates>
       <x>760</x>
-      <y>410</y>
+      <y>470</y>
       <w>320</w>
       <h>100</h>
     </coordinates>
@@ -188,7 +177,7 @@ drawPolygon(p);</custom_code>
     <id>Relation</id>
     <coordinates>
       <x>760</x>
-      <y>430</y>
+      <y>490</y>
       <w>190</w>
       <h>80</h>
     </coordinates>
@@ -199,7 +188,7 @@ drawPolygon(p);</custom_code>
     <id>UMLUseCase</id>
     <coordinates>
       <x>890</x>
-      <y>400</y>
+      <y>460</y>
       <w>120</w>
       <h>40</h>
     </coordinates>
@@ -210,7 +199,7 @@ drawPolygon(p);</custom_code>
     <id>UMLUseCase</id>
     <coordinates>
       <x>1060</x>
-      <y>410</y>
+      <y>470</y>
       <w>120</w>
       <h>30</h>
     </coordinates>
@@ -221,7 +210,7 @@ drawPolygon(p);</custom_code>
     <id>UMLUseCase</id>
     <coordinates>
       <x>940</x>
-      <y>330</y>
+      <y>390</y>
       <w>120</w>
       <h>40</h>
     </coordinates>
@@ -232,7 +221,7 @@ drawPolygon(p);</custom_code>
     <id>UMLUseCase</id>
     <coordinates>
       <x>820</x>
-      <y>330</y>
+      <y>390</y>
       <w>120</w>
       <h>40</h>
     </coordinates>
@@ -243,7 +232,7 @@ drawPolygon(p);</custom_code>
     <id>UMLUseCase</id>
     <coordinates>
       <x>1060</x>
-      <y>330</y>
+      <y>390</y>
       <w>120</w>
       <h>40</h>
     </coordinates>
@@ -254,7 +243,7 @@ drawPolygon(p);</custom_code>
     <id>UMLClass</id>
     <coordinates>
       <x>490</x>
-      <y>770</y>
+      <y>830</y>
       <w>100</w>
       <h>30</h>
     </coordinates>
@@ -266,7 +255,7 @@ bg=blue</panel_attributes>
     <id>UMLUseCase</id>
     <coordinates>
       <x>640</x>
-      <y>730</y>
+      <y>790</y>
       <w>120</w>
       <h>40</h>
     </coordinates>
@@ -277,7 +266,7 @@ bg=blue</panel_attributes>
     <id>UMLUseCase</id>
     <coordinates>
       <x>630</x>
-      <y>770</y>
+      <y>830</y>
       <w>120</w>
       <h>40</h>
     </coordinates>
@@ -288,7 +277,7 @@ bg=blue</panel_attributes>
     <id>UMLUseCase</id>
     <coordinates>
       <x>620</x>
-      <y>820</y>
+      <y>880</y>
       <w>120</w>
       <h>40</h>
     </coordinates>
@@ -299,7 +288,7 @@ bg=blue</panel_attributes>
     <id>UMLUseCase</id>
     <coordinates>
       <x>840</x>
-      <y>200</y>
+      <y>260</y>
       <w>120</w>
       <h>40</h>
     </coordinates>
@@ -310,7 +299,7 @@ bg=blue</panel_attributes>
     <id>UMLUseCase</id>
     <coordinates>
       <x>960</x>
-      <y>210</y>
+      <y>270</y>
       <w>120</w>
       <h>40</h>
     </coordinates>
@@ -321,7 +310,7 @@ bg=blue</panel_attributes>
     <id>UMLUseCase</id>
     <coordinates>
       <x>1080</x>
-      <y>200</y>
+      <y>260</y>
       <w>120</w>
       <h>40</h>
     </coordinates>
@@ -332,7 +321,7 @@ bg=blue</panel_attributes>
     <id>Relation</id>
     <coordinates>
       <x>890</x>
-      <y>70</y>
+      <y>130</y>
       <w>120</w>
       <h>150</h>
     </coordinates>
@@ -343,7 +332,7 @@ bg=blue</panel_attributes>
     <id>Relation</id>
     <coordinates>
       <x>1000</x>
-      <y>70</y>
+      <y>130</y>
       <w>50</w>
       <h>160</h>
     </coordinates>
@@ -354,7 +343,7 @@ bg=blue</panel_attributes>
     <id>Relation</id>
     <coordinates>
       <x>1020</x>
-      <y>70</y>
+      <y>130</y>
       <w>120</w>
       <h>150</h>
     </coordinates>
@@ -364,19 +353,19 @@ bg=blue</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1620</x>
-      <y>750</y>
-      <w>50</w>
+      <x>1960</x>
+      <y>800</y>
+      <w>30</w>
       <h>90</h>
     </coordinates>
     <panel_attributes>lt=-</panel_attributes>
-    <additional_attributes>30.0;10.0;10.0;70.0</additional_attributes>
+    <additional_attributes>10.0;10.0;10.0;70.0</additional_attributes>
   </element>
   <element>
     <id>UMLUseCase</id>
     <coordinates>
-      <x>1580</x>
-      <y>820</y>
+      <x>1920</x>
+      <y>870</y>
       <w>120</w>
       <h>40</h>
     </coordinates>
@@ -387,7 +376,7 @@ bg=blue</panel_attributes>
     <id>Relation</id>
     <coordinates>
       <x>880</x>
-      <y>360</y>
+      <y>420</y>
       <w>70</w>
       <h>60</h>
     </coordinates>
@@ -398,7 +387,7 @@ bg=blue</panel_attributes>
     <id>Relation</id>
     <coordinates>
       <x>950</x>
-      <y>360</y>
+      <y>420</y>
       <w>70</w>
       <h>60</h>
     </coordinates>
@@ -409,7 +398,7 @@ bg=blue</panel_attributes>
     <id>Relation</id>
     <coordinates>
       <x>990</x>
-      <y>360</y>
+      <y>420</y>
       <w>140</w>
       <h>70</h>
     </coordinates>
@@ -420,29 +409,29 @@ bg=blue</panel_attributes>
     <id>Relation</id>
     <coordinates>
       <x>760</x>
-      <y>460</y>
-      <w>320</w>
-      <h>50</h>
+      <y>490</y>
+      <w>470</w>
+      <h>80</h>
     </coordinates>
     <panel_attributes>lt=-</panel_attributes>
-    <additional_attributes>10.0;30.0;300.0;10.0</additional_attributes>
+    <additional_attributes>10.0;60.0;450.0;10.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>610</x>
-      <y>480</y>
-      <w>60</w>
-      <h>60</h>
+      <x>600</x>
+      <y>540</y>
+      <w>70</w>
+      <h>50</h>
     </coordinates>
     <panel_attributes>lt=-</panel_attributes>
-    <additional_attributes>10.0;40.0;40.0;10.0</additional_attributes>
+    <additional_attributes>10.0;30.0;50.0;10.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
       <x>580</x>
-      <y>770</y>
+      <y>830</y>
       <w>70</w>
       <h>40</h>
     </coordinates>
@@ -453,7 +442,7 @@ bg=blue</panel_attributes>
     <id>Relation</id>
     <coordinates>
       <x>580</x>
-      <y>770</y>
+      <y>830</y>
       <w>60</w>
       <h>90</h>
     </coordinates>
@@ -464,7 +453,7 @@ bg=blue</panel_attributes>
     <id>Relation</id>
     <coordinates>
       <x>540</x>
-      <y>790</y>
+      <y>850</y>
       <w>100</w>
       <h>100</h>
     </coordinates>
@@ -475,7 +464,7 @@ bg=blue</panel_attributes>
     <id>Relation</id>
     <coordinates>
       <x>580</x>
-      <y>740</y>
+      <y>800</y>
       <w>80</w>
       <h>60</h>
     </coordinates>
@@ -485,71 +474,31 @@ bg=blue</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>700</x>
-      <y>80</y>
-      <w>50</w>
-      <h>400</h>
-    </coordinates>
-    <panel_attributes>lt=-
-1</panel_attributes>
-    <additional_attributes>10.0;380.0;30.0;10.0</additional_attributes>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>760</x>
-      <y>40</y>
-      <w>210</w>
+      <x>740</x>
+      <y>100</y>
+      <w>230</w>
       <h>40</h>
     </coordinates>
     <panel_attributes>lt=-
 m1=m</panel_attributes>
-    <additional_attributes>190.0;10.0;10.0;10.0</additional_attributes>
-  </element>
-  <element>
-    <type>CustomElementImpl</type>
-    <coordinates>
-      <x>1580</x>
-      <y>570</y>
-      <w>101</w>
-      <h>101</h>
-    </coordinates>
-    <panel_attributes>has a
-bg=green</panel_attributes>
-    <additional_attributes/>
-    <custom_code>height = 100;
-width = 100;
-int y=(height/2 - textHeight() + 5) * textlines.size() * 1/2;
-
-for(String textline : textlines) {
-	y += y + textHeight();
-	printCenter(textline,y);
-}
-
-Polygon p = new Polygon();
-p.addPoint(width/2,0);
-p.addPoint(width, height/2);
-p.addPoint(width/2, height);
-p.addPoint(0, height/2);
-drawPolygon(p);</custom_code>
+    <additional_attributes>210.0;10.0;10.0;10.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
       <x>760</x>
-      <y>500</y>
-      <w>890</w>
-      <h>90</h>
+      <y>560</y>
+      <w>1210</w>
+      <h>110</h>
     </coordinates>
-    <panel_attributes>lt=-
-1</panel_attributes>
-    <additional_attributes>10.0;10.0;870.0;70.0</additional_attributes>
+    <panel_attributes>lt=-</panel_attributes>
+    <additional_attributes>10.0;10.0;1190.0;90.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1620</x>
-      <y>660</y>
+      <x>1940</x>
+      <y>710</y>
       <w>30</w>
       <h>70</h>
     </coordinates>
@@ -561,7 +510,7 @@ drawPolygon(p);</custom_code>
     <id>UMLClass</id>
     <coordinates>
       <x>1090</x>
-      <y>1040</y>
+      <y>1100</y>
       <w>100</w>
       <h>30</h>
     </coordinates>
@@ -572,8 +521,8 @@ bg=blue</panel_attributes>
   <element>
     <type>CustomElementImpl</type>
     <coordinates>
-      <x>1480</x>
-      <y>900</y>
+      <x>1820</x>
+      <y>950</y>
       <w>101</w>
       <h>101</h>
     </coordinates>
@@ -599,32 +548,32 @@ drawPolygon(p);</custom_code>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1520</x>
-      <y>750</y>
-      <w>110</w>
+      <x>1860</x>
+      <y>800</y>
+      <w>90</w>
       <h>170</h>
     </coordinates>
     <panel_attributes>lt=-
 m2=1</panel_attributes>
-    <additional_attributes>10.0;150.0;90.0;10.0</additional_attributes>
+    <additional_attributes>10.0;150.0;70.0;10.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
       <x>1180</x>
-      <y>990</y>
-      <w>370</w>
-      <h>100</h>
+      <y>1040</y>
+      <w>710</w>
+      <h>110</h>
     </coordinates>
     <panel_attributes>lt=-
 m2=M</panel_attributes>
-    <additional_attributes>350.0;10.0;10.0;70.0</additional_attributes>
+    <additional_attributes>690.0;10.0;10.0;80.0</additional_attributes>
   </element>
   <element>
     <id>UMLUseCase</id>
     <coordinates>
       <x>990</x>
-      <y>950</y>
+      <y>1010</y>
       <w>120</w>
       <h>40</h>
     </coordinates>
@@ -635,7 +584,7 @@ m2=M</panel_attributes>
     <id>Relation</id>
     <coordinates>
       <x>1040</x>
-      <y>980</y>
+      <y>1040</y>
       <w>100</w>
       <h>80</h>
     </coordinates>
@@ -646,7 +595,7 @@ m2=M</panel_attributes>
     <id>UMLUseCase</id>
     <coordinates>
       <x>910</x>
-      <y>980</y>
+      <y>1040</y>
       <w>120</w>
       <h>40</h>
     </coordinates>
@@ -657,7 +606,7 @@ m2=M</panel_attributes>
     <id>Relation</id>
     <coordinates>
       <x>1170</x>
-      <y>1060</y>
+      <y>1120</y>
       <w>140</w>
       <h>70</h>
     </coordinates>
@@ -668,7 +617,7 @@ m2=M</panel_attributes>
     <id>Relation</id>
     <coordinates>
       <x>960</x>
-      <y>1010</y>
+      <y>1070</y>
       <w>150</w>
       <h>60</h>
     </coordinates>
@@ -679,7 +628,7 @@ m2=M</panel_attributes>
     <type>CustomElementImpl</type>
     <coordinates>
       <x>1090</x>
-      <y>1160</y>
+      <y>1220</y>
       <w>101</w>
       <h>101</h>
     </coordinates>
@@ -706,7 +655,7 @@ drawPolygon(p);</custom_code>
     <id>Relation</id>
     <coordinates>
       <x>1080</x>
-      <y>1060</y>
+      <y>1120</y>
       <w>50</w>
       <h>170</h>
     </coordinates>
@@ -718,7 +667,7 @@ M</panel_attributes>
     <id>Relation</id>
     <coordinates>
       <x>1160</x>
-      <y>1060</y>
+      <y>1120</y>
       <w>50</w>
       <h>170</h>
     </coordinates>
@@ -730,7 +679,7 @@ M</panel_attributes>
     <id>UMLUseCase</id>
     <coordinates>
       <x>930</x>
-      <y>1120</y>
+      <y>1180</y>
       <w>120</w>
       <h>40</h>
     </coordinates>
@@ -741,7 +690,7 @@ M</panel_attributes>
     <id>Relation</id>
     <coordinates>
       <x>980</x>
-      <y>1050</y>
+      <y>1110</y>
       <w>130</w>
       <h>90</h>
     </coordinates>
@@ -752,7 +701,7 @@ M</panel_attributes>
     <type>CustomElementImpl</type>
     <coordinates>
       <x>950</x>
-      <y>30</y>
+      <y>90</y>
       <w>121</w>
       <h>51</h>
     </coordinates>
@@ -775,7 +724,7 @@ for(String textline : textlines) {
     <id>Relation</id>
     <coordinates>
       <x>590</x>
-      <y>450</y>
+      <y>510</y>
       <w>80</w>
       <h>50</h>
     </coordinates>
@@ -786,18 +735,18 @@ for(String textline : textlines) {
     <id>Relation</id>
     <coordinates>
       <x>700</x>
-      <y>390</y>
+      <y>450</y>
       <w>90</w>
-      <h>90</h>
+      <h>100</h>
     </coordinates>
     <panel_attributes>lt=-</panel_attributes>
-    <additional_attributes>70.0;10.0;10.0;70.0</additional_attributes>
+    <additional_attributes>70.0;10.0;10.0;71.0</additional_attributes>
   </element>
   <element>
     <type>CustomElementImpl</type>
     <coordinates>
-      <x>1570</x>
-      <y>710</y>
+      <x>1890</x>
+      <y>760</y>
       <w>121</w>
       <h>51</h>
     </coordinates>
@@ -819,8 +768,8 @@ for(String textline : textlines) {
   <element>
     <type>CustomElementImpl</type>
     <coordinates>
-      <x>1770</x>
-      <y>720</y>
+      <x>2140</x>
+      <y>750</y>
       <w>121</w>
       <h>51</h>
     </coordinates>
@@ -840,61 +789,34 @@ for(String textline : textlines) {
 </custom_code>
   </element>
   <element>
-    <type>CustomElementImpl</type>
-    <coordinates>
-      <x>1780</x>
-      <y>560</y>
-      <w>101</w>
-      <h>101</h>
-    </coordinates>
-    <panel_attributes>has an
-bg=green</panel_attributes>
-    <additional_attributes/>
-    <custom_code>height = 100;
-width = 100;
-int y=(height/2 - textHeight() + 5) * textlines.size() * 1/2;
-
-for(String textline : textlines) {
-	y += y + textHeight();
-	printCenter(textline,y);
-}
-
-Polygon p = new Polygon();
-p.addPoint(width/2,0);
-p.addPoint(width, height/2);
-p.addPoint(width/2, height);
-p.addPoint(0, height/2);
-drawPolygon(p);</custom_code>
-  </element>
-  <element>
     <id>Relation</id>
     <coordinates>
       <x>760</x>
-      <y>480</y>
-      <w>1090</w>
-      <h>100</h>
+      <y>530</y>
+      <w>1460</w>
+      <h>40</h>
     </coordinates>
     <panel_attributes>lt=-
 1</panel_attributes>
-    <additional_attributes>10.0;10.0;1070.0;80.0</additional_attributes>
+    <additional_attributes>10.0;20.0;1440.0;20.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1820</x>
-      <y>650</y>
+      <x>2190</x>
+      <y>610</y>
       <w>40</w>
-      <h>90</h>
+      <h>160</h>
     </coordinates>
     <panel_attributes>lt=-
 M</panel_attributes>
-    <additional_attributes>10.0;10.0;10.0;70.0</additional_attributes>
+    <additional_attributes>10.0;10.0;10.0;140.0</additional_attributes>
   </element>
   <element>
     <id>UMLUseCase</id>
     <coordinates>
-      <x>1710</x>
-      <y>810</y>
+      <x>2080</x>
+      <y>840</y>
       <w>120</w>
       <h>40</h>
     </coordinates>
@@ -904,8 +826,8 @@ M</panel_attributes>
   <element>
     <id>UMLUseCase</id>
     <coordinates>
-      <x>1950</x>
-      <y>810</y>
+      <x>2320</x>
+      <y>840</y>
       <w>120</w>
       <h>40</h>
     </coordinates>
@@ -915,8 +837,8 @@ M</panel_attributes>
   <element>
     <id>UMLUseCase</id>
     <coordinates>
-      <x>1830</x>
-      <y>810</y>
+      <x>2200</x>
+      <y>840</y>
       <w>120</w>
       <h>40</h>
     </coordinates>
@@ -926,8 +848,8 @@ M</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1760</x>
-      <y>760</y>
+      <x>2130</x>
+      <y>790</y>
       <w>90</w>
       <h>70</h>
     </coordinates>
@@ -937,8 +859,8 @@ M</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1820</x>
-      <y>760</y>
+      <x>2190</x>
+      <y>790</y>
       <w>90</w>
       <h>70</h>
     </coordinates>
@@ -948,8 +870,8 @@ M</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1820</x>
-      <y>760</y>
+      <x>2190</x>
+      <y>790</y>
       <w>200</w>
       <h>70</h>
     </coordinates>
@@ -959,8 +881,8 @@ M</panel_attributes>
   <element>
     <id>UMLUseCase</id>
     <coordinates>
-      <x>2070</x>
-      <y>810</y>
+      <x>2440</x>
+      <y>840</y>
       <w>120</w>
       <h>40</h>
     </coordinates>
@@ -970,8 +892,8 @@ M</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1830</x>
-      <y>760</y>
+      <x>2200</x>
+      <y>790</y>
       <w>310</w>
       <h>70</h>
     </coordinates>
@@ -982,7 +904,7 @@ M</panel_attributes>
     <id>Relation</id>
     <coordinates>
       <x>590</x>
-      <y>500</y>
+      <y>560</y>
       <w>140</w>
       <h>90</h>
     </coordinates>
@@ -993,7 +915,7 @@ M</panel_attributes>
     <type>CustomElementImpl</type>
     <coordinates>
       <x>410</x>
-      <y>850</y>
+      <y>910</y>
       <w>101</w>
       <h>101</h>
     </coordinates>
@@ -1020,7 +942,7 @@ drawPolygon(p);</custom_code>
     <id>Relation</id>
     <coordinates>
       <x>450</x>
-      <y>790</y>
+      <y>850</y>
       <w>100</w>
       <h>80</h>
     </coordinates>
@@ -1032,7 +954,7 @@ drawPolygon(p);</custom_code>
     <id>Relation</id>
     <coordinates>
       <x>390</x>
-      <y>940</y>
+      <y>1000</y>
       <w>90</w>
       <h>120</h>
     </coordinates>
@@ -1044,7 +966,7 @@ drawPolygon(p);</custom_code>
     <id>UMLUseCase</id>
     <coordinates>
       <x>170</x>
-      <y>1130</y>
+      <y>1190</y>
       <w>120</w>
       <h>40</h>
     </coordinates>
@@ -1055,7 +977,7 @@ drawPolygon(p);</custom_code>
     <id>UMLUseCase</id>
     <coordinates>
       <x>0</x>
-      <y>1120</y>
+      <y>1180</y>
       <w>120</w>
       <h>40</h>
     </coordinates>
@@ -1066,7 +988,7 @@ drawPolygon(p);</custom_code>
     <id>UMLUseCase</id>
     <coordinates>
       <x>0</x>
-      <y>1160</y>
+      <y>1220</y>
       <w>120</w>
       <h>40</h>
     </coordinates>
@@ -1077,7 +999,7 @@ drawPolygon(p);</custom_code>
     <id>UMLUseCase</id>
     <coordinates>
       <x>280</x>
-      <y>1150</y>
+      <y>1210</y>
       <w>120</w>
       <h>40</h>
     </coordinates>
@@ -1088,7 +1010,7 @@ drawPolygon(p);</custom_code>
     <id>UMLUseCase</id>
     <coordinates>
       <x>400</x>
-      <y>1150</y>
+      <y>1210</y>
       <w>120</w>
       <h>40</h>
     </coordinates>
@@ -1099,7 +1021,7 @@ drawPolygon(p);</custom_code>
     <id>Relation</id>
     <coordinates>
       <x>110</x>
-      <y>1130</y>
+      <y>1190</y>
       <w>80</w>
       <h>40</h>
     </coordinates>
@@ -1110,7 +1032,7 @@ drawPolygon(p);</custom_code>
     <id>Relation</id>
     <coordinates>
       <x>110</x>
-      <y>1140</y>
+      <y>1200</y>
       <w>80</w>
       <h>60</h>
     </coordinates>
@@ -1121,7 +1043,7 @@ drawPolygon(p);</custom_code>
     <id>Relation</id>
     <coordinates>
       <x>280</x>
-      <y>1080</y>
+      <y>1140</y>
       <w>140</w>
       <h>90</h>
     </coordinates>
@@ -1132,7 +1054,7 @@ drawPolygon(p);</custom_code>
     <id>Relation</id>
     <coordinates>
       <x>340</x>
-      <y>1080</y>
+      <y>1140</y>
       <w>80</w>
       <h>90</h>
     </coordinates>
@@ -1143,7 +1065,7 @@ drawPolygon(p);</custom_code>
     <id>Relation</id>
     <coordinates>
       <x>390</x>
-      <y>1080</y>
+      <y>1140</y>
       <w>90</w>
       <h>90</h>
     </coordinates>
@@ -1154,7 +1076,7 @@ drawPolygon(p);</custom_code>
     <id>UMLUseCase</id>
     <coordinates>
       <x>580</x>
-      <y>1110</y>
+      <y>1170</y>
       <w>120</w>
       <h>40</h>
     </coordinates>
@@ -1165,7 +1087,7 @@ drawPolygon(p);</custom_code>
     <id>Relation</id>
     <coordinates>
       <x>390</x>
-      <y>1080</y>
+      <y>1140</y>
       <w>210</w>
       <h>70</h>
     </coordinates>
@@ -1176,7 +1098,7 @@ drawPolygon(p);</custom_code>
     <type>CustomElementImpl</type>
     <coordinates>
       <x>740</x>
-      <y>1000</y>
+      <y>1060</y>
       <w>101</w>
       <h>101</h>
     </coordinates>
@@ -1203,7 +1125,7 @@ drawPolygon(p);</custom_code>
     <id>Relation</id>
     <coordinates>
       <x>450</x>
-      <y>1030</y>
+      <y>1090</y>
       <w>310</w>
       <h>50</h>
     </coordinates>
@@ -1215,7 +1137,7 @@ M</panel_attributes>
     <id>Relation</id>
     <coordinates>
       <x>830</x>
-      <y>1030</y>
+      <y>1090</y>
       <w>280</w>
       <h>50</h>
     </coordinates>
@@ -1227,7 +1149,7 @@ M</panel_attributes>
     <type>CustomElementImpl</type>
     <coordinates>
       <x>740</x>
-      <y>770</y>
+      <y>830</y>
       <w>101</w>
       <h>101</h>
     </coordinates>
@@ -1254,7 +1176,7 @@ drawPolygon(p);</custom_code>
     <id>Relation</id>
     <coordinates>
       <x>390</x>
-      <y>860</y>
+      <y>920</y>
       <w>420</w>
       <h>200</h>
     </coordinates>
@@ -1266,7 +1188,7 @@ M</panel_attributes>
     <id>Relation</id>
     <coordinates>
       <x>700</x>
-      <y>500</y>
+      <y>560</y>
       <w>110</w>
       <h>290</h>
     </coordinates>
@@ -1275,61 +1197,34 @@ M</panel_attributes>
     <additional_attributes>90.0;270.0;10.0;10.0</additional_attributes>
   </element>
   <element>
-    <type>CustomElementImpl</type>
-    <coordinates>
-      <x>1010</x>
-      <y>590</y>
-      <w>81</w>
-      <h>81</h>
-    </coordinates>
-    <panel_attributes>Make
-bg=green</panel_attributes>
-    <additional_attributes/>
-    <custom_code>height = 80;
-width = 80;
-int y=(height/2 - textHeight() + 5) * textlines.size() * 1/2;
-
-for(String textline : textlines) {
-	y += y + textHeight();
-	printCenter(textline,y);
-}
-
-Polygon p = new Polygon();
-p.addPoint(width/2,0);
-p.addPoint(width, height/2);
-p.addPoint(width/2, height);
-p.addPoint(0, height/2);
-drawPolygon(p);</custom_code>
-  </element>
-  <element>
     <id>Relation</id>
     <coordinates>
       <x>700</x>
-      <y>500</y>
-      <w>370</w>
+      <y>560</y>
+      <w>380</w>
       <h>110</h>
     </coordinates>
     <panel_attributes>lt=-
 1</panel_attributes>
-    <additional_attributes>10.0;10.0;350.0;90.0</additional_attributes>
+    <additional_attributes>10.0;10.0;360.0;90.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
       <x>1040</x>
-      <y>660</y>
+      <y>700</y>
       <w>40</w>
-      <h>60</h>
+      <h>80</h>
     </coordinates>
     <panel_attributes>lt=-
 M</panel_attributes>
-    <additional_attributes>10.0;10.0;10.0;40.0</additional_attributes>
+    <additional_attributes>20.0;10.0;10.0;60.0</additional_attributes>
   </element>
   <element>
     <type>CustomElementImpl</type>
     <coordinates>
       <x>1090</x>
-      <y>790</y>
+      <y>850</y>
       <w>81</w>
       <h>81</h>
     </coordinates>
@@ -1356,7 +1251,7 @@ drawPolygon(p);</custom_code>
     <id>UMLUseCase</id>
     <coordinates>
       <x>900</x>
-      <y>590</y>
+      <y>650</y>
       <w>120</w>
       <h>40</h>
     </coordinates>
@@ -1367,7 +1262,7 @@ drawPolygon(p);</custom_code>
     <id>UMLUseCase</id>
     <coordinates>
       <x>850</x>
-      <y>630</y>
+      <y>690</y>
       <w>120</w>
       <h>40</h>
     </coordinates>
@@ -1378,7 +1273,7 @@ drawPolygon(p);</custom_code>
     <type>CustomElementImpl</type>
     <coordinates>
       <x>990</x>
-      <y>700</y>
+      <y>760</y>
       <w>121</w>
       <h>51</h>
     </coordinates>
@@ -1401,7 +1296,7 @@ for(String textline : textlines) {
     <id>Relation</id>
     <coordinates>
       <x>960</x>
-      <y>620</y>
+      <y>680</y>
       <w>110</w>
       <h>100</h>
     </coordinates>
@@ -1412,7 +1307,7 @@ for(String textline : textlines) {
     <id>Relation</id>
     <coordinates>
       <x>910</x>
-      <y>660</y>
+      <y>720</y>
       <w>100</w>
       <h>80</h>
     </coordinates>
@@ -1423,7 +1318,7 @@ for(String textline : textlines) {
     <id>Relation</id>
     <coordinates>
       <x>1030</x>
-      <y>740</y>
+      <y>800</y>
       <w>120</w>
       <h>70</h>
     </coordinates>
@@ -1435,7 +1330,7 @@ M</panel_attributes>
     <id>Relation</id>
     <coordinates>
       <x>1120</x>
-      <y>860</y>
+      <y>920</y>
       <w>40</w>
       <h>200</h>
     </coordinates>
@@ -1444,61 +1339,34 @@ M</panel_attributes>
     <additional_attributes>10.0;10.0;10.0;180.0</additional_attributes>
   </element>
   <element>
-    <type>CustomElementImpl</type>
-    <coordinates>
-      <x>910</x>
-      <y>870</y>
-      <w>101</w>
-      <h>101</h>
-    </coordinates>
-    <panel_attributes>Has
-bg=green</panel_attributes>
-    <additional_attributes/>
-    <custom_code>height = 100;
-width = 100;
-int y=(height/2 - textHeight() + 5) * textlines.size() * 1/2;
-
-for(String textline : textlines) {
-	y += y + textHeight();
-	printCenter(textline,y);
-}
-
-Polygon p = new Polygon();
-p.addPoint(width/2,0);
-p.addPoint(width, height/2);
-p.addPoint(width/2, height);
-p.addPoint(0, height/2);
-drawPolygon(p);</custom_code>
-  </element>
-  <element>
     <id>Relation</id>
     <coordinates>
       <x>450</x>
-      <y>910</y>
-      <w>480</w>
-      <h>170</h>
+      <y>960</y>
+      <w>510</w>
+      <h>180</h>
     </coordinates>
     <panel_attributes>lt=-
 1</panel_attributes>
-    <additional_attributes>10.0;150.0;460.0;10.0</additional_attributes>
+    <additional_attributes>10.0;160.0;490.0;10.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
       <x>1000</x>
-      <y>740</y>
+      <y>800</y>
       <w>60</w>
-      <h>200</h>
+      <h>190</h>
     </coordinates>
     <panel_attributes>lt=-
 M</panel_attributes>
-    <additional_attributes>10.0;180.0;40.0;10.0</additional_attributes>
+    <additional_attributes>10.0;170.0;40.0;10.0</additional_attributes>
   </element>
   <element>
     <type>CustomElementImpl</type>
     <coordinates>
       <x>870</x>
-      <y>790</y>
+      <y>850</y>
       <w>81</w>
       <h>81</h>
     </coordinates>
@@ -1525,7 +1393,7 @@ drawPolygon(p);</custom_code>
     <id>Relation</id>
     <coordinates>
       <x>390</x>
-      <y>860</y>
+      <y>920</y>
       <w>540</w>
       <h>200</h>
     </coordinates>
@@ -1537,7 +1405,7 @@ M</panel_attributes>
     <id>Relation</id>
     <coordinates>
       <x>700</x>
-      <y>500</y>
+      <y>560</y>
       <w>230</w>
       <h>310</h>
     </coordinates>
@@ -1549,7 +1417,7 @@ M</panel_attributes>
     <id>UMLUseCase</id>
     <coordinates>
       <x>890</x>
-      <y>730</y>
+      <y>790</y>
       <w>90</w>
       <h>30</h>
     </coordinates>
@@ -1560,7 +1428,7 @@ M</panel_attributes>
     <id>Relation</id>
     <coordinates>
       <x>920</x>
-      <y>750</y>
+      <y>810</y>
       <w>50</w>
       <h>100</h>
     </coordinates>
@@ -1571,7 +1439,7 @@ M</panel_attributes>
     <id>UMLUseCase</id>
     <coordinates>
       <x>950</x>
-      <y>770</y>
+      <y>830</y>
       <w>80</w>
       <h>30</h>
     </coordinates>
@@ -1582,7 +1450,7 @@ M</panel_attributes>
     <id>Relation</id>
     <coordinates>
       <x>940</x>
-      <y>790</y>
+      <y>850</y>
       <w>60</w>
       <h>60</h>
     </coordinates>
@@ -1592,8 +1460,8 @@ M</panel_attributes>
   <element>
     <type>CustomElementImpl</type>
     <coordinates>
-      <x>1260</x>
-      <y>690</y>
+      <x>1350</x>
+      <y>770</y>
       <w>121</w>
       <h>51</h>
     </coordinates>
@@ -1616,7 +1484,7 @@ for(String textline : textlines) {
     <id>Relation</id>
     <coordinates>
       <x>1140</x>
-      <y>900</y>
+      <y>960</y>
       <w>100</w>
       <h>160</h>
     </coordinates>
@@ -1628,19 +1496,19 @@ for(String textline : textlines) {
     <id>Relation</id>
     <coordinates>
       <x>1210</x>
-      <y>730</y>
-      <w>100</w>
-      <h>120</h>
+      <y>810</y>
+      <w>190</w>
+      <h>100</h>
     </coordinates>
     <panel_attributes>lt=-
 1</panel_attributes>
-    <additional_attributes>80.0;10.0;10.0;100.0</additional_attributes>
+    <additional_attributes>170.0;10.0;10.0;80.0</additional_attributes>
   </element>
   <element>
     <type>CustomElementImpl</type>
     <coordinates>
       <x>1140</x>
-      <y>680</y>
+      <y>740</y>
       <w>81</w>
       <h>81</h>
     </coordinates>
@@ -1667,7 +1535,7 @@ drawPolygon(p);</custom_code>
     <id>Relation</id>
     <coordinates>
       <x>1100</x>
-      <y>700</y>
+      <y>760</y>
       <w>60</w>
       <h>40</h>
     </coordinates>
@@ -1679,70 +1547,43 @@ drawPolygon(p);</custom_code>
     <id>Relation</id>
     <coordinates>
       <x>1210</x>
-      <y>700</y>
-      <w>70</w>
-      <h>40</h>
-    </coordinates>
-    <panel_attributes>lt=-
-1</panel_attributes>
-    <additional_attributes>10.0;20.0;50.0;20.0</additional_attributes>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>700</x>
-      <y>500</y>
-      <w>640</w>
-      <h>110</h>
-    </coordinates>
-    <panel_attributes>lt=-
-1</panel_attributes>
-    <additional_attributes>10.0;10.0;620.0;90.0</additional_attributes>
-  </element>
-  <element>
-    <type>CustomElementImpl</type>
-    <coordinates>
-      <x>1280</x>
-      <y>590</y>
-      <w>81</w>
-      <h>81</h>
-    </coordinates>
-    <panel_attributes>Has
-bg=green</panel_attributes>
-    <additional_attributes/>
-    <custom_code>height = 80;
-width = 80;
-int y=(height/2 - textHeight() + 5) * textlines.size() * 1/2;
-
-for(String textline : textlines) {
-	y += y + textHeight();
-	printCenter(textline,y);
-}
-
-Polygon p = new Polygon();
-p.addPoint(width/2,0);
-p.addPoint(width, height/2);
-p.addPoint(width/2, height);
-p.addPoint(0, height/2);
-drawPolygon(p);</custom_code>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>1310</x>
-      <y>660</y>
-      <w>40</w>
+      <y>770</y>
+      <w>160</w>
       <h>50</h>
     </coordinates>
     <panel_attributes>lt=-
+1</panel_attributes>
+    <additional_attributes>10.0;10.0;140.0;30.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>670</x>
+      <y>560</y>
+      <w>740</w>
+      <h>130</h>
+    </coordinates>
+    <panel_attributes>lt=-
+</panel_attributes>
+    <additional_attributes>10.0;10.0;720.0;110.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1400</x>
+      <y>720</y>
+      <w>40</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>lt=-
 M</panel_attributes>
-    <additional_attributes>10.0;30.0;10.0;10.0</additional_attributes>
+    <additional_attributes>10.0;50.0;10.0;10.0</additional_attributes>
   </element>
   <element>
     <type>CustomElementImpl</type>
     <coordinates>
       <x>480</x>
-      <y>550</y>
+      <y>610</y>
       <w>121</w>
       <h>41</h>
     </coordinates>
@@ -1768,8 +1609,8 @@ for(String textline : textlines) {
   <element>
     <type>CustomElementImpl</type>
     <coordinates>
-      <x>1060</x>
-      <y>450</y>
+      <x>1210</x>
+      <y>480</y>
       <w>121</w>
       <h>41</h>
     </coordinates>
@@ -1796,7 +1637,7 @@ for(String textline : textlines) {
     <type>CustomElementImpl</type>
     <coordinates>
       <x>560</x>
-      <y>870</y>
+      <y>930</y>
       <w>121</w>
       <h>41</h>
     </coordinates>
@@ -1824,7 +1665,7 @@ drawLine((width-twidth)/2, y,width - (width-twidth)/2 ,y);</custom_code>
     <type>CustomElementImpl</type>
     <coordinates>
       <x>1240</x>
-      <y>1110</y>
+      <y>1170</y>
       <w>121</w>
       <h>41</h>
     </coordinates>
@@ -1852,7 +1693,7 @@ drawLine((width-twidth)/2, y,width - (width-twidth)/2 ,y);</custom_code>
     <type>CustomElementImpl</type>
     <coordinates>
       <x>650</x>
-      <y>460</y>
+      <y>520</y>
       <w>121</w>
       <h>51</h>
     </coordinates>
@@ -1874,7 +1715,7 @@ drawRectangle(0,0,width,height);</custom_code>
     <type>CustomElementImpl</type>
     <coordinates>
       <x>340</x>
-      <y>1040</y>
+      <y>1100</y>
       <w>121</w>
       <h>51</h>
     </coordinates>
@@ -1895,9 +1736,9 @@ drawRectangle(0,0,width,height);</custom_code>
   <element>
     <type>CustomElementImpl</type>
     <coordinates>
-      <x>690</x>
-      <y>10</y>
-      <w>81</w>
+      <x>660</x>
+      <y>70</y>
+      <w>91</w>
       <h>81</h>
     </coordinates>
     <panel_attributes>Has a
@@ -1931,8 +1772,8 @@ drawPolygon(p2);</custom_code>
   <element>
     <type>CustomElementImpl</type>
     <coordinates>
-      <x>1440</x>
-      <y>580</y>
+      <x>1610</x>
+      <y>660</y>
       <w>81</w>
       <h>81</h>
     </coordinates>
@@ -1959,31 +1800,31 @@ drawPolygon(p);</custom_code>
     <id>Relation</id>
     <coordinates>
       <x>710</x>
-      <y>500</y>
-      <w>790</w>
-      <h>100</h>
+      <y>560</y>
+      <w>960</w>
+      <h>120</h>
     </coordinates>
     <panel_attributes>lt=-
 M</panel_attributes>
-    <additional_attributes>10.0;10.0;770.0;80.0</additional_attributes>
+    <additional_attributes>10.0;10.0;940.0;100.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
       <x>1170</x>
-      <y>650</y>
-      <w>330</w>
-      <h>410</h>
+      <y>730</y>
+      <w>500</w>
+      <h>390</h>
     </coordinates>
     <panel_attributes>lt=-
 M</panel_attributes>
-    <additional_attributes>10.0;390.0;310.0;10.0</additional_attributes>
+    <additional_attributes>10.0;370.0;480.0;10.0</additional_attributes>
   </element>
   <element>
     <type>CustomElementImpl</type>
     <coordinates>
       <x>1180</x>
-      <y>830</y>
+      <y>890</y>
       <w>81</w>
       <h>81</h>
     </coordinates>
@@ -2012,7 +1853,7 @@ drawPolygon(p);</custom_code>
     <id>Relation</id>
     <coordinates>
       <x>570</x>
-      <y>390</y>
+      <y>450</y>
       <w>100</w>
       <h>90</h>
     </coordinates>
@@ -2023,7 +1864,7 @@ drawPolygon(p);</custom_code>
     <type>CustomElementImpl</type>
     <coordinates>
       <x>1200</x>
-      <y>200</y>
+      <y>260</y>
       <w>121</w>
       <h>41</h>
     </coordinates>
@@ -2045,7 +1886,7 @@ DrawDashedLine((width-twidth)/2, y,width - (width-twidth)/2 ,y);</custom_code>
     <id>Relation</id>
     <coordinates>
       <x>1060</x>
-      <y>50</y>
+      <y>110</y>
       <w>220</w>
       <h>170</h>
     </coordinates>
@@ -2055,8 +1896,8 @@ DrawDashedLine((width-twidth)/2, y,width - (width-twidth)/2 ,y);</custom_code>
   <element>
     <type>CustomElementImpl</type>
     <coordinates>
-      <x>1120</x>
-      <y>620</y>
+      <x>1100</x>
+      <y>680</y>
       <w>121</w>
       <h>41</h>
     </coordinates>
@@ -2078,18 +1919,18 @@ DrawDashedLine((width-twidth)/2, y,width - (width-twidth)/2 ,y);</custom_code>
     <id>Relation</id>
     <coordinates>
       <x>1040</x>
-      <y>650</y>
-      <w>160</w>
+      <y>710</y>
+      <w>140</w>
       <h>70</h>
     </coordinates>
     <panel_attributes>lt=-</panel_attributes>
-    <additional_attributes>10.0;50.0;140.0;10.0</additional_attributes>
+    <additional_attributes>10.0;50.0;120.0;10.0</additional_attributes>
   </element>
   <element>
     <type>CustomElementImpl</type>
     <coordinates>
-      <x>1350</x>
-      <y>640</y>
+      <x>1450</x>
+      <y>720</y>
       <w>101</w>
       <h>31</h>
     </coordinates>
@@ -2110,19 +1951,19 @@ DrawDashedLine((width-twidth)/2, y,width - (width-twidth)/2 ,y);</custom_code>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1330</x>
-      <y>660</y>
-      <w>90</w>
+      <x>1420</x>
+      <y>740</y>
+      <w>100</w>
       <h>50</h>
     </coordinates>
     <panel_attributes>lt=-</panel_attributes>
-    <additional_attributes>10.0;30.0;70.0;10.0</additional_attributes>
+    <additional_attributes>10.0;30.0;80.0;10.0</additional_attributes>
   </element>
   <element>
     <id>UMLUseCase</id>
     <coordinates>
-      <x>1310</x>
-      <y>750</y>
+      <x>1410</x>
+      <y>830</y>
       <w>80</w>
       <h>30</h>
     </coordinates>
@@ -2132,19 +1973,19 @@ DrawDashedLine((width-twidth)/2, y,width - (width-twidth)/2 ,y);</custom_code>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1320</x>
-      <y>730</y>
-      <w>50</w>
+      <x>1410</x>
+      <y>810</y>
+      <w>60</w>
       <h>40</h>
     </coordinates>
     <panel_attributes>lt=-</panel_attributes>
-    <additional_attributes>10.0;10.0;30.0;20.0</additional_attributes>
+    <additional_attributes>10.0;10.0;40.0;20.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
       <x>220</x>
-      <y>1050</y>
+      <y>1110</y>
       <w>140</w>
       <h>30</h>
     </coordinates>
@@ -2155,7 +1996,7 @@ DrawDashedLine((width-twidth)/2, y,width - (width-twidth)/2 ,y);</custom_code>
     <type>CustomElementImpl</type>
     <coordinates>
       <x>110</x>
-      <y>1040</y>
+      <y>1100</y>
       <w>121</w>
       <h>41</h>
     </coordinates>
@@ -2179,7 +2020,7 @@ drawLine((width-twidth)/2, y,width - (width-twidth)/2 ,y);</custom_code>
     <type>CustomElementImpl</type>
     <coordinates>
       <x>460</x>
-      <y>380</y>
+      <y>440</y>
       <w>121</w>
       <h>41</h>
     </coordinates>
@@ -2202,8 +2043,8 @@ drawLine((width-twidth)/2, y,width - (width-twidth)/2 ,y);</custom_code>
   <element>
     <type>CustomElementImpl</type>
     <coordinates>
-      <x>1990</x>
-      <y>730</y>
+      <x>2360</x>
+      <y>760</y>
       <w>121</w>
       <h>41</h>
     </coordinates>
@@ -2224,8 +2065,8 @@ DrawDashedLine((width-twidth)/2, y,width - (width-twidth)/2 ,y);</custom_code>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1880</x>
-      <y>730</y>
+      <x>2250</x>
+      <y>760</y>
       <w>130</w>
       <h>40</h>
     </coordinates>
@@ -2235,8 +2076,8 @@ DrawDashedLine((width-twidth)/2, y,width - (width-twidth)/2 ,y);</custom_code>
   <element>
     <type>CustomElementImpl</type>
     <coordinates>
-      <x>1430</x>
-      <y>820</y>
+      <x>1770</x>
+      <y>870</y>
       <w>121</w>
       <h>41</h>
     </coordinates>
@@ -2257,12 +2098,283 @@ DrawDashedLine((width-twidth)/2, y,width - (width-twidth)/2 ,y);</custom_code>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1480</x>
-      <y>740</y>
-      <w>110</w>
+      <x>1820</x>
+      <y>790</y>
+      <w>90</w>
       <h>100</h>
     </coordinates>
     <panel_attributes>lt=-</panel_attributes>
-    <additional_attributes>10.0;80.0;90.0;10.0</additional_attributes>
+    <additional_attributes>10.0;80.0;70.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <type>CustomElementImpl</type>
+    <coordinates>
+      <x>1020</x>
+      <y>650</y>
+      <w>81</w>
+      <h>61</h>
+    </coordinates>
+    <panel_attributes>make
+bg=pink</panel_attributes>
+    <additional_attributes/>
+    <custom_code>
+int y=(height/2 - textHeight() + 5) * textlines.size() * 1/2;
+
+for(String textline : textlines) {
+	y += y + textHeight();
+	printCenter(textline,y);
+}
+
+Polygon p = new Polygon();
+p.addPoint(width/2,0);
+p.addPoint(width, height/2);
+p.addPoint(width/2, height);
+p.addPoint(0, height/2);
+drawPolygon(p);
+Polygon p2 = new Polygon();
+p2.addPoint(width/2 ,5);
+p2.addPoint(width - 5, height/2 );
+p2.addPoint(width/2 , height - 5);
+p2.addPoint(5, height/2 );
+drawPolygon(p2);</custom_code>
+  </element>
+  <element>
+    <type>CustomElementImpl</type>
+    <coordinates>
+      <x>1370</x>
+      <y>670</y>
+      <w>81</w>
+      <h>61</h>
+    </coordinates>
+    <panel_attributes>Has
+bg=pink</panel_attributes>
+    <additional_attributes/>
+    <custom_code>
+int y=(height/2 - textHeight() + 5) * textlines.size() * 1/2;
+
+for(String textline : textlines) {
+	y += y + textHeight();
+	printCenter(textline,y);
+}
+
+Polygon p = new Polygon();
+p.addPoint(width/2,0);
+p.addPoint(width, height/2);
+p.addPoint(width/2, height);
+p.addPoint(0, height/2);
+drawPolygon(p);
+Polygon p2 = new Polygon();
+p2.addPoint(width/2 ,5);
+p2.addPoint(width - 5, height/2 );
+p2.addPoint(width/2 , height - 5);
+p2.addPoint(5, height/2 );
+drawPolygon(p2);</custom_code>
+  </element>
+  <element>
+    <id>UMLUseCase</id>
+    <coordinates>
+      <x>1160</x>
+      <y>830</y>
+      <w>120</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>Amount</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1160</x>
+      <y>850</y>
+      <w>70</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>lt=-
+1</panel_attributes>
+    <additional_attributes>50.0;10.0;10.0;40.0</additional_attributes>
+  </element>
+  <element>
+    <type>CustomElementImpl</type>
+    <coordinates>
+      <x>1910</x>
+      <y>650</y>
+      <w>81</w>
+      <h>71</h>
+    </coordinates>
+    <panel_attributes>Has a
+bg=pink</panel_attributes>
+    <additional_attributes/>
+    <custom_code>
+int y=(height/2 - textHeight() + 5) * textlines.size() * 1/2;
+
+for(String textline : textlines) {
+	y += y + textHeight();
+	printCenter(textline,y);
+}
+
+Polygon p = new Polygon();
+p.addPoint(width/2,0);
+p.addPoint(width, height/2);
+p.addPoint(width/2, height);
+p.addPoint(0, height/2);
+drawPolygon(p);
+Polygon p2 = new Polygon();
+p2.addPoint(width/2 ,5);
+p2.addPoint(width - 5, height/2 );
+p2.addPoint(width/2 , height - 5);
+p2.addPoint(5, height/2 );
+drawPolygon(p2);</custom_code>
+  </element>
+  <element>
+    <type>CustomElementImpl</type>
+    <coordinates>
+      <x>2160</x>
+      <y>550</y>
+      <w>81</w>
+      <h>71</h>
+    </coordinates>
+    <panel_attributes>Has a
+bg=pink</panel_attributes>
+    <additional_attributes/>
+    <custom_code>
+int y=(height/2 - textHeight() + 5) * textlines.size() * 1/2;
+
+for(String textline : textlines) {
+	y += y + textHeight();
+	printCenter(textline,y);
+}
+
+Polygon p = new Polygon();
+p.addPoint(width/2,0);
+p.addPoint(width, height/2);
+p.addPoint(width/2, height);
+p.addPoint(0, height/2);
+drawPolygon(p);
+Polygon p2 = new Polygon();
+p2.addPoint(width/2 ,5);
+p2.addPoint(width - 5, height/2 );
+p2.addPoint(width/2 , height - 5);
+p2.addPoint(5, height/2 );
+drawPolygon(p2);</custom_code>
+  </element>
+  <element>
+    <type>CustomElementImpl</type>
+    <coordinates>
+      <x>940</x>
+      <y>940</y>
+      <w>71</w>
+      <h>61</h>
+    </coordinates>
+    <panel_attributes>Has
+bg=green</panel_attributes>
+    <additional_attributes/>
+    <custom_code>int y=(height/2 - textHeight() + 5) * textlines.size() * 1/2;
+
+for(String textline : textlines) {
+	y += y + textHeight();
+	printCenter(textline,y);
+}
+
+Polygon p = new Polygon();
+p.addPoint(width/2,0);
+p.addPoint(width, height/2);
+p.addPoint(width/2, height);
+p.addPoint(0, height/2);
+drawPolygon(p);</custom_code>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>690</x>
+      <y>560</y>
+      <w>380</w>
+      <h>110</h>
+    </coordinates>
+    <panel_attributes>lt=-</panel_attributes>
+    <additional_attributes>10.0;10.0;360.0;90.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>690</x>
+      <y>560</y>
+      <w>740</w>
+      <h>130</h>
+    </coordinates>
+    <panel_attributes>lt=-
+1</panel_attributes>
+    <additional_attributes>10.0;10.0;720.0;110.0</additional_attributes>
+  </element>
+  <element>
+    <id>Text</id>
+    <coordinates>
+      <x>490</x>
+      <y>550</y>
+      <w>120</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>customelement=
+drawEllipse(0,0,width,height) lt=.
+drawText("Age",width/2,height/2 + 5,center)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>750</x>
+      <y>560</y>
+      <w>1180</w>
+      <h>110</h>
+    </coordinates>
+    <panel_attributes>lt=-
+1</panel_attributes>
+    <additional_attributes>10.0;10.0;1160.0;90.0</additional_attributes>
+  </element>
+  <element>
+    <type>CustomElementImpl</type>
+    <coordinates>
+      <x>0</x>
+      <y>1320</y>
+      <w>0</w>
+      <h>100</h>
+    </coordinates>
+    <panel_attributes>// Modify the text below and
+// observe the element preview.
+
+Hello, World! 
+Enjoy UMLet!</panel_attributes>
+    <additional_attributes/>
+    <custom_code>width=10;
+drawLine(width/2-2,0,width/2-2,height);
+drawLine(width/2+2,0,width/2+2,height);</custom_code>
+  </element>
+  <element>
+    <type>CustomElementImpl</type>
+    <coordinates>
+      <x>700</x>
+      <y>150</y>
+      <w>11</w>
+      <h>371</h>
+    </coordinates>
+    <panel_attributes>// Modify the text below and
+// observe the element preview.
+
+Hello, World! 
+Enjoy UMLet!</panel_attributes>
+    <additional_attributes/>
+    <custom_code>width = 10;
+drawLine(width/2- 2, 0,width/2-2,height);
+drawLine(width/2+ 2, 0,width/2+2,height);</custom_code>
+  </element>
+  <element>
+    <id>Text</id>
+    <coordinates>
+      <x>710</x>
+      <y>310</y>
+      <w>30</w>
+      <h>20</h>
+    </coordinates>
+    <panel_attributes>M</panel_attributes>
+    <additional_attributes/>
   </element>
 </diagram>
