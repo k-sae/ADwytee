@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.3.14)  23 MAR 2017 22:59
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.3.14)  26 MAR 2017 15:46
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -163,25 +163,25 @@ Underfull \hbox (badness 10000) in paragraph at lines 18--55
 
 [1
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] [2]
-Underfull \hbox (badness 10000) in paragraph at lines 99--117
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
+Underfull \hbox (badness 10000) in paragraph at lines 91--109
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 99--117
+Underfull \hbox (badness 10000) in paragraph at lines 91--109
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 99--117
+Underfull \hbox (badness 10000) in paragraph at lines 91--109
 
  []
 
-<./Home.png, id=14, 1499.6025pt x 883.3pt>
+[2] <./Home.png, id=14, 1499.6025pt x 883.3pt>
 File: ./Home.png Graphic file (type png)
  <use ./Home.png>
-Package pdftex.def Info: ./Home.png used on input line 122.
+Package pdftex.def Info: ./Home.png used on input line 114.
 (pdftex.def)             Requested size: 172.5pt x 101.59758pt.
  [3 <./Home.png>]
 No file SDDLatex.bbl.
@@ -189,7 +189,7 @@ No file SDDLatex.bbl.
 Here is how much of TeX's memory you used:
  1496 strings out of 493029
  21275 string characters out of 6136234
- 80546 words of memory out of 5000000
+ 81546 words of memory out of 5000000
  5040 multiletter control sequences out of 15000+600000
  7895 words of font info for 28 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -199,7 +199,7 @@ s/cm/cmbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/c
 mbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.p
 fb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></us
 r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb>
-Output written on SDDLatex.pdf (4 pages, 1389486 bytes).
+Output written on SDDLatex.pdf (4 pages, 1389058 bytes).
 PDF statistics:
  38 PDF objects out of 1000 (max. 8388607)
  25 compressed objects within 1 object stream
