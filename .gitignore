@@ -1,2 +1,4 @@
 *.~lock.SDD.odt#
 .~lock.SDD.odt#
+.~lock.*.odt#
+*.~lock.*.odt#
