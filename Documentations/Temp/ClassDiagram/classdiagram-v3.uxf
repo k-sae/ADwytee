@@ -359,7 +359,7 @@ Date date;</panel_attributes>
     <panel_attributes>Transaction
 -
 String MedicineCode;
-</panel_attributes>
+Date transactionDate;</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
