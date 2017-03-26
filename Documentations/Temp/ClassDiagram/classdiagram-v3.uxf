@@ -83,7 +83,7 @@ unHangPharmacy();
 +PatientProfile GetPatientProfile()
 +bool editOrder();
 +setRate();
-
++TrackMedicine();
 </panel_attributes>
     <additional_attributes/>
   </element>
