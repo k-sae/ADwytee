@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.3.14)  26 MAR 2017 15:46
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.3.14)  27 MAR 2017 02:25
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -55,34 +55,42 @@ Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
 \Gin@req@height=\dimen103
 \Gin@req@width=\dimen104
 )
-(./SDDLatex.aux)
+(/usr/share/texlive/texmf-dist/tex/latex/float/float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count88
+\float@exts=\toks15
+\float@box=\box26
+\@float@everytoks=\toks16
+\@floatcapt=\box27
+) (./SDDLatex.aux)
 \openout1 = `SDDLatex.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 8.
-LaTeX Font Info:    ... okay on input line 8.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 8.
-LaTeX Font Info:    ... okay on input line 8.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 8.
-LaTeX Font Info:    ... okay on input line 8.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 8.
-LaTeX Font Info:    ... okay on input line 8.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 8.
-LaTeX Font Info:    ... okay on input line 8.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 8.
-LaTeX Font Info:    ... okay on input line 8.
- (/usr/share/texlive/texmf-dist/tex/context/base/supp-pdf.mkii
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 9.
+LaTeX Font Info:    ... okay on input line 9.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 9.
+LaTeX Font Info:    ... okay on input line 9.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 9.
+LaTeX Font Info:    ... okay on input line 9.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 9.
+LaTeX Font Info:    ... okay on input line 9.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 9.
+LaTeX Font Info:    ... okay on input line 9.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 9.
+LaTeX Font Info:    ... okay on input line 9.
+
+(/usr/share/texlive/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count88
+\scratchcounter=\count89
 \scratchdimen=\dimen105
-\scratchbox=\box26
-\nofMPsegments=\count89
-\nofMParguments=\count90
-\everyMPshowfont=\toks15
-\MPscratchCnt=\count91
+\scratchbox=\box28
+\nofMPsegments=\count90
+\nofMParguments=\count91
+\everyMPshowfont=\toks17
+\MPscratchCnt=\count92
 \MPscratchDim=\dimen106
-\MPnumerator=\count92
-\makeMPintoPDFobject=\count93
-\everyMPtoPDFconversion=\toks16
+\MPnumerator=\count93
+\makeMPintoPDFobject=\count94
+\everyMPtoPDFconversion=\toks18
 ) (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
 Package: pdftexcmds 2011/11/29 v0.20 Utility functions of pdfTeX for LuaTeX (HO
 )
@@ -132,77 +140,106 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <12> on input line 10.
+(Font)              <12> on input line 11.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 10.
+(Font)              <8> on input line 11.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 10.
+(Font)              <6> on input line 11.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 21.
+(Font)              <7> on input line 22.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 21.
+(Font)              <5> on input line 22.
 
-Underfull \hbox (badness 10000) in paragraph at lines 18--55
+Underfull \hbox (badness 10000) in paragraph at lines 19--56
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 18--55
+Underfull \hbox (badness 10000) in paragraph at lines 19--56
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 18--55
+Underfull \hbox (badness 10000) in paragraph at lines 19--56
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 18--55
+Underfull \hbox (badness 10000) in paragraph at lines 19--56
 
  []
 
 [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
-Underfull \hbox (badness 10000) in paragraph at lines 91--109
+<./block.png, id=11, 712.6625pt x 816.04875pt>
+File: ./block.png Graphic file (type png)
+ <use ./block.png>
+Package pdftex.def Info: ./block.png used on input line 70.
+(pdftex.def)             Requested size: 285.05995pt x 326.41371pt.
+ [2]
+<./database/Erd.png, id=15, 2609.75pt x 1395.2125pt>
+File: ./database/Erd.png Graphic file (type png)
+ <use ./database/Erd.png>
+Package pdftex.def Info: ./database/Erd.png used on input line 89.
+(pdftex.def)             Requested size: 469.73474pt x 251.12741pt.
+
+Overfull \hbox (124.73474pt too wide) in paragraph at lines 89--90
+[][] 
+ []
+
+[3 <./block.png>]
+<./database/DatabaseTables.png, id=19, 4918.375pt x 4316.125pt>
+File: ./database/DatabaseTables.png Graphic file (type png)
+
+<use ./database/DatabaseTables.png>
+Package pdftex.def Info: ./database/DatabaseTables.png used on input line 95.
+(pdftex.def)             Requested size: 491.86632pt x 431.63779pt.
+
+Overfull \hbox (146.86632pt too wide) in paragraph at lines 95--96
+ [][] 
+ []
+
+[4 <./database/Erd.png (PNG copy)>] [5 <./database/DatabaseTables.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 109--127
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 91--109
+Underfull \hbox (badness 10000) in paragraph at lines 109--127
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 91--109
+Underfull \hbox (badness 10000) in paragraph at lines 109--127
 
  []
 
-[2] <./Home.png, id=14, 1499.6025pt x 883.3pt>
+<./Home.png, id=27, 1499.6025pt x 883.3pt>
 File: ./Home.png Graphic file (type png)
  <use ./Home.png>
-Package pdftex.def Info: ./Home.png used on input line 114.
+Package pdftex.def Info: ./Home.png used on input line 132.
 (pdftex.def)             Requested size: 172.5pt x 101.59758pt.
- [3 <./Home.png>]
+ [6 <./Home.png>]
 No file SDDLatex.bbl.
-[4] (./SDDLatex.aux) ) 
+[7] (./SDDLatex.aux) ) 
 Here is how much of TeX's memory you used:
- 1496 strings out of 493029
- 21275 string characters out of 6136234
- 81546 words of memory out of 5000000
- 5040 multiletter control sequences out of 15000+600000
+ 1572 strings out of 493029
+ 22385 string characters out of 6136234
+ 81913 words of memory out of 5000000
+ 5108 multiletter control sequences out of 15000+600000
  7895 words of font info for 28 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 37i,6n,23p,281b,225s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 37i,6n,23p,281b,229s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfont
 s/cm/cmbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/c
 mbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.p
 fb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></us
 r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb>
-Output written on SDDLatex.pdf (4 pages, 1389058 bytes).
+Output written on SDDLatex.pdf (7 pages, 2013955 bytes).
 PDF statistics:
- 38 PDF objects out of 1000 (max. 8388607)
- 25 compressed objects within 1 object stream
+ 53 PDF objects out of 1000 (max. 8388607)
+ 33 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 6 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 21 words of extra memory for PDF output out of 10000 (max. 10000000)
 

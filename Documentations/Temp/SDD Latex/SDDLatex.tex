@@ -1,5 +1,6 @@
 \documentclass[]{article}
 \usepackage{graphicx}
+\usepackage{float}
 
 %opening
 \title{Software Design Document}
@@ -63,7 +64,12 @@ The system will depends mainly on our API server where it will be responsible fo
 
 \section{System Architecture}
 \subsection{Architectural Design}
-...
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.4]{./block}
+\caption{Block Diagram}
+\end{figure}
 
 
 \subsection{Decomposition Description}
@@ -77,6 +83,18 @@ The system will depends mainly on our API server where it will be responsible fo
 \section{Data Design}
 \subsection{Data Description}
 The major data or system entities are stored with MySQL database using PHP Scripts installed on the local web server.
+
+\begin{figure}[H]
+
+\includegraphics[scale=0.18]{./database/Erd}
+\caption{ERD}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.1]{./database/DatabaseTables}
+\caption{Database Tables}
+\end{figure}
 
 \subsection {Data Dictionary}
 ...

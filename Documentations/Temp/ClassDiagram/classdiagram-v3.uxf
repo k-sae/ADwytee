@@ -26,7 +26,7 @@
     <panel_attributes>Pharmacy
 -
 List&lt;Order&gt; orders;
-List&lt;TrackedUsers&gt;
+List&lt;PatientProfile&gt; trackedPatients 
 List&lt;Rate&gt; rates;
 -
 +void bindPatient();
@@ -56,15 +56,17 @@ List&lt;Rate&gt; rates;
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>576</x>
+      <x>513</x>
       <y>828</y>
-      <w>144</w>
-      <h>72</h>
+      <w>207</w>
+      <h>90</h>
     </coordinates>
     <panel_attributes>Admin
 -
 hangPharmacy();
 unHangPharmacy();
+removePharmacy();
+acceptRegesteredPharmacy();
 </panel_attributes>
     <additional_attributes/>
   </element>
@@ -493,8 +495,8 @@ String status; </panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1899</x>
-      <y>459</y>
+      <x>1548</x>
+      <y>927</y>
       <w>207</w>
       <h>72</h>
     </coordinates>
@@ -509,7 +511,7 @@ String status; </panel_attributes>
     <id>UMLClass</id>
     <coordinates>
       <x>1503</x>
-      <y>459</y>
+      <y>396</y>
       <w>234</w>
       <h>126</h>
     </coordinates>
@@ -537,23 +539,23 @@ List&lt;String&gt; AlternativesCode;</panel_attributes>
     <id>Relation</id>
     <coordinates>
       <x>1638</x>
-      <y>576</y>
+      <y>513</y>
       <w>153</w>
-      <h>243</h>
+      <h>306</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;-</panel_attributes>
-    <additional_attributes>150.0;250.0;10.0;10.0</additional_attributes>
+    <additional_attributes>150.0;320.0;10.0;10.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1782</x>
-      <y>522</y>
-      <w>225</w>
-      <h>297</h>
+      <x>1656</x>
+      <y>864</y>
+      <w>108</w>
+      <h>81</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;-</panel_attributes>
-    <additional_attributes>10.0;310.0;230.0;10.0</additional_attributes>
+    <additional_attributes>100.0;10.0;10.0;70.0</additional_attributes>
   </element>
   <element>
     <id>UMLClass</id>
@@ -643,52 +645,15 @@ void connect();
     <additional_attributes>70.0;80.0;10.0;10.0</additional_attributes>
   </element>
   <element>
-    <id>UMLClass</id>
-    <coordinates>
-      <x>1143</x>
-      <y>918</y>
-      <w>207</w>
-      <h>72</h>
-    </coordinates>
-    <panel_attributes>Order
--
-+int Status;
-+List&lt;String&gt; MedicinesCode;
-+Date date;</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>1206</x>
-      <y>882</y>
-      <w>108</w>
-      <h>54</h>
-    </coordinates>
-    <panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes>
-    <additional_attributes>10.0;40.0;100.0;10.0</additional_attributes>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>1035</x>
-      <y>873</y>
-      <w>171</w>
-      <h>63</h>
-    </coordinates>
-    <panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes>
-    <additional_attributes>170.0;50.0;10.0;10.0</additional_attributes>
-  </element>
-  <element>
     <id>Relation</id>
     <coordinates>
       <x>1404</x>
-      <y>576</y>
+      <y>513</y>
       <w>216</w>
-      <h>225</h>
+      <h>288</h>
     </coordinates>
     <panel_attributes>lt=&lt;-</panel_attributes>
-    <additional_attributes>220.0;10.0;10.0;230.0</additional_attributes>
+    <additional_attributes>220.0;10.0;10.0;300.0</additional_attributes>
   </element>
   <element>
     <id>UMLClass</id>
@@ -761,5 +726,38 @@ LoginInfo;</panel_attributes>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes>
     <additional_attributes>130.0;10.0;10.0;60.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1494</x>
+      <y>882</y>
+      <w>171</w>
+      <h>63</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;170.0;50.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1035</x>
+      <y>945</y>
+      <w>531</w>
+      <h>27</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>570.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1341</x>
+      <y>477</y>
+      <w>180</w>
+      <h>126</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>10.0;120.0;180.0;10.0</additional_attributes>
   </element>
 </diagram>
