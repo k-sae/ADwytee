@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.3.14)  28 MAR 2017 18:31
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.3.14)  28 MAR 2017 21:21
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -176,78 +176,637 @@ Underfull \hbox (badness 10000) in paragraph at lines 19--56
 File: ./block.png Graphic file (type png)
  <use ./block.png>
 Package pdftex.def Info: ./block.png used on input line 70.
-(pdftex.def)             Requested size: 285.05995pt x 326.41371pt.
- [2]
-<./database/Erd.png, id=15, 2609.75pt x 1395.2125pt>
-File: ./database/Erd.png Graphic file (type png)
- <use ./database/Erd.png>
-Package pdftex.def Info: ./database/Erd.png used on input line 89.
-(pdftex.def)             Requested size: 469.73474pt x 251.12741pt.
+(pdftex.def)             Requested size: 228.05666pt x 261.14093pt.
 
-Overfull \hbox (124.73474pt too wide) in paragraph at lines 89--90
-[][] 
- []
+<./activity/01.JPG, id=12, 303.38344pt x 536.75531pt>
+File: ./activity/01.JPG Graphic file (type jpg)
+ <use ./activity/01.JPG>
+Package pdftex.def Info: ./activity/01.JPG used on input line 83.
+(pdftex.def)             Requested size: 212.36694pt x 375.72614pt.
 
-[3 <./block.png>]
-<./database/DatabaseTables.png, id=19, 4918.375pt x 4316.125pt>
-File: ./database/DatabaseTables.png Graphic file (type png)
+[2 <./block.png>] <./activity/02.JPG, id=16, 739.26187pt x 766.36313pt>
+File: ./activity/02.JPG Graphic file (type jpg)
 
-<use ./database/DatabaseTables.png>
-Package pdftex.def Info: ./database/DatabaseTables.png used on input line 95.
-(pdftex.def)             Requested size: 491.86632pt x 431.63779pt.
+<use ./activity/02.JPG>
+Package pdftex.def Info: ./activity/02.JPG used on input line 87.
+(pdftex.def)             Requested size: 443.56053pt x 459.82143pt.
 
-Overfull \hbox (146.86632pt too wide) in paragraph at lines 95--96
+Overfull \hbox (98.56053pt too wide) in paragraph at lines 87--88
  [][] 
  []
 
-[4 <./database/Erd.png (PNG copy)>] [5 <./database/DatabaseTables.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 109--127
+<./activity/03.JPG, id=17, 383.18156pt x 709.90219pt>
+File: ./activity/03.JPG Graphic file (type jpg)
+ <use ./activity/03.JPG>
+Package pdftex.def Info: ./activity/03.JPG used on input line 91.
+(pdftex.def)             Requested size: 229.9107pt x 425.9446pt.
+
+[3 <./activity/01.JPG>] <./activity/04.JPG, id=21, 290.58563pt x 377.15906pt>
+File: ./activity/04.JPG Graphic file (type jpg)
+
+<use ./activity/04.JPG>
+Package pdftex.def Info: ./activity/04.JPG used on input line 95.
+(pdftex.def)             Requested size: 203.40854pt x 264.00954pt.
+ [4 <./activity/02.JPG>]
+<./activity/05.JPG, id=25, 1206.00563pt x 833.36343pt>
+File: ./activity/05.JPG Graphic file (type jpg)
+ <use ./activity/05.JPG>
+Package pdftex.def Info: ./activity/05.JPG used on input line 99.
+(pdftex.def)             Requested size: 482.3937pt x 333.33946pt.
+
+Overfull \hbox (137.3937pt too wide) in paragraph at lines 99--100
+ [][] 
+ []
+
+[5 <./activity/03.JPG>] <./activity/06.JPG, id=29, 840.13875pt x 769.37437pt>
+File: ./activity/06.JPG Graphic file (type jpg)
+
+<use ./activity/06.JPG>
+Package pdftex.def Info: ./activity/06.JPG used on input line 103.
+(pdftex.def)             Requested size: 504.08714pt x 461.62819pt.
+
+Overfull \hbox (159.08714pt too wide) in paragraph at lines 103--104
+ [][] 
+ []
+
+[6 <./activity/04.JPG>] <./activity/07.JPG, id=33, 650.43pt x 895.09406pt>
+File: ./activity/07.JPG Graphic file (type jpg)
+
+<use ./activity/07.JPG>
+Package pdftex.def Info: ./activity/07.JPG used on input line 107.
+(pdftex.def)             Requested size: 390.261pt x 537.06058pt.
+
+Overfull \hbox (45.261pt too wide) in paragraph at lines 107--108
+ [][] 
+ []
+
+[7 <./activity/05.JPG>] <./activity/08.JPG, id=38, 676.02562pt x 895.09406pt>
+File: ./activity/08.JPG Graphic file (type jpg)
+
+<use ./activity/08.JPG>
+Package pdftex.def Info: ./activity/08.JPG used on input line 111.
+(pdftex.def)             Requested size: 405.6185pt x 537.06058pt.
+
+Overfull \hbox (60.6185pt too wide) in paragraph at lines 111--112
+ [][] 
+ []
+
+[8 <./activity/06.JPG>] <./activity/09.JPG, id=42, 749.04843pt x 895.09406pt>
+File: ./activity/09.JPG Graphic file (type jpg)
+
+<use ./activity/09.JPG>
+Package pdftex.def Info: ./activity/09.JPG used on input line 115.
+(pdftex.def)             Requested size: 449.43253pt x 537.06058pt.
+
+Overfull \hbox (104.43253pt too wide) in paragraph at lines 115--116
+ [][] 
+ []
+
+[9 <./activity/07.JPG>] <./activity/10.JPG, id=46, 766.36313pt x 713.66624pt>
+File: ./activity/10.JPG Graphic file (type jpg)
+
+<use ./activity/10.JPG>
+Package pdftex.def Info: ./activity/10.JPG used on input line 119.
+(pdftex.def)             Requested size: 459.82143pt x 428.20305pt.
+
+Overfull \hbox (114.82143pt too wide) in paragraph at lines 119--120
+ [][] 
+ []
+
+[10 <./activity/08.JPG>] <./activity/11.JPG, id=50, 757.32938pt x 766.36313pt>
+File: ./activity/11.JPG Graphic file (type jpg)
+
+<use ./activity/11.JPG>
+Package pdftex.def Info: ./activity/11.JPG used on input line 123.
+(pdftex.def)             Requested size: 454.40114pt x 459.82143pt.
+
+Overfull \hbox (109.40114pt too wide) in paragraph at lines 123--124
+ [][] 
+ []
+
+[11 <./activity/09.JPG>] <./activity/12.JPG, id=54, 738.50906pt x 652.68843pt>
+File: ./activity/12.JPG Graphic file (type jpg)
+
+<use ./activity/12.JPG>
+Package pdftex.def Info: ./activity/12.JPG used on input line 127.
+(pdftex.def)             Requested size: 443.10886pt x 391.61609pt.
+
+Overfull \hbox (98.10886pt too wide) in paragraph at lines 127--128
+ [][] 
+ []
+
+[12 <./activity/10.JPG>] <./activity/13.JPG, id=58, 711.4078pt x 810.02625pt>
+File: ./activity/13.JPG Graphic file (type jpg)
+
+<use ./activity/13.JPG>
+Package pdftex.def Info: ./activity/13.JPG used on input line 131.
+(pdftex.def)             Requested size: 426.84798pt x 486.0195pt.
+
+Overfull \hbox (81.84798pt too wide) in paragraph at lines 131--132
+ [][] 
+ []
+
+[13 <./activity/11.JPG>] <./activity/14.JPG, id=63, 698.61pt x 694.84593pt>
+File: ./activity/14.JPG Graphic file (type jpg)
+
+<use ./activity/14.JPG>
+Package pdftex.def Info: ./activity/14.JPG used on input line 135.
+(pdftex.def)             Requested size: 419.16924pt x 416.91077pt.
+
+Overfull \hbox (74.16924pt too wide) in paragraph at lines 135--136
+ [][] 
+ []
+
+[14 <./activity/12.JPG>] <./activity/15.JPG, id=67, 770.88pt x 816.80156pt>
+File: ./activity/15.JPG Graphic file (type jpg)
+
+<use ./activity/15.JPG>
+Package pdftex.def Info: ./activity/15.JPG used on input line 139.
+(pdftex.def)             Requested size: 462.53157pt x 490.08472pt.
+
+Overfull \hbox (117.53157pt too wide) in paragraph at lines 139--140
+ [][] 
+ []
+
+[15 <./activity/13.JPG>] <./activity/16.JPG, id=71, 942.52126pt x 959.83594pt>
+File: ./activity/16.JPG Graphic file (type jpg)
+
+<use ./activity/16.JPG>
+Package pdftex.def Info: ./activity/16.JPG used on input line 143.
+(pdftex.def)             Requested size: 377.00183pt x 383.92758pt.
+
+Overfull \hbox (32.00183pt too wide) in paragraph at lines 143--144
+ [][] 
+ []
+
+[16 <./activity/14.JPG>] <./activity/17.JPG, id=75, 720.44156pt x 766.36313pt>
+File: ./activity/17.JPG Graphic file (type jpg)
+
+<use ./activity/17.JPG>
+Package pdftex.def Info: ./activity/17.JPG used on input line 147.
+(pdftex.def)             Requested size: 432.26826pt x 459.82143pt.
+
+Overfull \hbox (87.26826pt too wide) in paragraph at lines 147--148
+ [][] 
+ []
+
+[17 <./activity/15.JPG>] <./activity/18.JPG, id=79, 739.26187pt x 694.84593pt>
+File: ./activity/18.JPG Graphic file (type jpg)
+
+<use ./activity/18.JPG>
+Package pdftex.def Info: ./activity/18.JPG used on input line 151.
+(pdftex.def)             Requested size: 443.56053pt x 416.91077pt.
+
+Overfull \hbox (98.56053pt too wide) in paragraph at lines 151--152
+ [][] 
+ []
+
+[18 <./activity/16.JPG>] <./activity/19.JPG, id=83, 738.50906pt x 766.36313pt>
+File: ./activity/19.JPG Graphic file (type jpg)
+
+<use ./activity/19.JPG>
+Package pdftex.def Info: ./activity/19.JPG used on input line 155.
+(pdftex.def)             Requested size: 443.10886pt x 459.82143pt.
+
+Overfull \hbox (98.10886pt too wide) in paragraph at lines 155--156
+ [][] 
+ []
+
+[19 <./activity/17.JPG>] <./activity/20.JPG, id=88, 822.07124pt x 818.30719pt>
+File: ./activity/20.JPG Graphic file (type jpg)
+
+<use ./activity/20.JPG>
+Package pdftex.def Info: ./activity/20.JPG used on input line 159.
+(pdftex.def)             Requested size: 493.24655pt x 490.9881pt.
+
+Overfull \hbox (148.24655pt too wide) in paragraph at lines 159--160
+ [][] 
+ []
+
+[20 <./activity/18.JPG>] <./activity/21.JPG, id=92, 698.61pt x 694.84593pt>
+File: ./activity/21.JPG Graphic file (type jpg)
+
+<use ./activity/21.JPG>
+Package pdftex.def Info: ./activity/21.JPG used on input line 163.
+(pdftex.def)             Requested size: 419.16924pt x 416.91077pt.
+
+Overfull \hbox (74.16924pt too wide) in paragraph at lines 163--164
+ [][] 
+ []
+
+[21 <./activity/19.JPG>] <./activity/22.JPG, id=96, 752.0597pt x 769.37437pt>
+File: ./activity/22.JPG Graphic file (type jpg)
+
+<use ./activity/22.JPG>
+Package pdftex.def Info: ./activity/22.JPG used on input line 167.
+(pdftex.def)             Requested size: 451.2393pt x 461.62819pt.
+
+Overfull \hbox (106.2393pt too wide) in paragraph at lines 167--168
+ [][] 
+ []
+
+[22 <./activity/20.JPG>] <./activity/23.JPG, id=100, 481.8pt x 816.80156pt>
+File: ./activity/23.JPG Graphic file (type jpg)
+
+<use ./activity/23.JPG>
+Package pdftex.def Info: ./activity/23.JPG used on input line 171.
+(pdftex.def)             Requested size: 289.08221pt x 490.08472pt.
+ [23 <./activity/21.JPG>]
+<./activity/24.JPG, id=104, 738.50906pt x 713.66624pt>
+File: ./activity/24.JPG Graphic file (type jpg)
+ <use ./activity/24.JPG>
+Package pdftex.def Info: ./activity/24.JPG used on input line 175.
+(pdftex.def)             Requested size: 443.10886pt x 428.20305pt.
+
+Overfull \hbox (98.10886pt too wide) in paragraph at lines 175--176
+ [][] 
+ []
+
+[24 <./activity/22.JPG>]
+<./activity/25.JPG, id=108, 569.87906pt x 769.37437pt>
+File: ./activity/25.JPG Graphic file (type jpg)
+ <use ./activity/25.JPG>
+Package pdftex.def Info: ./activity/25.JPG used on input line 179.
+(pdftex.def)             Requested size: 341.93007pt x 461.62819pt.
+
+[25 <./activity/23.JPG>]
+<./activity/26.JPG, id=113, 743.77875pt x 694.84593pt>
+File: ./activity/26.JPG Graphic file (type jpg)
+ <use ./activity/26.JPG>
+Package pdftex.def Info: ./activity/26.JPG used on input line 183.
+(pdftex.def)             Requested size: 446.27069pt x 416.91077pt.
+
+Overfull \hbox (101.27069pt too wide) in paragraph at lines 183--184
+ [][] 
+ []
+
+[26 <./activity/24.JPG>]
+<./activity/27.JPG, id=117, 562.35094pt x 901.11656pt>
+File: ./activity/27.JPG Graphic file (type jpg)
+ <use ./activity/27.JPG>
+Package pdftex.def Info: ./activity/27.JPG used on input line 187.
+(pdftex.def)             Requested size: 393.64297pt x 630.7773pt.
+
+Overfull \hbox (48.64297pt too wide) in paragraph at lines 187--188
+ [][] 
+ []
+
+[27 <./activity/25.JPG>] [28 <./activity/26.JPG>]
+Overfull \vbox (80.7773pt too high) has occurred while \output is active []
+
+
+[29 <./activity/27.JPG>] <./classdiagram.png, id=127, 2117.9125pt x 1646.15pt>
+File: ./classdiagram.png Graphic file (type png)
+
+<use ./classdiagram.png>
+Package pdftex.def Info: ./classdiagram.png used on input line 196.
+(pdftex.def)             Requested size: 465.9422pt x 362.15411pt.
+
+Overfull \hbox (120.9422pt too wide) in paragraph at lines 196--197
+ [][] 
+ []
+
+<./sequence/01.png, id=128, 1314.9125pt x 713.66624pt>
+File: ./sequence/01.png Graphic file (type png)
+ <use ./sequence/01.png>
+Package pdftex.def Info: ./sequence/01.png used on input line 205.
+(pdftex.def)             Requested size: 394.47679pt x 214.10152pt.
+
+Overfull \hbox (49.47679pt too wide) in paragraph at lines 205--206
+ [][] 
+ []
+
+<./sequence/02.png, id=129, 1266.7325pt x 700.6175pt>
+File: ./sequence/02.png Graphic file (type png)
+ <use ./sequence/02.png>
+Package pdftex.def Info: ./sequence/02.png used on input line 209.
+(pdftex.def)             Requested size: 380.02269pt x 210.18686pt.
+
+Overfull \hbox (35.02269pt too wide) in paragraph at lines 209--210
+ [][] 
+ []
+
+[30 <./classdiagram.png (PNG copy)>]
+<./sequence/03.png, id=133, 1424.32124pt x 710.655pt>
+File: ./sequence/03.png Graphic file (type png)
+ <use ./sequence/03.png>
+Package pdftex.def Info: ./sequence/03.png used on input line 213.
+(pdftex.def)             Requested size: 427.29967pt x 213.19814pt.
+
+Overfull \hbox (82.29967pt too wide) in paragraph at lines 213--214
+ [][] 
+ []
+
+<./sequence/04.png, id=134, 703.62875pt x 559.08875pt>
+File: ./sequence/04.png Graphic file (type png)
+ <use ./sequence/04.png>
+Package pdftex.def Info: ./sequence/04.png used on input line 217.
+(pdftex.def)             Requested size: 211.09026pt x 167.7279pt.
+
+[31 <./sequence/01.png> <./sequence/02.png>]
+<./sequence/05.png, id=139, 1632.0975pt x 700.6175pt>
+File: ./sequence/05.png Graphic file (type png)
+ <use ./sequence/05.png>
+Package pdftex.def Info: ./sequence/05.png used on input line 221.
+(pdftex.def)             Requested size: 456.98419pt x 196.17155pt.
+
+Overfull \hbox (111.98419pt too wide) in paragraph at lines 221--222
+ [][] 
+ []
+
+<./sequence/06.png, id=140, 1551.7975pt x 700.6175pt>
+File: ./sequence/06.png Graphic file (type png)
+ <use ./sequence/06.png>
+Package pdftex.def Info: ./sequence/06.png used on input line 225.
+(pdftex.def)             Requested size: 465.54285pt x 210.18686pt.
+
+Overfull \hbox (120.54285pt too wide) in paragraph at lines 225--226
+ [][] 
+ []
+
+[32 <./sequence/03.png> <./sequence/04.png>]
+<./sequence/07.png, id=144, 1108.14pt x 715.67375pt>
+File: ./sequence/07.png Graphic file (type png)
+ <use ./sequence/07.png>
+Package pdftex.def Info: ./sequence/07.png used on input line 229.
+(pdftex.def)             Requested size: 332.44456pt x 214.70378pt.
+
+<./sequence/08.png, id=145, 1011.78pt x 732.7375pt>
+File: ./sequence/08.png Graphic file (type png)
+ <use ./sequence/08.png>
+Package pdftex.def Info: ./sequence/08.png used on input line 233.
+(pdftex.def)             Requested size: 303.53633pt x 219.82294pt.
+
+[33 <./sequence/05.png> <./sequence/06.png>]
+<./sequence/09.png, id=149, 1517.67pt x 721.69624pt>
+File: ./sequence/09.png Graphic file (type png)
+ <use ./sequence/09.png>
+Package pdftex.def Info: ./sequence/09.png used on input line 237.
+(pdftex.def)             Requested size: 455.30452pt x 216.51054pt.
+
+Overfull \hbox (110.30452pt too wide) in paragraph at lines 237--238
+ [][] 
+ []
+
+<./sequence/10.png, id=150, 1553.805pt x 729.72626pt>
+File: ./sequence/10.png Graphic file (type png)
+ <use ./sequence/10.png>
+Package pdftex.def Info: ./sequence/10.png used on input line 241.
+(pdftex.def)             Requested size: 466.1451pt x 218.91957pt.
+
+Overfull \hbox (121.1451pt too wide) in paragraph at lines 241--242
+ [][] 
+ []
+
+[34 <./sequence/07.png> <./sequence/08.png>]
+<./sequence/11.png, id=154, 1566.85374pt x 690.58pt>
+File: ./sequence/11.png Graphic file (type png)
+ <use ./sequence/11.png>
+Package pdftex.def Info: ./sequence/11.png used on input line 245.
+(pdftex.def)             Requested size: 470.05975pt x 207.1756pt.
+
+Overfull \hbox (125.05975pt too wide) in paragraph at lines 245--246
+ [][] 
+ []
+
+<./sequence/12.png, id=155, 1463.4675pt x 695.59875pt>
+File: ./sequence/12.png Graphic file (type png)
+ <use ./sequence/12.png>
+Package pdftex.def Info: ./sequence/12.png used on input line 249.
+(pdftex.def)             Requested size: 439.04364pt x 208.68123pt.
+
+Overfull \hbox (94.04364pt too wide) in paragraph at lines 249--250
+ [][] 
+ []
+
+[35 <./sequence/09.png> <./sequence/10.png>]
+<./sequence/13.png, id=159, 1479.5275pt x 713.66624pt>
+File: ./sequence/13.png Graphic file (type png)
+ <use ./sequence/13.png>
+Package pdftex.def Info: ./sequence/13.png used on input line 253.
+(pdftex.def)             Requested size: 443.86168pt x 214.10152pt.
+
+Overfull \hbox (98.86168pt too wide) in paragraph at lines 253--254
+ [][] 
+ []
+
+<./sequence/14.png, id=160, 1667.22874pt x 792.9625pt>
+File: ./sequence/14.png Graphic file (type png)
+ <use ./sequence/14.png>
+Package pdftex.def Info: ./sequence/14.png used on input line 257.
+(pdftex.def)             Requested size: 466.82086pt x 222.02798pt.
+
+Overfull \hbox (121.82086pt too wide) in paragraph at lines 257--258
+ [][] 
+ []
+
+[36 <./sequence/11.png> <./sequence/12.png>]
+<./sequence/15.png, id=164, 1668.2325pt x 705.63625pt>
+File: ./sequence/15.png Graphic file (type png)
+ <use ./sequence/15.png>
+Package pdftex.def Info: ./sequence/15.png used on input line 261.
+(pdftex.def)             Requested size: 417.05711pt x 176.40863pt.
+
+Overfull \hbox (72.05711pt too wide) in paragraph at lines 261--262
+ [][] 
+ []
+
+<./sequence/16.png, id=165, 1667.22874pt x 724.7075pt>
+File: ./sequence/16.png Graphic file (type png)
+ <use ./sequence/16.png>
+Package pdftex.def Info: ./sequence/16.png used on input line 265.
+(pdftex.def)             Requested size: 416.80617pt x 181.17642pt.
+
+Overfull \hbox (71.80617pt too wide) in paragraph at lines 265--266
+ [][] 
+ []
+
+[37 <./sequence/13.png> <./sequence/14.png>]
+<./sequence/17.png, id=170, 1028.84375pt x 710.655pt>
+File: ./sequence/17.png Graphic file (type png)
+ <use ./sequence/17.png>
+Package pdftex.def Info: ./sequence/17.png used on input line 269.
+(pdftex.def)             Requested size: 308.6555pt x 213.19814pt.
+
+<./sequence/18.png, id=171, 1572.87625pt x 718.685pt>
+File: ./sequence/18.png Graphic file (type png)
+ <use ./sequence/18.png>
+Package pdftex.def Info: ./sequence/18.png used on input line 273.
+(pdftex.def)             Requested size: 471.86652pt x 215.60716pt.
+
+Overfull \hbox (126.86652pt too wide) in paragraph at lines 273--274
+ [][] 
+ []
+
+[38 <./sequence/15.png> <./sequence/16.png>]
+<./sequence/19.png, id=175, 1556.81625pt x 710.655pt>
+File: ./sequence/19.png Graphic file (type png)
+ <use ./sequence/19.png>
+Package pdftex.def Info: ./sequence/19.png used on input line 277.
+(pdftex.def)             Requested size: 467.04848pt x 213.19814pt.
+
+Overfull \hbox (122.04848pt too wide) in paragraph at lines 277--278
+ [][] 
+ []
+
+<./sequence/20.png, id=176, 1548.78625pt x 706.64pt>
+File: ./sequence/20.png Graphic file (type png)
+ <use ./sequence/20.png>
+Package pdftex.def Info: ./sequence/20.png used on input line 281.
+(pdftex.def)             Requested size: 464.63947pt x 211.99364pt.
+
+Overfull \hbox (119.63947pt too wide) in paragraph at lines 281--282
+ [][] 
+ []
+
+[39 <./sequence/17.png> <./sequence/18.png>]
+<./sequence/21.png, id=180, 1540.75626pt x 714.67pt>
+File: ./sequence/21.png Graphic file (type png)
+ <use ./sequence/21.png>
+Package pdftex.def Info: ./sequence/21.png used on input line 285.
+(pdftex.def)             Requested size: 462.23044pt x 214.40265pt.
+
+Overfull \hbox (117.23044pt too wide) in paragraph at lines 285--286
+ [][] 
+ []
+
+<./sequence/22.png, id=181, 1629.08624pt x 728.7225pt>
+File: ./sequence/22.png Graphic file (type png)
+ <use ./sequence/22.png>
+Package pdftex.def Info: ./sequence/22.png used on input line 289.
+(pdftex.def)             Requested size: 456.14104pt x 204.04091pt.
+
+Overfull \hbox (111.14104pt too wide) in paragraph at lines 289--290
+ [][] 
+ []
+
+[40 <./sequence/19.png> <./sequence/20.png>]
+<./sequence/23.png, id=185, 1565.85pt x 698.61pt>
+File: ./sequence/23.png Graphic file (type png)
+ <use ./sequence/23.png>
+Package pdftex.def Info: ./sequence/23.png used on input line 293.
+(pdftex.def)             Requested size: 469.75862pt x 209.58461pt.
+
+Overfull \hbox (124.75862pt too wide) in paragraph at lines 293--294
+ [][] 
+ []
+
+File: ./sequence/23.png Graphic file (type png)
+<use ./sequence/23.png>
+Package pdftex.def Info: ./sequence/23.png used on input line 297.
+(pdftex.def)             Requested size: 469.75862pt x 209.58461pt.
+
+Overfull \hbox (124.75862pt too wide) in paragraph at lines 297--298
+ [][] 
+ []
+
+[41 <./sequence/21.png> <./sequence/22.png>]
+<./sequence/25.png, id=189, 859.21pt x 710.655pt>
+File: ./sequence/25.png Graphic file (type png)
+ <use ./sequence/25.png>
+Package pdftex.def Info: ./sequence/25.png used on input line 301.
+(pdftex.def)             Requested size: 257.76498pt x 213.19814pt.
+
+<./sequence/26.png, id=190, 849.1725pt x 691.58376pt>
+File: ./sequence/26.png Graphic file (type png)
+ <use ./sequence/26.png>
+Package pdftex.def Info: ./sequence/26.png used on input line 305.
+(pdftex.def)             Requested size: 254.75371pt x 207.47672pt.
+
+[42 <./sequence/23.png>] <./sequence/27.png, id=194, 847.165pt x 699.61375pt>
+File: ./sequence/27.png Graphic file (type png)
+
+<use ./sequence/27.png>
+Package pdftex.def Info: ./sequence/27.png used on input line 309.
+(pdftex.def)             Requested size: 254.15146pt x 209.88574pt.
+ <./sequence/28.png, id=195, 860.21375pt x 709.65125pt>
+File: ./sequence/28.png Graphic file (type png)
+
+<use ./sequence/28.png>
+Package pdftex.def Info: ./sequence/28.png used on input line 313.
+(pdftex.def)             Requested size: 258.06612pt x 212.897pt.
+ [43 <./sequence/25.png> <./sequence/26.png>]
+<./sequence/29.png, id=200, 1666.225pt x 688.5725pt>
+File: ./sequence/29.png Graphic file (type png)
+ <use ./sequence/29.png>
+Package pdftex.def Info: ./sequence/29.png used on input line 317.
+(pdftex.def)             Requested size: 416.55524pt x 172.1427pt.
+
+Overfull \hbox (71.55524pt too wide) in paragraph at lines 317--318
+ [][] 
+ []
+
+[44 <./sequence/27.png> <./sequence/28.png>]
+<./database/Erd.png, id=204, 2609.75pt x 1395.2125pt>
+File: ./database/Erd.png Graphic file (type png)
+ <use ./database/Erd.png>
+Package pdftex.def Info: ./database/Erd.png used on input line 326.
+(pdftex.def)             Requested size: 469.73474pt x 251.12741pt.
+
+Overfull \hbox (124.73474pt too wide) in paragraph at lines 326--327
+[][] 
+ []
+
+<./database/DatabaseTables.png, id=205, 4918.375pt x 4316.125pt>
+File: ./database/DatabaseTables.png Graphic file (type png)
+
+<use ./database/DatabaseTables.png>
+Package pdftex.def Info: ./database/DatabaseTables.png used on input line 332.
+(pdftex.def)             Requested size: 442.63466pt x 388.4345pt.
+
+Overfull \hbox (97.63466pt too wide) in paragraph at lines 332--333
+ [][] 
+ []
+
+[45 <./sequence/29.png> <./database/Erd.png (PNG copy)>]
+Underfull \hbox (badness 10000) in paragraph at lines 340--358
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 109--127
+Underfull \hbox (badness 10000) in paragraph at lines 340--358
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 109--127
+Underfull \hbox (badness 10000) in paragraph at lines 340--358
 
  []
 
-<./Home.png, id=27, 1499.6025pt x 883.3pt>
+[46 <./database/DatabaseTables.png>]
+<./Home.png, id=213, 1499.6025pt x 883.3pt>
 File: ./Home.png Graphic file (type png)
  <use ./Home.png>
-Package pdftex.def Info: ./Home.png used on input line 132.
+Package pdftex.def Info: ./Home.png used on input line 363.
 (pdftex.def)             Requested size: 269.9168pt x 158.98714pt.
- [6 <./Home.png>]
-<./tractability.png, id=31, 1724.4425pt x 599.23875pt>
+
+<./tractability.png, id=214, 1724.4425pt x 599.23875pt>
 File: ./tractability.png Graphic file (type png)
 
 <use ./tractability.png>
-Package pdftex.def Info: ./tractability.png used on input line 144.
+Package pdftex.def Info: ./tractability.png used on input line 375.
 (pdftex.def)             Requested size: 344.88239pt x 119.84563pt.
-
+ [47 <./Home.png>]
 No file SDDLatex.bbl.
-[7 <./tractability.png>] (./SDDLatex.aux) ) 
+[48 <./tractability.png>] (./SDDLatex.aux) ) 
 Here is how much of TeX's memory you used:
- 1576 strings out of 493029
- 22481 string characters out of 6136234
+ 1839 strings out of 493029
+ 27706 string characters out of 6136234
  81905 words of memory out of 5000000
- 5111 multiletter control sequences out of 15000+600000
+ 5335 multiletter control sequences out of 15000+600000
  7895 words of font info for 28 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  37i,6n,23p,281b,220s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/share/texlive/texmf-dist/fonts
-/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1
-/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/publi
-c/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfo
-nts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/
-cmr17.pfb>
-Output written on SDDLatex.pdf (7 pages, 2041715 bytes).
+</usr/share/texlive/texmf-dist/font
+s/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texlive/texmf-dist/fonts/type
+1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/publ
+ic/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsf
+onts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm
+/cmr17.pfb>
+Output written on SDDLatex.pdf (48 pages, 4320627 bytes).
 PDF statistics:
- 54 PDF objects out of 1000 (max. 8388607)
- 33 compressed objects within 1 object stream
+ 242 PDF objects out of 1000 (max. 8388607)
+ 123 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
- 26 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 306 words of extra memory for PDF output out of 10000 (max. 10000000)
 
