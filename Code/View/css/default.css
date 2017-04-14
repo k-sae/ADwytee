@@ -151,15 +151,23 @@ body {
   color:#000;
 }
 
+/*regmedicine*/
+.med_reg{
+  height:50%;
+width: 50%;
+background-color: rgba(0,0,0,0.5);
+z-index: 50;
+
+}
+
+.add{
+  background-color:rgba(0,0,0,.5);
+  height: 500px
+}
 /*
  * Footer
  */
 
-
-.add{
-  background-color:rgba(0,0,0,.5);
-  height: 300px
-}
 /*
  * Affix and center
  */
