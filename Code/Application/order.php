@@ -16,12 +16,12 @@ private $order;
 
   }
   $this->order=  new Order_Query();
- 
+
 }
  public function print_word($id)
  {
    # code...
-     return ($this->order->fetch_word($id));
+  return ($this->order->fetch_word($id,$_SESSION["language"]));
  }
 }
  ?>
