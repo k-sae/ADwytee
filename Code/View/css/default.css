@@ -59,43 +59,6 @@ body {
 .inner {
   padding: 30px;
 }
-
-
-/*
- * Header
- */
-.masthead-brand {
-  margin-top: 10px;
-  margin-bottom: 10px;
-}
-
-.masthead-nav > li {
-  display: inline-block;
-}
-.masthead-nav > li + li {
-  margin-left: 20px;
-}
-.masthead-nav > li > a {
-  padding-right: 0;
-  padding-left: 0;
-  font-size: 16px;
-  font-weight: bold;
-  color: #fff; /* IE8 proofing */
-  color: rgba(255,255,255,.75);
-  border-bottom: 2px solid transparent;
-}
-.masthead-nav > li > a:hover,
-.masthead-nav > li > a:focus {
-  background-color: transparent;
-  border-bottom-color: #a9a9a9;
-  border-bottom-color: rgba(255,255,255,.25);
-}
-.masthead-nav > .active > a,
-.masthead-nav > .active > a:hover,
-.masthead-nav > .active > a:focus {
-  color: #fff;
-  border-bottom-color: #fff;
-}
 .carousel {
   height: 500px;
   margin-bottom: 60px;
@@ -117,23 +80,7 @@ body {
   min-width: 100%;
   height: 500px;
 }
-@media (min-width: 768px) {
-  .masthead-brand {
-    float: left;
-  }
-  .masthead-nav {
-    float: right;
-  }
-  .carousel-caption p {
-    margin-bottom: 20px;
-    font-size: 21px;
-    line-height: 1.4;
-  }
 
-  .featurette-heading {
-    font-size: 50px;
-  }
-}
 
 
 /*
@@ -150,20 +97,30 @@ body {
 .search{
   color:#000;
 }
-
-/*regmedicine*/
-.med_reg{
-  height:50%;
-width: 50%;
-background-color: rgba(0,0,0,0.5);
-z-index: 50;
-
+.navbar-nav{
+  float: right;
 }
+
 
 .add{
   background-color:rgba(0,0,0,.5);
   height: 500px
 }
+/*
+pharmacy  style
+*/
+.wrapper{margin-top:50px ;height: 300px}
+.details{height: 100%}
+.img{background:#686868;border-radius: 50%;height: 32%;float: left;width: 12%;margin: 4% 1% 4% 1%;}
+.info{text-align: left;margin: 4% 1% 1% 1%}
+.details .btn{position: absolute;
+bottom: 0;
+right: 10%;}
+
+
+
+
+
 /*
  * Footer
  */
