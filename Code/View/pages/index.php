@@ -18,7 +18,7 @@ include '../content/header.php';
         </div>
         <div id="navbar" class="collapse navbar-collapse">
           <ul class="nav navbar-nav">
-            <li class="active"><a href="#">Pharmacy Profile</a></li>
+            <li class="active"><a href="Pharmacy.php">Pharmacy Profile</a></li>
             <li><a href="#about">About</a></li>
             <li><a href="#contact">Contact</a></li>
           </ul>
