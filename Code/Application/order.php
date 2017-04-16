@@ -18,10 +18,10 @@ private $order;
   $this->order=  new Order_Query();
 
 }
- public function print_word($id)
+ public function print_word($key)
  {
    # code...
-  return ($this->order->fetch_word($id,$_SESSION["language"]));
+  return ($this->order->fetch_word($key,$_SESSION["language"]));
  }
 }
  ?>

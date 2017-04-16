@@ -1,7 +1,11 @@
 <?php
 session_start();
-if (isset($_SESSION["language"])){
-  $_SESSION["language"] ='en';
+if (!isset($_SESSION["language"])){
+  $_SESSION["language"] ='ar';
+}
+else {
+
+$_SESSION["language"] ='en';
 }
 include_once '../../Application/order.php';
 $order =new order();
@@ -10,20 +14,77 @@ $order =new order();
 <!docotype html>
 <html>
     <head>
-        <title>orderPage</title>
+        <title><?php echo ($order->print_word("order_page")); ?></title>
         <meta charset="utf-8">
-        <link rel="stylesheet" href="../css/home.css">
+        <link rel="stylesheet" href="../css/order.css">
+        <link rel="stylesheet" href="../css/bootstrap.css">
+        <link rel="stylesheet" href="../css/default.css">
     </head>
     <body>
-         <div class="d1"><h1><?php
+      <?php
+include '../content/header.php';
+?>
+	<nav class="navbar navbar-fixed-top navbar-inverse">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="index.php">ADwytee</a>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li ><a href="#">Pharmacy Profile</a></li>
+            <li class="active"><a href="#"><?php echo ($order->print_word("order_page")); ?></a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
 
-
-          echo ($order->print_word(4)); ?></h1> </div>
-        <div class="d2"><h1>personal نننن </h1> </div>
-        <div class="d3"><h1>skills in web design</h1></div>
-        <div class="d4"><h1>skills in programming</h1> </div>
-
-         <script src="../jq/jquery-1.12.3.min.js"></script>
-    <script src="../jq/home.js"></script>
+  <table>
+   <thead>
+     <tr>
+       <th colspan="3"><?php echo ($order->print_word("order")); ?></th>
+     </tr>
+     <tr>
+       <th>#</th>
+       <th colspan="2">Atividade</th>
+     </tr>
+   </thead>
+   <tbody>
+     <tr>
+       <td>1</td>
+       <td>Atualizar página da equipe</td>
+       <td>
+         <i class="material-icons button edit">edit</i>
+         <i class="material-icons button delete">delete</i>
+       </td>
+     </tr>
+     <tr>
+       <td>2</td>
+       <td>Design da nova marca</td>
+       <td>
+         <i class="material-icons button edit">edit</i>
+         <i class="material-icons button delete">delete</i>
+       </td>
+     </tr>
+     <tr>
+       <td>3</td>
+       <td>Encontrar desenvolvedor front-end</td>
+       <td>
+         <i class="material-icons button edit">edit</i>
+         <i class="material-icons button delete">delete</i>
+       </td>
+     </tr>
+   </tbody>
+ </table>
+ <?php
+include '../content/footer.php';
+?>
     </body>
 </html>
