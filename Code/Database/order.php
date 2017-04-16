@@ -17,11 +17,12 @@ class Order_Query
 
      $this->database = new DataBase($this->file_name2);
 }
-   public function fetch_word($id,$type)
+   public function fetch_word($key,$type)
   {
     # code...
     $type_word = $type . "_word"  ;
-    $query = "SELECT $type_word FROM `app_language` WHERE word_id =$id";
+    $query = "SELECT $type_word FROM `app_language` WHERE word_key like '$key'
+    ";
     $result = $this->database->fetch_query($query);
      return ($result["0"][$type_word]);
 

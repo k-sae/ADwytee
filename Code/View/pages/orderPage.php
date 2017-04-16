@@ -1,7 +1,11 @@
 <?php
 session_start();
-if (isset($_SESSION["language"])){
+if (!isset($_SESSION["language"])){
   $_SESSION["language"] ='ar';
+}
+else {
+
+$_SESSION["language"] ='en';
 }
 include_once '../../Application/order.php';
 $order =new order();
@@ -10,7 +14,7 @@ $order =new order();
 <!docotype html>
 <html>
     <head>
-        <title>orderPage</title>
+        <title><?php echo ($order->print_word("order_page")); ?></title>
         <meta charset="utf-8">
         <link rel="stylesheet" href="../css/order.css">
         <link rel="stylesheet" href="../css/bootstrap.css">
@@ -34,7 +38,7 @@ include '../content/header.php';
         <div id="navbar" class="collapse navbar-collapse">
           <ul class="nav navbar-nav">
             <li ><a href="#">Pharmacy Profile</a></li>
-            <li class="active"><a href="#"><?php echo ($order->print_word(1)); ?></a></li>
+            <li class="active"><a href="#"><?php echo ($order->print_word("order_page")); ?></a></li>
             <li><a href="#about">About</a></li>
             <li><a href="#contact">Contact</a></li>
           </ul>
@@ -42,12 +46,10 @@ include '../content/header.php';
       </div>
     </nav>
 
-         <div class="d1"><h1><?php echo ($order->print_word(4)); ?></h1> </div>
-
-     <table>
+  <table>
    <thead>
      <tr>
-       <th colspan="3">Atividades do Projeto</th>
+       <th colspan="3"><?php echo ($order->print_word("order")); ?></th>
      </tr>
      <tr>
        <th>#</th>
