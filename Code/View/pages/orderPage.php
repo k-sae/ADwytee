@@ -1,11 +1,11 @@
 <?php
 session_start();
 if (!isset($_SESSION["language"])){
-  $_SESSION["language"] ='en';
+  $_SESSION["language"] ='an';
 }
 else {
 
-$_SESSION["language"] ='ar';
+$_SESSION["language"] ='en';
 }
 //include_once '../../Application/order.php';
 

@@ -216,7 +216,7 @@ CREATE TABLE `NOTIFICATION` (
 -- Table structure for table `patient_chronics`
 --
 
-CREATE TABLE `PATIENT_CHEONICS` (
+CREATE TABLE `PATIENT_CHRONICS` (
   `PatientKey` varchar(16) CHARACTER SET utf8 COLLATE utf8_bin NOT NULL,
   `Chronics` varchar(24) NOT NULL COMMENT 'Patient Chronics',
   PRIMARY KEY (`PatientKey`,`Chronics`),
