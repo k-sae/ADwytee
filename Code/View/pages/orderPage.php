@@ -7,12 +7,12 @@ else {
 
 $_SESSION["language"] ='ar';
 }
-include_once '../../Application/order.php';
+//include_once '../../Application/order.php';
 
 $dictionary_path = './dictionary/'.$_SESSION["language"].'.php';
 
 include_once  $dictionary_path;
-$order =new order();
+//$order =new order();
 
  ?>
 <!docotype html>
