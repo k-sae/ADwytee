@@ -257,8 +257,7 @@ CREATE TABLE `NOTIFICATION` (
 CREATE TABLE `PATIENT_CHRONICS` (
   `PatientId` int(11),
   `Chronics` varchar(24) NOT NULL COMMENT 'Patient Chronics',
-  PRIMARY KEY (`PatientId`,`Chronics`),
-   FOREIGN KEY (`PatientId`) REFERENCES `User`(`Id`) ON DELETE CASCADE
+   FOREIGN KEY (`PatientId`) REFERENCES `USER`(`Id`) ON DELETE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
@@ -271,7 +270,7 @@ CREATE TABLE `PATIENT_RISK_FACTOR` (
   `PatientId` int(11),
   `RiskFactor` varchar(64) NOT NULL,
   PRIMARY KEY (`PatientId`,`RiskFactor`),
-  FOREIGN KEY (`PatientId`) REFERENCES `User`(`Id`) ON DELETE CASCADE
+  FOREIGN KEY (`PatientId`) REFERENCES `USER`(`Id`) ON DELETE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
@@ -284,7 +283,7 @@ CREATE TABLE `PATIENT_TRACKED_MEDICINES` (
   `PatientId` int(11),
   `MedicineCode` varchar(13) NOT NULL,
   PRIMARY KEY (PatientId,MedicineCode),
-  FOREIGN KEY (`PatientId`) REFERENCES `User`(`Id`) ON DELETE CASCADE,
+  FOREIGN KEY (`PatientId`) REFERENCES `USER`(`Id`) ON DELETE CASCADE,
   FOREIGN KEY (`MedicineCode`) REFERENCES `MEDICINE`(`Code`) ON DELETE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
