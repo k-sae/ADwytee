@@ -96,6 +96,16 @@ body {
   color:#000;
   margin-top:40%;
 }
+div.sug:hover{
+  background-color: #ccc;
+}
+div.sug{
+  background-color: #fff;
+  padding: 1%;
+}
+a.sug{ 
+  color: #000;
+}
 .navbar-nav{
   float: right;
 }

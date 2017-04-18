@@ -26,11 +26,11 @@ class livesearch{
   public function search($str)
   {
 
-    $result_arr = $this->livesearch->fetch_pharmaces($str);
+    $result_arr = $this->livesearch->fetch_medicines($str);
 
     if(sizeof($result_arr) != 0){
       for($i=0; $i< sizeof($result_arr) && $i <10; $i++){
-	       $result =  $result_arr[$i]['EnName'] . " - " . $result_arr[$i]['ArName'] . "<br>";
+	       $result = "<a class='sug' href='resultpage.php?result=" . $result_arr[$i]['EnName'] . "'> <div class='sug'>" . $result_arr[$i]['EnName'] . " - " . $result_arr[$i]['ArName'] . " </div> </a>";
         echo $result;
       }
     } else {
