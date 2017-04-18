@@ -135,8 +135,66 @@ width :40%;
 
 
 /*
- * Footer
+ * Order
  */
+ .Ordertable{
+  text-align: left;
+  line-height: 40px;
+  border-collapse: separate;
+  border-spacing: 0;
+  border: 2px solid #ed1c40;
+  width: 500px;
+  margin: 50px auto;
+  border-radius: .25rem;
+}
+ .button {
+  color: #aaa;
+  cursor: pointer;
+  vertical-align: middle;
+}
+
+.edit:hover {
+  color: #0a79df;
+}
+
+.delete:hover {
+  color: #dc2a2a;
+}
+.Ordertable thead tr:first-child {
+  background: #ed1c40;
+  color: #fff;
+  border: none;
+}
+
+.Ordertable th:first-child,
+.Ordertable td:first-child {
+  padding: 0 15px 0 20px;
+}
+
+.Ordertable thead tr:last-child th {
+  border-bottom: 3px solid #ddd;
+}
+
+.Ordertable tbody tr:hover {
+  background-color: rgba(237, 28, 64, .1);
+  cursor: default;
+}
+
+.Ordertable tbody tr:last-child td {
+  border: none;
+}
+
+.Ordertable tbody td {
+  border-bottom: 1px solid #ddd;
+}
+
+.Ordertable td:last-child {
+  text-align: right;
+  padding-right: 10px;
+}
+
+
+
 
 /*
  * Affix and center
