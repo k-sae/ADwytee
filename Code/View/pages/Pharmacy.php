@@ -33,7 +33,7 @@ include_once  $dictionary_path;
         </div>
       </div>
     </nav>
-    <div class="wrapper container">
+    <div class="wrapper container" style="height: 300px">
 	    <div class="details col-sm-9">
 			<div class="img col-sm-2"></div>
 			<div class="info col-sm-10">

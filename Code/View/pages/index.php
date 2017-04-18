@@ -31,23 +31,32 @@ include_once  $dictionary_path;
               <div id="navbar" class="collapse navbar-collapse">
                 <ul class="nav navbar-nav">
                   <li class="active"><a href="Pharmacy.php">Pharmacy Profile</a></li>
-                  <li ><a href="">Register</a></li>
+                  <li ><a href="" data-toggle="modal" data-target="#myModal">Register</a></li>
                   <li><a href="#about">About</a></li>
                   <li ><a href="orderPage.php"><?php echo  $language['orderpage']?></a></li>
                   <li><a href="#contact">Contact</a></li>
                 </ul>
               </div>
             </div>
-            </nav>  
-            <div class="Register" visibility="hidden" >
-              <div class="reg_container">
-                <h3>Please choose</h3>
-                <H5>Register As</H5>
-                <button class="btn-lg btn-primary">Pharmacy</button>
-                <button class="btn-lg btn-primary">Patient</button>
+            </nav>
+            <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+              <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel">Register</h4>
+                  </div>
+                  <div class="modal-body">
+                    <form><input type="" name=""></form>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                    <button type="button" class="btn btn-primary">Register</button>
+                  </div>
+                </div>
               </div>
-            </div>
-          <div class="search">
+            </div>  
+            <div class="search">
             <form><input placeholder="search" type="text"></form>
           </div>
         </div>
