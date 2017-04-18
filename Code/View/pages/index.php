@@ -30,10 +30,10 @@ include_once  $dictionary_path;
               </div>
               <div id="navbar" class="collapse navbar-collapse">
                 <ul class="nav navbar-nav">
-                  <li class="active"><a href="Pharmacy.php">Pharmacy Profile</a></li>
-                  <li ><a href="" data-toggle="modal" data-target="#myModal">Register</a></li>
+                  <li><a href="Pharmacy.php">Pharmacy Profile</a></li>
+                  <li><a href="" data-toggle="modal" data-target="#myModal">Register</a></li>
                   <li><a href="#about">About</a></li>
-                  <li ><a href="orderPage.php"><?php echo  $language['orderpage']?></a></li>
+                  <li><a href="orderPage.php"><?php echo  $language['orderpage']?></a></li>
                   <li><a href="#contact">Contact</a></li>
                 </ul>
               </div>
@@ -57,7 +57,9 @@ include_once  $dictionary_path;
               </div>
             </div>  
             <div class="search">
-            <form><input placeholder="search" type="text"></form>
+            <form><input placeholder="search" type="text" size="75" onkeyup="showResult(this.value)">
+            <div id="livesearch"></div>
+            </form>
           </div>
         </div>
       </div>
