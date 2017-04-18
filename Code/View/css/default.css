@@ -81,8 +81,6 @@ body {
   height: 500px;
 }
 
-
-
 /*
  * Cover
  */
@@ -117,7 +115,22 @@ pharmacy  style
 bottom: 0;
 right: 10%;}
 
-
+.Register{
+height:100%;
+width: 100%;
+position: absolute;
+top: 0;
+background-color: rgba(0,0,0,0.5);
+z-index: 50;
+visibility: hidden;
+}
+.reg_container{
+position: relative;
+top: 40%;
+left:40%;
+height:40%;
+width :40%;
+}
 
 
 

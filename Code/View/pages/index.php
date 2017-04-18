@@ -6,33 +6,41 @@ include '../content/header.php';
       <div class="site-wrapper-inner">
         <div class="cover-container">
           <nav class="navbar navbar-fixed-top navbar-inverse">
-      <div class="container">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand" href="index.php">ADwytee</a>
-        </div>
-        <div id="navbar" class="collapse navbar-collapse">
-          <ul class="nav navbar-nav">
-            <li class="active"><a href="Pharmacy.php">Pharmacy Profile</a></li>
-              <li ><a href="orderPage.php">order</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#contact">Contact</a></li>
-          </ul>
-        </div>
-      </div>
-    </nav>  
+            <div class="container">
+              <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                  <span class="sr-only">Toggle navigation</span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.php">ADwytee</a>
+              </div>
+              <div id="navbar" class="collapse navbar-collapse">
+                <ul class="nav navbar-nav">
+                  <li class="active"><a href="Pharmacy.php">Pharmacy Profile</a></li>
+                    <li ><a href="">Register</a></li>
+                  <li><a href="#about">About</a></li>
+                  <li><a href="#contact">Contact</a></li>
+                </ul>
+              </div>
+            </div>
+            </nav>  
+            <div class="Register" visibility="hidden" >
+              <div class="reg_container">
+                <h3>Please choose</h3>
+                <H5>Register As</H5>
+                <button class="btn-lg btn-primary">Pharmacy</button>
+                <button class="btn-lg btn-primary">Patient</button>
+              </div>
+            </div>
           <div class="search">
             <form><input placeholder="search" type="text"></form>
           </div>
         </div>
       </div>
     </div>
-     <div class="add">
+    <!-- <div class="add">
            <div id="myCarousel" class="carousel slide" data-ride="carousel">
         <ol class="carousel-indicators">
           <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
@@ -81,6 +89,7 @@ include '../content/header.php';
           </a>
         </div>
       </div>
+      -->
       <div class="about us"></div>
   </div>
   
