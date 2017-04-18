@@ -1,18 +1,25 @@
 <?php
 session_start();
 if (!isset($_SESSION["language"])){
-  $_SESSION["language"] ='an';
+  $_SESSION["language"] ='ar';
 }
 else {
 
 $_SESSION["language"] ='en';
 }
-//include_once '../../Application/order.php';
+if (!isset($_SESSION["type"])){
+  $_SESSION["type"] ='Pharmacy';
+}
+else {
+
+$_SESSION["type"] ='Patient';
+}
+include_once '../../Application/order.php';
 
 $dictionary_path = './dictionary/'.$_SESSION["language"].'.php';
 
 include_once  $dictionary_path;
-//$order =new order();
+$order =new order();
 
  ?>
 <!docotype html>
@@ -20,9 +27,7 @@ include_once  $dictionary_path;
     <head>
         <title><?php echo $language['orderpage'] ?></title>
         <meta charset="utf-8">
-        <link rel="stylesheet" href="../css/order.css">
-        <link rel="stylesheet" href="../css/bootstrap.css">
-        <link rel="stylesheet" href="../css/default.css">
+
     </head>
     <body>
       <?php
@@ -49,7 +54,7 @@ include '../content/header.php';
         </div>
       </div>
     </nav>
-
+<div>
   <table>
    <thead>
      <tr>
@@ -57,36 +62,24 @@ include '../content/header.php';
      </tr>
      <tr>
        <th>#</th>
-       <th colspan="2">Atividade</th>
+       <th colspan="2" class=""><?php echo $_SESSION["type"]." " .$language['orders'] ?></th>
      </tr>
    </thead>
    <tbody>
-     <tr>
-       <td>1</td>
-       <td>Atualizar página da equipe</td>
-       <td>
-         <i class="material-icons button edit">edit</i>
-         <i class="material-icons button delete">delete</i>
-       </td>
-     </tr>
-     <tr>
-       <td>2</td>
-       <td>Design da nova marca</td>
-       <td>
-         <i class="material-icons button edit">edit</i>
-         <i class="material-icons button delete">delete</i>
-       </td>
-     </tr>
-     <tr>
-       <td>3</td>
-       <td>Encontrar desenvolvedor front-end</td>
-       <td>
-         <i class="material-icons button edit">edit</i>
-         <i class="material-icons button delete">delete</i>
-       </td>
-     </tr>
-   </tbody>
+     <?php   for($i =1; $i <= 5 ;$i++){
+
+       echo '<tr>
+         <td>'.$i.'</td>
+         <td>[panadol] from helal</td>
+         <td>
+           <i class="material-icons button edit">edit</i>
+           <i class="material-icons button delete">delete</i>
+         </td>
+       </tr>
+       ';
+     } ?></tbody>
  </table>
+ </div>
  <?php
 
 include '../content/footer.php';
