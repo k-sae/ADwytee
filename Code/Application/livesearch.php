@@ -30,13 +30,13 @@ class livesearch{
 
     if(sizeof($result_arr) != 0){
       for($i=0; $i< sizeof($result_arr) && $i <10; $i++){
-	       $result = "<a href='Pharmacy.php?result=".$result_arr[$i]['Name']."' target='_blank'>".  $result_arr[$i]['Name']." </a> <br>";
+	       $result =  $result_arr[$i]['EnName'] . " - " . $result_arr[$i]['ArName'] . "<br>";
         echo $result;
       }
     } else {
       echo "no results found";
     }
-    //print_r($reselt);
+    //print_r($result_arr);
     //echo $reselt[0]["Name"];
     //var_dump ($reselt);
   }

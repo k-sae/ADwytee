@@ -20,17 +20,14 @@ class livesearch_Query
   public function fetch_pharmaces($str)
   {
 
-    $query = "SELECT P.Name FROM `PHARMACY`AS P
-              INNER JOIN pharmacymedicine AS pm ON p.Phkey = pm.Phkey
-              INNER JOIN medicine as m ON (pm.Mcode) = (m.Mcode) AND m.Name LIKE '%$str%'";
-
+    $query = "SELECT m.ArName, m.EnName FROM `MEDICINE` AS m 
+              WHERE m.ArName LIKE '%$str%' OR m.EnName LIKE '%$str%'";
+              
     $result = $this->database->fetch_query($query);
 
     return $result;
 
   }
-
-
 }
 
 ?>
