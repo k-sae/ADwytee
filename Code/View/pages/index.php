@@ -1,5 +1,17 @@
 <?php
+session_start();
+if (!isset($_SESSION["language"])){
+  $_SESSION["language"] ='en';
+}
+else {
+
+$_SESSION["language"] ='ar';
+}
 include '../content/header.php';
+$dictionary_path = './dictionary/'.$_SESSION["language"].'.php';
+
+include_once  $dictionary_path;
+
 ?>
   <div class="wrapper">
     <div class="site-wrapper">
@@ -19,8 +31,9 @@ include '../content/header.php';
               <div id="navbar" class="collapse navbar-collapse">
                 <ul class="nav navbar-nav">
                   <li class="active"><a href="Pharmacy.php">Pharmacy Profile</a></li>
-                    <li ><a href="">Register</a></li>
+                  <li ><a href="">Register</a></li>
                   <li><a href="#about">About</a></li>
+                  <li ><a href="orderPage.php"><?php echo  $language['orderpage']?></a></li>
                   <li><a href="#contact">Contact</a></li>
                 </ul>
               </div>
@@ -92,10 +105,10 @@ include '../content/header.php';
       -->
       <div class="about us"></div>
   </div>
-  
 
 
-    
+
+
 <?php
 include '../content/footer.php';
 ?>

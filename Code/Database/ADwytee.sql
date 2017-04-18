@@ -17,8 +17,82 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `adwytee`
+-- Database: `ADwytee`
 --
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `userTYPE`
+--
+
+CREATE TABLE `USERTYPE` (
+  `Id` int(11) NOT NULL AUTO_INCREMENT ,
+  `Type` varchar(24) Not NULL,
+  PRIMARY KEY (`Id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `user`
+--
+
+CREATE TABLE `USER` (
+  `Id` int(11) NOT NULL AUTO_INCREMENT ,
+  `Password` varchar(16) NOT NULL,
+  `Mail` varchar(254) NOT NULL UNIQUE,
+  `Type` int(11) Not NULL,
+  PRIMARY KEY (`Id`),
+  FOREIGN KEY (`Type`) REFERENCES `USERTYPE`(`Id`) ON DELETE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `history`
+--
+
+CREATE TABLE `HISTORY` (
+  `Id` int(11) NOT NULL AUTO_INCREMENT,
+  `Date` date NOT NULL,
+  `UserId` int(11) NOT NULL,
+  PRIMARY KEY (`Id`),
+  FOREIGN KEY (`UserId`) REFERENCES `USER`(`Id`) ON DELETE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+--
+-- Table structure for table `Gender`
+--
+
+CREATE TABLE `GENDER` (
+  `Id` tinyint(1) NOT NULL AUTO_INCREMENT,
+  `Gender` varchar(8) NOT NULL,
+  PRIMARY KEY (`Id`)
+)ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+
+--
+-- Table structure for table `patient`
+--
+
+CREATE TABLE `PATIENT` (
+  `Key` varchar(16) CHARACTER SET utf8 COLLATE utf8_bin NOT NULL COMMENT 'patient key',
+  `FName` varchar(24) NOT NULL COMMENT 'PatientFirstName',
+  `LName` varchar(24) NOT NULL COMMENT 'PatientLastName',
+  `Gender` tinyint(1) NOT NULL DEFAULT '0' COMMENT 'PGender(If0==male)',
+  `Birthdate` date NOT NULL COMMENT 'Patient DOB',
+  `Height` int(3) NOT NULL COMMENT 'Patient height',
+  `Weight` int(3) NOT NULL COMMENT 'Patient weight',
+  `StreetNo` int(3) NOT NULL COMMENT 'patient Str no',
+  `Gov` varchar(24) NOT NULL COMMENT 'patient city',
+  `District` varchar(24) NOT NULL COMMENT 'patient district',
+  `Telephone` varchar(14) NOT NULL UNIQUE COMMENT 'patient Telephone',
+  `UserId` int(11) NOT NULL UNIQUE COMMENT'patient id',
+   PRIMARY KEY (`UserId`),
+   FOREIGN KEY (`UserId`) REFERENCES `USER`(`Id`) ON DELETE CASCADE,
+   FOREIGN KEY (`Gender`) REFERENCES `GENDER`(`Id`) ON DELETE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -26,14 +100,34 @@ SET time_zone = "+00:00";
 -- Table structure for table `allergy`
 --
 
-CREATE TABLE `allergy` (
-  `p_key` varchar(14) CHARACTER SET utf8 COLLATE utf8_bin DEFAULT NULL,
-  `a_id` int(11) NOT NULL,
-  `a_name` varchar(255) NOT NULL,
-  `dateofreaction` date NOT NULL,
-  `typeofreaction` text NOT NULL,
-  `notes` text NOT NULL
+CREATE TABLE `ALLERGY` (
+  `UserId` int(11) NOT NULL,
+  `Id` int(11) NOT NULL AUTO_INCREMENT,
+  `Name` varchar(24) NOT NULL,
+  `DOR` date NOT NULL,
+  `TOR` text NOT NULL,
+  `Notes` text NOT NULL,
+  PRIMARY KEY (`Id`),
+  FOREIGN KEY (`UserId`) REFERENCES `USER`(`Id`) ON DELETE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=COMPACT;
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `pharmacy`
+--
+
+CREATE TABLE `PHARMACY` (
+  `Key` varchar(16) CHARACTER SET utf8 COLLATE utf8_bin NOT NULL,
+  `UserId` int(11) NOT NULL UNIQUE,
+  `Name` varchar(24) NOT NULL,
+  `Notes` TEXT NOT NULL,
+  `Describition` TEXT NOT NULL,
+  `Longtiude` int(11) NOT NULL,
+  `Latitiude` int(11) NOT NULL,
+  `Telephone` varchar(14) NOT Null,
+   PRIMARY KEY (`UserId`),
+  FOREIGN KEY (`UserId`) REFERENCES `USER` (`Id`) ON DELETE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -41,9 +135,12 @@ CREATE TABLE `allergy` (
 -- Table structure for table `binded_with`
 --
 
-CREATE TABLE `binded_with` (
-  `ph_key` varchar(14) CHARACTER SET utf8 COLLATE utf8_bin NOT NULL,
-  `p_key` varchar(14) CHARACTER SET utf8 COLLATE utf8_bin NOT NULL
+CREATE TABLE `BIND_WITH` (
+  `PharmacyId` int(11) NOT NULL,
+  `PatientId` int(11) NOT NULL,
+    PRIMARY KEY (`PharmacyId`,`PatientId`),
+    FOREIGN KEY (`PharmacyId`) REFERENCES `USER`(`Id`) ON DELETE CASCADE,
+    FOREIGN KEY (`PatientId`) REFERENCES `USER`(`Id`)ON DELETE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
@@ -52,24 +149,16 @@ CREATE TABLE `binded_with` (
 -- Table structure for table `blood_pressure`
 --
 
-CREATE TABLE `blood_pressure` (
-  `bp_id` int(11) NOT NULL,
-  `p_key` varchar(14) CHARACTER SET utf8 COLLATE utf8_bin NOT NULL,
+CREATE TABLE `BLOOD_PRESSURE` (
+  `Id` int(11) NOT NULL AUTO_INCREMENT UNIQUE,
+  `PatientId` int(11),
   `systolic` int(3) NOT NULL,
   `diastolic` int(3) NOT NULL,
-  `date` date NOT NULL
+  `date` date NOT NULL,
+  PRIMARY KEY (`Id`),
+  FOREIGN KEY (`PatientId`) REFERENCES `USER`(`Id`) ON DELETE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
--- --------------------------------------------------------
-
---
--- Table structure for table `history`
---
-
-CREATE TABLE `history` (
-  `h_id` int(11) NOT NULL,
-  `h_date` date NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -77,11 +166,13 @@ CREATE TABLE `history` (
 -- Table structure for table `medicine`
 --
 
-CREATE TABLE `medicine` (
-  `m_code` int(12) NOT NULL,
-  `m_name` varchar(50) NOT NULL,
-  `descripton` text NOT NULL,
-  `expiredate` date NOT NULL
+CREATE TABLE `MEDICINE` (
+  `Code` varchar (13) NOT NULL UNIQUE,
+  `EnName` varchar(24) NOT NULL UNIQUE,
+  `ArName` varchar(24) CHARACTER SET utf8 COLLATE utf8_general_ci NULL UNIQUE,
+  `Descripton` text NOT NULL,
+  `Expiredate` date NOT NULL,
+  PRIMARY KEY (`Code`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
@@ -90,34 +181,25 @@ CREATE TABLE `medicine` (
 -- Table structure for table `medicine_alternatives`
 --
 
-CREATE TABLE `medicine_alternatives` (
-  `m_code` int(12) NOT NULL,
-  `mA_code` int(12) NOT NULL
+CREATE TABLE `MEDICINE_ALTERNATIVES` (
+  `MedicineCode` varchar(13) NOT NULL,
+  `M_AlternativeCode` varchar(13) NOT NULL,
+  PRIMARY key (`MedicineCode`,`M_AlternativeCode`),
+   FOREIGN KEY (`MedicineCode`) REFERENCES `MEDICINE`(`Code`) ON DELETE CASCADE,
+   FOREIGN KEY (`M_AlternativeCode`) REFERENCES `MEDICINE`(`Code`) ON DELETE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `medicine_order`
+-- Table structure for table `order status`
 --
 
-CREATE TABLE `medicine_order` (
-  `M-code` int(12) NOT NULL,
-  `Oid` int(11) NOT NULL,
-  `Amount` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
--- --------------------------------------------------------
-
---
--- Table structure for table `notification`
---
-
-CREATE TABLE `notification` (
-  `n_id` int(11) NOT NULL,
-  `m_code` int(12) NOT NULL,
-  `o_id` int(11) NOT NULL,
-  `p_key` varchar(14) CHARACTER SET utf8 COLLATE utf8_bin NOT NULL
+CREATE TABLE `ORDER_STATUS` (
+  `Id` tinyint(1) NOT NULL AUTO_INCREMENT UNIQUE,
+  `Status` varchar(11),
+  PRIMARY KEY(`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
@@ -126,45 +208,57 @@ CREATE TABLE `notification` (
 -- Table structure for table `order`
 --
 
-CREATE TABLE `order` (
-  `Oid` int(11) NOT NULL,
-  `Pkey` varchar(14) CHARACTER SET utf8 COLLATE utf8_bin DEFAULT NULL,
-  `Phkey` varchar(14) CHARACTER SET utf8 COLLATE utf8_bin DEFAULT NULL,
-  `date` datetime NOT NULL,
-  `status` tinyint(1) NOT NULL DEFAULT '0'
+CREATE TABLE `ORDER` (
+  `Id` int(11) NOT NULL AUTO_INCREMENT UNIQUE,
+  `UserId` int(11),
+  `PharmacyId` int(11),
+  `date` TIMESTAMP NOT NULL,
+  `status` tinyint(1) NOT NULL DEFAULT '0',
+  PRIMARY key (`Id`),
+  FOREIGN KEY (`UserId`) REFERENCES `USER`(`Id`)ON DELETE CASCADE,
+  FOREIGN KEY (`PharmacyId`) REFERENCES `USER`(`Id`) ON DELETE CASCADE,
+  FOREIGN KEY (`status`) REFERENCES `ORDER_STATUS`(`Id`) ON DELETE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+-- --------------------------------------------------------
+--
+-- Table structure for table `medicine_order`
+--
+
+CREATE TABLE `MEDICINE_ORDER` (
+  `MedicineCode` varchar (13) NOT NULL,
+  `OrderId` int(11) NOT NULL,
+  `Amount` int(11) NOT NULL,
+  PRIMARY key (`MedicineCode`,`OrderId`),
+  FOREIGN KEY (`MedicineCode`) REFERENCES `MEDICINE`(`Code`)ON DELETE CASCADE,
+   FOREIGN KEY (`OrderId`) REFERENCES `ORDER`(`Id`)ON DELETE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `patient`
+-- Table structure for table `notification`
 --
 
-CREATE TABLE `patient` (
-  `p_key` varchar(14) CHARACTER SET utf8 COLLATE utf8_bin NOT NULL COMMENT 'patient key',
-  `p_fName` varchar(35) NOT NULL COMMENT 'PatientFirstName',
-  `p_lName` varchar(35) NOT NULL COMMENT 'PatientLastName',
-  `gender` tinyint(1) NOT NULL DEFAULT '0' COMMENT 'PGender(If0==male)',
-  `p_birthdate` date NOT NULL COMMENT 'Patient DOB',
-  `height` int(3) NOT NULL COMMENT 'Patient height',
-  `weight` int(4) NOT NULL COMMENT 'Patient weight',
-  `streetNo` int(11) NOT NULL COMMENT 'patient Str no',
-  `gov` varchar(255) NOT NULL COMMENT 'patient city',
-  `district` varchar(255) NOT NULL COMMENT 'patient district',
-  `telephone` int(11) NOT NULL COMMENT 'patient Telephone',
-  `u_id` int(11) NOT NULL COMMENT 'patient id',
-  `h_id` int(11) NOT NULL COMMENT 'patient history'
+CREATE TABLE `NOTIFICATION` (
+  `Id` int(11) NOT NULL AUTO_INCREMENT UNIQUE,
+  `MedicineCode` varchar(13) NOT NULL,
+  `OrderId` int(11) NOT NULL,
+  `PatientId` Int(11) NOT NULL,
+   PRIMARY key (`Id`),
+   FOREIGN KEY (`MedicineCode`) REFERENCES `MEDICINE`(`Code`) ON DELETE CASCADE,
+   FOREIGN KEY (`OrderId`) REFERENCES `ORDER`(`Id`) ON DELETE CASCADE,
+   FOREIGN KEY (`PatientId`) REFERENCES `USER`(`Id`) ON DELETE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
 -- --------------------------------------------------------
-
 --
 -- Table structure for table `patient_chronics`
 --
 
-CREATE TABLE `patient_chronics` (
-  `p_key` varchar(14) CHARACTER SET utf8 COLLATE utf8_bin NOT NULL,
-  `p_chronics` varchar(255) NOT NULL COMMENT 'Patient Chronics'
+CREATE TABLE `PATIENT_CHRONICS` (
+  `PatientId` int(11),
+  `Chronics` varchar(24) NOT NULL COMMENT 'Patient Chronics',
+  PRIMARY KEY (`PatientId`,`Chronics`),
+   FOREIGN KEY (`PatientId`) REFERENCES `User`(`Id`) ON DELETE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
@@ -173,9 +267,11 @@ CREATE TABLE `patient_chronics` (
 -- Table structure for table `patient_risk_factor`
 --
 
-CREATE TABLE `patient_risk_factor` (
-  `p_key` varchar(14) CHARACTER SET utf8 COLLATE utf8_bin NOT NULL,
-  `p_risk_factor` varchar(255) NOT NULL
+CREATE TABLE `PATIENT_RISK_FACTOR` (
+  `PatientId` int(11),
+  `RiskFactor` varchar(64) NOT NULL,
+  PRIMARY KEY (`PatientId`,`RiskFactor`),
+  FOREIGN KEY (`PatientId`) REFERENCES `User`(`Id`) ON DELETE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
@@ -184,26 +280,14 @@ CREATE TABLE `patient_risk_factor` (
 -- Table structure for table `patient_tracked_medicines`
 --
 
-CREATE TABLE `patient_tracked_medicines` (
-  `p_key` int(11) NOT NULL,
-  `m_code` int(12) NOT NULL
+CREATE TABLE `PATIENT_TRACKED_MEDICINES` (
+  `PatientId` int(11),
+  `MedicineCode` varchar(13) NOT NULL,
+  PRIMARY KEY (PatientId,MedicineCode),
+  FOREIGN KEY (`PatientId`) REFERENCES `User`(`Id`) ON DELETE CASCADE,
+  FOREIGN KEY (`MedicineCode`) REFERENCES `MEDICINE`(`Code`) ON DELETE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
--- --------------------------------------------------------
-
---
--- Table structure for table `pharmacy`
---
-
-CREATE TABLE `pharmacy` (
-  `ph_key` varchar(14) CHARACTER SET utf8 COLLATE utf8_bin NOT NULL,
-  `u_id` int(11) NOT NULL,
-  `ph_name` varchar(35) NOT NULL,
-  `notes` varchar(255) NOT NULL,
-  `describition` varchar(1024) NOT NULL,
-  `longtiude` int(11) NOT NULL,
-  `latitiude` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -211,9 +295,12 @@ CREATE TABLE `pharmacy` (
 -- Table structure for table `pharmacy_medicine`
 --
 
-CREATE TABLE `pharmacy_medicine` (
-  `ph_key` varchar(14) CHARACTER SET utf8 COLLATE utf8_bin NOT NULL,
-  `m_code` int(12) NOT NULL
+CREATE TABLE `PHARMACY_MEDICINE` (
+  `PharmacyId` int(11),
+  `MedicineCode` varchar(13) NOT NULL,
+  PRIMARY KEY (`PharmacyId`,`MedicineCode`),
+  FOREIGN KEY (`PharmacyId`) REFERENCES `USER`(`Id`)ON DELETE CASCADE,
+  FOREIGN KEY (`MedicineCode`) REFERENCES `MEDICINE`(`Code`) ON DELETE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
@@ -222,192 +309,17 @@ CREATE TABLE `pharmacy_medicine` (
 -- Table structure for table `rate`
 --
 
-CREATE TABLE `rate` (
-  `ph_key` varchar(14) CHARACTER SET utf8 COLLATE utf8_bin NOT NULL,
-  `p_key` varchar(14) CHARACTER SET utf8 COLLATE utf8_bin NOT NULL,
+CREATE TABLE `RATE` (
+  `PharmacyId` int(11),
+  `PatientId` int(11),
   `value` tinyint(1) NOT NULL DEFAULT '0',
-  `comment` text NOT NULL
+  `comment` TEXT NOT NULL,
+  PRIMARY KEY (`PharmacyId`,`PatientId`),
+  FOREIGN KEY (`PharmacyId`) REFERENCES `USER`(`Id`) ON DELETE CASCADE,
+  FOREIGN KEY (`PatientId`) REFERENCES `USER`(`Id`) ON DELETE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
-
---
--- Table structure for table `user`
---
-
-CREATE TABLE `user` (
-  `u_id` int(11) NOT NULL,
-  `u_password` varchar(18) NOT NULL,
-  `u_mail` varchar(255) NOT NULL,
-  `type` tinyint(1) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
---
--- Indexes for dumped tables
---
-
---
--- Indexes for table `allergy`
---
-ALTER TABLE `allergy`
-  ADD PRIMARY KEY (`a_id`),
-  ADD UNIQUE KEY `ALID` (`a_id`),
-  ADD KEY `Pkey` (`p_key`);
-
---
--- Indexes for table `binded_with`
---
-ALTER TABLE `binded_with`
-  ADD PRIMARY KEY (`ph_key`,`p_key`),
-  ADD UNIQUE KEY `Phkey` (`ph_key`),
-  ADD UNIQUE KEY `Pkey` (`p_key`);
-
---
--- Indexes for table `blood_pressure`
---
-ALTER TABLE `blood_pressure`
-  ADD PRIMARY KEY (`bp_id`,`p_key`),
-  ADD UNIQUE KEY `BPID` (`bp_id`),
-  ADD KEY `Pkey` (`p_key`);
-
---
--- Indexes for table `history`
---
-ALTER TABLE `history`
-  ADD PRIMARY KEY (`h_id`);
-
---
--- Indexes for table `medicine`
---
-ALTER TABLE `medicine`
-  ADD PRIMARY KEY (`m_code`);
-
---
--- Indexes for table `medicine_alternatives`
---
-ALTER TABLE `medicine_alternatives`
-  ADD PRIMARY KEY (`m_code`,`mA_code`);
-
---
--- Indexes for table `medicine_order`
---
-ALTER TABLE `medicine_order`
-  ADD PRIMARY KEY (`M-code`,`Oid`);
-
---
--- Indexes for table `notification`
---
-ALTER TABLE `notification`
-  ADD PRIMARY KEY (`n_id`);
-
---
--- Indexes for table `order`
---
-ALTER TABLE `order`
-  ADD PRIMARY KEY (`Oid`),
-  ADD UNIQUE KEY `Pkey` (`Pkey`),
-  ADD UNIQUE KEY `Phkey` (`Phkey`);
-
---
--- Indexes for table `patient`
---
-ALTER TABLE `patient`
-  ADD PRIMARY KEY (`p_key`),
-  ADD UNIQUE KEY `Pkey` (`p_key`),
-  ADD KEY `PId` (`u_id`);
-
---
--- Indexes for table `patient_chronics`
---
-ALTER TABLE `patient_chronics`
-  ADD PRIMARY KEY (`p_key`,`p_chronics`);
-
---
--- Indexes for table `patient_risk_factor`
---
-ALTER TABLE `patient_risk_factor`
-  ADD PRIMARY KEY (`p_key`,`p_risk_factor`);
-
---
--- Indexes for table `patient_tracked_medicines`
---
-ALTER TABLE `patient_tracked_medicines`
-  ADD PRIMARY KEY (`p_key`,`m_code`),
-  ADD KEY `Pkey` (`p_key`),
-  ADD KEY `M-code` (`m_code`);
-
---
--- Indexes for table `pharmacy`
---
-ALTER TABLE `pharmacy`
-  ADD PRIMARY KEY (`ph_key`),
-  ADD UNIQUE KEY `Phkey` (`ph_key`),
-  ADD KEY `Uid` (`u_id`);
-
---
--- Indexes for table `pharmacy_medicine`
---
-ALTER TABLE `pharmacy_medicine`
-  ADD PRIMARY KEY (`ph_key`,`m_code`);
-
---
--- Indexes for table `rate`
---
-ALTER TABLE `rate`
-  ADD PRIMARY KEY (`ph_key`,`p_key`),
-  ADD UNIQUE KEY `Phkey` (`ph_key`),
-  ADD UNIQUE KEY `Pkey` (`p_key`);
-
---
--- Indexes for table `user`
---
-ALTER TABLE `user`
-  ADD PRIMARY KEY (`u_id`);
-
---
--- AUTO_INCREMENT for dumped tables
---
-
---
--- AUTO_INCREMENT for table `allergy`
---
-ALTER TABLE `allergy`
-  MODIFY `a_id` int(11) NOT NULL AUTO_INCREMENT;
---
--- AUTO_INCREMENT for table `blood_pressure`
---
-ALTER TABLE `blood_pressure`
-  MODIFY `bp_id` int(11) NOT NULL AUTO_INCREMENT;
---
--- AUTO_INCREMENT for table `history`
---
-ALTER TABLE `history`
-  MODIFY `h_id` int(11) NOT NULL AUTO_INCREMENT;
---
--- AUTO_INCREMENT for table `notification`
---
-ALTER TABLE `notification`
-  MODIFY `n_id` int(11) NOT NULL AUTO_INCREMENT;
---
--- AUTO_INCREMENT for table `order`
---
-ALTER TABLE `order`
-  MODIFY `Oid` int(11) NOT NULL AUTO_INCREMENT;
---
--- AUTO_INCREMENT for table `patient`
---
-ALTER TABLE `patient`
-  MODIFY `u_id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'patient id';
---
--- AUTO_INCREMENT for table `pharmacy`
---
-ALTER TABLE `pharmacy`
-  MODIFY `u_id` int(11) NOT NULL AUTO_INCREMENT;
---
--- AUTO_INCREMENT for table `user`
---
-ALTER TABLE `user`
-  MODIFY `u_id` int(11) NOT NULL AUTO_INCREMENT;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
