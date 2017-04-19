@@ -1,14 +1,19 @@
 <?php
 include '../content/header.php';
+include '../../Database/pharmacy.php';
+$ph=new Pharmacy_Query();
+$arry=$ph->fetch_Pharmacy('1','1');
+$arrys=$arry[0];
 ?>
-    <div class="wrapper container" style="height: 300px;margin-top:50px">
+    <div class="wrapper2 container" style="margin-top:50px">
 	    <div class="details col-sm-9">
 			<div class="img col-sm-2"></div>
 			<div class="info col-sm-10">
-				<h3>name : </h3>
-				<h3>notes : </h3>
-				<h3>decribition : </h3>
-				<h3>Location : </h3>
+				<h3>name :<?php echo $arrys["Name"];?> </h3>
+				<h3>Location : <?php echo $arrys["Longtiude"] .','. $arrys["Latitiude"] ;?>  </h3>
+				<h3>Telephone :<?php echo $arrys["Telephone"];?> </h3>
+				<p> notes :<?php echo $arrys["Notes"];?></p>
+				<p>decribition :<?php echo $arrys["Describition"];?></p>
 			</div>
 			 <button class=" btn btn-lg btn-primary"> edit</button>
 	    </div>
@@ -27,23 +32,25 @@ include '../content/header.php';
           </div>
         </div>
     </div>
-	<div class="container">
-		  <h2>Table</h2>
-		  <p>The .table-responsive class creates a responsive table which will scroll horizontally on small devices (under 768px). When viewing on anything larger than 768px wide, there is no difference:</p>
+	<div class="container col-md-12">
+		  <h2>Medicine_Table</h2>
 		  <div class="table-responsive">
 		  <table class="table">
 		    <thead>
 		      <tr>
 		        <th>#</th>
-		        <th>Firstname</th>
-		        <th>Lastname</th>
-		        <th>Age</th>
-		        <th>City</th>
-		        <th>Country</th>
+		        <th>Parcode</th>
+		        <th>English name</th>
+		        <th>Arabic name</th>
+		        <th>Amount</th>
+		        <th>expire date</th>
+
+		        <!--ask about medicine amount and expire date-->
 		      </tr>
 		    </thead>
 		    <tbody>
 		      <tr>
+		      <!--ADDed medcines displau-->
 		        <td>1</td>
 		        <td>Anna</td>
 		        <td>Pitt</td>

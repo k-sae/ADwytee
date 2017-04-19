@@ -50,7 +50,6 @@ include_once  $dictionary_path;
             <li ><a href="" data-toggle="modal" data-target="#myModal"><?php echo  $language['register']?></a></li>
             <li><a href="#contact"><?php echo  $language['contact']?></a></li>
             <li>
-
             <form method="post">
               <select id="langlist" name="lang" onchange="this.form.submit()" class="langselect">
                 <option dir="rtl" value="ar"> عربى </option>
@@ -66,3 +65,20 @@ include_once  $dictionary_path;
         </div>
       </div>
     </nav>
+          <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span>                   </button>
+                 <h4 class="modal-title" id="myModalLabel">Register</h4>
+                </div>
+                <div class="modal-body">
+                  <form><input type="" name=""></form>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                  <button type="button" class="btn btn-primary">Register</button>
+                </div>
+              </div>
+            </div>
+         </div> 
