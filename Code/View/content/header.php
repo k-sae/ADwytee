@@ -33,15 +33,15 @@ include_once  $dictionary_path;
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="index.php">ADwytee</a>
+          <a class="navbar-brand" href="index.php"><?php echo  $language['ADwytee']?></a>
         </div>
         <div id="navbar" class="collapse navbar-collapse">
           <ul class="nav navbar-nav">
-            <li><a href="Pharmacy.php">Pharmacy Profile</a></li>
+            <li><a href="Pharmacy.php"><?php echo$language['Pharmacy Profile']?></a></li>
             <li ><a href="orderPage.php"><?php echo  $language['orderpage']?></a></li>
-            <li><a href="#about">About</a></li>
-            <li ><a href="" data-toggle="modal" data-target="#myModal">Register</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li><a href="#about"><?php echo  $language['About']?></a></li>
+            <li ><a href="" data-toggle="modal" data-target="#myModal"><?php echo  $language['Register']?></a></li>
+            <li><a href="#contact"><?php echo  $language['contact']?></a></li>
           </ul>
         </div>
       </div>

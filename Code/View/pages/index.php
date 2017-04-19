@@ -30,7 +30,7 @@ include '../content/header.php';
         </div>
       </div>
     </div>
-    <!-- <div class="add">
+    <div class="add">
            <div id="myCarousel" class="carousel slide" data-ride="carousel">
         <ol class="carousel-indicators">
           <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
@@ -79,7 +79,6 @@ include '../content/header.php';
           </a>
         </div>
       </div>
-      -->
       <div class="about us"></div>
   </div>
 
