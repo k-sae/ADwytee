@@ -81,8 +81,6 @@ body {
   height: 500px;
 }
 
-
-
 /*
  * Cover
  */
@@ -109,7 +107,7 @@ body {
 /*
 pharmacy  style
 */
-.wrapper{margin-top:50px ;height: 300px}
+
 .details{height: 100%}
 .img{background:#686868;border-radius: 50%;height: 32%;float: left;width: 12%;margin: 4% 1% 4% 1%;}
 .info{text-align: left;margin: 4% 1% 1% 1%}
@@ -117,13 +115,95 @@ pharmacy  style
 bottom: 0;
 right: 10%;}
 
-
+.Register{
+height:100%;
+width: 100%;
+position: absolute;
+top: 0;
+background-color: rgba(0,0,0,0.5);
+z-index: 50;
+visibility: hidden;
+}
+.reg_container{
+position: relative;
+top: 40%;
+left:40%;
+height:40%;
+width :40%;
+}
 
 
 
 /*
- * Footer
+ * Order
  */
+ .Ordertable{
+  text-align: left;
+  line-height: 50px;
+  border-collapse: separate;
+  border-spacing: 0;
+  border: 2px solid #ed1c40;
+  width: 600px;
+  margin: 100px auto;
+  border-radius: .25rem;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+ .button {
+  color: #aaa;
+  cursor: pointer;
+  vertical-align: middle;
+  padding: 3px;
+  font-size: 17;
+  }
+
+.edit:hover {
+  color: #0a79df;
+}
+
+.delete:hover {
+  color: #dc2a2a;
+}
+.details:hover {
+
+  color: green;
+}
+.Ordertable thead tr:first-child {
+  background: #ed1c40;
+  color: #fff;
+  border: none;
+}
+
+.Ordertable th:first-child,
+.Ordertable td:first-child {
+  padding: 0 15px 0 20px;
+  text-align: center;
+  font-size: 30px;
+}
+.Ordertable th:nth-child(2){
+  font-size: 24px;
+  padding: 1px;
+}
+.Ordertable thead tr:last-child th {
+  border-bottom: 3px solid #ddd;
+}
+
+.Ordertable tbody tr:hover {
+  background-color: rgba(237, 28, 64, .1);
+  cursor: default;
+}
+
+.Ordertable tbody tr:last-child td {
+  border: none;
+}
+
+.Ordertable tbody td {
+  border-bottom: 1px solid #ddd;
+}
+
+.Ordertable td:last-child {
+  text-align: right;
+  padding-right: 10px;
+}
 
 /*
  * Affix and center
@@ -167,81 +247,4 @@ right: 10%;}
   .featurette-heading {
     margin-top: 120px;
   }
-}
-/*order Style*/
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-/*  color: #333; **/
-}
-
-table {
-  text-align: left;
-  line-height: 40px;
-  border-collapse: separate;
-  border-spacing: 0;
-  border: 2px solid #ed1c40;
-  width: 500px;
-  margin: 100px auto;
-  border-radius: .25rem;
-}
-
-thead tr:first-child {
-  background: #ed1c40;
-  color: #fff;
-  border: none;
-  font-size: 30px;
-
-}
-
-th:first-child,
-td:first-child {
-  padding: 0 15px 0 20px;
-  text-align: center;
-}
-th:nth-child(2){
-  font-size: 24px;
-  padding: 1px;
-}
-thead tr:last-child th {
-  border-bottom: 3px solid #ddd;
-
-}
-
-tbody tr:hover {
-  background-color: rgba(237, 28, 64, .1);
-  cursor: default;
-}
-
-tbody tr:last-child td {
-  border: none;
-}
-
-tbody td {
-  border-bottom: 1px solid #ddd;
-}
-
-td:last-child {
-  text-align: right;
-  padding-right: 10px;
-}
-
-.button {
-  color: #aaa;
-  cursor: pointer;
-  vertical-align: middle;
-  padding: 10 ;
-}
-
-.edit:hover {
-  color: #0a79df;
-}
-
-.delete:hover {
-  color: #dc2a2a;
 }
