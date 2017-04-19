@@ -6,7 +6,7 @@ include '../content/header.php';
       <div class="site-wrapper-inner">
         <div class="cover-container">  
             <div class="search">
-            <form><input placeholder="search" type="text" size="86" onkeyup="showResult(this.value)">
+            <form><input placeholder="<?php echo  $language['search']?>" type="text" size="86" onkeyup="showResult(this.value)">
             <div id="livesearch"></div>
             </form>
           </div>
