@@ -1,6 +1,7 @@
 <?php
 session_start();
 
+
 //THE DEFUALT LANGUAGE
 if (!isset($_POST["lang"]) && !isset($_SESSION["language"])){
   $_SESSION["language"] = "en";
@@ -11,7 +12,6 @@ if (!isset($_POST["lang"]) && !isset($_SESSION["language"])){
 } else {
   $_SESSION["language"] = $_POST["lang"];
 }
-
 $dictionary_path = './dictionary/'.$_SESSION["language"].'.php';
 include_once  $dictionary_path;
 ?>
@@ -22,7 +22,9 @@ include_once  $dictionary_path;
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!--link rel="icon" href="../../favicon.ico"-->
+
     <title><?php echo  $language['logo']?></title>
+
     <link href="../css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="../css/font-awesome.min.css">
     <link href="../css/bugfix.css" rel="stylesheet">
@@ -47,7 +49,7 @@ include_once  $dictionary_path;
             <li><a href="#about"><?php echo  $language['about']?></a></li>
             <li ><a href="" data-toggle="modal" data-target="#myModal"><?php echo  $language['register']?></a></li>
             <li><a href="#contact"><?php echo  $language['contact']?></a></li>
-            <li> 
+            <li>
 
             <form method="post">
               <select id="langlist" name="lang" onchange="this.form.submit()" class="langselect">
@@ -57,7 +59,7 @@ include_once  $dictionary_path;
               <script>
                 document.getElementById('langlist').value = "<?php echo $_SESSION["language"]; ?>";
               </script>
-            </form> 
+            </form>
 
           </li>
           </ul>

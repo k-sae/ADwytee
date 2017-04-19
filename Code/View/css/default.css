@@ -155,19 +155,26 @@ width :40%;
  */
  .Ordertable{
   text-align: left;
-  line-height: 40px;
+  line-height: 50px;
   border-collapse: separate;
   border-spacing: 0;
   border: 2px solid #ed1c40;
-  width: 500px;
-  margin: 50px auto;
+  width: 40%;
+  margin: 10% auto;
   border-radius: .25rem;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
 }
+
  .button {
   color: #aaa;
   cursor: pointer;
   vertical-align: middle;
-}
+  padding: 1%;
+  font-size: 150%;
+  }
+.add2:hover {
+    color: yellow;
+  }
 
 .edit:hover {
   color: #0a79df;
@@ -175,6 +182,10 @@ width :40%;
 
 .delete:hover {
   color: #dc2a2a;
+}
+.details:hover {
+
+  color: green;
 }
 .Ordertable thead tr:first-child {
   background: #ed1c40;
@@ -185,8 +196,12 @@ width :40%;
 .Ordertable th:first-child,
 .Ordertable td:first-child {
   padding: 0 15px 0 20px;
+  text-align: center;
+  font-size: 200%;
 }
-
+.Ordertable th:nth-child(2){
+  font-size: 150%;
+}
 .Ordertable thead tr:last-child th {
   border-bottom: 3px solid #ddd;
 }
@@ -208,9 +223,6 @@ width :40%;
   text-align: right;
   padding-right: 10px;
 }
-
-
-
 
 /*
  * Affix and center
