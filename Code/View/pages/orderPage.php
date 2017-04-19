@@ -15,7 +15,7 @@ $order =new order();
 
 </head>
 <div style="overflow-x:auto;">
-  <table class="Ordertable" class="table-responsive">
+  <table class="Ordertable table-responsive">
   <thead>
      <tr>
        <th colspan="3"> <?php echo  $language['orders']; ?></th>
