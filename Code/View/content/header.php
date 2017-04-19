@@ -12,6 +12,21 @@ if (!isset($_POST["lang"]) && !isset($_SESSION["language"])){
 } else {
   $_SESSION["language"] = $_POST["lang"];
 }
+
+//if (!isset($_SESSION["latitude"]) && !isset($_SESSION["longitude"])){
+  
+if ((!isset($_GET["lat"]) && !isset($_SESSION["latitude"])) || (!isset($_GET["long"]) && !isset($_SESSION["longitude"]))) {
+include_once '../../api/Location.php';
+}
+else if (!isset($_GET["lat"]) || !isset($_GET["lat"])) {
+  $_SESSION["latitude"] = $_SESSION["latitude"];
+  $_SESSION["longitude"] = $_SESSION["longitude"];
+}else
+{
+ $_SESSION["latitude"] =  $_GET["lat"];
+ $_SESSION["longitude"] = $_GET["long"];
+}
+
 $dictionary_path = './dictionary/'.$_SESSION["language"].'.php';
 include_once  $dictionary_path;
 ?>
