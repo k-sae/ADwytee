@@ -21,7 +21,7 @@ class livesearch_Query
   {
 
     $query = "SELECT m.ArName, m.EnName FROM `MEDICINE` AS m 
-              WHERE m.ArName LIKE '%$str%' OR m.EnName LIKE '%$str%'";
+              WHERE m.ArName LIKE '%$str%' OR m.EnName LIKE '%$str%' OR m.Code LIKE '%$str%'";
               
     $result = $this->database->fetch_query($query);
 
