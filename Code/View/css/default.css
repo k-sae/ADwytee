@@ -81,6 +81,11 @@ body {
   height: 500px;
 }
 
+.langselect{
+  background-color: #000;
+  margin-top: 25%; 
+}
+
 /*
  * Cover
  */
