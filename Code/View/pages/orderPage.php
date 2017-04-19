@@ -22,7 +22,23 @@ $order =new order();
      </tr>
      <tr>
        <th>#</th>
-       <th colspan="2" class ="material-icons button add2"><?php echo $language['addorder'] ?></th>
+       <div class="overlay" id ="div">
+         <!-- close button-->
+         <a  href="#" class="close-button">&#8864</a>
+         <!-- ovarly page -->
+         <!--open ovarly -->
+         <th colspan="2" class ="material-icons button add2">
+           <span  onclick="OpenDiv"><?php echo $language['addorder'] ?></span></th>
+         <script src = "../js/order.js" type = "text/javascript">
+         function OpenDiv() {
+           var thediv =document.getElementById("div") ;
+           thediv.style.transform = "scale(1)";
+         }
+
+          </script>
+         </div>
+       </div>
+
       </tr>
    </thead>
    <tbody>
@@ -45,6 +61,8 @@ $order =new order();
      } ?></tbody>
  </table>
  </div>
+<!-- overlay div -->
+
  <?php
 
 include '../content/footer.php';

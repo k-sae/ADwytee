@@ -83,7 +83,7 @@ body {
 
 .langselect{
   background-color: #000;
-  margin-top: 25%; 
+  margin-top: 25%;
 }
 
 /*
@@ -108,7 +108,7 @@ div.sug{
   background-color: #fff;
   padding: 1%;
 }
-a.sug{ 
+a.sug{
   color: #000;
 }
 .navbar-nav{
@@ -223,7 +223,23 @@ width :40%;
   text-align: right;
   padding-right: 10px;
 }
-
+/* overlay div*/
+.overlay{
+  width: 100%;
+  background: rgba(0, 0, 0, .75);
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  transform: scale(0);
+}
+/* close button*/
+.overlay .close-button{
+   position: absolute;
+   right: 1%;
+   top: 10%;
+   font-size: 200%;
+}
 /*
  * Affix and center
  */
