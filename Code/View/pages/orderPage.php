@@ -1,18 +1,11 @@
 <?php
 include '../content/header.php';
-if (!isset($_SESSION["type"])){
-$_SESSION["type"] ='Pharmacy';
-}
-else {
-
-$_SESSION["type"] ='Patient';
-}
 include_once '../../Application/order.php';
 $order =new order();
 ?>
 <head>
        <title><?php echo $language['orderpage'] ?></title>
-
+<script src = "../js/order.js">  </script>
 </head>
 <div style="overflow-x:auto;">
   <table class="Ordertable table-responsive">
@@ -22,7 +15,19 @@ $order =new order();
      </tr>
      <tr>
        <th>#</th>
-       <th colspan="2" class ="material-icons button add2"><?php echo $language['addorder'] ?></th>
+       <div class="overlay" id ="div">
+         <!-- close button-->
+         <a  href="#" class="close-button" onclick="closeDiv()">&#8864</a>
+         <!-- ovarly page -->
+         <!--open ovarly -->
+         <th colspan="2" class ="material-icons button-order add-order">
+           <span  onclick="OpenDiv()"><?php echo $language['addorder'] ?></span></th>
+
+
+
+         </div>
+       </div>
+
       </tr>
    </thead>
    <tbody>
@@ -33,9 +38,9 @@ $order =new order();
          <td>pharmacyname</td>
          <td>
 
-           <i class="material-icons button details">'.$language['details'].'</i>
-          <i class="material-icons button edit">'. $language['edit'].'</i>
-           <i class="material-icons button delete">'.$language['delete'].'</i>
+           <i class="material-icons button-order details-order">'.$language['details'].'</i>
+          <i class="material-icons button-order edit-order">'. $language['edit'].'</i>
+           <i class="material-icons button-order delete-order">'.$language['delete'].'</i>
 
 
 
@@ -45,6 +50,8 @@ $order =new order();
      } ?></tbody>
  </table>
  </div>
+<!-- overlay div -->
+
  <?php
 
 include '../content/footer.php';

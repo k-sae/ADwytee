@@ -4,7 +4,7 @@ include '../content/header.php';
   <div class="wrapper">
     <div class="site-wrapper">
       <div class="site-wrapper-inner">
-        <div class="cover-container">  
+        <div class="cover-container">   
             <div class="search">
             <form action="resultpage.php" method="get"><input name="result" placeholder="<?php echo  $language['search']?>" type="text" size="86" autocomplete="off" required="required" onkeyup="showResult(this.value)">
             <div id="livesearch"></div>
@@ -13,7 +13,7 @@ include '../content/header.php';
         </div>
       </div>
     </div>
-    <!-- <div class="add">
+    <div class="add">
            <div id="myCarousel" class="carousel slide" data-ride="carousel">
         <ol class="carousel-indicators">
           <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
@@ -62,7 +62,6 @@ include '../content/header.php';
           </a>
         </div>
       </div>
-      -->
       <div class="about us"></div>
   </div>
 
