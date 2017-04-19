@@ -94,6 +94,7 @@ body {
 }
 .search{
   color:#000;
+  margin-top:40%;
 }
 .navbar-nav{
   float: right;
@@ -217,7 +218,7 @@ width :40%;
   }
   /* Start the vertical centering */
   .site-wrapper-inner {
-    vertical-align: middle;
+    /*vertical-align: middle; */
   }
   /* Handle the widths */
   .masthead,

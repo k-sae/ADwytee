@@ -22,8 +22,10 @@ include '../content/header.php';
               </div>
             </div>
           </div>  
-          <div class="search">
-          <form><input placeholder="search" type="text"></form>
+            <div class="search">
+            <form><input placeholder="search" type="text" size="86" onkeyup="showResult(this.value)">
+            <div id="livesearch"></div>
+            </form>
           </div>
         </div>
       </div>
