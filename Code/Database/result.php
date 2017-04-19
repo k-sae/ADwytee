@@ -25,7 +25,8 @@ class result_Query
               INNER JOIN USERTYPE AS ut ON u.Type = ut.Id
               INNER JOIN PHARMACY_MEDICINE AS pm ON p.UserId = pm.PharmacyId
 
-              INNER JOIN MEDICINE as m ON (pm.MedicineCode) = (m.Code) AND m.EnName LIKE '%$str%'";
+              INNER JOIN MEDICINE as m ON (pm.MedicineCode) = (m.Code) 
+              AND (m.EnName = '$str' OR m.ArName = '$str' OR m.Code = '$str')";
               
     $result = $this->database->fetch_query($query);
 

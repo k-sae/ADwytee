@@ -148,6 +148,27 @@ height:40%;
 width :40%;
 }
 
+/*
+ * RESULT
+ *
+*/
+.searchagain input{
+  color: #000;
+}
+
+.Resulttable{
+  text-align: left;
+  line-height: 50px;
+  border-collapse: separate;
+  border-spacing: 0;
+  border: 2px solid #ed1c40;
+  width: 40%;
+  margin: 10% auto;
+  border-radius: .25rem;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+
 
 
 /*

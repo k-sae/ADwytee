@@ -3,6 +3,7 @@
 
 $language['logo'] = "ADwytee";
 $language['search'] = "Search";
+$language['searchagain'] = "Search Again";
 $language['orders'] = "Orders";
 $language['page'] ="Page";
 $language['orderpage'] ="OrderPage";

@@ -4,7 +4,7 @@
  */
 class Order
 {
-private $file_name = '../../DataBase/order.php';
+private $file_name = '../../Database/order.php';
 private $order;
   function __construct()
   {

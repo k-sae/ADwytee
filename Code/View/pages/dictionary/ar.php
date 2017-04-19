@@ -3,6 +3,7 @@
 
 $language['logo'] = "أدويتي";
 $language['search'] = "أبحث";
+$language['searchagain'] = "أبحث مره اخري";
 $language['orders'] = "الطلبات";
 $language['page'] ="صفحة";
 $language['orderpage'] ="صفحة الطلبات";
