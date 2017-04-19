@@ -47,7 +47,7 @@ include_once  $dictionary_path;
             <li><a href="Pharmacy.php"><?php echo  $language['pharmacyprofile']?></a></li>
             <li ><a href="orderPage.php"><?php echo  $language['orderpage']?></a></li>
             <li><a href="#about"><?php echo  $language['about']?></a></li>
-            <li ><a href="" data-toggle="modal" data-target="#myModal"><?php echo  $language['register']?></a></li>
+            <li ><a href="" data-toggle="modal" data-target="#myModal"><?php echo  $language['login']?></a></li>
             <li><a href="#contact"><?php echo  $language['contact']?></a></li>
             <li>
             <form method="post">
@@ -70,14 +70,14 @@ include_once  $dictionary_path;
               <div class="modal-content">
                 <div class="modal-header">
                   <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span>                   </button>
-                 <h4 class="modal-title" id="myModalLabel">Register</h4>
+                 <h4 class="modal-title" id="myModalLabel"><?php echo  $language['login']?></h4>
                 </div>
                 <div class="modal-body">
                   <form><input type="" name=""></form>
                 </div>
                 <div class="modal-footer">
                   <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
-                  <button type="button" class="btn btn-primary">Register</button>
+                  <button type="button" class="btn btn-primary"><?php echo  $language['login']?></button>
                 </div>
               </div>
             </div>
