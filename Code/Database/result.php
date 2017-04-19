@@ -1,7 +1,7 @@
 <?php
 
 
-class livesearch_Query
+class result_Query
 {
   private $file_name ='DataBase.php';
   private $database;
@@ -17,11 +17,15 @@ class livesearch_Query
      $this->database = new DataBase($this->file_name2);
   }
 
-  public function fetch_medicines($str)
+  public function fetch_pharmaces($str)
   {
 
-    $query = "SELECT m.ArName, m.EnName FROM `MEDICINE` AS m 
-              WHERE m.ArName LIKE '%$str%' OR m.EnName LIKE '%$str%' OR m.Code LIKE '%$str%'";
+    $query = "SELECT p.Name, m.EnName FROM `PHARMACY`AS p
+              INNER JOIN USER AS u ON p.UserId = u.Id
+              INNER JOIN USERTYPE AS ut ON u.Type = ut.Id
+              INNER JOIN PHARMACY_MEDICINE AS pm ON p.UserId = pm.PharmacyId
+
+              INNER JOIN MEDICINE as m ON (pm.MedicineCode) = (m.Code) AND m.EnName = '$str'";
               
     $result = $this->database->fetch_query($query);
 

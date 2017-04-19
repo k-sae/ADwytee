@@ -1,3 +1,4 @@
+
 -- phpMyAdmin SQL Dump
 -- version 4.5.1
 -- http://www.phpmyadmin.net
@@ -68,6 +69,16 @@ CREATE TABLE `GENDER` (
   `Gender` varchar(8) NOT NULL,
   PRIMARY KEY (`Id`)
 )ENGINE=InnoDB DEFAULT CHARSET=utf8;
+-- --------------------------------------------------------
+--
+-- Table structure for table `Gender`
+--
+
+CREATE TABLE `LANGUAGE` (
+  `Id` tinyint(1) NOT NULL AUTO_INCREMENT,
+  `language` varchar(2) NOT NULL,
+  PRIMARY KEY (`Id`)
+)ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -89,9 +100,11 @@ CREATE TABLE `PATIENT` (
   `District` varchar(24) NOT NULL COMMENT 'patient district',
   `Telephone` varchar(14) NOT NULL UNIQUE COMMENT 'patient Telephone',
   `UserId` int(11) NOT NULL UNIQUE COMMENT'patient id',
+  `Language` tinyint(1) NOT NULL DEFAULT 1,
    PRIMARY KEY (`UserId`),
    FOREIGN KEY (`UserId`) REFERENCES `USER`(`Id`) ON DELETE CASCADE,
-   FOREIGN KEY (`Gender`) REFERENCES `GENDER`(`Id`) ON DELETE CASCADE
+   FOREIGN KEY (`Gender`) REFERENCES `GENDER`(`Id`) ON DELETE CASCADE,
+   FOREIGN KEY (`Language`) REFERENCES `LANGUAGE` (`Id`) ON DELETE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
@@ -171,8 +184,7 @@ CREATE TABLE `MEDICINE` (
   `EnName` varchar(24) NOT NULL UNIQUE,
   `ArName` varchar(24) CHARACTER SET utf8 COLLATE utf8_general_ci NULL UNIQUE,
   `Descripton` text NOT NULL,
-  `Expiredate` date NOT NULL,
-  PRIMARY KEY (`Code`)
+   PRIMARY KEY (`Code`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
@@ -297,6 +309,7 @@ CREATE TABLE `PATIENT_TRACKED_MEDICINES` (
 CREATE TABLE `PHARMACY_MEDICINE` (
   `PharmacyId` int(11),
   `MedicineCode` varchar(13) NOT NULL,
+  `Amount` int(11) NOT NULL,
   PRIMARY KEY (`PharmacyId`,`MedicineCode`),
   FOREIGN KEY (`PharmacyId`) REFERENCES `USER`(`Id`)ON DELETE CASCADE,
   FOREIGN KEY (`MedicineCode`) REFERENCES `MEDICINE`(`Code`) ON DELETE CASCADE

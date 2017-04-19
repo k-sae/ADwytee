@@ -17,7 +17,7 @@ class Order_Query
 
      $this->database = new DataBase($this->file_name2);
 }
-   public function fetch_word($key,$type)
+   public function fetch_order($key)
   {
     # code...
     $type_word = $type . "_word"  ;

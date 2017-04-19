@@ -4,13 +4,13 @@ include '../content/header.php';
   <div class="wrapper">
     <div class="site-wrapper">
       <div class="site-wrapper-inner">
-        <div class="cover-container">
+        <div class="cover-container">  
           <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
             <div class="modal-dialog" role="document">
               <div class="modal-content">
                 <div class="modal-header">
-                  <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                  <h4 class="modal-title" id="myModalLabel">Register</h4>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span>                   </button>
+                 <h4 class="modal-title" id="myModalLabel">Register</h4>
                 </div>
                 <div class="modal-body">
                   <form><input type="" name=""></form>
@@ -21,9 +21,9 @@ include '../content/header.php';
                 </div>
               </div>
             </div>
-          </div>  
+         </div>  
             <div class="search">
-            <form><input placeholder="search" type="text" size="86" onkeyup="showResult(this.value)">
+            <form><input placeholder="<?php echo  $language['search']?>" type="text" size="86" onkeyup="showResult(this.value)">
             <div id="livesearch"></div>
             </form>
           </div>
