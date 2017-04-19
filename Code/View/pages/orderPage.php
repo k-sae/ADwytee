@@ -14,14 +14,15 @@ $order =new order();
        <title><?php echo $language['orderpage'] ?></title>
 
 </head>
-  <table class="Ordertable">
+<div style="overflow-x:auto;">
+  <table class="Ordertable" class="table-responsive">
   <thead>
      <tr>
        <th colspan="3"> <?php echo  $language['orders']; ?></th>
      </tr>
      <tr>
        <th>#</th>
-       <th colspan="2" ><?php echo $language['addorder'] ?></th>
+       <th colspan="2" class ="material-icons button add2"><?php echo $language['addorder'] ?></th>
       </tr>
    </thead>
    <tbody>
@@ -29,7 +30,7 @@ $order =new order();
 
        echo '<tr>
          <td>'.$i.'</td>
-         <td>[panadol] from helal</td>
+         <td>pharmacyname</td>
          <td>
 
            <i class="material-icons button details">'.$language['details'].'</i>
