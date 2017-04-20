@@ -34,10 +34,11 @@ class result{
       for($i=0; $i< sizeof($result_arr); $i++){
         $distance = $this->getDistance(30.0110797,31.1886828, $result_arr[$i]['Latitude'],$result_arr[$i]['Longitude'], "K");
 	      $result = "<tr>
-                     <td> " . number_format($distance,2) . " </td>
-                     <td> " . $result_arr[$i]['Name'] . " </td>
+                     
+                     <td>Pharmacy: <a href=''>" . $result_arr[$i]['Name'] . "</a>  
+                     <br>Far from you: " . number_format($distance,2) . "Km </td>
                      <td>
-                      <i>Order</i>
+                      <i><a href=''> Order </a></i>
                      </td>
                     </tr>";
 
