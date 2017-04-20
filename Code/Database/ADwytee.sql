@@ -32,6 +32,17 @@ CREATE TABLE `USERTYPE` (
   PRIMARY KEY (`Id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 -- --------------------------------------------------------
+--
+-- Table structure for table `language`
+--
+
+CREATE TABLE `LANGUAGE` (
+  `Id` tinyint(1) NOT NULL AUTO_INCREMENT,
+  `language` varchar(2) NOT NULL,
+  PRIMARY KEY (`Id`)
+)ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
 
 --
 -- Table structure for table `user`
@@ -42,8 +53,10 @@ CREATE TABLE `USER` (
   `Password` varchar(16) NOT NULL,
   `Mail` varchar(254) NOT NULL UNIQUE,
   `Type` int(11) Not NULL,
+  `Language` tinyint(1) NOT NULL DEFAULT 1,
   PRIMARY KEY (`Id`),
-  FOREIGN KEY (`Type`) REFERENCES `USERTYPE`(`Id`) ON DELETE CASCADE
+  FOREIGN KEY (`Type`) REFERENCES `USERTYPE`(`Id`) ON DELETE CASCADE,
+   FOREIGN KEY (`Language`) REFERENCES `LANGUAGE` (`Id`) ON DELETE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 -- --------------------------------------------------------
 
@@ -69,16 +82,6 @@ CREATE TABLE `GENDER` (
   `Gender` varchar(8) NOT NULL,
   PRIMARY KEY (`Id`)
 )ENGINE=InnoDB DEFAULT CHARSET=utf8;
--- --------------------------------------------------------
---
--- Table structure for table `Gender`
---
-
-CREATE TABLE `LANGUAGE` (
-  `Id` tinyint(1) NOT NULL AUTO_INCREMENT,
-  `language` varchar(2) NOT NULL,
-  PRIMARY KEY (`Id`)
-)ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -100,11 +103,11 @@ CREATE TABLE `PATIENT` (
   `District` varchar(24) NOT NULL COMMENT 'patient district',
   `Telephone` varchar(14) NOT NULL UNIQUE COMMENT 'patient Telephone',
   `UserId` int(11) NOT NULL UNIQUE COMMENT'patient id',
-  `Language` tinyint(1) NOT NULL DEFAULT 1,
+  `Longtiude` double NOT NULL,
+  `Latitiude` double NOT NULL,
    PRIMARY KEY (`UserId`),
    FOREIGN KEY (`UserId`) REFERENCES `USER`(`Id`) ON DELETE CASCADE,
-   FOREIGN KEY (`Gender`) REFERENCES `GENDER`(`Id`) ON DELETE CASCADE,
-   FOREIGN KEY (`Language`) REFERENCES `LANGUAGE` (`Id`) ON DELETE CASCADE
+   FOREIGN KEY (`Gender`) REFERENCES `GENDER`(`Id`) ON DELETE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
@@ -135,8 +138,8 @@ CREATE TABLE `PHARMACY` (
   `Name` varchar(24) NOT NULL,
   `Notes` TEXT NOT NULL,
   `Describition` TEXT NOT NULL,
-  `Longtiude` int(11) NOT NULL,
-  `Latitiude` int(11) NOT NULL,
+  `Longtiude` double NOT NULL,
+  `Latitiude` double NOT NULL,
   `Telephone` varchar(14) NOT Null,
    PRIMARY KEY (`UserId`),
   FOREIGN KEY (`UserId`) REFERENCES `USER` (`Id`) ON DELETE CASCADE
