@@ -1,5 +1,5 @@
 <?php
-include '../content/header.php';
+include_once '../content/header.php';
 include_once '../../Application/order.php';
 $order =new order();
 ?>
