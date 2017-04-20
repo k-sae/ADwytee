@@ -20,7 +20,7 @@ class result_Query
   public function fetch_pharmaces($str)
   {
 
-    $query = "SELECT p.Name, m.EnName, p.Longtiude, p.Latitiude FROM `PHARMACY`AS p
+    $query = "SELECT p.Name, m.EnName, p.Latitude, p.Longitude FROM `PHARMACY`AS p
               INNER JOIN USER AS u ON p.UserId = u.Id
               INNER JOIN USERTYPE AS ut ON u.Type = ut.Id
               INNER JOIN PHARMACY_MEDICINE AS pm ON p.UserId = pm.PharmacyId
