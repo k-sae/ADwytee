@@ -1,5 +1,5 @@
 <?php
-include '../content/header.php';
+include_once '../content/header.php';
 include_once '../../Application/order.php';
 $order =new order();
 ?>
@@ -14,14 +14,14 @@ $order =new order();
        <th colspan="3"> <?php echo  $language['orders']; ?></th>
      </tr>
      <tr>
-       <th>#</th>
+       <th class="material-icons button-order add-order">+</th>
        <div class="overlay" id ="div">
          <!-- close button-->
-         <a  href="#" class="close-button" onclick="closeDiv()">&#8864</a>
+         <a   href="#"class="close-button" onclick="closeDiv()">&#8864</a>
          <!-- ovarly page -->
          <!--open ovarly -->
          <th colspan="2" class ="material-icons button-order add-order">
-           <span  onclick="OpenDiv()"><?php echo $language['addorder'] ?></span></th>
+           <span  onclick="OpenDiv()"><?php echo  $language['addorder'] ?></span></th>
 
 
 
@@ -34,8 +34,8 @@ $order =new order();
      <?php   for($i =1; $i <= 5 ;$i++){
 
        echo '<tr>
-         <td>'.$i.'</td>
-         <td>pharmacyname</td>
+         <td >'.$i.'</td>
+         <td class="td-order">pharmacyname</td>
          <td>
 
            <i class="material-icons button-order details-order">'.$language['details'].'</i>

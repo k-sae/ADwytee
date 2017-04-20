@@ -16,27 +16,19 @@ $medicine = $_GET["result"];
 	          </form>
           </div>
           
-          <table class="Ordertable">
-
-          	<thead>
-		     <tr>
-		       <th colspan="3">Results</th>
-		     </tr>
-		     <tr>
-		       <th>#</th>
-		       <th colspan="2">Pharmacies</th>
-		     </tr>
-		   </thead>
-
-		   <tbody>
+          <table class="Resulttable">
+					  <tr>
+					  	<th colspan="2">Results for <?php echo $medicine; ?></th>
+					  </tr>
+					  <tbody>
 
 
-		      <?php new result($medicine); ?> 
+					  	<?php new result($medicine); ?> 
 
-		     
-		   </tbody>
+					     
+					  </tbody>
 
-		 </table>
+					</table>
 
         </div>
       </div>
