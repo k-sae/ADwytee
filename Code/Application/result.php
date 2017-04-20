@@ -32,7 +32,7 @@ class result{
     if(sizeof($result_arr) != 0){
       $this->sort($result_arr);
       for($i=0; $i< sizeof($result_arr); $i++){
-        $distance = $this->getDistance(30.0110797,31.1886828, $result_arr[$i]['Latitude'],$result_arr[$i]['Longitude'], "K");
+        $distance = $this->getDistance($_SESSION['latitude'],$_SESSION['longitude'], $result_arr[$i]['Latitude'],$result_arr[$i]['Longitude'], "K");
         $result = "<tr>
                      
                      <td>Pharmacy: <a href=''>" . $result_arr[$i]['Name'] . "</a>  
@@ -79,8 +79,8 @@ class result{
     for($i=0; $i< sizeof($array); $i++){
       for($j=1; $j< (sizeof($array)-$i); $j++){
         
-        $distance1 = $this->getDistance(30.0110797,31.1886828, $array[($j-1)]['Latitude'],$array[($j-1)]['Longitude'], "M");
-        $distance2 = $this->getDistance(30.0110797,31.1886828, $array[$j]['Latitude'],$array[$j]['Longitude'], "M");
+        $distance1 = $this->getDistance($_SESSION['latitude'],$_SESSION['longitude'], $array[($j-1)]['Latitude'],$array[($j-1)]['Longitude'], "M");
+        $distance2 = $this->getDistance($_SESSION['latitude'],$_SESSION['longitude'], $array[$j]['Latitude'],$array[$j]['Longitude'], "M");
 
         if($distance1 > $distance2){
           $this->swaparray($array, ($j-1), $j);
