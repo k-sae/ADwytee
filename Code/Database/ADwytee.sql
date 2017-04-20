@@ -342,8 +342,8 @@ CREATE TABLE `RATE` (
 
 INSERT INTO `LANGUAGE`( `Language`) VALUES ('en');
 INSERT INTO `LANGUAGE`( `Language`) VALUES ('ar');
-INSERT INTO `ORDER_STATUS`( `Status`) VALUES ('pend');
-INSERT INTO `ORDER_STATUS`( `Status`) VALUES ('prog');
+INSERT INTO `ORDER_STATUS`( `Status`) VALUES ('pending');
+INSERT INTO `ORDER_STATUS`( `Status`) VALUES ('in progress');
 INSERT INTO `USERTYPE`( `Type`) VALUES ('admin');
 INSERT INTO `USERTYPE`( `Type`) VALUES ('pharmacy');
 INSERT INTO `USERTYPE`( `Type`) VALUES ('patient');
