@@ -103,7 +103,7 @@ CREATE TABLE `PATIENT` (
   `District` varchar(24) NOT NULL COMMENT 'patient district',
   `Telephone` varchar(14) NOT NULL UNIQUE COMMENT 'patient Telephone',
   `UserId` int(11) NOT NULL UNIQUE COMMENT'patient id',
-  `Longtiude` double NOT NULL,
+  `latitude` double NOT NULL,
   `Latitiude` double NOT NULL,
    PRIMARY KEY (`UserId`),
    FOREIGN KEY (`UserId`) REFERENCES `USER`(`Id`) ON DELETE CASCADE,
@@ -138,7 +138,7 @@ CREATE TABLE `PHARMACY` (
   `Name` varchar(24) NOT NULL,
   `Notes` TEXT NOT NULL,
   `Describition` TEXT NOT NULL,
-  `Longtiude` double NOT NULL,
+  `latitude` double NOT NULL,
   `Latitiude` double NOT NULL,
   `Telephone` varchar(14) NOT Null,
    PRIMARY KEY (`UserId`),
@@ -333,7 +333,20 @@ CREATE TABLE `RATE` (
   FOREIGN KEY (`PharmacyId`) REFERENCES `USER`(`Id`) ON DELETE CASCADE,
   FOREIGN KEY (`PatientId`) REFERENCES `USER`(`Id`) ON DELETE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+-- --------------------------------------------------------
 
+--
+-- insert main table value
+--
+-- --------------------------------------------------------
+
+INSERT INTO `LANGUAGE`( `Language`) VALUES ('en');
+INSERT INTO `LANGUAGE`( `Language`) VALUES ('ar');
+INSERT INTO `ORDER_STATUS`( `Status`) VALUES ('pend');
+INSERT INTO `ORDER_STATUS`( `Status`) VALUES ('prog');
+INSERT INTO `USERTYPE`( `Type`) VALUES ('admin');
+INSERT INTO `USERTYPE`( `Type`) VALUES ('pharmacy');
+INSERT INTO `USERTYPE`( `Type`) VALUES ('patient');
 -- --------------------------------------------------------
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
