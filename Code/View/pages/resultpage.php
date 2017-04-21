@@ -2,6 +2,11 @@
 include '../../Application/result.php';
 include '../content/header.php';
 $medicine = $_GET["result"];
+if (!isset($_SESSION["latitude"]) || !isset($_SESSION["longitude"])) {
+	echo '<script> alert("Please allow the request to know your location,In Order to search");
+					window.location.href = "index.php";
+	 			</script>';
+}
 ?>
 
 <div class="wrapper">

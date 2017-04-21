@@ -1,11 +1,10 @@
 <?php
 session_start();
 
-
 //THE DEFUALT LANGUAGE
 if (!isset($_POST["lang"]) && !isset($_SESSION["language"])){
   $_SESSION["language"] = "en";
-//WHEN NAVIGATIONG TO ANOTHER PAGE
+//WHEN NAVIGATING TO ANOTHER PAGE
 } else if (!isset($_POST["lang"])) {
   //$_SESSION["language"] = $_SESSION["language"];
 //WHEN REFRESHING OR CHANGING THE LANGUAGE
@@ -13,14 +12,14 @@ if (!isset($_POST["lang"]) && !isset($_SESSION["language"])){
   $_SESSION["language"] = $_POST["lang"];
 }
 
-//if (!isset($_SESSION["latitude"]) && !isset($_SESSION["longitude"])){
-  
 if ((!isset($_GET["lat"]) && !isset($_SESSION["latitude"])) || (!isset($_GET["long"]) && !isset($_SESSION["longitude"]))) {
-include_once '../../api/Location.php';
+  echo ' <script src="../js/Location.js"></script> ';
+  echo ' <script> getLocation(); </script> ';
 }
 else if (!isset($_GET["lat"]) || !isset($_GET["lat"])) {
   $_SESSION["latitude"] = $_SESSION["latitude"];
   $_SESSION["longitude"] = $_SESSION["longitude"];
+  //session_destroy();
 }else
 {
  $_SESSION["latitude"] =  $_GET["lat"];
