@@ -20,7 +20,7 @@ function showPosition(position) {
 function showError(error) {
     switch(error.code) {
         case error.PERMISSION_DENIED:
-            alert("You denied the request for Geolocation.\nPlease allow the request to know your location");
+            //alert("You denied the request for Geolocation.\nPlease allow the request to know your location");
             break;
         case error.POSITION_UNAVAILABLE:
             alert("We can't access your location!\nPlease check your internet.");

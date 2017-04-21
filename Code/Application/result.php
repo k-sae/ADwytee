@@ -46,7 +46,7 @@ class result{
       }
     } else {
       echo "<tr>
-              <td>no results found</td>
+              <td>". $language['noresults']."</td>
             </tr>";
     }
   }

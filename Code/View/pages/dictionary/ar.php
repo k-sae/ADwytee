@@ -21,5 +21,8 @@ $language['pharmacy'] = "صيدلية";
 $language['farfromyou'] ="يبعُد عنك";
 $language['km'] ="كم";
 $language['ordernow'] ="اطٌُلب الان!";
+$language['noresults'] = "لا توجد نتائج";
+$language['requestdenied'] = "لكي تبحث, من فضلك اقبل الطلب للحصول علي موقعك";
+
 
 ?>

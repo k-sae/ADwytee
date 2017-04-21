@@ -21,6 +21,8 @@ $language['pharmacy'] = "Pharmacy";
 $language['farfromyou'] ="Far from you";
 $language['km'] ="Km";
 $language['ordernow'] ="Order Now!";
+$language['noresults'] = "no results found";
+$language['requestdenied'] = "In Order to search,Please allow the request to know your location";
 
 
 ?>
