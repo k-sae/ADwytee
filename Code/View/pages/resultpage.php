@@ -18,7 +18,7 @@ $medicine = $_GET["result"];
           
           <table class="Resulttable">
 					  <tr>
-					  	<th colspan="2">Results for <?php echo $medicine; ?></th>
+					  	<th colspan="2"><?php echo $language['resultsfor'] . " " . $medicine; ?></th>
 					  </tr>
 					  <tbody>
 

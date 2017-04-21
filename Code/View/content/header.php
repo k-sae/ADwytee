@@ -11,7 +11,10 @@ if (!isset($_POST["lang"]) && !isset($_SESSION["language"])){
 //WHEN REFRESHING OR CHANGING THE LANGUAGE
 } else {
   $_SESSION["language"] = $_POST["lang"];
-}
+}if($_SESSION["language"] == "en"){
+  $dir = "ltr";
+}else
+  $dir = "rtl";
 $dictionary_path = './dictionary/'.$_SESSION["language"].'.php';
 include_once  $dictionary_path;
 ?>
@@ -30,7 +33,7 @@ include_once  $dictionary_path;
     <link href="../css/bugfix.css" rel="stylesheet">
     <link href="../css/default.css" rel="stylesheet">
   </head>
-  <body>
+  <body dir = <?php echo $dir?> >
   <nav class="navbar navbar-fixed-top navbar-inverse">
       <div class="container">
         <div class="navbar-header">

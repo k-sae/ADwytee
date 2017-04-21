@@ -1,5 +1,5 @@
-//this  file  en word
 <?php
+//this  file  en word
 
 $language['logo'] = "ADwytee";
 $language['search'] = "Search";
@@ -16,5 +16,11 @@ $language['about'] ="About us";
 $language['register'] ="Register";
 $language['login'] ="Login";
 $language['contact'] ="Contact Us";
+$language['resultsfor'] = "Results for";
+$language['pharmacy'] = "Pharmacy";
+$language['farfromyou'] ="Far from you";
+$language['km'] ="Km";
+$language['ordernow'] ="Order Now!";
+
 
 ?>
