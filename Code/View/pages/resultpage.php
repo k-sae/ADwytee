@@ -23,7 +23,7 @@ if (!isset($_SESSION["latitude"]) || !isset($_SESSION["longitude"])) {
           
           <table class="Resulttable">
 					  <tr>
-					  	<th colspan="2">Results for <?php echo $medicine; ?></th>
+					  	<th colspan="2"><?php echo $language['resultsfor'] . " " . $medicine; ?></th>
 					  </tr>
 					  <tbody>
 

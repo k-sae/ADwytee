@@ -1,3 +1,4 @@
+//
 <?php
 error_reporting(0);
 
@@ -24,8 +25,7 @@ class result{
 
   public function fetch($str)
   {
-
-
+    include 'dictionary/'. $_SESSION["language"].'.php';
     $result_arr = $this->result->fetch_pharmaces($str);
     
 
@@ -35,10 +35,10 @@ class result{
         $distance = $this->getDistance($_SESSION['latitude'],$_SESSION['longitude'], $result_arr[$i]['Latitude'],$result_arr[$i]['Longitude'], "K");
         $result = "<tr>
                      
-                     <td>Pharmacy: <a href=''>" . $result_arr[$i]['Name'] . "</a>  
-                     <br>Far from you: " . number_format($distance,2) . "Km </td>
+                     <td>". $language['pharmacy'].": <a href=''>" . $result_arr[$i]['Name'] . "</a>  
+                     <br>". $language['farfromyou'].": " . number_format($distance,2) . $language['km'] ." </td>
                      <td>
-                      <i><a href=''> Order </a></i>
+                      <i><a href='orderPage.php'> ". $language['ordernow']." </a></i>
                      </td>
                     </tr>";
 

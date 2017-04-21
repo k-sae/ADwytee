@@ -1,5 +1,5 @@
-//this  file  ar word
 <?php
+//this  file  ar word
 
 $language['logo'] = "أدويتي";
 $language['search'] = "أبحث";
@@ -14,7 +14,12 @@ $language['addorder'] ="اضافة طلب";
 $language['pharmacyprofile'] ="صفحة الصيديلة الشخصية";
 $language['about'] ="عنّا";
 $language['register'] ="سجّل";
-$language['contact'] ="تواصل معنا";
 $language['login'] ="دخول";
+$language['contact'] ="تواصل معنا";
+$language['resultsfor'] = "نتائج عن";
+$language['pharmacy'] = "صيدلية";
+$language['farfromyou'] ="يبعُد عنك";
+$language['km'] ="كم";
+$language['ordernow'] ="اطٌُلب الان!";
 
 ?>

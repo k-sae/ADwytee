@@ -12,6 +12,11 @@ if (!isset($_POST["lang"]) && !isset($_SESSION["language"])){
   $_SESSION["language"] = $_POST["lang"];
 }
 
+if($_SESSION["language"] == "en"){
+  $dir = "ltr";
+}else
+  $dir = "rtl";
+
 if ((!isset($_GET["lat"]) && !isset($_SESSION["latitude"])) || (!isset($_GET["long"]) && !isset($_SESSION["longitude"]))) {
   echo ' <script src="../js/Location.js"></script> ';
   echo ' <script> getLocation(); </script> ';
@@ -20,8 +25,7 @@ else if (!isset($_GET["lat"]) || !isset($_GET["lat"])) {
   $_SESSION["latitude"] = $_SESSION["latitude"];
   $_SESSION["longitude"] = $_SESSION["longitude"];
   //session_destroy();
-}else
-{
+}else{
  $_SESSION["latitude"] =  $_GET["lat"];
  $_SESSION["longitude"] = $_GET["long"];
 }
@@ -44,7 +48,7 @@ include_once  $dictionary_path;
     <link href="../css/bugfix.css" rel="stylesheet">
     <link href="../css/default.css" rel="stylesheet">
   </head>
-  <body>
+  <body dir = <?php echo $dir?> >
   <nav class="navbar navbar-fixed-top navbar-inverse">
       <div class="container">
         <div class="navbar-header">
