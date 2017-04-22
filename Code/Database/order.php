@@ -17,18 +17,17 @@ class Order_Query
 
      $this->database = new DataBase($this->file_name2);
 }
-   public function fetch_order($key)
+   public function fetch_order($id)
   {
     # code...
-    $type_word = $type . "_word"  ;
-    $query = "SELECT $type_word FROM `app_language` WHERE word_key like '$key'
-    ";
-    $result = $this->database->fetch_query($query);
-     return ($result["0"][$type_word]);
-
-  }
-
-
+    $query = "SELECT `Id`, `PharmacyId`, `date`, `status` FROM `order` WHERE `UserId` = $id ";
+    return ($this->database->fetch_query($query));
+    }
+    public function fetch_pharmacy($id){
+        $query = "SELECT `Name` FROM `pharmacy` WHERE `UserId` = $id ";
+        return ($this->database->fetch_query($query));
+    }
+    
 }
 
  ?>

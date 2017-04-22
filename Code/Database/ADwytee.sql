@@ -56,7 +56,7 @@ CREATE TABLE `USER` (
   `Language` tinyint(1) NOT NULL DEFAULT 1,
   PRIMARY KEY (`Id`),
   FOREIGN KEY (`Type`) REFERENCES `USERTYPE`(`Id`) ON DELETE CASCADE,
-   FOREIGN KEY (`Language`) REFERENCES `LANGUAGE` (`Id`) ON DELETE CASCADE
+  FOREIGN KEY (`Language`) REFERENCES `LANGUAGE` (`Id`) ON DELETE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 -- --------------------------------------------------------
 
@@ -103,8 +103,8 @@ CREATE TABLE `PATIENT` (
   `District` varchar(24) NOT NULL COMMENT 'patient district',
   `Telephone` varchar(14) NOT NULL UNIQUE COMMENT 'patient Telephone',
   `UserId` int(11) NOT NULL UNIQUE COMMENT'patient id',
-  `latitude` double NOT NULL,
-  `Latitiude` double NOT NULL,
+  `Latitude` double NOT NULL,
+  `Longitude` double NOT NULL,
    PRIMARY KEY (`UserId`),
    FOREIGN KEY (`UserId`) REFERENCES `USER`(`Id`) ON DELETE CASCADE,
    FOREIGN KEY (`Gender`) REFERENCES `GENDER`(`Id`) ON DELETE CASCADE
@@ -138,10 +138,10 @@ CREATE TABLE `PHARMACY` (
   `Name` varchar(24) NOT NULL,
   `Notes` TEXT NOT NULL,
   `Describition` TEXT NOT NULL,
-  `latitude` double NOT NULL,
-  `Latitiude` double NOT NULL,
+  `Latitude` double NOT NULL,
+  `Longitude` double NOT NULL,
   `Telephone` varchar(14) NOT Null,
-   PRIMARY KEY (`UserId`),
+  PRIMARY KEY (`UserId`),
   FOREIGN KEY (`UserId`) REFERENCES `USER` (`Id`) ON DELETE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
@@ -154,9 +154,9 @@ CREATE TABLE `PHARMACY` (
 CREATE TABLE `BIND_WITH` (
   `PharmacyId` int(11) NOT NULL,
   `PatientId` int(11) NOT NULL,
-    PRIMARY KEY (`PharmacyId`,`PatientId`),
-    FOREIGN KEY (`PharmacyId`) REFERENCES `USER`(`Id`) ON DELETE CASCADE,
-    FOREIGN KEY (`PatientId`) REFERENCES `USER`(`Id`)ON DELETE CASCADE
+  PRIMARY KEY (`PharmacyId`,`PatientId`),
+  FOREIGN KEY (`PharmacyId`) REFERENCES `USER`(`Id`) ON DELETE CASCADE,
+  FOREIGN KEY (`PatientId`) REFERENCES `USER`(`Id`)ON DELETE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
@@ -187,7 +187,7 @@ CREATE TABLE `MEDICINE` (
   `EnName` varchar(24) NOT NULL UNIQUE,
   `ArName` varchar(24) CHARACTER SET utf8 COLLATE utf8_general_ci NULL UNIQUE,
   `Descripton` text NOT NULL,
-   PRIMARY KEY (`Code`)
+  PRIMARY KEY (`Code`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
@@ -200,8 +200,8 @@ CREATE TABLE `MEDICINE_ALTERNATIVES` (
   `MedicineCode` varchar(13) NOT NULL,
   `M_AlternativeCode` varchar(13) NOT NULL,
   PRIMARY key (`MedicineCode`,`M_AlternativeCode`),
-   FOREIGN KEY (`MedicineCode`) REFERENCES `MEDICINE`(`Code`) ON DELETE CASCADE,
-   FOREIGN KEY (`M_AlternativeCode`) REFERENCES `MEDICINE`(`Code`) ON DELETE CASCADE
+  FOREIGN KEY (`MedicineCode`) REFERENCES `MEDICINE`(`Code`) ON DELETE CASCADE,
+  FOREIGN KEY (`M_AlternativeCode`) REFERENCES `MEDICINE`(`Code`) ON DELETE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 
@@ -245,7 +245,7 @@ CREATE TABLE `MEDICINE_ORDER` (
   `Amount` int(11) NOT NULL,
   PRIMARY key (`MedicineCode`,`OrderId`),
   FOREIGN KEY (`MedicineCode`) REFERENCES `MEDICINE`(`Code`)ON DELETE CASCADE,
-   FOREIGN KEY (`OrderId`) REFERENCES `ORDER`(`Id`)ON DELETE CASCADE
+  FOREIGN KEY (`OrderId`) REFERENCES `ORDER`(`Id`)ON DELETE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
@@ -259,10 +259,10 @@ CREATE TABLE `NOTIFICATION` (
   `MedicineCode` varchar(13) NOT NULL,
   `OrderId` int(11) NOT NULL,
   `PatientId` Int(11) NOT NULL,
-   PRIMARY key (`Id`),
-   FOREIGN KEY (`MedicineCode`) REFERENCES `MEDICINE`(`Code`) ON DELETE CASCADE,
-   FOREIGN KEY (`OrderId`) REFERENCES `ORDER`(`Id`) ON DELETE CASCADE,
-   FOREIGN KEY (`PatientId`) REFERENCES `USER`(`Id`) ON DELETE CASCADE
+  PRIMARY key (`Id`),
+  FOREIGN KEY (`MedicineCode`) REFERENCES `MEDICINE`(`Code`) ON DELETE CASCADE,
+  FOREIGN KEY (`OrderId`) REFERENCES `ORDER`(`Id`) ON DELETE CASCADE,
+  FOREIGN KEY (`PatientId`) REFERENCES `USER`(`Id`) ON DELETE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 -- --------------------------------------------------------
 --
@@ -272,7 +272,7 @@ CREATE TABLE `NOTIFICATION` (
 CREATE TABLE `PATIENT_CHRONICS` (
   `PatientId` int(11),
   `Chronics` varchar(24) NOT NULL COMMENT 'Patient Chronics',
-   FOREIGN KEY (`PatientId`) REFERENCES `USER`(`Id`) ON DELETE CASCADE
+  FOREIGN KEY (`PatientId`) REFERENCES `USER`(`Id`) ON DELETE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
@@ -340,6 +340,7 @@ CREATE TABLE `RATE` (
 --
 -- --------------------------------------------------------
 
+
 INSERT INTO `LANGUAGE`( `Language`) VALUES ('en');
 INSERT INTO `LANGUAGE`( `Language`) VALUES ('ar');
 INSERT INTO `ORDER_STATUS`( `Status`) VALUES ('pending');
@@ -347,6 +348,7 @@ INSERT INTO `ORDER_STATUS`( `Status`) VALUES ('in progress');
 INSERT INTO `USERTYPE`( `Type`) VALUES ('admin');
 INSERT INTO `USERTYPE`( `Type`) VALUES ('pharmacy');
 INSERT INTO `USERTYPE`( `Type`) VALUES ('patient');
+
 -- --------------------------------------------------------
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

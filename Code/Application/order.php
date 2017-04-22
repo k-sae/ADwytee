@@ -18,10 +18,21 @@ private $order;
   $this->order=  new Order_Query();
 
 }
- public function print_word($key)
+ public function return_oreder($id)
  {
    # code...
-  return ($this->order->fetch_word($key,$_SESSION["language"]));
+   $order_reselt =$this->order->fetch_order($id);
+   if(sizeof($order_reselt) !=0){
+  return ($order_reselt);
+}
+else {
+  return 0;
+}
  }
+  public function return_pharmacy($id){
+    $order_reselt =$this->order->fetch_pharmacy($id);
+    return ($order_reselt);
+  }
+  
 }
  ?>

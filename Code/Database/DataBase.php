@@ -56,6 +56,7 @@ class DataBase
    }
    public function database_all_assoc($database_result) {
       // return assc array
+      
         while ($row = mysqli_fetch_assoc($database_result)) {
             $array_return[] = $row;
         }

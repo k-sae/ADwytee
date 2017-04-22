@@ -36,9 +36,6 @@ class livesearch{
     } else {
       echo "no results found";
     }
-    //print_r($result_arr);
-    //echo $reselt[0]["Name"];
-    //var_dump ($reselt);
   }
 }
 ?>

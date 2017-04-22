@@ -85,7 +85,8 @@ body {
 
 .langselect{
   background-color: #000;
-  margin-top: 25%;
+  margin-top: 22%;
+  border: none;
 }
 
 /*
@@ -152,6 +153,33 @@ height:40%;
 width :40%;
 }
 
+/*
+ * RESULT
+ *
+*/
+.searchagain input{
+  color: #000;
+}
+
+.Resulttable{
+  line-height: 150%;
+  border-collapse: separate;
+  border-spacing: 0px 15px;
+  width: 100%;
+  font-family: Montserrat, sans-serif;}
+
+.Resulttable th{
+  background: #666;
+  padding: 12px 0px 12px 0px;
+  text-align: center;
+  font-size: 200%;
+}
+.Resulttable td{
+  background-color: #555;
+  padding: 10px;
+  font-size: 120%;
+  box-shadow: 0px 2px 3px 3px #444;
+}
 
 
 /*
