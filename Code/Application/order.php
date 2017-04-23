@@ -33,6 +33,12 @@ else {
     $order_reselt =$this->order->fetch_pharmacy($id);
     return ($order_reselt);
   }
-  
+
+
+public function return_all_pharmacy(){
+  $order_reselt =$this->order->fetch_all_pharmacy();
+  return ($order_reselt);
+}
+
 }
  ?>

@@ -27,7 +27,11 @@ class Order_Query
         $query = "SELECT `Name` FROM `pharmacy` WHERE `UserId` = $id ";
         return ($this->database->fetch_query($query));
     }
-    
+    public function fetch_all_pharmacy(){
+        $query = "SELECT `Name` FROM `pharmacy`";
+        return ($this->database->fetch_query($query));
+    }
+
 }
 
  ?>

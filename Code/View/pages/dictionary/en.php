@@ -23,6 +23,6 @@ $language['km'] ="Km";
 $language['ordernow'] ="Order Now!";
 $language['noresults'] = "no results found";
 $language['requestdenied'] = "In Order to search,Please allow the request to know your location";
-
-
+$language['nopharmacyyet'] ="No Pharmacy yet";
+$language['allpharmacy']="All Pharmacy Name";
 ?>

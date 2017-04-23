@@ -23,6 +23,6 @@ $language['km'] ="كم";
 $language['ordernow'] ="اطٌُلب الان!";
 $language['noresults'] = "لا توجد نتائج";
 $language['requestdenied'] = "لكي تبحث, من فضلك اقبل الطلب للحصول علي موقعك";
-
-
+$language['nopharmacyyet'] ="لاتوجد صيدليات حتي  الان";
+$language['allpharmacy'] ="كل  الصيدليات";
 ?>
