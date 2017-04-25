@@ -85,17 +85,24 @@ include_once  $dictionary_path;
     </nav>
           <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
             <div class="modal-dialog" role="document">
-              <div class="modal-content">
+              <div class="modal-content register-dialog">
                 <div class="modal-header">
                   <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span>                   </button>
                  <h4 class="modal-title" id="myModalLabel"><?php echo  $language['login']?></h4>
                 </div>
                 <div class="modal-body">
-                  <form><input type="" name=""></form>
+                  <form>
+                   <input type="email" name="email" placeholder="Email">
+                    <br>
+                    <input type="password" name="password" placeholder="Password">
+                    <br>
+                    <button type="button" class="btn btn-primary"><?php echo  $language['login']?></button>
+                  </form>
+                  <p>No Acount yet? <a href="../pages/RegisterPage.php">Fuck ur self<a><p>
                 </div>
                 <div class="modal-footer">
-                  <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
-                  <button type="button" class="btn btn-primary"><?php echo  $language['login']?></button>
+                  <!-- <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button> -->
+                  <!-- <button type="button" class="btn btn-primary"><?php echo  $language['login']?></button> -->
                 </div>
               </div>
             </div>
