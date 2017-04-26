@@ -1,19 +1,19 @@
 <?php
 include '../content/header.php';
-include '../../Database/pharmacy.php';
-$ph=new Pharmacy_Query();
-$arry=$ph->fetch_Pharmacy('1','1');
-$arrys=$arry[0];
+//include '../../Database/pharmacy.php';
+//$ph=new Pharmacy_Query();
+//$arry=$ph->fetch_Pharmacy('1','1');
+//$arrys=$arry[0];
 ?>
     <div class="wrapper2 container" style="margin-top:50px">
 	    <div class="details col-sm-9">
 			<div class="img col-sm-2"></div>
 			<div class="info col-sm-10">
-				<h3>name :<?php echo $arrys["Name"];?> </h3>
-				<h3>Location : <?php echo $arrys["Longtiude"] .','. $arrys["Latitiude"] ;?>  </h3>
-				<h3>Telephone :<?php echo $arrys["Telephone"];?> </h3>
-				<p> notes :<?php echo $arrys["Notes"];?></p>
-				<p>decribition :<?php echo $arrys["Describition"];?></p>
+				<h3>name :<?php// echo $arrys["Name"];?> </h3>
+				<h3>Location : <?php //echo $arrys["Longtiude"] .','. $arrys["Latitiude"] ;?>  </h3>
+				<h3>Telephone :<?php //echo $arrys["Telephone"];?> </h3>
+				<p> notes :<?php// echo $arrys["Notes"];?></p>
+				<p>decribition :<?php //echo $arrys["Describition"];?></p>
 			</div>
 			 <button class=" btn btn-lg btn-primary"> edit</button>
 	    </div>
@@ -32,6 +32,7 @@ $arrys=$arry[0];
           </div>
         </div>
     </div>
+    <a href="PatientHistory.php"><button class="btn btn-lg btn-primary">Patient History</button></a>
 	<div class="container col-md-12">
 		  <h2>Medicine_Table</h2>
 		  <div class="table-responsive">

@@ -151,9 +151,23 @@ left:40%;
 height:40%;
 width :40%;
 }
-
-
-
+/*
+Patient history
+*/
+.Patient_info{ height: 200px }
+.details-table-2,.bloodPressureTable{float: right;}
+.details-table,.details-table-2{margin-top:50px }
+.details-table .table tbody tr:first-child td,.details-table-2 .table tbody tr:first-child td{
+  border-top: 0px;
+}
+.details-table .table tbody tr td:first-child,.details-table-2 .table tbody tr td:first-child{
+  width: 30%;
+}
+.details-table .table tbody tr td,.details-table-2 .table tbody tr td{
+padding:0px;
+}
+.risk{ text-align: left }
+.table{padding: 4px}
 /*
  * Order
  */
