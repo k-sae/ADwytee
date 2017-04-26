@@ -1,17 +1,35 @@
 <?php
 session_start();
 
-
 //THE DEFUALT LANGUAGE
 if (!isset($_POST["lang"]) && !isset($_SESSION["language"])){
   $_SESSION["language"] = "en";
-//WHEN NAVIGATIONG TO ANOTHER PAGE
+//WHEN NAVIGATING TO ANOTHER PAGE
 } else if (!isset($_POST["lang"])) {
   //$_SESSION["language"] = $_SESSION["language"];
 //WHEN REFRESHING OR CHANGING THE LANGUAGE
 } else {
   $_SESSION["language"] = $_POST["lang"];
 }
+
+if($_SESSION["language"] == "en"){
+  $dir = "ltr";
+}else
+  $dir = "rtl";
+
+if ((!isset($_GET["lat"]) && !isset($_SESSION["latitude"])) || (!isset($_GET["long"]) && !isset($_SESSION["longitude"]))) {
+  echo ' <script src="../js/Location.js"></script> ';
+  echo ' <script> getLocation(); </script> ';
+}
+else if (!isset($_GET["lat"]) || !isset($_GET["lat"])) {
+  $_SESSION["latitude"] = $_SESSION["latitude"];
+  $_SESSION["longitude"] = $_SESSION["longitude"];
+  //session_destroy();
+}else{
+ $_SESSION["latitude"] =  $_GET["lat"];
+ $_SESSION["longitude"] = $_GET["long"];
+}
+
 $dictionary_path = './dictionary/'.$_SESSION["language"].'.php';
 include_once  $dictionary_path;
 ?>
@@ -30,7 +48,7 @@ include_once  $dictionary_path;
     <link href="../css/bugfix.css" rel="stylesheet">
     <link href="../css/default.css" rel="stylesheet">
   </head>
-  <body>
+  <body dir = <?php echo $dir?> >
   <nav class="navbar navbar-fixed-top navbar-inverse">
       <div class="container">
         <div class="navbar-header">
@@ -67,17 +85,24 @@ include_once  $dictionary_path;
     </nav>
           <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
             <div class="modal-dialog" role="document">
-              <div class="modal-content">
+              <div class="modal-content register-dialog">
                 <div class="modal-header">
                   <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span>                   </button>
                  <h4 class="modal-title" id="myModalLabel"><?php echo  $language['login']?></h4>
                 </div>
                 <div class="modal-body">
-                  <form><input type="" name=""></form>
+                  <form>
+                   <input type="email" name="email" placeholder="Email">
+                    <br>
+                    <input type="password" name="password" placeholder="Password">
+                    <br>
+                    <button type="button" class="btn btn-primary"><?php echo  $language['login']?></button>
+                  </form>
+                  <p>No Acount yet? <a href="../pages/RegisterPage.php">Fuck ur self<a><p>
                 </div>
                 <div class="modal-footer">
-                  <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
-                  <button type="button" class="btn btn-primary"><?php echo  $language['login']?></button>
+                  <!-- <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button> -->
+                  <!-- <button type="button" class="btn btn-primary"><?php echo  $language['login']?></button> -->
                 </div>
               </div>
             </div>
