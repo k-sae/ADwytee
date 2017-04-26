@@ -1,15 +1,16 @@
 <?php
-include_once "Info.php"
+include_once "Info.php";
  /**
  * 
  */
  class RegisterInfo
  {
- 	// $info;
+ 	public $info;
+ 	public $loginInfo;
  	function __construct()
  	{
  		# code...
- 		// $this->info = new Info();
+ 		$this->info = new Info();
  	}
  }
 ?>

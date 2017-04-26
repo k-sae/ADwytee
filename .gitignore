@@ -3,3 +3,6 @@
 .~lock.*.odt#
 *.~lock.*.odt#
 *credential.php
+.buildpath
+.project
+.settings/

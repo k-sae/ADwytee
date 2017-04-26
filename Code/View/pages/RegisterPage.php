@@ -1,8 +1,8 @@
 <?php
 include_once '../content/header.php';
 include_once '../../Application/Register.php';
-// include_once '../../Application/RegisterInfo.php';
-// $register = new RegisterInfo();
+include_once '../../Application/RegisterInfo.php';
+$register = new RegisterInfo();
 ?>
 
 <div class="container reg-container">
