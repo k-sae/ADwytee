@@ -98,12 +98,12 @@ include_once  $dictionary_path;
                     <br>
                     <button type="button" class="btn btn-primary"><?php echo  $language['login']?></button>
                   </form>
-                  <p>No Acount yet? <a href="../pages/RegisterPage.php">Fuck ur self<a><p>
+                  <p>No Acount yet? <a href="../pages/RegisterPage.php">Fuck ur self</a><p>
                 </div>
                 <div class="modal-footer">
-                  <!-- <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button> -->
+                  <!-- <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
                   <!-- <button type="button" class="btn btn-primary"><?php echo  $language['login']?></button> -->
                 </div>
               </div>
             </div>
-         </div> 
+         </div>  
