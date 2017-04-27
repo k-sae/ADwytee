@@ -9,11 +9,11 @@ include '../content/header.php';
 	    <div class="details col-sm-9">
 			<div class="img col-sm-2"></div>
 			<div class="info col-sm-10">
-				<h3>name :<?php// echo $arrys["Name"];?> </h3>
-				<h3>Location : <?php //echo $arrys["Longtiude"] .','. $arrys["Latitiude"] ;?>  </h3>
-				<h3>Telephone :<?php //echo $arrys["Telephone"];?> </h3>
-				<p> notes :<?php// echo $arrys["Notes"];?></p>
-				<p>decribition :<?php //echo $arrys["Describition"];?></p>
+				<h3>name :<!--<?php// echo $arrys["Name"];?>--> </h3>
+				<h3>Location : <!--<?php //echo $arrys["Longtiude"] .','. $arrys["Latitiude"] ;?> --> </h3>
+				<h3>Telephone :<!--<?php //echo $arrys["Telephone"];?>--> </h3>
+				<h3> notes :<!--<?php// echo $arrys["Notes"];?>--></h3>
+				<h3>decribition :<!--<?php //echo $arrys["Describition"];?>--></h3>
 			</div>
 			 <button class=" btn btn-lg btn-primary"> edit</button>
 	    </div>
@@ -45,6 +45,7 @@ include '../content/header.php';
 		        <th>Arabic name</th>
 		        <th>Amount</th>
 		        <th>expire date</th>
+		        <th>edit</th>
 
 		        <!--ask about medicine amount and expire date-->
 		      </tr>
@@ -58,9 +59,31 @@ include '../content/header.php';
 		        <td>35</td>
 		        <td>New York</td>
 		        <td>USA</td>
+		        <td><button class="btn-primary btn"> edit medicine</button></td>
 		      </tr>
 		    </tbody>
 		  </table>
+		  </div>
+		  <button class=" btn btn-primary" data-toggle="modal" data-target="#check_medicine">ADD_NEW_MEDICINE</button>
+		</div>
+		<div class="modal fade" id="check_medicine" tabindex="-1" role="dialog" aria-labelledby="check_medicineLabel" aria-hidden="true">
+		  <div class="modal-dialog" role="document">
+		    <div class="modal-content">
+		      <div class="modal-header">
+		        <h5 class="modal-title" id="check_medicineLabel">Check</h5>
+		        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+		          <span aria-hidden="true">&times;</span>
+		        </button>
+		      </div>
+		      <div class="modal-body">
+		        ...
+		        <a href="RegisterMedicine.php"> <button>register medicine</button></a>
+		      </div>
+		      <div class="modal-footer">
+		        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+		       <button type="button" class="btn btn-primary" >Save changes</button>
+		      </div>
+		    </div>
 		  </div>
 		</div>
 
