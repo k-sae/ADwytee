@@ -1,5 +1,7 @@
 <?php
-include_once "Info.php";
+include_once "../../Application/Info.php";
+include_once '../../Application/LoginInfo.php';
+include_once '../../Database/Register.php';
  /**
  * 
  */
@@ -7,10 +9,14 @@ include_once "Info.php";
  {
  	public $info;
  	public $loginInfo;
- 	function __construct()
+ 	function __construct($info, $loginInfo)
  	{
  		# code...
- 		$this->info = new Info();
+ 		$this->info = $info;
+ 		$this->loginInfo = $loginInfo;
+ 		$dataBaseRegister= new DatabaseRegister();
+ 		$dataBaseRegister->register($this);
+
  	}
  }
 ?>

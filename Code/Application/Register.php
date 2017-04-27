@@ -2,7 +2,7 @@
 /**
  *
  */
-class Order
+class Register
 {
 private $file_name = '../../Database/Register.php';
 private $order;
@@ -15,7 +15,6 @@ private $order;
      echo "error in file name";
 
     }
-  $this->order=  new Order_Query();
 
   }
 }
