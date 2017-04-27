@@ -1,6 +1,8 @@
 <?php
 include_once '../content/header.php';
-// include_once '../../Application/order.php';
+include_once '../../Application/Register.php';
+include_once '../../Application/RegisterInfo.php';
+$register = new RegisterInfo();
 ?>
 
 <div class="container reg-container">
@@ -11,29 +13,29 @@ include_once '../content/header.php';
 					<div class="col-sm-12">
 						<div class="row">
 							<div class="col-sm-6 form-group">
-								<label>First Name</label>
-								<input type="text" placeholder="Enter First Name Here.." class="form-control">
+								<label><?php echo  $language['first_name']; ?></label>
+								<input type="text" name="FName" placeholder="<?php echo  $language['enter_first_name_here']; ?>" class="form-control">
 							</div>
 							<div class="col-sm-6 form-group">
-								<label>Last Name</label>
-								<input type="text" placeholder="Enter Last Name Here.." class="form-control">
+								<label><?php echo  $language['last_name']; ?></label>
+								<input type="text" name="LName" placeholder="<?php echo  $language['enter_last_name_here']; ?>" class="form-control">
 							</div>
 						</div>					
 						<div class="row">
 							<div class="col-sm-4 form-group">
-								<label>City</label>
-								<input type="text" placeholder="Enter City Name Here.." class="form-control">
+								<label><?php echo  $language['goverment']; ?></label>
+								<input type="text" placeholder="<?php echo  $language['enter_governemnt_name_here']; ?>" class="form-control">
 							</div>	
 							<div class="col-sm-4 form-group">
-								<label>State</label>
-								<input type="text" placeholder="Enter State Name Here.." class="form-control">
+								<label><?php echo  $language['district']; ?></label>
+								<input type="text" placeholder="<?php echo  $language['enter_district_name_here']; ?>" class="form-control">
 							</div>	
 							<div class="col-sm-4 form-group">
-								<label>Zip</label>
-								<input type="text" placeholder="Enter Zip Code Here.." class="form-control">
+								<label><?php echo  $language['street_no']; ?></label>
+								<input type="text" placeholder="<?php echo  $language['enter_street_no_here']; ?>" class="form-control">
 							</div>		
 						</div>
-						<div class="row">
+					<!-- 	<div class="row">
 							<div class="col-sm-6 form-group">
 								<label>Title</label>
 								<input type="text" placeholder="Enter Designation Here.." class="form-control">
@@ -42,18 +44,18 @@ include_once '../content/header.php';
 								<label>Company</label>
 								<input type="text" placeholder="Enter Company Name Here.." class="form-control">
 							</div>	
-						</div>						
+						</div>		 -->				
 					<div class="form-group">
-						<label>Phone Number</label>
-						<input type="text" placeholder="Enter Phone Number Here.." class="form-control">
+						<label><?php echo  $language['phone_number']; ?></label>
+						<input type="text" placeholder="<?php echo  $language['enter_phone_no_here']; ?>" class="form-control">
 					</div>		
 					<div class="form-group">
-						<label>Email Address</label>
-						<input type="text" placeholder="Enter Email Address Here.." class="form-control">
+						<label><?php echo  $language['email']; ?></label>
+						<input type="text" placeholder="<?php echo  $language['enter_email_here']; ?>"class="form-control">
 					</div>	
 					<div class="form-group">
-						<label>Website</label>
-						<input type="text" placeholder="Enter Website Name Here.." class="form-control">
+						<label><?php echo  $language['password']; ?></label>
+						<input type="password" placeholder="<?php echo  $language['enter_password_here']; ?>" class="form-control">
 					</div>
 					<button type="button" class="btn btn-lg btn-info">Submit</button>					
 					</div>
