@@ -124,6 +124,14 @@ a.sug{
   height: 500px
 }
 /*
+register  medicine
+*/
+.Regwrap{ height: 100%; background:url(../images/2.png);background-size: 100% 100%; }
+.darklay{height: 100% ;width: 100%;background-color: rgba(9,9,9,0.4);margin-top: 30px}
+.darklay .container {height: 100%}
+.formmod{height: 100%;   box-shadow: 10px 10px 5px #888888; background-color: rgba(0,0,0,0.3);padding-top: 2%}
+.formmod .form-group label{font-size: 20px}
+/*
 pharmacy  style
 */
 
@@ -167,7 +175,7 @@ Patient history
 .details-table .table tbody tr td,.details-table-2 .table tbody tr td{
 padding:0px;
 }
-.risk{ text-align: left }
+.Risk{ text-align: left }
 .table{padding: 4px}
 /*
  * RESULT
