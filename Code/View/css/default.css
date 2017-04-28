@@ -101,8 +101,14 @@ body {
   font-weight: bold;
 }
 .search{
-  color:#000;
+  position: relative;
   margin-top:40%;
+}
+#livesearch{
+  position: absolute;
+  color:#000;
+  background-color: #ffffff;
+  width: 100%;
 }
 div.sug:hover{
   background-color: #ccc;
@@ -181,8 +187,8 @@ padding:0px;
  * RESULT
  *
 */
-.searchagain input{
-  color: #000;
+.searchagain{
+  position: relative;
 }
 
 .Resulttable{
@@ -470,4 +476,15 @@ body {
   .jumbotron {
     border-bottom: 0;
   }
+}
+
+#frame{
+
+  width: 100%;
+  height: 350px;
+}
+
+#regmedbtn{
+  display: none;
+  margin-top:40%;
 }

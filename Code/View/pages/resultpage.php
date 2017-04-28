@@ -16,10 +16,10 @@ if (!isset($_SESSION["latitude"]) || !isset($_SESSION["longitude"])) {
 					<div class="searchagain">
 						<br><br>
 						<h4><?php echo  $language['searchagain']?></h4>
-	          <form action="resultpage.php" method="get"><input name="result" placeholder="<?php echo  $language['search']?>" type="text" size="86" autocomplete="off" required="required" onkeyup="showResult(this.value)">
-	          	<div id="livesearch"></div>
+	          <form action="resultpage.php" method="get"><input class="form-control" name="result" placeholder="<?php echo $language['search']?>" type="text" autocomplete="off" required="required" onkeyup="showResult(this.value)">
+            <div id="livesearch"></div>
 	          </form>
-          </div>
+         	</div>
           
           <table class="Resulttable">
 					  <tr>

@@ -4,6 +4,17 @@ include '../content/header.php';
 //$ph=new Pharmacy_Query();
 //$arry=$ph->fetch_Pharmacy('1','1');
 //$arrys=$arry[0];
+
+if(isset($_POST['Code']) && isset($_POST['EnName']) && isset($_POST['ArName']) && isset($_POST['Description'])){
+	include_once '../../Application/Medicine.php';
+	include_once '../../Application/RegisterMedicine.php';
+	$medicine = new Medicine();
+	$medicine->Code = $_POST['Code'];
+	$medicine->EnName = $_POST['EnName'];
+	$medicine->ArName = $_POST['ArName'];
+	$medicine->Description = $_POST['Description'];
+	new RegisterMedicine($medicine);
+}
 ?>
     <div class="wrapper2 container" style="margin-top:50px">
 	    <div class="details col-sm-9">
@@ -76,8 +87,9 @@ include '../content/header.php';
 		        </button>
 		      </div>
 		      <div class="modal-body">
-		        ...
-		        <a href="RegisterMedicine.php"> <button>register medicine</button></a>
+		        
+		        <div> <iframe src="registeriframe.html" id="frame" frameborder="0" scrolling="no"></iframe></div>
+		        
 		      </div>
 		      <div class="modal-footer">
 		        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
