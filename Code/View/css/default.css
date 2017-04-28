@@ -197,12 +197,10 @@ width :40%;
   width: 50%;
   margin: 12% auto;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-
-}
+   }
 .head-table{
   text-align: center;
   font-size: 260%;
-
 }
 .add-order{
   font-size: 200%;
@@ -212,7 +210,7 @@ width :40%;
  .button-order {
   color: #aaa;
   padding: 5%;
-  font-size: 150%;
+  font-size: 200%;
   }
 .add-order:hover {
     color: yellow;
@@ -260,7 +258,7 @@ width :40%;
 
 }
 .td-order{
-  font-size: 120%;
+  font-size: 180%;
 }
 .Ordertable td:last-child {
   text-align: end;
@@ -316,16 +314,17 @@ width :40%;
 }
 .details .btn{bottom:0px;}
 .wrapper2{height: 300px}
-
+.Ordertable{
+  width:75%;
 }
+}
+
 @media(max-width: 480px){
   .Ordertable{
-    width: 100%;
+    width:100%;
   }
+
 }
-@media(max-width: 320px){
-  .Ordertable{
-    width: 100%;
-  }
+
 
 }

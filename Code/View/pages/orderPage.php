@@ -1,12 +1,13 @@
 <?php
 include_once '../content/header.php';
-include_once '../../Application/order.php';
-$order =new order();
+include_once '../../Application/orderManger.php';
+$orderManger =new orderManger();
 ?>
 <head>
   <script src = "../js/order.js">  </script> </head>
-<div >
-  <table class="Ordertable">
+
+<table class="Ordertable">
+
   <thead>
      <tr>
        <th colspan="3" class="head-table"> <?php echo  $language['orders']; ?></th>
@@ -19,19 +20,21 @@ $order =new order();
        </thead>
    <tbody>
      <?php
-     $array_order = $order->return_oreder(1);
+     $array_order = $orderManger->return_order(1);
+
      if($array_order !=0){
        $size = sizeof($array_order);
        for($i =1; $i <=$size  ;$i++){
 
        echo '<tr>
-         <td >'.$i.'</td>
-         <td class="td-order">'.$order->return_pharmacy($array_order[$i-1]["PharmacyId"])[0]["Name"].
+         <td class="td-order" >'.$i.'</td>
+         <td class="td-order">'
+         .$orderManger->return_pharmacy($array_order[$i-1]->getPharmacyId())[0]["Name"].
          '</td>
          <td>
 
                <i class=" button-order details-order fa fa-info-circle"  aria-hidden="true" ></i>';
-            if($array_order[$i-1]["status"] ==  1) {
+            if($array_order[$i-1]->getStatus() ==  1) {
               echo  '
           <i class=" button-order edit-order">  <span class="fa fa-pencil" aria-hidden="true"> <span></i>
            <i class=" button-order delete-order fa fa-trash"  aria-hidden="true">
@@ -43,8 +46,10 @@ $order =new order();
        </tr>';
      }}
    }?></tbody>
+
  </table>
- </div>
+
+
 
     <div class="modal fade" id="addorder" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
       <div class="modal-dialog" role="document">
@@ -55,10 +60,10 @@ $order =new order();
           </div>
           <div class="modal-body">
             <form  >
-              <!-- select pharmacy -->
+              <!-- select pharmacy-->
             <select name="users" onchange="showUser(this.value)" id="soflow" class ="select-pharmacy">
               <?php
-              $pharmacys =$order->return_all_pharmacy();
+              /*$pharmacys =$orderManger->return_all_pharmacy();
               $size_pharmay=sizeof($pharmacys);
               if($size_pharmay  == 0){
                 echo "<option value=\"\">".$language['nopharmacyyet'].":</option>";
@@ -70,13 +75,13 @@ $order =new order();
                    echo '<option value='.$pharmacys[$i-1]['PharmacyId'].'>'.$pharmacy_name.'</option>';
                 }
 
-              }
+              }*/
               ?>
             </select>
             <!--select medicine -->
             <select name="users" onchange="showUser(this.value)" id="soflow" class="select-medicine">
-              <?php
-              $pharmacys =$order->return_all_pharmacy();
+              <?php /*
+              $pharmacys =$orderManger->return_all_pharmacy();
               $size_pharmay=sizeof($pharmacys);
               if($size_pharmay  == 0){
                 echo "<option value=\"\">".$language['nopharmacyyet'].":</option>";
@@ -89,6 +94,7 @@ $order =new order();
                 }
 
               }
+              */
               ?>
             </select>
             <!-- amount of medicine -->
@@ -102,9 +108,12 @@ $order =new order();
           </div>
         </div>
       </div>
-   </div>
+  </div>
+
+
  <?php
+ 
  include '../content/footer.php';
-?>
+ ?>
     </body>
 </html>

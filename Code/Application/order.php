@@ -1,44 +1,56 @@
-<?php
+<<?php
 /**
  *
  */
 class Order
 {
-private $file_name = '../../Database/order.php';
-private $order;
-  function __construct()
+  private $id;
+  private $date;
+  private $userId;
+  private $pharmacyId;
+  private $status;
+  public function setId($id)
   {
-    # code...
-    try {
-   include_once ($this->file_name) ;
-     } catch (Exception $e) {
-     echo "error in file name";
-
+    $this->id =$id;
   }
-  $this->order=  new Order_Query();
+  public function setUserId($userid)
+  {
+    $this->userId =$userid;
+  }
 
-}
- public function return_oreder($id)
+  public function setPharmacyId($pharmacyId)
+  {
+    $this->pharmacyId =$pharmacyId;
+  }
+  public function setDate($date)
+  {
+    $this->date =$date;
+  }
+  public function setStatus($status)
+  {
+    $this->status =$status;
+  }
+   public function getId()
+  {
+    return $this->id;
+  }
+  public function getPharmacyId()
+  {
+   return $this->pharmacyId;
+  }
+ public function getUserId()
  {
-   # code...
-   $order_reselt =$this->order->fetch_order($id);
-   if(sizeof($order_reselt) !=0){
-  return ($order_reselt);
-}
-else {
-  return 0;
-}
+  return $this->userId;
  }
-  public function return_pharmacy($id){
-    $order_reselt =$this->order->fetch_pharmacy($id);
-    return ($order_reselt);
-  }
-
-
-public function return_all_pharmacy(){
-  $order_reselt =$this->order->fetch_all_pharmacy();
-  return ($order_reselt);
-}
+ public function getDate()
+ {
+ return $this->date;
+ }
+ public function getStatus()
+ {
+ return $this->status;
+ }
 
 }
+
  ?>
