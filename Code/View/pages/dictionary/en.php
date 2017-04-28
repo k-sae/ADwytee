@@ -10,7 +10,7 @@ $language['orderpage'] ="OrderPage";
 $language['delete'] ="Delete";
 $language['edit'] ="Edit";
 $language['details'] ="Details";
-$language['addorder'] ="Add Order";
+$language['addorder'] ="  Add Order   ";
 $language['pharmacyprofile'] ="Pharmacy Profile";
 $language['about'] ="About us";
 $language['register'] ="Register";
@@ -25,4 +25,6 @@ $language['noresults'] = "no results found";
 $language['requestdenied'] = "In Order to search,Please allow the request to know your location";
 $language['nopharmacyyet'] ="No Pharmacy yet";
 $language['allpharmacy']="All Pharmacy Name";
+$language['saveorder'] ="Save order";
+ $language['cancel'] ="Cancel";
 ?>

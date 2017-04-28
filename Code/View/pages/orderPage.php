@@ -4,94 +4,19 @@ include_once '../../Application/order.php';
 $order =new order();
 ?>
 <head>
-       <title><?php echo $language['orderpage'] ?></title>
-<script src = "../js/order.js">  </script>
-<script>
-function delete_order(str) {
-  if (str=="") {
-    document.getElementById("txtHint").innerHTML="";
-    return;
-  }
-  if (window.XMLHttpRequest) {
-    // code for IE7+, Firefox, Chrome, Opera, Safari
-    xmlhttp=new XMLHttpRequest();
-  } else { // code for IE6, IE5
-    xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
-  }
-  xmlhttp.onreadystatechange=function() {
-    if (this.readyState==4 && this.status==200) {
-      document.getElementById("").innerHTML=this.responseText;
-    }
-  }
-  xmlhttp.open("GET","getuser.php?q="+str,true);
-  xmlhttp.send();
-}
-</script>
-
-</script>
-</head>
-<div class="overlay" id ="div">
-  <!-- close button-->
-  <a   href="#"class="close-button" onclick="closeDiv1()">&#8864</a>
-  <!-- ovarly page -->
-  <form  >
-    <!-- select pharmacy -->
-  <select name="users" onchange="showUser(this.value)" id="soflow" class ="select-pharmacy">
-    <?php
-    $pharmacys =$order->return_all_pharmacy();
-    $size_pharmay=sizeof($pharmacys);
-    if($size_pharmay  == 0){
-      echo "<option value=\"\">".$language['nopharmacyyet'].":</option>";
-    }
-   else {
-       echo '<option value="">'.$language['allpharmacy'].':</option>';
-        for ($i=1; $i <=$size_pharmay ; $i++) {
-        $pharmacy_name=  $pharmacys[$i-1]['Name'] ;
-         echo '<option value='.$pharmacys[$i-1]['PharmacyId'].'>'.$pharmacy_name.'</option>';
-      }
-
-    }
-    ?>
-  </select>
-  <!--select medicine -->
-  <select name="users" onchange="showUser(this.value)" id="soflow" class="select-medicine">
-    <?php
-    $pharmacys =$order->return_all_pharmacy();
-    $size_pharmay=sizeof($pharmacys);
-    if($size_pharmay  == 0){
-      echo "<option value=\"\">".$language['nopharmacyyet'].":</option>";
-    }
-   else {
-       echo '<option value="">'."alll".':</option>';
-        for ($i=1; $i <=$size_pharmay ; $i++) {
-        $pharmacy_name=  $pharmacys[$i-1]['Name'] ;
-         echo '<option value='.$pharmacys[$i-1]['PharmacyId'].'>'.$pharmacy_name.'</option>';
-      }
-
-    }
-    ?>
-  </select>
-  <!-- amount of medicine -->
-  <input type="number" name="quantity" min="1" max="5" class="amount">
- </div>
-</form>
-  <!--open ovarly -->
-   </div>
-
-
-<div style="overflow-x:auto;">
-  <table class="Ordertable table-responsive">
+  <script src = "../js/order.js">  </script> </head>
+<div >
+  <table class="Ordertable">
   <thead>
      <tr>
-       <th colspan="3"> <?php echo  $language['orders']; ?></th>
+       <th colspan="3" class="head-table"> <?php echo  $language['orders']; ?></th>
      </tr>
      <tr>
-       <th class="material-icons button-order add-order">+</th>
-       <th colspan="2" class ="material-icons button-order add-order">
-           <span  onclick="OpenDiv1()"><?php echo  $language['addorder'] ?></span></th>
-
-        </tr>
-   </thead>
+       <th colspan="3" data-toggle="modal" data-target="#addorder" class="add-order ">
+       <span class="fa fa-plus-square" aria-hidden="true"></span>
+       <span ><?php echo $language['addorder'] ?></span></th>
+       </tr>
+       </thead>
    <tbody>
      <?php
      $array_order = $order->return_oreder(1);
@@ -104,11 +29,13 @@ function delete_order(str) {
          <td class="td-order">'.$order->return_pharmacy($array_order[$i-1]["PharmacyId"])[0]["Name"].
          '</td>
          <td>
-               <i class="material-icons button-order details-order" onclick="OpenDiv2()">'.$language['details'].'</i>';
+
+               <i class=" button-order details-order fa fa-info-circle"  aria-hidden="true" ></i>';
             if($array_order[$i-1]["status"] ==  1) {
               echo  '
-          <i class="material-icons button-order edit-order">'. $language['edit'].'</i>
-           <i class="material-icons button-order delete-order">'.$language['delete'].'</i>
+          <i class=" button-order edit-order">  <span class="fa fa-pencil" aria-hidden="true"> <span></i>
+           <i class=" button-order delete-order fa fa-trash"  aria-hidden="true">
+          </i>
 
 
 
@@ -118,23 +45,66 @@ function delete_order(str) {
    }?></tbody>
  </table>
  </div>
- <div class="overlay" id ="div2">
-   <!-- close button-->
-   <a   href="#"class="close-button" onclick="closeDiv2()">&#8864</a>
-   <!-- ovarly page -->
 
+    <div class="modal fade" id="addorder" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span>                   </button>
+           <h4 class="modal-title" id="myModalLabel"><?php echo  $language['addorder']?></h4>
+          </div>
+          <div class="modal-body">
+            <form  >
+              <!-- select pharmacy -->
+            <select name="users" onchange="showUser(this.value)" id="soflow" class ="select-pharmacy">
+              <?php
+              $pharmacys =$order->return_all_pharmacy();
+              $size_pharmay=sizeof($pharmacys);
+              if($size_pharmay  == 0){
+                echo "<option value=\"\">".$language['nopharmacyyet'].":</option>";
+              }
+             else {
+                 echo '<option value="">'.$language['allpharmacy'].':</option>';
+                  for ($i=1; $i <=$size_pharmay ; $i++) {
+                  $pharmacy_name=  $pharmacys[$i-1]['Name'] ;
+                   echo '<option value='.$pharmacys[$i-1]['PharmacyId'].'>'.$pharmacy_name.'</option>';
+                }
 
-    </div>
+              }
+              ?>
+            </select>
+            <!--select medicine -->
+            <select name="users" onchange="showUser(this.value)" id="soflow" class="select-medicine">
+              <?php
+              $pharmacys =$order->return_all_pharmacy();
+              $size_pharmay=sizeof($pharmacys);
+              if($size_pharmay  == 0){
+                echo "<option value=\"\">".$language['nopharmacyyet'].":</option>";
+              }
+             else {
+                 echo '<option value="">'."alll".':</option>';
+                  for ($i=1; $i <=$size_pharmay ; $i++) {
+                  $pharmacy_name=  $pharmacys[$i-1]['Name'] ;
+                   echo '<option value='.$pharmacys[$i-1]['PharmacyId'].'>'.$pharmacy_name.'</option>';
+                }
 
+              }
+              ?>
+            </select>
+            <!-- amount of medicine -->
+            <input type="number" name="quantity" min="1" max="5" class="amount">
+           </div>
+          </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal"><?php echo  $language['cancel']?></button>
+            <button type="button" class="btn btn-primary"><?php echo  $language['saveorder']?></button>
+          </div>
+        </div>
+      </div>
+   </div>
  <?php
- //var_dump(  $array_order) ;
-  //var_dump ($order->return_pharmacy($array_order[2]["PharmacyId"])[0]["Name"]);
-//var_dump(  $pharmacy_name) ;
-if(isset($_GET['q'])){
-$q = intval($_GET['q']);
-echo $q;
-}
-include '../content/footer.php';
+ include '../content/footer.php';
 ?>
     </body>
 </html>

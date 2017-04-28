@@ -47,6 +47,7 @@ include_once  $dictionary_path;
     <link rel="stylesheet" href="../css/font-awesome.min.css">
     <link href="../css/bugfix.css" rel="stylesheet">
     <link href="../css/default.css" rel="stylesheet">
+
   </head>
   <body dir = <?php echo $dir?> >
   <nav class="navbar navbar-fixed-top navbar-inverse">
@@ -99,4 +100,4 @@ include_once  $dictionary_path;
                 </div>
               </div>
             </div>
-         </div> 
+         </div>

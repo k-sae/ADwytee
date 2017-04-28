@@ -18,8 +18,12 @@ a:hover {
   background-color: #fff;
   border: 1px solid #fff;
 }
-
-
+.glyphicon-plus-sign:before {
+  content: "\e081";
+}
+.glyphicon-plus:before {
+  content: "\002b";
+}
 /*
  * Base structure
  */
@@ -185,23 +189,29 @@ width :40%;
 /*
  * Order
  */
+
  .Ordertable{
-  text-align: left;
   line-height: 50px;
   border-collapse: separate;
-  border-spacing: 0;
-  border: 2px solid #ed1c40;
-  width: 40%;
-  margin: 10% auto;
-  border-radius: .25rem;
+  border: 3px solid #ed1c40;
+  width: 50%;
+  margin: 12% auto;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+
 }
+.head-table{
+  text-align: center;
+  font-size: 260%;
+
+}
+.add-order{
+  font-size: 200%;
+  text-align: start;
+  }
 
  .button-order {
   color: #aaa;
-  cursor: pointer;
-  vertical-align: middle;
-  padding: 1%;
+  padding: 5%;
   font-size: 150%;
   }
 .add-order:hover {
@@ -219,6 +229,7 @@ width :40%;
 
   color: green;
 }
+
 .Ordertable thead tr:first-child {
   background: #ed1c40;
   color: #fff;
@@ -228,12 +239,9 @@ width :40%;
 .Ordertable th:first-child,
 .Ordertable td:first-child {
   padding: 0 15px 0 20px;
-  text-align: center;
-  font-size: 200%;
+
 }
-.Ordertable th:nth-child(2){
-  font-size: 150%;
-}
+
 .Ordertable thead tr:last-child th {
   border-bottom: 3px solid #ddd;
 }
@@ -255,68 +263,11 @@ width :40%;
   font-size: 120%;
 }
 .Ordertable td:last-child {
-  text-align: right;
+  text-align: end;
   padding-right: 10px;
 
 }
-/* overlay div*/
-.overlay{
-  width: 100%;
-  background: rgba(0, 0, 0, .75);
-  position: fixed;
-  top: 0;
-  left: 0;
-  height: 100vh;
-  transform: scale(0);
-  }
-/* close button*/
-.overlay .close-button{
-   position: absolute;
-   right: 1%;
-   top: 10%;
-   font-size: 200%;
-}
-/* add-order-div*/
-/* -------------------- Select Box Styles: stackoverflow.com Method *
-/* -------------------- Source: http://stackoverflow.com/a/5809186 */
-.select-pharmacy{
-  position: absolute;
-  left: 1%;
-  top: 20%;
-}
-.select-medicine{
-  position: absolute;
-  left: 25%;
-  top: 20%;
-}
-select#soflow {
-  -webkit-appearance: button;
-   -webkit-border-radius: 2px;
-   -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.8);
-   -webkit-padding-end: 20px;
-   -webkit-padding-start: 2px;
-   -webkit-user-select: none;
-    background-position: 97% center;
-   background-repeat: no-repeat;
-   border: 1px solid #AAA;
-   color: black;
-   font-size: 150%;
-   margin: 20px;
-   overflow: hidden;
-   padding: 5px 10px;
-   text-overflow: ellipsis;
-   white-space: nowrap;
-   width: 300px;
-}
-.amount{
-  position: absolute;
-  left: 55%;
-  top: 25%;
-  font-size: 110%;
-  color: black;
 
-
-}
 
 
 /*
@@ -338,7 +289,7 @@ select#soflow {
   .cover-container {
     width: 100%; /* Must be percentage or pixels for horizontal alignment */
   }
-
+}
 
 }
 
@@ -365,4 +316,16 @@ select#soflow {
 }
 .details .btn{bottom:0px;}
 .wrapper2{height: 300px}
+
+}
+@media(max-width: 480px){
+  .Ordertable{
+    width: 100%;
+  }
+}
+@media(max-width: 320px){
+  .Ordertable{
+    width: 100%;
+  }
+
 }
