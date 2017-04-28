@@ -1,60 +1,119 @@
 <?php
 include_once '../content/header.php';
-include_once '../../Application/order.php';
-$order =new order();
+include_once '../../Application/orderManger.php';
+$orderManger =new orderManger();
 ?>
 <head>
-       <title><?php echo $language['orderpage'] ?></title>
-<script src = "../js/order.js">  </script>
-</head>
-<div style="overflow-x:auto;">
-  <table class="Ordertable table-responsive">
+  <script src = "../js/order.js">  </script> </head>
+
+<table class="Ordertable">
+
   <thead>
      <tr>
-       <th colspan="3"> <?php echo  $language['orders']; ?></th>
+       <th colspan="3" class="head-table"> <?php echo  $language['orders']; ?></th>
      </tr>
      <tr>
-       <th class="material-icons button-order add-order">+</th>
-       <div class="overlay" id ="div">
-         <!-- close button-->
-         <a   href="#"class="close-button" onclick="closeDiv()">&#8864</a>
-         <!-- ovarly page -->
-         <!--open ovarly -->
-         <th colspan="2" class ="material-icons button-order add-order">
-           <span  onclick="OpenDiv()"><?php echo  $language['addorder'] ?></span></th>
-
-
-
-         </div>
-       </div>
-
-      </tr>
-   </thead>
+       <th colspan="3" data-toggle="modal" data-target="#addorder" class="add-order ">
+       <span class="fa fa-plus-square" aria-hidden="true"></span>
+       <span ><?php echo $language['addorder'] ?></span></th>
+       </tr>
+       </thead>
    <tbody>
-     <?php   for($i =1; $i <= 5 ;$i++){
+     <?php
+     $array_order = $orderManger->return_order(1);
+
+     if($array_order !=0){
+       $size = sizeof($array_order);
+       for($i =1; $i <=$size  ;$i++){
 
        echo '<tr>
-         <td >'.$i.'</td>
-         <td class="td-order">pharmacyname</td>
+         <td class="td-order" >'.$i.'</td>
+         <td class="td-order">'
+         .$orderManger->return_pharmacy($array_order[$i-1]->getPharmacyId())[0]["Name"].
+         '</td>
          <td>
 
-           <i class="material-icons button-order details-order">'.$language['details'].'</i>
-          <i class="material-icons button-order edit-order">'. $language['edit'].'</i>
-           <i class="material-icons button-order delete-order">'.$language['delete'].'</i>
+               <i class=" button-order details-order fa fa-info-circle"  aria-hidden="true" ></i>';
+            if($array_order[$i-1]->getStatus() ==  1) {
+              echo  '
+          <i class=" button-order edit-order">  <span class="fa fa-pencil" aria-hidden="true"> <span></i>
+           <i class=" button-order delete-order fa fa-trash"  aria-hidden="true">
+          </i>
 
 
 
            </td>
-       </tr>
-       ';
-     } ?></tbody>
+       </tr>';
+     }}
+   }?></tbody>
+
  </table>
- </div>
-<!-- overlay div -->
+
+
+
+    <div class="modal fade" id="addorder" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span>                   </button>
+           <h4 class="modal-title" id="myModalLabel"><?php echo  $language['addorder']?></h4>
+          </div>
+          <div class="modal-body">
+            <form  >
+              <!-- select pharmacy-->
+            <select name="users" onchange="showUser(this.value)" id="soflow" class ="select-pharmacy">
+              <?php
+              /*$pharmacys =$orderManger->return_all_pharmacy();
+              $size_pharmay=sizeof($pharmacys);
+              if($size_pharmay  == 0){
+                echo "<option value=\"\">".$language['nopharmacyyet'].":</option>";
+              }
+             else {
+                 echo '<option value="">'.$language['allpharmacy'].':</option>';
+                  for ($i=1; $i <=$size_pharmay ; $i++) {
+                  $pharmacy_name=  $pharmacys[$i-1]['Name'] ;
+                   echo '<option value='.$pharmacys[$i-1]['PharmacyId'].'>'.$pharmacy_name.'</option>';
+                }
+
+              }*/
+              ?>
+            </select>
+            <!--select medicine -->
+            <select name="users" onchange="showUser(this.value)" id="soflow" class="select-medicine">
+              <?php /*
+              $pharmacys =$orderManger->return_all_pharmacy();
+              $size_pharmay=sizeof($pharmacys);
+              if($size_pharmay  == 0){
+                echo "<option value=\"\">".$language['nopharmacyyet'].":</option>";
+              }
+             else {
+                 echo '<option value="">'."alll".':</option>';
+                  for ($i=1; $i <=$size_pharmay ; $i++) {
+                  $pharmacy_name=  $pharmacys[$i-1]['Name'] ;
+                   echo '<option value='.$pharmacys[$i-1]['PharmacyId'].'>'.$pharmacy_name.'</option>';
+                }
+
+              }
+              */
+              ?>
+            </select>
+            <!-- amount of medicine -->
+            <input type="number" name="quantity" min="1" max="5" class="amount">
+           </div>
+          </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal"><?php echo  $language['cancel']?></button>
+            <button type="button" class="btn btn-primary"><?php echo  $language['saveorder']?></button>
+          </div>
+        </div>
+      </div>
+  </div>
+
 
  <?php
-
-include '../content/footer.php';
-?>
+ 
+ include '../content/footer.php';
+ ?>
     </body>
 </html>

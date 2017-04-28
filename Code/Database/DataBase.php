@@ -9,11 +9,12 @@
 
 class DataBase
 {
-  private  $host;
+  private  $host; //  host name
   private $user;
   private $password;
   private $database;
   private $connection;
+  private static $instance;// single database object
   function __construct($file_name)
   {
 
@@ -56,6 +57,7 @@ class DataBase
    }
    public function database_all_assoc($database_result) {
       // return assc array
+
         while ($row = mysqli_fetch_assoc($database_result)) {
             $array_return[] = $row;
         }
@@ -63,7 +65,13 @@ class DataBase
         return $array_return;
   }
 
-  }
 
 
+  public static function getInstance(){// create only one object for databse
+          if(!self::$instance){
+              self::$instance= new  self();
+          }
+          return self::$instance;
+      }
+    }
  ?>

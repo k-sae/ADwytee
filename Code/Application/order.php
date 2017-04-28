@@ -1,27 +1,56 @@
-<?php
+<<?php
 /**
  *
  */
 class Order
 {
-private $file_name = '../../Database/order.php';
-private $order;
-  function __construct()
+  private $id;
+  private $date;
+  private $userId;
+  private $pharmacyId;
+  private $status;
+  public function setId($id)
   {
-    # code...
-    try {
-   include_once ($this->file_name) ;
-     } catch (Exception $e) {
-     echo "error in file name";
-
+    $this->id =$id;
   }
-  $this->order=  new Order_Query();
+  public function setUserId($userid)
+  {
+    $this->userId =$userid;
+  }
+
+  public function setPharmacyId($pharmacyId)
+  {
+    $this->pharmacyId =$pharmacyId;
+  }
+  public function setDate($date)
+  {
+    $this->date =$date;
+  }
+  public function setStatus($status)
+  {
+    $this->status =$status;
+  }
+   public function getId()
+  {
+    return $this->id;
+  }
+  public function getPharmacyId()
+  {
+   return $this->pharmacyId;
+  }
+ public function getUserId()
+ {
+  return $this->userId;
+ }
+ public function getDate()
+ {
+ return $this->date;
+ }
+ public function getStatus()
+ {
+ return $this->status;
+ }
 
 }
- public function print_word($key)
- {
-   # code...
-  return ($this->order->fetch_word($key,$_SESSION["language"]));
- }
-}
+
  ?>

@@ -340,13 +340,15 @@ CREATE TABLE `RATE` (
 --
 -- --------------------------------------------------------
 
-INSERT INTO `LANGUAGE`(`Language`) VALUES ('en');
-INSERT INTO `LANGUAGE`(`Language`) VALUES ('ar');
-INSERT INTO `ORDER_STATUS`(`Status`) VALUES ('pending');
-INSERT INTO `ORDER_STATUS`(`Status`) VALUES ('in progress');
-INSERT INTO `USERTYPE`(`Type`) VALUES ('admin');
-INSERT INTO `USERTYPE`(`Type`) VALUES ('pharmacy');
-INSERT INTO `USERTYPE`(`Type`) VALUES ('patient');
+
+INSERT INTO `LANGUAGE`( `Language`) VALUES ('en');
+INSERT INTO `LANGUAGE`( `Language`) VALUES ('ar');
+INSERT INTO `ORDER_STATUS`( `Status`) VALUES ('pending');
+INSERT INTO `ORDER_STATUS`( `Status`) VALUES ('in progress');
+INSERT INTO `USERTYPE`( `Type`) VALUES ('admin');
+INSERT INTO `USERTYPE`( `Type`) VALUES ('pharmacy');
+INSERT INTO `USERTYPE`( `Type`) VALUES ('patient');
+
 -- --------------------------------------------------------
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
