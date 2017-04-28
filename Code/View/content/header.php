@@ -38,7 +38,7 @@ include_once  $dictionary_path;
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
     <!--link rel="icon" href="../../favicon.ico"-->
 
     <title><?php echo  $language['logo']?></title>
@@ -86,18 +86,26 @@ include_once  $dictionary_path;
     </nav>
           <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
             <div class="modal-dialog" role="document">
-              <div class="modal-content">
+              <div class="modal-content register-dialog">
                 <div class="modal-header">
                   <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span>                   </button>
                  <h4 class="modal-title" id="myModalLabel"><?php echo  $language['login']?></h4>
                 </div>
                 <div class="modal-body">
-                  <form><input type="" name=""></form>
+                  <form>
+                   <input type="email" name="email" placeholder="Email">
+                    <br>
+                    <input type="password" name="password" placeholder="Password">
+                    <br>
+                    <button type="button" class="btn btn-primary"><?php echo  $language['login']?></button>
+                  </form>
+                  <p>No Acount yet? <a href="../pages/RegisterPage.php">Fuck ur self</a><p>
                 </div>
                 <div class="modal-footer">
-                  <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
-                  <button type="button" class="btn btn-primary"><?php echo  $language['login']?></button>
+                  <!-- <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                  <!-- <button type="button" class="btn btn-primary"><?php echo  $language['login']?></button> -->
                 </div>
               </div>
             </div>
+
          </div>
