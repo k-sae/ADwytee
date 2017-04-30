@@ -20,25 +20,25 @@ class Order_Query
    public function fetch_order($id)
   {
     # code...
-    $query = "SELECT `Id`, `PharmacyId`, `date`, `status` FROM `order` WHERE `UserId` = $id ";
+    $query = "SELECT `Id`, `PharmacyId`, `date`, `status` FROM `Order` WHERE `UserId` = $id ";
     return ($this->database->fetch_query($query));
     }
     public function fetch_pharmacy($id){
-        $query = "SELECT `Name` FROM `pharmacy` WHERE `UserId` = $id ";
+        $query = "SELECT `Name` FROM `Pharmacy` WHERE `UserId` = $id ";
         return ($this->database->fetch_query($query));
     }
     public function fetch_all_pharmacy(){
-        $query = "SELECT `Name` FROM `pharmacy`";
+        $query = "SELECT `Name` FROM `Pharmacy`";
         return ($this->database->fetch_query($query));
     }
     public function deleteOrder($id)
     {
-      $query ="DELETE FROM `order` WHERE `id`=$id";
+      $query ="DELETE FROM `Order` WHERE `id`=$id";
       $this->database->fetch_query($query);
     }
   public function add()
   {
-    $query ="INSERT INTO `usertype`( `Type`) VALUES ('m5ns')";
+    $query ="INSERT INTO `Usertype`( `Type`) VALUES ('m5ns')";
     $this->database->database_query($query);
   }
 }
