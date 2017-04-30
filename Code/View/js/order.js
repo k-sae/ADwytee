@@ -15,7 +15,7 @@ function deleteOrder(id,row) {
 
      }
 }
-xmlhttp.open("GET","../../Application/orderManger.php?k=k",true);
+xmlhttp.open("GET","../../Application/livesearch.php?k=k",true);
 xmlhttp.send();
 
 }

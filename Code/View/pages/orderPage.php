@@ -136,7 +136,7 @@ $orderManger =new orderManger();
          <h4 class="modal-title" id="myModalLabel"><?php echo  $language['orderdetails']?></h4>
         </div>
         <div class="modal-body">
-          
+
         </div>
         <div class="modal-footer">
           <button type="button" class="canc btn btn-primary "data-dismiss="modal"><?php echo  $language['cancel']?></button>
@@ -148,14 +148,7 @@ $orderManger =new orderManger();
 
  <?php
 
- if(isset($_GET["val"])){
 
-
-   echo $_GET["val"];
- }
- else{
-  echo "no";
- }
  include '../content/footer.php';
  ?>
     </body>

@@ -1,6 +1,22 @@
 
 <?php
+$file_name = '../../Database/livesearch.php';
 
+try{
+  include_once $file_name ;
+} catch (Exception $e) {
+  echo "error";
+}
+if(isset($_GET["k"])){
+
+  $q = $_GET["k"];
+  search3($q);
+}
+function search3($str) {
+
+  $livesearch = new livesearch_Query();
+  $result_arr = $livesearch->add();
+}
 /**
  *
  */
