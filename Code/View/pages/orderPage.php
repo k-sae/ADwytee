@@ -4,9 +4,25 @@ include_once '../../Application/orderManger.php';
 $orderManger =new orderManger();
 ?>
 <head>
-  <script src = "../js/order.js">  </script> </head>
+  <script src = "../js/order.js">  </script>
+  <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+  <script type="text/javascript">
+  $(document).ready(function(){
+      $("#hh").click(function() {
+          var val = "Hi";
+          $.ajax ({
+              url: "../../Application/test.php",
+              data: { val : val },
+              success: function( result ) {
+                  alert("Hi, testing");
 
-<table class="Ordertable">
+              }
+          });
+      });
+  });
+  </script>
+  </head>
+<table class="Ordertable" id ="order-table">
 
   <thead>
      <tr>
@@ -33,11 +49,13 @@ $orderManger =new orderManger();
          '</td>
          <td>
 
-               <i class=" button-order details-order fa fa-info-circle"  aria-hidden="true" ></i>';
+               <i class=" button-order details-order fa fa-info-circle"  aria-hidden="true"
+               data-toggle="modal" data-target="#orderdetails" ></i>';
             if($array_order[$i-1]->getStatus() ==  1) {
               echo  '
-          <i class=" button-order edit-order">  <span class="fa fa-pencil" aria-hidden="true"> <span></i>
-           <i class=" button-order delete-order fa fa-trash"  aria-hidden="true">
+          <i class=" button-order edit-order">  <span class="fa fa-pencil" aria-hidden="true" id ="hh"> </i>
+           <i class=" button-order delete-order fa fa-trash"  aria-hidden="true"
+           value= "'.$array_order[$i-1]->getId().'"onclick="deleteOrder('.$array_order[$i-1]->getId().',this)">
           </i>
 
 
@@ -50,7 +68,7 @@ $orderManger =new orderManger();
  </table>
 
 
-
+<!--addorder-->
     <div class="modal fade" id="addorder" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
       <div class="modal-dialog" role="document">
         <div class="modal-content">
@@ -109,10 +127,35 @@ $orderManger =new orderManger();
         </div>
       </div>
   </div>
+  <!--details div-->
+  <div class="modal fade" id="orderdetails" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span>                   </button>
+         <h4 class="modal-title" id="myModalLabel"><?php echo  $language['orderdetails']?></h4>
+        </div>
+        <div class="modal-body">
+          
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="canc btn btn-primary "data-dismiss="modal"><?php echo  $language['cancel']?></button>
 
+        </div>
+      </div>
+    </div>
+</div>
 
  <?php
- 
+
+ if(isset($_GET["val"])){
+
+
+   echo $_GET["val"];
+ }
+ else{
+  echo "no";
+ }
  include '../content/footer.php';
  ?>
     </body>

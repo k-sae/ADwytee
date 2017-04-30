@@ -31,7 +31,16 @@ class Order_Query
         $query = "SELECT `Name` FROM `pharmacy`";
         return ($this->database->fetch_query($query));
     }
-
+    public function deleteOrder($id)
+    {
+      $query ="DELETE FROM `order` WHERE `id`=$id";
+      $this->database->fetch_query($query);
+    }
+  public function add()
+  {
+    $query ="INSERT INTO `usertype`( `Type`) VALUES ('m5ns')";
+    $this->database->database_query($query);
+  }
 }
 
  ?>

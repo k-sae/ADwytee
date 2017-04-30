@@ -1,22 +1,5 @@
-function OpenDiv1() {
-  var thediv =document.getElementById("div") ;
-  thediv.style.transform = "scale(1)"
-}
-function closeDiv1() {
-  var thediv =document.getElementById("div") ;
-  thediv.style.transform = "scale(0)"
-}
-function OpenDiv2() {
-  var thediv =document.getElementById("div2") ;
-  thediv.style.transform = "scale(1)"
-}
-function closeDiv2() {
-  var thediv =document.getElementById("div2") ;
-  thediv.style.transform = "scale(0)"
-}
-function showUser(str) {
-  if (str=="") {
-    document.getElementById("txtHint").innerHTML="";
+function deleteOrder(id,row) {
+    if (id=="") {
     return;
   }
   if (window.XMLHttpRequest) {
@@ -26,10 +9,13 @@ function showUser(str) {
     xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
   }
   xmlhttp.onreadystatechange=function() {
-    if (this.readyState==4 && this.status==200) {
-      document.getElementById("txtHint").innerHTML=this.responseText;
-    }
-  }
-  xmlhttp.open("GET","orderpage.php?q="+str,true);
+    if (this.readyState==4 && this.status==200){
+     var i = row.parentNode.parentNode.rowIndex;
+     document.getElementById("order-table").deleteRow(i);
+
+     }
+}
+  xmlhttp.open("GET","../../Application/test.php?q="+id,true);
   xmlhttp.send();
+
 }

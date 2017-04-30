@@ -1,4 +1,6 @@
+
 <?php
+
 /**
  *
  */
@@ -50,6 +52,22 @@ public function return_all_pharmacy(){
   $order_result =$this->order_query->fetch_all_pharmacy();
   return ($order_result);
 }
+ public function checkorder()
+ {
+   if(isset($_GET["q"])){
+    $this->order_query->deleteOrder($_GET["q"]);
+   }
+ }
+ public function addtype()
+ {
+   $this->order_query->add();
+ }
 
 }
+
+if(isset($_GET["q"])){
+  $order3 =new orderManger();
+  $order3->addtype();
+}
+
  ?>
