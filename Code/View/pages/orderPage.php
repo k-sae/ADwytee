@@ -50,7 +50,7 @@ $orderManger =new orderManger();
          <td>
 
                <i class=" button-order details-order fa fa-info-circle"  aria-hidden="true"
-               data-toggle="modal" data-target="#orderdetails" ></i>';
+               data-toggle="modal" data-target="#orderdetails" value="1" onclick="this.value" ></i>';
             if($array_order[$i-1]->getStatus() ==  1) {
               echo  '
           <i class=" button-order edit-order">  <span class="fa fa-pencil" aria-hidden="true" id ="hh"> </i>

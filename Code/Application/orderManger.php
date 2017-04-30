@@ -36,6 +36,7 @@ private $order;
     $this->order[$i]->setDate($order_result[$i]['date']);
 
 }
+
   return ($this->order);
 }
 else {

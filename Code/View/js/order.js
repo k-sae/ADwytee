@@ -19,3 +19,6 @@ function deleteOrder(id,row) {
   xmlhttp.send();
 
 }
+function showdetails(id){
+  return id;
+}

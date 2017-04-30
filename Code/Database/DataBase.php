@@ -61,8 +61,9 @@ class DataBase
         while ($row = mysqli_fetch_assoc($database_result)) {
             $array_return[] = $row;
         }
-
+        if(isset( $array_return)){
         return $array_return;
+      }
   }
 
 
