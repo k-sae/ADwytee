@@ -7,7 +7,7 @@ $language['searchagain'] = "Search Again";
 $language['orders'] = "Orders";
 $language['page'] ="Page";
 $language['orderpage'] ="OrderPage";
-$language['delete'] ="Delete";
+$language['deletedone'] ="Delete Done successful";
 $language['edit'] ="Edit";
 $language['orderdetails'] ="Order Details";
 $language['addorder'] ="  Add Order   ";
@@ -30,7 +30,7 @@ $language['allpharmacy']="All Pharmacy Name";
 $language['saveorder'] ="Save order";
  $language['cancel'] ="Cancel";
 
-
+ $language['refresh'] ="Wrong Refresh This Page";
 // Register labels
 $language['first_name'] ="First Name";
 $language['last_name'] ="Last Name";

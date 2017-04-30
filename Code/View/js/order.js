@@ -12,13 +12,16 @@ function deleteOrder(id,row) {
     if (this.readyState==4 && this.status==200){
      var i = row.parentNode.parentNode.rowIndex;
      document.getElementById("order-table").deleteRow(i);
-
+    document.getElementById("error").style.transform = "scale(1)";
+    document.getElementById("wrong-message").innerHTML=this.responseText;
      }
 }
-xmlhttp.open("GET","../../Application/livesearch.php?k=k",true);
+xmlhttp.open("GET","../pages/innerorderpage.php?id="+id,true);
 xmlhttp.send();
 
 }
-function showdetails(id){
-  return id;
+
+function  closediv(){
+    document.getElementById("error").style.transform = "scale(0)";
+
 }

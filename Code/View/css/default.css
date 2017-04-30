@@ -297,10 +297,37 @@ padding:0px;
 }
 
 .canc{
-  
+
   float: left;
 }
+#error{
+  transform: scale(0);
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  background-color: rgba(0, 0, 0,.8 );
+}
+ #wrong-message{
+  width: 310px;
+  top:40%;
+  position: relative;
+  margin: auto;
+  height: 200px;
+  font-size: 46px;
+  padding: 1%;
+}
+.close{
+  position: absolute;
+  right: 1%;
+  color: white;
+  top: 10%;
+}
+.close:hover{
 
+  color: white;
+}
 /*
  * Affix and center
  */
@@ -347,18 +374,39 @@ padding:0px;
 .wrapper2{height: 300px}
 .Ordertable{
   width:75%;
-}
+
 }
 
+}
+
+/*@media(max-width: 900px){
+
+  #wrong-message{
+   width: 100%;
+
+   height: 20%;
+
+ }
+ }
+*/
 @media(max-width: 480px){
   .Ordertable{
     width:100%;
   }
+  /*#wrong-message{
+   width: 100%;
+
+   height: 30%;
+
+ }*/
 
 }
 
 
-}
+
+
+
+
 
 
 

@@ -33,8 +33,20 @@ class Order_Query
     }
     public function deleteOrder($id)
     {
-      $query ="DELETE FROM `ORDER` WHERE `id`=$id";
-      $this->database->fetch_query($query);
+      $query1 = "SELECT `status` FROM `ORDER` WHERE `Id` = $id";
+      $status = $this->database->fetch_query($query1);
+
+      if(isset($status)){
+
+        if($status[0]['status'] == 1){
+
+          $query ="DELETE FROM `ORDER` WHERE `id`=$id";
+        //  $this->database->database_query($query);
+          return True;
+        }
+
+      }
+       return False;
     }
   public function add()
   {

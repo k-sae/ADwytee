@@ -4,24 +4,8 @@ include_once '../../Application/orderManger.php';
 $orderManger =new orderManger();
 ?>
 <head>
-  <script src = "../js/order.js">  </script>
-  <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
-  <script type="text/javascript">
-  $(document).ready(function(){
-      $("#hh").click(function() {
-          var val = "Hi";
-          $.ajax ({
-              url: "../../Application/test.php",
-              data: { val : val },
-              success: function( result ) {
-                  alert("Hi, testing");
+  <script src = "../js/order.js">  </script></head>
 
-              }
-          });
-      });
-  });
-  </script>
-  </head>
 <table class="Ordertable" id ="order-table">
 
   <thead>
@@ -53,7 +37,7 @@ $orderManger =new orderManger();
                data-toggle="modal" data-target="#orderdetails" value="1" onclick="this.value" ></i>';
             if($array_order[$i-1]->getStatus() ==  1) {
               echo  '
-          <i class=" button-order edit-order">  <span class="fa fa-pencil" aria-hidden="true" id ="hh"> </i>
+          <i class=" button-order edit-order">  <span class="fa fa-pencil fa-fw" aria-hidden="true" id ="hh"> </i>
            <i class=" button-order delete-order fa fa-trash"  aria-hidden="true"
            value= "'.$array_order[$i-1]->getId().'"onclick="deleteOrder('.$array_order[$i-1]->getId().',this)">
           </i>
@@ -66,8 +50,13 @@ $orderManger =new orderManger();
    }?></tbody>
 
  </table>
+<!--delete div -->
+  <div id = "error"  class="alert alert-danger">
+    <div class="alert alert-danger" id ="wrong-message">
+      </div>
+      <i class="fa fa-window-close close fa-2x" aria-hidden="true" onclick="closediv()"> </i>
 
-
+  </div>
 <!--addorder-->
     <div class="modal fade" id="addorder" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
       <div class="modal-dialog" role="document">
@@ -147,9 +136,7 @@ $orderManger =new orderManger();
 </div>
 
  <?php
-
-
- include '../content/footer.php';
+include '../content/footer.php';
  ?>
     </body>
 </html>
