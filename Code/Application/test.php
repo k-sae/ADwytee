@@ -8,8 +8,8 @@ include_once ($file_name) ;
 
 }
 $order_query=  new Order_Query();
-echo $_GET["q"];
-if(isset($_GET["q"])){
+
+if(isset($_GET["k"])){
    $this->order_query->add();
 }
 if(isset($_GET["val"])){

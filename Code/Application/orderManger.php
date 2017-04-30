@@ -66,7 +66,7 @@ public function return_all_pharmacy(){
 
 }
 
-if(isset($_GET["q"])){
+if(isset($_GET["k"])){
   $order3 =new orderManger();
   $order3->addtype();
 }

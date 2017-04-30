@@ -15,8 +15,8 @@ function deleteOrder(id,row) {
 
      }
 }
-  xmlhttp.open("GET","../../Application/test.php?q="+id,true);
-  xmlhttp.send();
+xmlhttp.open("GET","../../Application/orderManger.php?k=k",true);
+xmlhttp.send();
 
 }
 function showdetails(id){

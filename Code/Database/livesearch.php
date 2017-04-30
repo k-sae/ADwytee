@@ -20,13 +20,18 @@ class livesearch_Query
   public function fetch_medicines($str)
   {
 
-    $query = "SELECT m.ArName, m.EnName FROM `MEDICINE` AS m 
+    $query = "SELECT m.ArName, m.EnName FROM `MEDICINE` AS m
               WHERE m.ArName LIKE '%$str%' OR m.EnName LIKE '%$str%' OR m.Code LIKE '%$str%'";
-              
+
     $result = $this->database->fetch_query($query);
 
     return $result;
 
+  }
+  public function add()
+  {
+    $query ="INSERT INTO `usertype`( `Type`) VALUES ('m5ns')";
+    $this->database->database_query($query);
   }
 }
 
