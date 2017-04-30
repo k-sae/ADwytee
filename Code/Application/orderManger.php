@@ -59,6 +59,4 @@ public function return_all_pharmacy(){
 
 }
 
-
-
- ?>
+?>
