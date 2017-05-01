@@ -9,6 +9,7 @@ class Order
   private $userId;
   private $pharmacyId;
   private $status;
+  private $medicine_order;
   public function setId($id)
   {
     $this->id =$id;
@@ -30,6 +31,10 @@ class Order
   {
     $this->status =$status;
   }
+  public function setMedicine($medicine)
+  {
+    $this->medicine_order = $medicine;
+  }
    public function getId()
   {
     return $this->id;
@@ -50,7 +55,18 @@ class Order
  {
  return $this->status;
  }
-
+ public function getMedicine()
+ {
+ return $this->medicine_order;
+ }
+ public function tostring()
+ {
+   return (serialize($this));
+ }
+ public static function fromstring($str)
+ {
+   return (unserialize($str));
+ }
 }
 
  ?>

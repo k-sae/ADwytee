@@ -55,6 +55,28 @@ class Order_Query
     $query ="INSERT INTO `USERTYPE`( `Type`) VALUES ('m5ns')";
     $this->database->database_query($query);
   }
+  public function fetch_order_details($id)
+  {
+    $query1 = "SELECT `PharmacyId`, `date`, `status` FROM `ORDER` WHERE `Id` = $id";
+
+    return ($this->database->fetch_query($query1));
+
+  }
+  public function get_Status($id)
+  {
+    $query1 = "SELECT `Status` FROM `ORDER_STATUS` WHERE `Id` =$id";
+    return ($this->database->fetch_query($query1));
+  }
+  public function get_medicine_order($id)
+  {
+  $query1 = " SELECT `MedicineCode`, `Amount` FROM `MEDICINE_ORDER` WHERE `OrderId` =$id ";
+  return ($this->database->fetch_query($query1));
+  }
+  public function get_medicine_name($id)
+  {
+  $query1 = " SELECT `EnName` FROM `MEDICINE` WHERE `Code` =$id ";
+  return ($this->database->fetch_query($query1));
+  }
 }
 
  ?>

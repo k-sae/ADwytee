@@ -45,8 +45,11 @@ class DataBase
    public function fetch_query($query)
    {
      // applay query and return assc aaray
-     # code...
-     return $this->database_all_assoc($this->database_query($query));
+
+     $return_query =$this->database_query($query);
+     if(isset($return_query)  && $return_query !=False){
+     return $this->database_all_assoc($return_query);
+   }
    }
    public function database_query($database_query) {
      //aplay query

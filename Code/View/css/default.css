@@ -310,13 +310,18 @@ padding:0px;
   background-color: rgba(0, 0, 0,.8 );
 }
  #wrong-message{
-  width: 310px;
   top:40%;
   position: relative;
   margin: auto;
-  height: 200px;
-  font-size: 46px;
-  padding: 1%;
+ font-size: 150%;
+  }
+.details-body{
+  background-color: rgba(0, 0, 0, 0.2);
+  color: red;
+}
+.label-details{
+  text-align: start;
+  font-size: 150%;
 }
 .close{
   position: absolute;
@@ -379,26 +384,11 @@ padding:0px;
 
 }
 
-/*@media(max-width: 900px){
-
-  #wrong-message{
-   width: 100%;
-
-   height: 20%;
-
- }
- }
-*/
 @media(max-width: 480px){
   .Ordertable{
     width:100%;
   }
-  /*#wrong-message{
-   width: 100%;
 
-   height: 30%;
-
- }*/
 
 }
 
