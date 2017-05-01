@@ -5,15 +5,26 @@ include '../content/header.php';
 //$arry=$ph->fetch_Pharmacy('1','1');
 //$arrys=$arry[0];
 
-if(isset($_POST['Code']) && isset($_POST['EnName']) && isset($_POST['ArName']) && isset($_POST['Description'])){
+if(isset($_POST['Code']) && isset($_POST['EnName']) && isset($_POST['ArName']) && isset($_POST['Description'])&& isset($_POST['amount'])){
 	include_once '../../Application/Medicine.php';
 	include_once '../../Application/RegisterMedicine.php';
+	
 	$medicine = new Medicine();
 	$medicine->setCode($_POST['Code']);
 	$medicine->setEnName($_POST['EnName']);
 	$medicine->setArName($_POST['ArName']);
 	$medicine->setDescription($_POST['Description']);
-	new RegisterMedicine($medicine);
+
+	$pharmacyId = 1;
+	$rm = new RegisterMedicine();
+	$rm->register($pharmacyId, $medicine, $_POST['amount']);
+
+}else if(isset($_POST['medicine']) && isset($_POST['amount'])){
+	include_once '../../Application/RegisterMedicine.php';
+
+	$pharmacyId = 1;
+	$rm = new RegisterMedicine();
+	$rm->add($pharmacyId, $_POST['medicine'], $_POST['amount']);
 }
 ?>
     <div class="wrapper2 container" style="margin-top:50px">

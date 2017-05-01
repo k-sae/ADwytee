@@ -1,35 +1,44 @@
+<?php
+include_once 'language.php';
+?>
 <!DOCTYPE html>
-<html>
+<html  lang="<?php echo $_SESSION["language"]; ?>">
 <head>
 	<title></title>
 	<link href="../css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="../css/font-awesome.min.css">
     <link href="../css/bugfix.css" rel="stylesheet">
 </head>
-<body style="background-color: #fff;">
+<body style="background-color: #fff;" dir = <?php echo $dir?> >
 	<form action="Pharmacy.php" method="post" target="_top">
 		<div class="form-group row">
-			<label for="example-text-input" class="col-xs-3 col-form-label">English Name:</label>
+			<label for="example-text-input" class="col-xs-4 col-form-label"><?php echo $language['medicineenname']; ?>:</label>
 			<div class="col-xs-5">
-				<input class="form-control" name="EnName" type="text" placeholder="Medicine Name" id="example-text-input" required="required">
+				<input class="form-control" name="EnName" type="text" placeholder="<?php echo $language['medicineenname']; ?>" id="example-text-input" required="required">
 			</div>
 		</div>
 		<div class="form-group row">
-			<label for="example-text-input" class="col-xs-3 col-form-label">Arabic Name:</label>
+			<label for="example-text-input" class="col-xs-4 col-form-label"><?php echo $language['medicinearname']; ?>:</label>
 			<div class="col-xs-5">
-				<input class="form-control" name="ArName" type="text" placeholder="Arabic Name" id="example-text-input" required="required">
+				<input class="form-control" name="ArName" type="text" placeholder="<?php echo $language['medicinearname']; ?>" id="example-text-input" required="required">
 			</div>
 		</div>
 		<div class="form-group row">
-			<label for="example-text-input" class="col-xs-3 col-form-label">Barcode:</label>
+			<label for="example-text-input" class="col-xs-4 col-form-label"><?php echo $language['barcode']; ?>:</label>
 			<div class="col-xs-5">
-				<input class="form-control" name="Code" type="text" placeholder="Barcode" id="example-text-input" required="required">
+				<input class="form-control" name="Code" type="text" placeholder="<?php echo $language['barcode']; ?>" id="example-text-input" required="required">
 			</div>
 		</div>
 		<div class="form-group row">
-			<label for="example-text-input" class="col-xs-3 col-form-label">Description:</label>
+			<label for="example-text-input" class="col-xs-4 col-form-label"><?php echo $language['desc']; ?>:</label>
 			<div class="col-xs-5">
-				<textarea class="form-control" name="Description" id="exampleTextarea" placeholder="Describtion" rows="3" required="required"></textarea>
+				<textarea class="form-control" name="Description" id="exampleTextarea" placeholder="<?php echo $language['desc']; ?>" rows="3" required="required"></textarea>
+			</div>
+		</div>
+		<div class="form-group row">
+			<label for="example-text-input" class="col-xs-4 col-form-label"><?php echo $language['amount']; ?>:</label>
+			<div class="col-xs-5">
+				<input class="form-control" name="amount" type="number" placeholder="<?php echo $language['amount']; ?>" id="example-text-input" required="required">
 			</div>
 		</div>
 		

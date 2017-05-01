@@ -46,6 +46,7 @@ if (!isset($_SESSION["latitude"]) || !isset($_SESSION["longitude"])) {
 						      	echo "<tr>
 						              	<td>
 						              		". $language['pharmacy'].": <a href=''>" . $results[$i]['Name'] . "</a>
+						              		<br> ". $language['quantity'].": " . $results[$i]['Amount'] . "
 						                  <br>". $language['farfromyou'].": " . number_format($distance,2) . $language['km'] ."
 						                </td>
 						                <td>
