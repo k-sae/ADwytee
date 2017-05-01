@@ -27,9 +27,7 @@ if(isset($_GET["id"])){
   $id = $_GET["id"];
 
   $message= $orderManger->checkorder($id);
-
-  echo $message;
-  if($message != True){
+if($message == True){
     echo $language['deletedone'];
   }
   else {

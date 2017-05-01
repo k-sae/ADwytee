@@ -41,7 +41,11 @@ class Order_Query
         if($status[0]['status'] == 1){
 
           $query ="DELETE FROM `ORDER` WHERE `id`=$id";
+<<<<<<< HEAD
           $this->database->database_query($query);
+=======
+         $this->database->database_query($query);
+>>>>>>> order
           return True;
         }
 
