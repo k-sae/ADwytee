@@ -11,8 +11,7 @@ $language['deletedone'] ="تم حذف الطلب بنجاح";
 $language['edit'] ="تعديل";
 $language['orderdetails'] ="تفاصيل الطلب";
 $language['addorder'] ="اضافة طلب";
-$language['inprogress'] ="(تحت التقدم)";
-$language['pending'] ="(قائمة الانتظار)";
+
 $language['pharmacyprofile'] ="صفحة الصيديلة الشخصية";
 $language['about'] ="عنّا";
 $language['register'] ="سجّل";
@@ -30,4 +29,11 @@ $language['allpharmacy'] ="كل  الصيدليات";
 $language['saveorder'] ="حفظ الطلب";
  $language['cancel'] ="الغاء";
  $language['refresh'] ="من فضللك اعد تحميل  الصفحة";
+ $language['orderid']=" رقم الطلب :";
+ $language['pharmacyname']="اسم الصيدلية :";
+ $language['orderstaus']="حالة الطلب :";
+ $language['orderdate']="تاريخ الطلب:";
+ $language['medicineinorder'] ="الادوية الموجودة بالطلب";
+ $language['amount'] = "الكمية";
+ $language['medicinename'] = "اسم الدواء";
 ?>

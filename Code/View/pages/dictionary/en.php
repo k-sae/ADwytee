@@ -23,8 +23,8 @@ $language['km'] ="Km";
 $language['ordernow'] ="Order Now!";
 $language['noresults'] = "no results found";
 $language['requestdenied'] = "In Order to search,Please allow the request to know your location";
-$language['inprogress'] ="(IN PROGRESS)";
-$language['pending'] ="(PENFING)";
+
+
 $language['nopharmacyyet'] ="No Pharmacy yet";
 $language['allpharmacy']="All Pharmacy Name";
 $language['saveorder'] ="Save order";
@@ -49,5 +49,11 @@ $language['enter_street_no_here'] ="Enter Street No Here..";
 $language['enter_phone_no_here'] ="Enter Phone No Here..";
 $language['enter_email_here'] ="Enter Email Here..";
 $language['enter_password_here'] ="Enter password Here..";
-
+$language['orderid']=" order ID : ";
+$language['pharmacyname']="Pharmacy Name:";
+$language['orderstaus']="Order Status:";
+$language['orderdate']="Order Date:";
+$language['medicineinorder'] = "Medicine In Order";
+$language['amount'] = "Amount";
+$language['medicinename'] = "Mdicine Name";
 ?>
