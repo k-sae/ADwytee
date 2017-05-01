@@ -9,10 +9,10 @@ if(isset($_POST['Code']) && isset($_POST['EnName']) && isset($_POST['ArName']) &
 	include_once '../../Application/Medicine.php';
 	include_once '../../Application/RegisterMedicine.php';
 	$medicine = new Medicine();
-	$medicine->Code = $_POST['Code'];
-	$medicine->EnName = $_POST['EnName'];
-	$medicine->ArName = $_POST['ArName'];
-	$medicine->Description = $_POST['Description'];
+	$medicine->setCode($_POST['Code']);
+	$medicine->setEnName($_POST['EnName']);
+	$medicine->setArName($_POST['ArName']);
+	$medicine->setDescription($_POST['Description']);
 	new RegisterMedicine($medicine);
 }
 ?>

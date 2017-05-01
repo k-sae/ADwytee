@@ -19,9 +19,9 @@ class RegisterMedicine_Query
 	public function register($medicine)
 	{
 
-	    $query = "INSERT INTO `MEDICINE`( `Code`, `EnName`, `ArName`, `Descripton`) VALUES ('".$medicine->Code."','".$medicine->EnName."','".$medicine->ArName."','".$medicine->Description."')";
+	    $query = "INSERT INTO `MEDICINE`( `Code`, `EnName`, `ArName`, `Descripton`) VALUES ('".$medicine->getCode()."','".$medicine->getEnName()."','".$medicine->getArName()."','".$medicine->getDescription()."')";
 
-	    $this->database->database_query($query);
+	    //$this->database->database_query($query);
 	}
 }
    
