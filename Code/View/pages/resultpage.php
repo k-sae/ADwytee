@@ -6,6 +6,8 @@ if (!isset($_SESSION["latitude"]) || !isset($_SESSION["longitude"])) {
 	echo '<script> alert("'. $language["requestdenied"].'");
 					window.location.href = "index.php";
 	 			</script>';
+}else{
+	$result = new result();
 }
 ?>
 
@@ -16,9 +18,15 @@ if (!isset($_SESSION["latitude"]) || !isset($_SESSION["longitude"])) {
 					<div class="searchagain">
 						<br><br>
 						<h4><?php echo  $language['searchagain']?></h4>
-	          <form action="resultpage.php" method="get"><input class="form-control" name="result" placeholder="<?php echo $language['search']?>" type="text" autocomplete="off" required="required" onkeyup="showResult(this.value)">
-            <div id="livesearch"></div>
-	          </form>
+	          <form action="resultpage.php" method="get">
+              <div class="input-group">
+                <input class="form-control" name="result" placeholder="<?php echo $language['search']?>" type="text" autocomplete="off" required="required" onkeyup="showResult(this.value)">
+                <span class="input-group-addon">
+                  <button type="submit" id="searchbtn"><i class="fa fa-search"></i></button>
+                </span>
+              </div>
+              <div id="livesearch"></div>
+            </form>
          	</div>
           
           <table class="Resulttable">
@@ -27,14 +35,34 @@ if (!isset($_SESSION["latitude"]) || !isset($_SESSION["longitude"])) {
 					  </tr>
 					  <tbody>
 
+					  	<?php 
+					  		$results = $result->fetch($medicine);
 
-					  	<?php new result($medicine); ?> 
+					  		if(sizeof($results) != 0){
+						      for($i = 0; $i < sizeof($results); $i++){
 
+						        $distance = $result->getDistance($_SESSION['latitude'],$_SESSION['longitude'], $results[$i]['Latitude'],$results[$i]['Longitude'], "K");
+
+						      	echo "<tr>
+						              	<td>
+						              		". $language['pharmacy'].": <a href=''>" . $results[$i]['Name'] . "</a>
+						                  <br>". $language['farfromyou'].": " . number_format($distance,2) . $language['km'] ."
+						                </td>
+						                <td>
+						                  <i><a href='orderPage.php'> ". $language['ordernow']." </a></i>
+						                </td>
+						              </tr>";
+						      }
+						    } else {
+						      echo "<tr>
+						              <td>". $language['noresults']."</td>
+						            </tr>";
+						    }
+
+					  	?> 
 					     
 					  </tbody>
-
 					</table>
-
         </div>
       </div>
     </div>

@@ -114,6 +114,10 @@ body {
   background-color: #ffffff;
   width: 100%;
 }
+#searchbtn{
+  border: none;
+  background: none;
+}
 div.sug:hover{
   background-color: #ccc;
 }
