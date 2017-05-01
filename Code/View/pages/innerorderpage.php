@@ -24,7 +24,7 @@ echo '<div class="label-details">
 <br>
 <span class="label label-primary">'.$language['pharmacyname'].$order->getPharmacyId().'</span>
 <br>
-<span class="label label-info">'. $language['orderstaus'].$order->getStatus().'</span>
+<span class="label label-info">'. $language['orderstaus'].$language[$order->getStatus()].'</span>
 <br>
 <span class="label label-success">'.$language['orderdate'].$order->getDate().'</span>
 </div> <br>'

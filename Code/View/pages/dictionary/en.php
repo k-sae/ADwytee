@@ -56,4 +56,6 @@ $language['orderdate']="Order Date:";
 $language['medicineinorder'] = "Medicine In Order";
 $language['amount'] = "Amount";
 $language['medicinename'] = "Mdicine Name";
+$language['inprogress'] = "In Progress";
+$language['pending'] = "Pending";
 ?>

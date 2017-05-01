@@ -36,4 +36,6 @@ $language['saveorder'] ="حفظ الطلب";
  $language['medicineinorder'] ="الادوية الموجودة بالطلب";
  $language['amount'] = "الكمية";
  $language['medicinename'] = "اسم الدواء";
+ $language['inprogress'] ="تحت التقدم";
+ $language['pending'] = "قيد التنفيذ";
 ?>
