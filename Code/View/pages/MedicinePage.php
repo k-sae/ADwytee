@@ -8,7 +8,7 @@ include_once '../content/header.php';
    
           <div class="panel panel-info medicine-page-panel">
             <div class="panel-heading">
-              <h3 class="panel-title">Sheena Shrestha</h3>
+              <h3 class="panel-title">echo</h3>
             </div>
             <div class="panel-body">
               <div class="row">
@@ -30,38 +30,17 @@ include_once '../content/header.php';
                   <table class="table table-user-information">
                     <tbody>
                       <tr>
-                        <td>Department:</td>
+                        <td><?php echo  $language['medicineenname']; ?></td>
                         <td>Programming</td>
                       </tr>
                       <tr>
-                        <td>Hire date:</td>
+                        <td><?php echo  $language['medicinearname']; ?></td>
                         <td>06/23/2013</td>
                       </tr>
                       <tr>
-                        <td>Date of Birth</td>
+                        <td><?php echo  $language['desc']; ?></td>
                         <td>01/24/1988</td>
                       </tr>
-                   
-                         <tr>
-                             <tr>
-                        <td>Gender</td>
-                        <td>Female</td>
-                      </tr>
-                        <tr>
-                        <td>Home Address</td>
-                        <td>Kathmandu,Nepal</td>
-                      </tr>
-                      <tr>
-                        <td>Email</td>
-                        <td><a href="mailto:info@support.com">info@support.com</a></td>
-                      </tr>
-                      <tr>
-                        <td>Phone Number</td>
-                        <td>123-4567-890(Landline)<br><br>555-4567-890(Mobile)
-                        </td>
-                           
-                      </tr>
-                     
                     </tbody>
                   </table>
                   

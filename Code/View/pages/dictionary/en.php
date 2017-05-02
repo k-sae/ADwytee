@@ -67,4 +67,7 @@ $language['amount'] = "Amount";
 $language['entertheamount'] = "Enter the quantity of this medicine";
 $language['add'] = "Add";
 
+//Medicine Page
+$language['code'] = "Code";
+$language['name'] = "Name";
 ?>
