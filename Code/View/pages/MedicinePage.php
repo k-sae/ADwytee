@@ -1,5 +1,8 @@
 <?php
 include_once '../content/header.php';
+include_once '../../Database/MedicineFetcher.php';
+$medicinFetcher = new MedicineFetcher();
+$arr =  $medicinFetcher->fetch(1)[0];
 ?>
 
 <div class="container medicine-page-container">
@@ -8,11 +11,11 @@ include_once '../content/header.php';
    
           <div class="panel panel-info medicine-page-panel">
             <div class="panel-heading">
-              <h3 class="panel-title">echo</h3>
+              <h3 class="panel-title"><?php echo $arr["EnName"] ?></h3>
             </div>
             <div class="panel-body">
               <div class="row">
-                <div class="col-md-3 col-lg-3 " align="center"> <img alt="User Pic" src="http://babyinfoforyou.com/wp-content/uploads/2014/10/avatar-300x300.png" class="img-circle img-responsive"> </div>
+                <div class="col-md-3 col-lg-3 " align="center"> <img alt="User Pic" src="../images/m1.png" class="img-circle img-responsive"> </div>
                 
                 <!--<div class="col-xs-10 col-sm-10 hidden-md hidden-lg"> <br>
                   <dl>
@@ -31,15 +34,15 @@ include_once '../content/header.php';
                     <tbody>
                       <tr>
                         <td><?php echo  $language['medicineenname']; ?></td>
-                        <td>Programming</td>
+                        <td><?php echo $arr["EnName"] ?></td>
                       </tr>
                       <tr>
                         <td><?php echo  $language['medicinearname']; ?></td>
-                        <td>06/23/2013</td>
+                        <td><?php echo $arr["ArName"] ?></td>
                       </tr>
                       <tr>
                         <td><?php echo  $language['desc']; ?></td>
-                        <td>01/24/1988</td>
+                        <td><?php echo $arr["Descripton"] ?></td>
                       </tr>
                     </tbody>
                   </table>
