@@ -33,12 +33,12 @@ $arr =  $medicinFetcher->fetch(1)[0];
                   <table class="table table-user-information">
                     <tbody>
                       <tr>
-                        <td><?php echo  $language['medicineenname']; ?></td>
+                        <td><?php echo  $language['name']; ?></td>
                         <td><?php echo $arr["EnName"] ?></td>
                       </tr>
                       <tr>
-                        <td><?php echo  $language['medicinearname']; ?></td>
-                        <td><?php echo $arr["ArName"] ?></td>
+                        <td><?php echo  $language['code']; ?></td>
+                        <td><?php echo $arr["Code"] ?></td>
                       </tr>
                       <tr>
                         <td><?php echo  $language['desc']; ?></td>
