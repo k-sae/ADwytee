@@ -6,9 +6,8 @@ class RegisterMedicine{
 
   private $file_name= '../../Database/RegisterMedicine.php';
   private $register;
-  private $medicine;
 
-  function __construct($medicine)
+  function __construct()
   {
 
     try {
@@ -17,16 +16,23 @@ class RegisterMedicine{
       echo "error in file name";
     }
 
-    $this->medicine = $medicine;
     $this->register = new RegisterMedicine_Query();
-    $this->register();
+    
 
   }
 
-  public function register()
+  public function register($phId, $medicine, $amount)
   {
-    $this->register->register($this->medicine);
+    $this->register->register($phId, $medicine, $amount);
 
+  }
+  public function add($phId, $medicine, $amount)
+  {
+    if(sizeof(($this->register->check($phId, $medicine))) == 0){
+      $this->register->insert($phId, $medicine, $amount);
+    }else{
+      $this->register->add($phId, $medicine, $amount);
+    }
   }
 
 }
