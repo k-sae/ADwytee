@@ -45,7 +45,7 @@ class PDF extends FPDF
       $this->Cell(20,8,$a,'LR',0,'L',$fill);
       $this->Cell(40,8,"Pharmacy Name...",'LR',0,'L',$fill);
       $this->Cell(40,8,$value['EnName'],'LR',0,'L',$fill);
-      $this->Cell(40,8,"Medicine Barcode...",'LR',0,'L',$fill);
+      $this->Cell(40,8,$value['Code'],'LR',0,'L',$fill);
       $this->Cell(40,8,"No Of Orders...",'LR',0,'L',$fill);
       $this->Ln();
       $fill = !$fill;
@@ -72,7 +72,7 @@ $pdf->AddPage();
 
 //Will be changed, just testing!
 $livesearch = new livesearch();
-$results = $livesearch->search("p");
+$results = $livesearch->search("a");
 
 $pdf->TableBody($results);
 
