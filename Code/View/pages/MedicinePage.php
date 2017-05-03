@@ -2,7 +2,12 @@
 include_once '../content/header.php';
 include_once '../../Database/MedicineFetcher.php';
 $medicinFetcher = new MedicineFetcher();
-$arr =  $medicinFetcher->fetch(1)[0];
+if (!isset($_GET['Code']))
+{
+	header("Location: index.php");
+	exit();
+}
+$arr =  $medicinFetcher->fetch($_GET['Code'])[0];
 ?>
 
 <div class="container medicine-page-container">
