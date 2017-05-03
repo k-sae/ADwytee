@@ -24,12 +24,13 @@ $orderManger =new orderManger();
        if($array_order !=0){
        $size = sizeof($array_order);
        for($i =1; $i <=$size  ;$i++){
-         echo "<tr>
+         echo "<tr >
+
          <td class='td-order' >".$i."</td>
          <td class='td-order'>"
-         .$orderManger->return_pharmacy($array_order[$i-1]->getPharmacyId())[0]['Name'].
+         .$orderManger->return_pharmacy_name($array_order[$i-1]->getPharmacy()).
          "</td>
-         <td>
+         <td class ='td-button'>
           <i class=' button-order details-order fa fa-info-circle'  aria-hidden='true'
           data-toggle='modal' data-target='#orderdetails' onclick=openDetails(".$array_order[$i-1]->getId().") ></i>";
             if($array_order[$i-1]->getStatus() ==  1) {

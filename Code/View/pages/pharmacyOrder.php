@@ -13,7 +13,7 @@ $orderManger =new orderManger();
      </tr></thead>
    <tbody>
      <?php
-     $array_order = $orderManger->return_order(1);
+     $array_order = $orderManger->return_order_pharmacy(1);
 
        if($array_order !=0){
        $size = sizeof($array_order);
@@ -21,7 +21,7 @@ $orderManger =new orderManger();
          echo "<tr>
          <td class='td-order' >".$i."</td>
          <td class='td-order'>"
-         .$orderManger->return_pharmacy($array_order[$i-1]->getPharmacyId())[0]['Name'].
+         .$orderManger->return_user_name($array_order[$i-1]->getuser()).
          "</td>
          <td>
           <i class=' button-order details-order fa fa-info-circle'  aria-hidden='true'
@@ -32,7 +32,7 @@ $orderManger =new orderManger();
            <i class=" button-order delete-order fa fa-times" aria-hidden="true"
            onclick="deleteOrder('.$array_order[$i-1]->getId().',this)">  </i></td></tr>';}
            else{
-          echo  '<i class=" button-order edit-order fa fa-th-list" aria-hidden="true"> </i>';
+          echo  '<i class=" button-order edit-order fa fa-check-square-o"  aria-hidden="true"> </i>';
            }
          }}?>
          </tbody>

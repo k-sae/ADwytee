@@ -243,8 +243,14 @@ padding:0px;
 
  .button-order {
   color: #aaa;
-  padding: 5%;
-  font-size: 200%;
+  padding-left: 3%;
+  padding-right: 3%;
+  font-size: 220%;
+}
+  .td-button{
+    padding-bottom: 1%;
+    padding-top: 3%;
+
   }
 .add-order:hover {
     color: yellow;
@@ -296,7 +302,7 @@ padding:0px;
 }
 .Ordertable td:last-child {
   text-align: end;
-  padding-right: 10px;
+
 
 }
 

@@ -22,7 +22,7 @@ if ($order != False){
 echo '<div class="label-details">
 <span class="label label-default">'.$language['orderid'].$order->getID().'</span>
 <br>
-<span class="label label-primary">'.$language['pharmacyname'].$order->getPharmacyId().'</span>
+<span class="label label-primary">'.$language['pharmacyname'].$order->getPharmacy().'</span>
 <br>
 <span class="label label-info">'. $language['orderstaus'].$language[$order->getStatus()].'</span>
 <br>
