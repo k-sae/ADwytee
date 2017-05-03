@@ -8,6 +8,10 @@ if (!isset($_GET['Code']))
 	exit();
 }
 $arr =  $medicinFetcher->fetch($_GET['Code'])[0];
+if (isset($_GET['phar']))
+{
+	//TODO
+}
 ?>
 
 <div class="container medicine-page-container">
