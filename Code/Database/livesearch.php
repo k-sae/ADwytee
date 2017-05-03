@@ -14,7 +14,7 @@ class livesearch_Query
       echo "error in file name";
   }
 
-     $this->database = new DataBase($this->file_name2);
+     $this->database = DataBase :: getInstance($this->file_name2);
   }
 
   public function fetch_medicines($str)
