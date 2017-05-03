@@ -23,7 +23,7 @@ function search1($str){
   if(sizeof($medcines) != 0){
     for($i = 0; $i < sizeof($medcines) && $i < 5; $i++){
 
-      $result = "<a class='sug' href='resultpage.php?result=" . $medcines[$i]['EnName'] . "'> <div class='sug'>" . $medcines[$i]['EnName'] . " - " . $medcines[$i]['ArName'] . " </div> </a>";
+    	$result = "<a class='sug' href='resultpage.php?result=" . $medcines[$i]['EnName']."&code=" . $medcines[$i]['Code']."'> <div class='sug'>" . $medcines[$i]['EnName'] . " - " . $medcines[$i]['ArName'] . " </div> </a>";
 
       echo $result;
     }
