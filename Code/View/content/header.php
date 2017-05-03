@@ -31,6 +31,8 @@ else if (!isset($_GET["lat"]) || !isset($_GET["lat"])) {
     <link href="../css/bugfix.css" rel="stylesheet">
     <link href="../css/default.css" rel="stylesheet">
 
+
+            
   </head>
   <body dir = <?php echo $dir?> >
   <nav class="navbar navbar-fixed-top navbar-inverse">

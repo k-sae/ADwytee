@@ -10,6 +10,7 @@ $language['login'] ="Login";
 $language['contact'] ="Contact Us";
 //order
 $language['orders'] = "Orders";
+$language['pharmacyorder'] = "Pharmacy Order";
 $language['page'] ="Page";
 $language['orderpage'] ="OrderPage";
 $language['deletedone'] ="Delete Done successful";
@@ -64,10 +65,17 @@ $language['medicinearname'] = "Medicine Arabic name";
 $language['barcode'] = "Barcode";
 $language['desc'] = "Descritption";
 $language['amount'] = "Amount";
+
+$language['medicinename'] = "Mdicine Name";
+$language['inprogress'] = "In Progress";
+$language['pending'] = "Pending";
+
 $language['entertheamount'] = "Enter the quantity of this medicine";
 $language['add'] = "Add";
+
 
 //Medicine Page
 $language['code'] = "Code";
 $language['name'] = "Name";
+
 ?>

@@ -6,20 +6,20 @@ class Order
 {
   private $id;
   private $date;
-  private $userId;
-  private $pharmacyId;
+  private $user;
+  private $pharmacy;
   private $status;
   private $medicine_order;
   public function setId($id)
   {
     $this->id =$id;
   }
-  public function setUserId($userid)
+  public function setUser($userid)
   {
     $this->userId =$userid;
   }
 
-  public function setPharmacyId($pharmacyId)
+  public function setPharmacy($pharmacyId)
   {
     $this->pharmacyId =$pharmacyId;
   }
@@ -39,11 +39,11 @@ class Order
   {
     return $this->id;
   }
-  public function getPharmacyId()
+  public function getPharmacy()
   {
    return $this->pharmacyId;
   }
- public function getUserId()
+ public function getUser()
  {
   return $this->userId;
  }

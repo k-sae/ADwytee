@@ -6,38 +6,35 @@ $orderManger =new orderManger();
 <head>
   <script src = "../js/order.js">  </script></head>
   <!-- order tabale -->
-<table class="Ordertable" id ="order-table">
+<table class="Ordertable table" id ="order-table">
 <thead>
      <tr>
-       <th colspan="3" class="head-table"> <?php echo  $language['orders']; ?></th>
-     </tr>
-     <tr>
-       <th colspan="3" data-toggle="modal" data-target="#addorder" class="add-order ">
-       <span class="fa fa-plus-square" aria-hidden="true"></span>
-       <span ><?php echo $language['addorder'] ?></span></th>
-       </tr>
-       </thead>
+       <th colspan="3" class="head-table"> <?php echo  $language['pharmacyorder']; ?></th>
+     </tr></thead>
    <tbody>
      <?php
-     $array_order = $orderManger->return_order(1);
+     $array_order = $orderManger->return_order_pharmacy(1);
 
        if($array_order !=0){
        $size = sizeof($array_order);
        for($i =1; $i <=$size  ;$i++){
-         echo "<tr >
-
+         echo "<tr>
          <td class='td-order' >".$i."</td>
          <td class='td-order'>"
-         .$orderManger->return_pharmacy_name($array_order[$i-1]->getPharmacy()).
+         .$orderManger->return_user_name($array_order[$i-1]->getuser()).
          "</td>
-         <td class ='td-button'>
+         <td>
           <i class=' button-order details-order fa fa-info-circle'  aria-hidden='true'
           data-toggle='modal' data-target='#orderdetails' onclick=openDetails(".$array_order[$i-1]->getId().") ></i>";
             if($array_order[$i-1]->getStatus() ==  1) {
               echo  '
-          <i class=" button-order edit-order fa fa-pencil" aria-hidden="true">  </i>
-           <i class=" button-order delete-order fa fa-trash"  aria-hidden="true"
-           onclick="deleteOrder('.$array_order[$i-1]->getId().',this)">  </i></td></tr>';}}}?>
+          <i class=" button-order edit-order fa fa-check" aria-hidden="true"> </i>
+           <i class=" button-order delete-order fa fa-times" aria-hidden="true"
+           onclick="deleteOrder('.$array_order[$i-1]->getId().',this)">  </i></td></tr>';}
+           else{
+          echo  '<i class=" button-order edit-order fa fa-check-square-o"  aria-hidden="true"> </i>';
+           }
+         }}?>
          </tbody>
 
    </table>

@@ -15,16 +15,26 @@ class Order_Query
      echo "error in file name";
    }
 
-     $this->database = new DataBase($this->file_name2);
+     $this->database = DataBase :: getInstance($this->file_name2);
 }
    public function fetch_order($id)
   {
     # code...
-    $query = "SELECT `Id`, `PharmacyId`, `date`, `status` FROM `ORDER` WHERE `UserId` = $id ";
+    $query = "SELECT `Id`, `PharmacyId`, `status` FROM `ORDER` WHERE `UserId` = $id ";
     return ($this->database->fetch_query($query));
     }
-    public function fetch_pharmacy($id){
+    public function fetch_order_pharmacy($id)
+   {
+     # code...
+     $query = "SELECT `Id`, `UserId`, `status` FROM `ORDER` WHERE `PharmacyId` = $id ";
+     return ($this->database->fetch_query($query));
+     }
+    public function fetch_pharmacy_name($id){
         $query = "SELECT `Name` FROM `PHARMACY` WHERE `UserId` = $id ";
+        return ($this->database->fetch_query($query));
+    }
+    public function fetch_user_name($id){
+        $query = "SELECT `FName`, `LName` FROM `PATIENT` WHERE `UserId` = $id ";
         return ($this->database->fetch_query($query));
     }
     public function fetch_all_pharmacy(){

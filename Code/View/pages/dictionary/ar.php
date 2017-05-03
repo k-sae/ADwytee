@@ -10,6 +10,7 @@ $language['login'] ="دخول";
 $language['contact'] ="تواصل معنا";
 //order
 $language['orders'] = "الطلبات";
+$language['pharmacyorder'] = "طلبات الصيدلية";
 $language['page'] ="صفحة";
 $language['orderpage'] ="صفحة الطلبات";
 $language['deletedone'] ="تم حذف الطلب بنجاح";
@@ -31,6 +32,9 @@ $language['requestdenied'] = "لكي تبحث, من فضلك اقبل الطلب
 $language['nopharmacyyet'] ="لاتوجد صيدليات حتي  الان";
 $language['allpharmacy'] ="كل  الصيدليات";
 $language['saveorder'] ="حفظ الطلب";
+ $language['inprogress'] ="تحت التقدم";
+ $language['pending'] = "قيد التنفيذ";
+
 $language['cancel'] ="الغاء";
 $language['refresh'] ="من فضللك اعد تحميل  الصفحة";
 $language['orderid']=" رقم الطلب :";
@@ -66,6 +70,7 @@ $language['desc'] = "الوصف";
 $language['amount'] = "الكمية";
 $language['entertheamount'] = "ادخل كمية هذا الدواء";
 $language['add'] = "اضف";
+
 
 
 ?>

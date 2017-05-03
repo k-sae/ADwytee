@@ -15,7 +15,7 @@ class DataBase
   private $database;
   private $connection;
   private static $instance;// single database object
-  function __construct($file_name)
+  private function __construct($file_name)
   {
 
     # code...
@@ -71,9 +71,9 @@ class DataBase
 
 
 
-  public static function getInstance(){// create only one object for databse
+  public static function getInstance($filename){// create only one object for databse
           if(!self::$instance){
-              self::$instance= new  self();
+              self::$instance= new  self($filename);
           }
           return self::$instance;
       }
