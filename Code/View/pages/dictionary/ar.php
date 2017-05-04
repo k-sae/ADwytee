@@ -17,6 +17,9 @@ $language['deletedone'] ="تم حذف الطلب بنجاح";
 $language['edit'] ="تعديل";
 $language['orderdetails'] ="تفاصيل الطلب";
 $language['addorder'] ="اضافة طلب";
+$language['orderername'] ="اسم الا مر :";
+$language['declinedone'] ="تم الرفض بنجاح";
+$language['finshdone'] ="تم انهاء الطلب بنجاح";
 //search&result
 $language['search'] = "أبحث";
 $language['searchagain'] = "أبحث مره اخري";

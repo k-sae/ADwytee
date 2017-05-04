@@ -76,17 +76,55 @@ public function return_all_pharmacy(){
  {
    return ($this->order_query->deleteOrder($id));
  }
+ public function end_order($id)
+ {
+   return ($this->order_query->end_order($id));
+ }
+ public function accept_order($id)
+ {
+   return ($this->order_query->accept_order($id));
+ }
  public function fech_deatails($id)
  {
    $order_result = $this->order_query->fetch_order_details($id);
-
    if(isset($order_result)){
    $order_status=$this->order_query->get_Status($order_result[0]['status'])[0]['Status'];
-   $pharmacy_name = $this->order_query->fetch_pharmacy($order_result[0]['PharmacyId'])[0]['Name'];
+   $pharmacy_name = $this->return_pharmacy_name($order_result[0]['PharmacyId']);
    $medicine = $this->order_query -> get_medicine_order($id);
     $this->order = new Order ();
      $this->order->setId($id);
      $this->order->setPharmacy($pharmacy_name);
+     $this->order->setStatus($order_status);
+     $this->order->setDate($order_result[0]['date']);
+     $medicine_lenght =sizeof($medicine);
+     $medicine_array;
+     if($medicine_lenght){
+     for( $i=0 ;$i< $medicine_lenght ; $i++){
+       $medicine_array[$i] =new MedicineOrder();
+       $medicine_array[$i]->setAmount($medicine[$i]['Amount']);
+       $medicine_name =$this->order_query->get_medicine_name($medicine[$i]['MedicineCode']);
+
+       $medicine_array[$i]->setMedicine($medicine_name[0]['EnName']);
+     }
+     $this->order->setMedicine($medicine_array);
+
+     }
+     return $this->order;
+   }
+   else {
+     return False;
+   }
+ }
+ public function fech_deatails_pharmacy($id)
+ {
+   $order_result = $this->order_query->fetch_order_pharmacy_details($id);
+   if(isset($order_result)){
+   $order_status=$this->order_query->get_Status($order_result[0]['status'])[0]['Status'];
+   $User_name = $this->return_user_name($order_result[0]['UserId']);
+   $medicine = $this->order_query -> get_medicine_order($id);
+    $this->order = new Order ();
+     $this->order->setId($id);
+     $this->order->setUser($User_name);
      $this->order->setStatus($order_status);
      $this->order->setDate($order_result[0]['date']);
      $medicine_lenght =sizeof($medicine);

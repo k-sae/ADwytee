@@ -32,7 +32,7 @@ $orderManger =new orderManger();
          "</td>
          <td class ='td-button'>
           <i class=' button-order details-order fa fa-info-circle'  aria-hidden='true'
-          data-toggle='modal' data-target='#orderdetails' onclick=openDetails(".$array_order[$i-1]->getId().") ></i>";
+          data-toggle='modal' data-target='#orderdetails' onclick=openDetailsPatient(".$array_order[$i-1]->getId().") ></i>";
             if($array_order[$i-1]->getStatus() ==  1) {
               echo  '
           <i class=" button-order edit-order fa fa-pencil" aria-hidden="true">  </i>

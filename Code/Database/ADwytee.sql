@@ -345,6 +345,7 @@ INSERT INTO `LANGUAGE`( `Language`) VALUES ('en');
 INSERT INTO `LANGUAGE`( `Language`) VALUES ('ar');
 INSERT INTO `ORDER_STATUS`( `Status`) VALUES ('pending');
 INSERT INTO `ORDER_STATUS`( `Status`) VALUES ('inprogress');
+INSERT INTO `ORDER_STATUS`( `Status`) VALUES ('complete');
 INSERT INTO `USERTYPE`( `Type`) VALUES ('admin');
 INSERT INTO `USERTYPE`( `Type`) VALUES ('pharmacy');
 INSERT INTO `USERTYPE`( `Type`) VALUES ('patient');
