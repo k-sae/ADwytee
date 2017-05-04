@@ -26,5 +26,6 @@ $language['requestdenied'] = "لكي تبحث, من فضلك اقبل الطلب
 $language['nopharmacyyet'] ="لاتوجد صيدليات حتي  الان";
 $language['allpharmacy'] ="كل  الصيدليات";
 $language['saveorder'] ="حفظ الطلب";
- $language['cancel'] ="الغاء";
+$language['cancel'] ="الغاء";
+
 ?>

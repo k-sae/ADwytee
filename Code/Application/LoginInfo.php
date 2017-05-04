@@ -2,7 +2,7 @@
  /**
  * 
  */
- class LoginInfo
+  class LoginInfo
  {
  	public $mail;
  	public $password;

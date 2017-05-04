@@ -34,7 +34,7 @@ $dictionary_path = './dictionary/'.$_SESSION["language"].'.php';
 include_once  $dictionary_path;
 ?>
 <!DOCTYPE html>
-<html lang="<?php echo $_SESSION["language"]; ?>">
+<html lang="<?php echo $_SESSION["language"]; ?>" style = "min-height: 100vh">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -49,7 +49,7 @@ include_once  $dictionary_path;
     <link href="../css/default.css" rel="stylesheet">
 
   </head>
-  <body dir = <?php echo $dir?> >
+  <body dir = <?php echo $dir?>  style = "min-height: 100vh">
   <nav class="navbar navbar-fixed-top navbar-inverse">
       <div class="container">
         <div class="navbar-header">
@@ -92,16 +92,17 @@ include_once  $dictionary_path;
                  <h4 class="modal-title" id="myModalLabel"><?php echo  $language['login']?></h4>
                 </div>
                 <div class="modal-body">
-                  <form>
+                  <form method="POST" id="login-form">
                    <input type="email" name="email" placeholder="Email">
                     <br>
                     <input type="password" name="password" placeholder="Password">
                     <br>
-                    <button type="button" class="btn btn-primary"><?php echo  $language['login']?></button>
+                    <button type="button" class="btn btn-primary" type="submit" onclick="loginfunction()" name="login"><?php echo  $language['login']?></button>
                   </form>
-                  <p>No Acount yet? <a href="../pages/RegisterPage.php">Fuck ur self</a><p>
+                  <p>No Acount yet? <a href="../pages/RegisterPage.php">Please register </a><p>
                 </div>
-                <div class="modal-footer">
+
+                <div class="modal-footer" id="hi">
                   <!-- <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
                   <!-- <button type="button" class="btn btn-primary"><?php echo  $language['login']?></button> -->
                 </div>
