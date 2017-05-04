@@ -344,11 +344,12 @@ CREATE TABLE `RATE` (
 INSERT INTO `LANGUAGE`( `Language`) VALUES ('en');
 INSERT INTO `LANGUAGE`( `Language`) VALUES ('ar');
 INSERT INTO `ORDER_STATUS`( `Status`) VALUES ('pending');
-INSERT INTO `ORDER_STATUS`( `Status`) VALUES ('in progress');
+INSERT INTO `ORDER_STATUS`( `Status`) VALUES ('inprogress');
 INSERT INTO `USERTYPE`( `Type`) VALUES ('admin');
 INSERT INTO `USERTYPE`( `Type`) VALUES ('pharmacy');
 INSERT INTO `USERTYPE`( `Type`) VALUES ('patient');
-
+INSERT INTO `GENDER`( `Gender`) VALUES ("Male");
+INSERT INTO `GENDER`( `Gender`) VALUES ("FMale");
 -- --------------------------------------------------------
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

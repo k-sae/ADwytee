@@ -15,7 +15,7 @@ class DataBase
   private $database;
   private $connection;
   private static $instance;// single database object
-  function __construct($file_name)
+  private function __construct($file_name)
   {
 
     # code...
@@ -45,8 +45,11 @@ class DataBase
    public function fetch_query($query)
    {
      // applay query and return assc aaray
-     # code...
-     return $this->database_all_assoc($this->database_query($query));
+
+     $return_query =$this->database_query($query);
+     if(isset($return_query)  && $return_query !=False){
+     return $this->database_all_assoc($return_query);
+   }
    }
    public function database_query($database_query) {
      //aplay query
@@ -61,15 +64,16 @@ class DataBase
         while ($row = mysqli_fetch_assoc($database_result)) {
             $array_return[] = $row;
         }
-
+        if(isset( $array_return)){
         return $array_return;
+      }
   }
 
 
 
-  public static function getInstance(){// create only one object for databse
+  public static function getInstance($filename){// create only one object for databse
           if(!self::$instance){
-              self::$instance= new  self();
+              self::$instance= new  self($filename);
           }
           return self::$instance;
       }

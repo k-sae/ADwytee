@@ -15,7 +15,7 @@ function showResult(str) {
       document.getElementById("livesearch").style.border="1px solid #A5ACB2";
     }
   }
-  xmlhttp.open("GET","../../Application/livesearch.php?q="+str,true);
+  xmlhttp.open("GET","livesearch.php?q="+str,true);
   xmlhttp.send();
 }
 
@@ -43,6 +43,6 @@ function checkMedicine(str) {
       document.getElementById("livesearch").style.border="1px solid #A5ACB2";
     }
   }
-  xmlhttp.open("GET","../../Application/livesearch.php?m="+str,true);
+  xmlhttp.open("GET","livesearch.php?m="+str,true);
   xmlhttp.send();
 }

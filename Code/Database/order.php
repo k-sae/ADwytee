@@ -15,23 +15,78 @@ class Order_Query
      echo "error in file name";
    }
 
-     $this->database = new DataBase($this->file_name2);
+     $this->database = DataBase :: getInstance($this->file_name2);
 }
    public function fetch_order($id)
   {
     # code...
-    $query = "SELECT `Id`, `PharmacyId`, `date`, `status` FROM `order` WHERE `UserId` = $id ";
+    $query = "SELECT `Id`, `PharmacyId`, `status` FROM `ORDER` WHERE `UserId` = $id ";
     return ($this->database->fetch_query($query));
     }
-    public function fetch_pharmacy($id){
-        $query = "SELECT `Name` FROM `pharmacy` WHERE `UserId` = $id ";
+    public function fetch_order_pharmacy($id)
+   {
+     # code...
+     $query = "SELECT `Id`, `UserId`, `status` FROM `ORDER` WHERE `PharmacyId` = $id ";
+     return ($this->database->fetch_query($query));
+     }
+    public function fetch_pharmacy_name($id){
+        $query = "SELECT `Name` FROM `PHARMACY` WHERE `UserId` = $id ";
+        return ($this->database->fetch_query($query));
+    }
+    public function fetch_user_name($id){
+        $query = "SELECT `FName`, `LName` FROM `PATIENT` WHERE `UserId` = $id ";
         return ($this->database->fetch_query($query));
     }
     public function fetch_all_pharmacy(){
-        $query = "SELECT `Name` FROM `pharmacy`";
+        $query = "SELECT `Name` FROM `PHARMACY`";
         return ($this->database->fetch_query($query));
     }
+    public function deleteOrder($id)
+    {
+      $query1 = "SELECT `status` FROM `ORDER` WHERE `Id` = $id";
+      $status = $this->database->fetch_query($query1);
 
+      if(isset($status)){
+
+        if($status[0]['status'] == 1){
+
+          $query ="DELETE FROM `ORDER` WHERE `id`=$id";
+
+         $this->database->database_query($query);
+
+          return True;
+        }
+
+      }
+       return False;
+    }
+  public function add()
+  {
+    $query ="INSERT INTO `USERTYPE`( `Type`) VALUES ('m5ns')";
+    $this->database->database_query($query);
+  }
+  public function fetch_order_details($id)
+  {
+    $query1 = "SELECT `PharmacyId`, `date`, `status` FROM `ORDER` WHERE `Id` = $id";
+
+    return ($this->database->fetch_query($query1));
+
+  }
+  public function get_Status($id)
+  {
+    $query1 = "SELECT `Status` FROM `ORDER_STATUS` WHERE `Id` =$id";
+    return ($this->database->fetch_query($query1));
+  }
+  public function get_medicine_order($id)
+  {
+  $query1 = " SELECT `MedicineCode`, `Amount` FROM `MEDICINE_ORDER` WHERE `OrderId` =$id ";
+  return ($this->database->fetch_query($query1));
+  }
+  public function get_medicine_name($id)
+  {
+  $query1 = " SELECT `EnName` FROM `MEDICINE` WHERE `Code` =$id ";
+  return ($this->database->fetch_query($query1));
+  }
 }
 
  ?>

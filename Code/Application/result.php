@@ -1,14 +1,12 @@
-//
-<?php
-error_reporting(0);
+<<?php
+//error_reporting(0);
 
 class result{
 
   private $file_name= '../../Database/result.php';
   private $result;
-  private $medicine;
 
-  function __construct($medicine)
+  function __construct()
   {
 
     try {
@@ -18,41 +16,20 @@ class result{
     }
 
     $this->result = new result_Query();
-    $this->medicine = $medicine;
-    $this->fetch($this->medicine);
 
   }
 
   public function fetch($str)
   {
-    include 'dictionary/'. $_SESSION["language"].'.php';
     $result_arr = $this->result->fetch_pharmaces($str);
+    $this->sort($result_arr);
+
+    return $result_arr;
     
-
-    if(sizeof($result_arr) != 0){
-      $this->sort($result_arr);
-      for($i=0; $i< sizeof($result_arr); $i++){
-        $distance = $this->getDistance($_SESSION['latitude'],$_SESSION['longitude'], $result_arr[$i]['Latitude'],$result_arr[$i]['Longitude'], "K");
-        $result = "<tr>
-                     
-                     <td>". $language['pharmacy'].": <a href=''>" . $result_arr[$i]['Name'] . "</a>  
-                     <br>". $language['farfromyou'].": " . number_format($distance,2) . $language['km'] ." </td>
-                     <td>
-                      <i><a href='orderPage.php'> ". $language['ordernow']." </a></i>
-                     </td>
-                    </tr>";
-
-        echo $result;
-      }
-    } else {
-      echo "<tr>
-              <td>". $language['noresults']."</td>
-            </tr>";
-    }
   }
 
 
-  private function getDistance($lat1, $lon1, $lat2, $lon2, $unit) {
+  public function getDistance($lat1, $lon1, $lat2, $lon2, $unit) {
 
     $theta = $lon1 - $lon2;
     $dist = sin(deg2rad($lat1)) * sin(deg2rad($lat2)) +  cos(deg2rad($lat1)) * cos(deg2rad($lat2)) * cos(deg2rad($theta));

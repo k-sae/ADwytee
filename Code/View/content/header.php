@@ -1,21 +1,6 @@
 <?php
-session_start();
 
-//THE DEFUALT LANGUAGE
-if (!isset($_POST["lang"]) && !isset($_SESSION["language"])){
-  $_SESSION["language"] = "en";
-//WHEN NAVIGATING TO ANOTHER PAGE
-} else if (!isset($_POST["lang"])) {
-  //$_SESSION["language"] = $_SESSION["language"];
-//WHEN REFRESHING OR CHANGING THE LANGUAGE
-} else {
-  $_SESSION["language"] = $_POST["lang"];
-}
-
-if($_SESSION["language"] == "en"){
-  $dir = "ltr";
-}else
-  $dir = "rtl";
+include_once 'language.php';
 
 if ((!isset($_GET["lat"]) && !isset($_SESSION["latitude"])) || (!isset($_GET["long"]) && !isset($_SESSION["longitude"]))) {
   echo ' <script src="../js/Location.js"></script> ';
@@ -30,8 +15,6 @@ else if (!isset($_GET["lat"]) || !isset($_GET["lat"])) {
  $_SESSION["longitude"] = $_GET["long"];
 }
 
-$dictionary_path = './dictionary/'.$_SESSION["language"].'.php';
-include_once  $dictionary_path;
 ?>
 <!DOCTYPE html>
 <html lang="<?php echo $_SESSION["language"]; ?>" style = "min-height: 100vh">
@@ -48,6 +31,8 @@ include_once  $dictionary_path;
     <link href="../css/bugfix.css" rel="stylesheet">
     <link href="../css/default.css" rel="stylesheet">
 
+
+            
   </head>
   <body dir = <?php echo $dir?>  style = "min-height: 100vh">
   <nav class="navbar navbar-fixed-top navbar-inverse">
@@ -63,6 +48,7 @@ include_once  $dictionary_path;
         </div>
         <div id="navbar" class="collapse navbar-collapse">
           <ul class="nav navbar-nav">
+            <li class="<?php if($page=="stat"){echo "active";}?>"><a href="statistics.php">Statistics</a></li>
             <li><a href="Pharmacy.php"><?php echo  $language['pharmacyprofile']?></a></li>
             <li ><a href="orderPage.php"><?php echo  $language['orderpage']?></a></li>
             <li><a href="#about"><?php echo  $language['about']?></a></li>

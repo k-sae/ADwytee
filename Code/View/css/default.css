@@ -114,6 +114,10 @@ body {
   background-color: #ffffff;
   width: 100%;
 }
+#searchbtn{
+  border: none;
+  background: none;
+}
 div.sug:hover{
   background-color: #ccc;
 }
@@ -245,8 +249,14 @@ padding:0px;
 
  .button-order {
   color: #aaa;
-  padding: 5%;
-  font-size: 200%;
+  padding-left: 3%;
+  padding-right: 3%;
+  font-size: 220%;
+}
+  .td-button{
+    padding-bottom: 1%;
+    padding-top: 3%;
+
   }
 .add-order:hover {
     color: yellow;
@@ -298,12 +308,47 @@ padding:0px;
 }
 .Ordertable td:last-child {
   text-align: end;
-  padding-right: 10px;
+
 
 }
 
+.cancle-button{
 
+  float: left;
+}
+#error{
+  transform: scale(0);
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  background-color: rgba(0, 0, 0,.8 );
+}
+ #wrong-message{
+  top:40%;
+  position: relative;
+  margin: auto;
+ font-size: 150%;
+  }
+.details-body{
+  background-color: rgba(0, 0, 0, 0.2);
+  color: red;
+}
+.label-details{
+  text-align: start;
+  font-size: 150%;
+}
+.close-icon{
+  position: absolute;
+  right: 1%;
+  color: white;
+  top: 10%;
+}
+.close:hover{
 
+  color: white;
+}
 /*
  * Affix and center
  */
@@ -350,7 +395,9 @@ padding:0px;
 .wrapper2{height: 300px}
 .Ordertable{
   width:75%;
+
 }
+
 }
 
 @media(max-width: 480px){
@@ -358,9 +405,8 @@ padding:0px;
     width:100%;
   }
 
+
 }
-
-
 
 
 /* My Area Dont Touch!!!!!! */
@@ -504,3 +550,49 @@ body {
   display: none;
   margin-top:40%;
 }
+
+
+/* Still my area DONT TOUCH */
+/** Medicine Page */
+
+.medicine-page-container{
+	  background-color: #444;
+	  margin-top: 20px;
+}
+.medicine-page-panel{
+	  background-color: #555;
+}
+.user-row {
+    margin-bottom: 14px;
+}
+
+.user-row:last-child {
+    margin-bottom: 0;
+}
+
+.dropdown-user {
+    margin: 13px 0;
+    padding: 5px;
+    height: 100%;
+}
+
+.dropdown-user:hover {
+    cursor: pointer;
+}
+
+.table-user-information > tbody > tr {
+    border-top: 1px solid rgb(221, 221, 221);
+}
+
+.table-user-information > tbody > tr:first-child {
+    border-top: 0;
+}
+
+
+.table-user-information > tbody > tr > td {
+    border-top: 0;
+}
+.toppad
+{margin-top:20px;
+}
+
