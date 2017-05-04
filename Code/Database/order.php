@@ -94,7 +94,7 @@ class Order_Query
 				($order->user,$order->pharmacy,25/4/2015,1)";
   	$this->database->database_query($query1);
   }
-  
+   
 }
 
  ?>
