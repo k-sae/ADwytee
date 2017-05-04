@@ -132,10 +132,15 @@ class Order_Query
   {
   	$query1 = 	"INSERT INTO `ORDER`(`UserId`, `PharmacyId`, `date`, `status`)
  			   	VALUES 
-				($order->user,$order->pharmacy,25/4/2015,1)";
+ 			   	($order->user,$order->pharmacy,25/4/2015,1)";
   	$this->database->database_query($query1);
+  	$id = mysqli_insert_id($this->database->get_con());
+  	
+  	$query2 = "INSERT INTO `MEDICINE_ORDER`(`MedicineCode`, `OrderId`, `Amount`) 
+				VALUES
+				($order->medicine_order,$id,1)";
+  	$this->database->database_query($query2);
   }
-   
 }
 
  ?>

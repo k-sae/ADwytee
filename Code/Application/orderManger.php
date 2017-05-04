@@ -115,6 +115,22 @@ public function return_all_pharmacy(){
      return False;
    }
  }
+ public function newOrder($order)
+ {
+ 	//TODO
+ 	//check if there is old order 
+ 	// if there is add a medicine to it 
+ 	// else make new order
+ 	$id = -1;
+ 	if($id != -1)
+ 	{
+ 		//alter
+ 	}
+ 	else {
+ 		$this->order_query->add_new_order($order);
+ 	}
+ 	
+ }
  public function fech_deatails_pharmacy($id)
  {
    $order_result = $this->order_query->fetch_order_pharmacy_details($id);
