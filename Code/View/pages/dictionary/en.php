@@ -17,6 +17,9 @@ $language['deletedone'] ="Delete Done successful";
 $language['edit'] ="Edit";
 $language['orderdetails'] ="Order Details";
 $language['addorder'] ="  Add Order   ";
+$language['orderername'] ="Orderer Name :";
+$language['declinedone'] ="Decline Done";
+$language['finshdone'] ="Finsh Done";
 //search&result
 $language['search'] = "Search";
 $language['searchagain'] = "Search Again";
