@@ -2,12 +2,12 @@
 include_once '../content/header.php';
 include_once '../../Database/MedicineFetcher.php';
 $medicinFetcher = new MedicineFetcher();
-if (!isset($_GET['Code']))
+if (!isset($_GET['code']))
 {
 	header("Location: index.php");
 	exit();
 }
-$arr =  $medicinFetcher->fetch($_GET['Code'])[0];
+$arr =  $medicinFetcher->fetch($_GET['code'])[0];
 if (isset($_GET['phar']))
 {
 	//TODO
@@ -55,8 +55,9 @@ if (isset($_GET['phar']))
                       </tr>
                     </tbody>
                   </table>
-                  
-                  <a href="#" class="btn btn-primary">Order Now</a>
+                  <?php if (isset($_GET["phar"]))
+                   echo "
+                  <a href='#' class='btn btn-primary'>Order Now</a>"?>
                 </div>
               </div>
             </div> 
