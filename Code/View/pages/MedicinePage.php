@@ -8,7 +8,7 @@ if (!isset($_GET['code']))
 	exit();
 }
 $arr =  $medicinFetcher->fetch($_GET['code'])[0];
-if (isset($_GET['phar']))
+if (isset($_POST['newOrder']))
 {
 	//TODO
 }
@@ -55,9 +55,11 @@ if (isset($_GET['phar']))
                       </tr>
                     </tbody>
                   </table>
+                  <form method="post">
                   <?php if (isset($_GET["phar"]))
                    echo "
-                  <a href='#' class='btn btn-primary'>Order Now</a>"?>
+                  <input type='submit' name='newOrder' class='btn btn-primary' value='Order Now'>"?>
+                  </form>
                 </div>
               </div>
             </div> 

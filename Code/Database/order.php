@@ -87,6 +87,14 @@ class Order_Query
   $query1 = " SELECT `EnName` FROM `MEDICINE` WHERE `Code` =$id ";
   return ($this->database->fetch_query($query1));
   }
+  public function add_new_order($order)
+  {
+  	$query1 = 	"INSERT INTO `ORDER`(`UserId`, `PharmacyId`, `date`, `status`)
+ 			   	VALUES 
+				($order->user,$order->pharmacy,25/4/2015,1)";
+  	$this->database->database_query($query1);
+  }
+  
 }
 
  ?>

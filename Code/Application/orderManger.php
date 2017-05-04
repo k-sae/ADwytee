@@ -108,6 +108,14 @@ public function return_all_pharmacy(){
      return False;
    }
  }
+ public function newOrder($order)
+ {
+ 	//TODO
+ 	//check if there is old order 
+ 	// if there is add a medicine to it 
+ 	// else make new order
+ 	
+ }
 
 }
 
