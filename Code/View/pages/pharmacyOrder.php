@@ -25,14 +25,17 @@ $orderManger =new orderManger();
          "</td>
          <td>
           <i class=' button-order details-order fa fa-info-circle'  aria-hidden='true'
-          data-toggle='modal' data-target='#orderdetails' onclick=openDetails(".$array_order[$i-1]->getId().") ></i>";
+          data-toggle='modal' data-target='#orderdetails' onclick=openDetailsPharmacy(".$array_order[$i-1]->getId().") ></i>";
             if($array_order[$i-1]->getStatus() ==  1) {
               echo  '
-          <i class=" button-order edit-order fa fa-check" aria-hidden="true"> </i>
-           <i class=" button-order delete-order fa fa-times" aria-hidden="true"
-           onclick="deleteOrder('.$array_order[$i-1]->getId().',this)">  </i></td></tr>';}
+            <span id = '.$i.'>
+          <i class=" button-order edit-order fa fa-check" aria-hidden="true"
+          onclick="accept('.$array_order[$i-1]->getId().','.$i.')"> </i>
+          <i class=" button-order delete-order fa fa-times" aria-hidden="true"
+           onclick="decline('.$array_order[$i-1]->getId().',this)">  </i></span></td></tr>';}
            else{
-          echo  '<i class=" button-order edit-order fa fa-check-square-o"  aria-hidden="true"> </i>';
+          echo  '<i class=" button-order edit-order fa fa-check-square-o"  aria-hidden="true"
+           onclick="finshorder('.$array_order[$i-1]->getId().',this)"> </i>';
            }
          }}?>
          </tbody>
@@ -54,7 +57,7 @@ $orderManger =new orderManger();
           <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span>                   </button>
          <h4 class="modal-title details-body" id="myModalLabel"><?php echo  $language['orderdetails']?></h4>
         </div>
-        <div class="modal-body details-body" id="details-body">
+        <div class="modal-body details-body" id="details-Pharmacy-body">
 
         </div>
         <div class="modal-footer details-body">
