@@ -14,9 +14,9 @@ class Pharmacy_Query
 
      $this->database = new DataBase($this->file_name2);
   }
-  public function fetch_Pharmacy($id,$key)
+  public function fetch_Pharmacy($id)
   { $result=array();
-    $query = " SELECT  `Name`, `Notes`, `Describition`, `Longtiude`, `Latitiude`, `Telephone` FROM `PHARMACY` WHERE `Key` LIKE '2' AND `Name` LIKE 'salo7a'";
+    $query = "SELECT `UserId`, `Name`, `Notes`, `Describition`, `Latitude`, `Longitude`, `Telephone` FROM `PHARMACY` WHERE `UserId` = $id";
     $result = $this->database->fetch_query($query);
     return $result;
   }

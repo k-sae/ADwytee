@@ -14,13 +14,13 @@ class livesearch_Query
       echo "error in file name";
   }
 
-     $this->database = new DataBase($this->file_name2);
+     $this->database = DataBase :: getInstance($this->file_name2);
   }
 
   public function fetch_medicines($str)
   {
 
-    $query = "SELECT m.ArName, m.EnName FROM `MEDICINE` AS m
+    $query = "SELECT m.Code, m.ArName, m.EnName FROM `MEDICINE` AS m
               WHERE m.ArName LIKE '%$str%' OR m.EnName LIKE '%$str%' OR m.Code LIKE '%$str%'
               ORDER BY m.EnName, m.ArName ASC";
 

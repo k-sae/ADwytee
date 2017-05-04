@@ -1,5 +1,6 @@
 <?php
 include '../content/header.php';
+include '../../Application/LoginInfo.php';
 ?>
   <div class="wrapper">
     <div class="site-wrapper">

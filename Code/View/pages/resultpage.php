@@ -2,6 +2,7 @@
 include '../../Application/result.php';
 include '../content/header.php';
 $medicine = $_GET["result"];
+$medicineCode = $_GET["code"];
 if (!isset($_SESSION["latitude"]) || !isset($_SESSION["longitude"])) {
 	echo '<script> alert("'. $language["requestdenied"].'");
 					window.location.href = "index.php";
@@ -31,7 +32,7 @@ if (!isset($_SESSION["latitude"]) || !isset($_SESSION["longitude"])) {
           
           <table class="Resulttable">
 					  <tr>
-					  	<th colspan="2"><?php echo $language['resultsfor'] . " " . $medicine; ?></th>
+					  	<th colspan="2"> <?php echo $language['resultsfor'] . " "."<a href='MedicinePage.php?Code=" .$medicineCode."' >". $medicine ."</a>"; ?></th>
 					  </tr>
 					  <tbody>
 

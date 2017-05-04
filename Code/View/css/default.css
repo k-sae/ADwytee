@@ -138,13 +138,19 @@ a.sug{
   height: 500px
 }
 /*
+bind user 
+*/
+.bind{
+  background:url(../images/3.jpg);
+  background-size: 100% 100%;
+  border:0px;
+}
+
+/*
 register  medicine
 */
-.Regwrap{ height: 100%; background:url(../images/2.png);background-size: 100% 100%; }
-.darklay{height: 100% ;width: 100%;background-color: rgba(9,9,9,0.4);margin-top: 30px}
-.darklay .container {height: 100%}
-.formmod{height: 100%;   box-shadow: 10px 10px 5px #888888; background-color: rgba(0,0,0,0.3);padding-top: 2%}
-.formmod .form-group label{font-size: 20px}
+
+.darklay{height: 100% ;width: 100%;background-color: rgba(9,9,9,0.6);}
 /*
 pharmacy  style
 */
@@ -403,18 +409,20 @@ padding:0px;
 }
 
 
-
-
-
-
-
-
-
 /* My Area Dont Touch!!!!!! */
-
-.register-dialog {
-  background-color: #444;
+.reg-back{background-image: url(../images/4.jpg);background-size:cover;}
+.register-dialog{
+  background-color:rgba(255,255,255,0.1);
 }
+.ph-reg-dialog{
+  margin-top :15px;
+}
+
+.ph-reg-dialog div input{
+  margin: 0px;
+}
+
+.regasph,.regasp{display: none}
 
 .register-dialog input{
   margin: 10px
@@ -428,7 +436,7 @@ padding:0px;
   color: #337ab7;
 }
 
-.register-dialog input{
+.register-dialog input,.ph-reg-dialog div textarea{
   background-color: #999;
   color: #000
 }

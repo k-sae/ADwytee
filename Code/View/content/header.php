@@ -17,7 +17,7 @@ else if (!isset($_GET["lat"]) || !isset($_GET["lat"])) {
 
 ?>
 <!DOCTYPE html>
-<html lang="<?php echo $_SESSION["language"]; ?>">
+<html lang="<?php echo $_SESSION["language"]; ?>" style = "min-height: 100vh">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -34,7 +34,7 @@ else if (!isset($_GET["lat"]) || !isset($_GET["lat"])) {
 
             
   </head>
-  <body dir = <?php echo $dir?> >
+  <body dir = <?php echo $dir?>  style = "min-height: 100vh">
   <nav class="navbar navbar-fixed-top navbar-inverse">
       <div class="container">
         <div class="navbar-header">
@@ -48,6 +48,7 @@ else if (!isset($_GET["lat"]) || !isset($_GET["lat"])) {
         </div>
         <div id="navbar" class="collapse navbar-collapse">
           <ul class="nav navbar-nav">
+            <li class="<?php if($page=="stat"){echo "active";}?>"><a href="statistics.php">Statistics</a></li>
             <li><a href="Pharmacy.php"><?php echo  $language['pharmacyprofile']?></a></li>
             <li ><a href="orderPage.php"><?php echo  $language['orderpage']?></a></li>
             <li><a href="#about"><?php echo  $language['about']?></a></li>
@@ -77,16 +78,17 @@ else if (!isset($_GET["lat"]) || !isset($_GET["lat"])) {
                  <h4 class="modal-title" id="myModalLabel"><?php echo  $language['login']?></h4>
                 </div>
                 <div class="modal-body">
-                  <form>
+                  <form method="POST" id="login-form">
                    <input type="email" name="email" placeholder="Email">
                     <br>
                     <input type="password" name="password" placeholder="Password">
                     <br>
-                    <button type="button" class="btn btn-primary"><?php echo  $language['login']?></button>
+                    <button type="button" class="btn btn-primary" type="submit" onclick="loginfunction()" name="login"><?php echo  $language['login']?></button>
                   </form>
-                  <p>No Acount yet? <a href="../pages/RegisterPage.php">Fuck ur self</a><p>
+                  <p>No Acount yet? <a href="../pages/RegisterPage.php">Please register </a><p>
                 </div>
-                <div class="modal-footer">
+
+                <div class="modal-footer" id="hi">
                   <!-- <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
                   <!-- <button type="button" class="btn btn-primary"><?php echo  $language['login']?></button> -->
                 </div>

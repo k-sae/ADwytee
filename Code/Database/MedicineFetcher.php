@@ -15,7 +15,7 @@ class MedicineFetcher
 			echo "error in file name";
 		}
 		
-		$this->database = new DataBase($this->credentials_file_location);
+		$this->database = DataBase::getInstance($this->credentials_file_location);
 	}
 	public function fetch($code)
 	{
