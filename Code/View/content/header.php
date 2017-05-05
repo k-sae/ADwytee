@@ -1,6 +1,7 @@
 <?php
 
 include_once 'language.php';
+include_once '../../Application/NotificationManger.php';
 
 if ((!isset($_GET["lat"]) && !isset($_SESSION["latitude"])) || (!isset($_GET["long"]) && !isset($_SESSION["longitude"]))) {
   echo ' <script src="../js/Location.js"></script> ';
@@ -14,7 +15,8 @@ else if (!isset($_GET["lat"]) || !isset($_GET["lat"])) {
  $_SESSION["latitude"] =  $_GET["lat"];
  $_SESSION["longitude"] = $_GET["long"];
 }
-
+$notification =  new NotificationManger();
+$N_Status = $notification->check_Notification(1);
 ?>
 <!DOCTYPE html>
 <html lang="<?php echo $_SESSION["language"]; ?>" style = "min-height: 100vh">
@@ -48,13 +50,15 @@ else if (!isset($_GET["lat"]) || !isset($_GET["lat"])) {
         </div>
         <div id="navbar" class="collapse navbar-collapse">
           <ul class="nav navbar-nav">
+            <li class="notification<?php if($N_Status == True) echo ' n-active';?>" id="noti"> <i class="fa fa-globe fa-2x " aria-hidden="true"></i></li>
             <li class="<?php if($page=="stat"){echo "active";}?>"><a href="statistics.php">Statistics</a></li>
-            <li><a href="Pharmacy.php"><?php echo  $language['pharmacyprofile']?></a></li>
-            <li ><a href="orderPage.php"><?php echo  $language['orderpage']?></a></li>
-              <li ><a href="pharmacyOrder.php"><?php echo  $language['pahrmacyorder']?></a></li>
+            <li ><a href="Pharmacy.php"><?php echo  $language['pharmacyprofile']?></a></li>
+            <li class="<?php if($page=="orderPage"){echo "active";}?>"><a href="orderPage.php"><?php echo  $language['orderpage']?></a></li>
+            <li class="<?php if($page=="pharmacyorder"){echo "active";}?>"><a href="pharmacyOrder.php"><?php echo  $language['pahrmacyorder']?></a></li>
             <li><a href="#about"><?php echo  $language['about']?></a></li>
             <li ><a href="" data-toggle="modal" data-target="#myModal"><?php echo  $language['login']?></a></li>
             <li><a href="#contact"><?php echo  $language['contact']?></a></li>
+
             <li>
             <form method="post">
               <select id="langlist" name="lang" onchange="this.form.submit()" class="langselect">

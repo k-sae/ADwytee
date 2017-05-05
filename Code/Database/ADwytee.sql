@@ -138,7 +138,7 @@ CREATE TABLE `PATIENT` (
   `Key` varchar(16) CHARACTER SET utf8 COLLATE utf8_bin NOT NULL COMMENT 'patient key',
   `FName` varchar(24) NOT NULL COMMENT 'PatientFirstName',
   `LName` varchar(24) NOT NULL COMMENT 'PatientLastName',
-  `Gender` tinyint(1) NOT NULL DEFAULT '0' COMMENT 'PGender(If0==male)',
+  `Gender` tinyint(1) NOT NULL DEFAULT '1' COMMENT 'PGender(If0==male)',
   `Birthdate` date NOT NULL COMMENT 'Patient DOB',
   `Height` int(3) NOT NULL COMMENT 'Patient height',
   `Weight` int(3) NOT NULL COMMENT 'Patient weight',
@@ -272,7 +272,7 @@ CREATE TABLE `ORDER` (
   `UserId` int(11),
   `PharmacyId` int(11),
   `date` TIMESTAMP NOT NULL,
-  `status` tinyint(1) NOT NULL DEFAULT '0',
+  `status` tinyint(1) NOT NULL DEFAULT '1',
   PRIMARY key (`Id`),
   FOREIGN KEY (`UserId`) REFERENCES `USER`(`Id`)ON DELETE CASCADE ON UPDATE CASCADE,
   FOREIGN KEY (`PharmacyId`) REFERENCES `USER`(`Id`) ON DELETE CASCADE ON UPDATE CASCADE,
@@ -293,20 +293,31 @@ CREATE TABLE `MEDICINE_ORDER` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
+--
+-- Table structure for table `notification_staus`
+--
 
+CREATE TABLE `NOTIFICATION_STATUS` (
+  `Id` int(11) NOT NULL AUTO_INCREMENT UNIQUE,
+  `Status` varchar(13) NOT NULL,
+  PRIMARY key (`Id`)
+  ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+-- --------------------------------------------------------
 --
 -- Table structure for table `notification`
 --
 
 CREATE TABLE `NOTIFICATION` (
   `Id` int(11) NOT NULL AUTO_INCREMENT UNIQUE,
-  `MedicineCode` varchar(13) NOT NULL,
-  `OrderId` int(11) NOT NULL,
+  `MedicineCode` varchar(13) ,
+  `OrderId` int(11),
   `PatientId` Int(11) NOT NULL,
+  `NStatus` Int(11) NOT NULL DEFAULT '1' ,
   PRIMARY key (`Id`),
   FOREIGN KEY (`MedicineCode`) REFERENCES `MEDICINE`(`Code`) ON DELETE CASCADE ON UPDATE CASCADE,
   FOREIGN KEY (`OrderId`) REFERENCES `ORDER`(`Id`) ON DELETE CASCADE ON UPDATE CASCADE,
-  FOREIGN KEY (`PatientId`) REFERENCES `USER`(`Id`) ON DELETE CASCADE ON UPDATE CASCADE
+  FOREIGN KEY (`PatientId`) REFERENCES `USER`(`Id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  FOREIGN KEY (`NStatus`) REFERENCES `NOTIFICATION_STATUS`(`Id`) ON DELETE CASCADE ON UPDATE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 -- --------------------------------------------------------
 --
@@ -390,11 +401,20 @@ INSERT INTO `LANGUAGE`( `Language`) VALUES ('ar');
 INSERT INTO `ORDER_STATUS`( `Status`) VALUES ('pending');
 INSERT INTO `ORDER_STATUS`( `Status`) VALUES ('inprogress');
 INSERT INTO `ORDER_STATUS`( `Status`) VALUES ('complete');
+INSERT INTO `NOTIFICATION_STATUS`( `Status`) VALUES ('active');
+INSERT INTO `NOTIFICATION_STATUS`( `Status`) VALUES ('disactive');
 INSERT INTO `USERTYPE`( `Type`) VALUES ('admin');
 INSERT INTO `USERTYPE`( `Type`) VALUES ('pharmacy');
 INSERT INTO `USERTYPE`( `Type`) VALUES ('patient');
 INSERT INTO `GENDER`( `Gender`) VALUES ("Male");
 INSERT INTO `GENDER`( `Gender`) VALUES ("FMale");
+INSERT INTO `GENDER`( `Gender`) VALUES ("FMale");
+INSERT INTO `PAGE_URL`( `Url`) VALUES ("index.php");
+INSERT INTO `PAGE_URL`( `Url`) VALUES ("pharmacyOrder.php");
+INSERT INTO `PAGE_URL`( `Url`) VALUES ("orderPage.php");
+INSERT INTO `PAGE_URL`( `Url`) VALUES ("RegisterPage.php");
+INSERT INTO `PAGE_URL`( `Url`) VALUES ("statistics.php");
+INSERT INTO `PAGE_URL`( `Url`) VALUES ("MedicinePage.php");
 -- --------------------------------------------------------
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
