@@ -48,7 +48,7 @@ else if (!isset($_GET["lat"]) || !isset($_GET["lat"])) {
         </div>
         <div id="navbar" class="collapse navbar-collapse">
           <ul class="nav navbar-nav">
-            <li class="<?php if($page=="stat"){echo "active";}?>"><a href="statistics.php">Statistics</a></li>
+            <li class="<?php if($page=="stat"){echo "active";}?>"><a href="statistics.php"><?php echo  $language['stat']?></a></li>
             <li><a href="Pharmacy.php"><?php echo  $language['pharmacyprofile']?></a></li>
             <li ><a href="orderPage.php"><?php echo  $language['orderpage']?></a></li>
               <li ><a href="pharmacyOrder.php"><?php echo  $language['pahrmacyorder']?></a></li>
