@@ -141,6 +141,46 @@ class Order_Query
 				($order->medicine_order,$id,1)";
   	$this->database->database_query($query2);
   }
+  public function get_pending_orders($order)
+  {
+  	$query1 = 	"SELECT `Id`
+ 				FROM `ORDER` 
+				WHERE `UserId` = $order->user
+				and `PharmacyId` = $order->pharmacy
+  	            and `status` = 1 ";
+  	$arr  = $this->database->fetch_query($query1);
+  	if (isset($arr[0]["Id"]))
+  	{
+  		return $arr[0]["Id"];
+  	}
+  	return -1;
+  	
+  }
+  public function add_to_existing_order($order)
+  {
+  	$m_id = $order->medicine_order->medicine_id;
+  	$query1 = 	"SELECT `Amount` FROM `MEDICINE_ORDER` 
+				WHERE `MedicineCode` = $m_id AND `OrderId` = $order->id";
+  	$arr  = $this->database->fetch_query($query1);
+  	print_r($arr);
+  	if (isset($arr[0]["Amount"]))
+  	{
+  		$amount = ($arr[0]['Amount'] + $order->medicine_order->amount);
+  		$code = $order->medicine_order->medicine_id;
+  		$query2 = "UPDATE `MEDICINE_ORDER`
+  		SET `Amount`= $amount
+  		WHERE 
+		`MedicineCode`= $code
+		AND
+		`OrderId`=$order->id";
+  		$this->database->database_query($query2);
+  	}
+  	else 
+  	{
+  	return -1;
+  	}
+  }
+  
 }
 
  ?>

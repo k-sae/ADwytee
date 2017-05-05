@@ -4,8 +4,9 @@
  */
 class MedicineOrder
 {
-  private $medicine_name;
-  private $amount;
+  public $medicine_id;
+  public $medicine_name;
+  public $amount;
   public function setAmount($amount)
   {
   $this->amount =$amount;

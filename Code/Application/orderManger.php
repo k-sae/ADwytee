@@ -121,10 +121,10 @@ public function return_all_pharmacy(){
  	//check if there is old order 
  	// if there is add a medicine to it 
  	// else make new order
- 	$id = -1;
- 	if($id != -1)
+ 	$order->id = $this->order_query->get_pending_orders($order);
+ 	if($order->id != -1)
  	{
- 		//alter
+ 		$this->order_query->add_to_existing_order($order);
  	}
  	else {
  		$this->order_query->add_new_order($order);

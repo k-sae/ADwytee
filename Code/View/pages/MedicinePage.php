@@ -3,6 +3,7 @@ include_once '../content/header.php';
 include_once '../../Database/MedicineFetcher.php';
 include_once '../../Application/order.php';
 include_once '../../Application/orderManger.php';
+include_once '../../Application/medicineOrder.php';
 $medicinFetcher = new MedicineFetcher();
 if (!isset($_GET['code']))
 {
@@ -14,7 +15,10 @@ if (isset($_POST['newOrder']))
 {
 	//TODO
 	$order = new Order();
-	$order->medicine_order = ($_GET['code']);
+	$medicine_order = new MedicineOrder();
+	$medicine_order->medicine_id = ($_GET['code']);
+	$medicine_order->amount = 1;
+	$order->medicine_order = $medicine_order;
 	$order->pharmacy = ($_GET["phar"]);
 	//TODO edit this according to session later
 	$order->user = (1);
