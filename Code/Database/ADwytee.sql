@@ -248,6 +248,19 @@ CREATE TABLE `MEDICINE_ALTERNATIVES` (
   FOREIGN KEY (`M_AlternativeCode`) REFERENCES `MEDICINE`(`Code`) ON DELETE CASCADE ON UPDATE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `RESERVATION`
+--
+
+CREATE TABLE `RESERVATION` (
+  `Id` int(11) NOT NULL,
+  `UserId` int(11) DEFAULT NULL,
+  `PharmacyId` int(11) DEFAULT NULL,
+  `Date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
 
 -- --------------------------------------------------------
 
