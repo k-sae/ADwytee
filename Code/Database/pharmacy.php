@@ -12,7 +12,7 @@ class Pharmacy_Query
      echo "error in file name";
    }
 
-     $this->database = new DataBase($this->file_name2);
+     $this->database = DataBase :: getInstance($this->file_name2);
   }
   public function fetch_Pharmacy($id)
   { $result=array();

@@ -36,20 +36,20 @@ if(isset($_POST["FName"]))
 						<div class="row">
 							<div class="col-sm-4 form-group">
 								<label><?php echo  $language['goverment']; ?></label>
-								<input type="text" placeholder="<?php echo  $language['enter_governemnt_name_here']; ?>" class="form-control">
+								<input type="text" name="government" placeholder="<?php echo  $language['enter_governemnt_name_here']; ?>" class="form-control">
 							</div>	
 							<div class="col-sm-4 form-group">
 								<label><?php echo  $language['district']; ?></label>
-								<input type="text" placeholder="<?php echo  $language['enter_district_name_here']; ?>" class="form-control">
+								<input type="text" name="district" placeholder="<?php echo  $language['enter_district_name_here']; ?>" class="form-control">
 							</div>	
 							<div class="col-sm-4 form-group">
 								<label><?php echo  $language['street_no']; ?></label>
-								<input type="text" placeholder="<?php echo  $language['enter_street_no_here']; ?>" class="form-control">
+								<input type="text" name="street_no" placeholder="<?php echo  $language['enter_street_no_here']; ?>" class="form-control">
 							</div>		
 						</div>			
 					<div class="form-group">
 						<label><?php echo  $language['phone_number']; ?></label>
-						<input type="text" placeholder="<?php echo  $language['enter_phone_no_here']; ?>" class="form-control">
+						<input type="text" name="phone_number" placeholder="<?php echo  $language['enter_phone_no_here']; ?>" class="form-control">
 					</div>		
 					<div class="form-group">
 						<label><?php echo  $language['email']; ?></label>
@@ -57,7 +57,7 @@ if(isset($_POST["FName"]))
 					</div>
 					<div class="form-group">
 						<label><?php echo  $language['password']; ?></label>
-						<input type="password" placeholder="<?php echo  $language['enter_password_here']; ?>" class="form-control">
+						<input type="password" name="password" placeholder="<?php echo  $language['enter_password_here']; ?>" class="form-control">
 					</div>
 					<button type="submit" class="btn btn-lg btn-info" onclick="registerfunction()" name="regp">Submit</button>					
 					</div>

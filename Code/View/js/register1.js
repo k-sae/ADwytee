@@ -28,8 +28,38 @@ $('#preg-form').validate({ // initialize the plugin
             FName: {
                 required: true,
                 minlength: 5
-            },  submitHandler: submitForm
-    }})
+            },
+            LName:{
+            	required:true,
+            	minlength:5
+            },
+            password:{
+            	required:true,
+            	minlength:8
+            },government:{
+            	required:true,
+            	minlenght:5
+            },street_no:{
+            	required:true,
+            	minlenght:5
+            },phone_number:{
+            	required:true,
+            	minlenght:5
+            },district:{
+            	required:true,
+            	minlenght:5}
+
+        },
+        messages: {
+        FName: "Enter your firstname",
+        LName: "Enter your lastname",
+        },
+
+
+
+
+             submitHandler: submitForm
+    })
 
 }
  function submitForm()
@@ -41,3 +71,5 @@ var data = $("#preg-form").serialize();
             type : 'POST',
             url  : '../../Application/validator.php',
             data : data})}
+
+
