@@ -37,7 +37,15 @@ if (isset($_POST['newOrder']))
             </div>
             <div class="panel-body">
               <div class="row">
-                <div class="col-md-3 col-lg-3 " align="center"> <img alt="User Pic" src="../images/m1.png" class="img-circle img-responsive"> </div>
+                <div class="col-md-3 col-lg-3 " align="center"> <img alt="User Pic" src="../mimages/<?php echo $_GET['code']?>" class="img-circle img-responsive">
+                	<form action="upload.php" method="post" enctype="multipart/form-data">
+					    <input type="file" name="fileToUpload"  id="fileToUpload">
+					    <input type="hidden" name="m_code" value="<?php echo $_GET['code']?>" >
+					    <br>
+					    <input type="submit" value="Upload" class="btn btn-primary" name="submit">
+					</form>
+                
+                 </div>
 
                 <!--<div class="col-xs-10 col-sm-10 hidden-md hidden-lg"> <br>
                   <dl>
