@@ -3,6 +3,7 @@
 
 //nav
 $language['logo'] = "أدويتي";
+$language['stat'] = "الاحصائيات";
 $language['pharmacyprofile'] ="صفحة الصيديلة الشخصية";
 $language['about'] ="عنّا";
 $language['register'] ="سجّل";

@@ -3,6 +3,7 @@
 
 //nav
 $language['logo'] = "ADwytee";
+$language['stat'] = "Statistics";
 $language['pharmacyprofile'] ="Pharmacy Profile";
 $language['about'] ="About us";
 $language['register'] ="Register";
