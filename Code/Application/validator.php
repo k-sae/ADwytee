@@ -10,7 +10,9 @@ include_once 'guest.php';
                   echo "1";
                 }else{
              $g=new Guest();
-             $reginfo=new new RegisterInfo(new Info(),new LoginInfo());
+             $reginfo= new RegisterInfo();
+             $reginfo->info = new Info();
+             $reginfo->loginInfo = new LoginInfo();
              $reginfo->$loginInfo->mail=$_POST['email'];
              $reginfo->$loginInfo->password=$_POST['password']; 
              $reginfo->$info->telephonNo=$_POST["phone_number"];
