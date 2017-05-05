@@ -135,10 +135,10 @@ class Order_Query
  			   	($order->user,$order->pharmacy,25/4/2015,1)";
   	$this->database->database_query($query1);
   	$id = mysqli_insert_id($this->database->get_con());
-  	
+  	$code = $order->medicine_order->medicine_id;
   	$query2 = "INSERT INTO `MEDICINE_ORDER`(`MedicineCode`, `OrderId`, `Amount`) 
 				VALUES
-				($order->medicine_order,$id,1)";
+				($code,$id,1)";
   	$this->database->database_query($query2);
   }
   public function get_pending_orders($order)
@@ -162,22 +162,25 @@ class Order_Query
   	$query1 = 	"SELECT `Amount` FROM `MEDICINE_ORDER` 
 				WHERE `MedicineCode` = $m_id AND `OrderId` = $order->id";
   	$arr  = $this->database->fetch_query($query1);
-  	print_r($arr);
+  	//if order with the same medicine exist update it 
+  	//else add new medicine order
   	if (isset($arr[0]["Amount"]))
   	{
   		$amount = ($arr[0]['Amount'] + $order->medicine_order->amount);
-  		$code = $order->medicine_order->medicine_id;
   		$query2 = "UPDATE `MEDICINE_ORDER`
   		SET `Amount`= $amount
   		WHERE 
-		`MedicineCode`= $code
+  		`MedicineCode`= $m_id
 		AND
 		`OrderId`=$order->id";
   		$this->database->database_query($query2);
   	}
   	else 
   	{
-  	return -1;
+  		$query2 = "INSERT INTO `MEDICINE_ORDER`(`MedicineCode`, `OrderId`, `Amount`)
+  		VALUES
+  		($m_id,$order->id,1)";
+  		$this->database->database_query($query2);
   	}
   }
   
