@@ -8,7 +8,13 @@ a:focus,
 a:hover {
   color: #fff;
 }
+.notification{
+  padding-top: 1.2%;
 
+}
+.n-active{
+  color: red;
+}
 /* Custom default button */
 .btn-default,
 .btn-default:hover,
@@ -247,12 +253,11 @@ padding:0px;
   padding-left: 3%;
   padding-right: 3%;
   font-size: 220%;
-  text-align: end;
-}
+  }
   .td-button{
     padding-bottom: 1%;
     padding-top: 3%;
-
+    text-align: end;
   }
 .add-order:hover {
     color: yellow;

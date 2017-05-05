@@ -1,4 +1,5 @@
 <?php
+$page = "pharmacyorder";
 include_once '../content/header.php';
 include_once '../../Application/orderManger.php';
 $orderManger =new orderManger();
@@ -24,7 +25,7 @@ $_SESSION['userId'] = 1;
          <td class='td-order'>"
          .$orderManger->return_user_name($array_order[$i-1]->getuser()).
          "</td>
-         <td>
+         <td class ='td-button'>
           <i class=' button-order details-order fa fa-info-circle'  aria-hidden='true'
           data-toggle='modal' data-target='#orderdetails' onclick=openDetailsPharmacy(".$array_order[$i-1]->getId().") ></i>";
             if($array_order[$i-1]->getStatus() ==  1) {

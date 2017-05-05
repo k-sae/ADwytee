@@ -24,6 +24,7 @@ if($message == True){
   else {
     echo $language['refresh'];
   }
+
 }
 /* decline message */
 if(isset($_GET["decline"])){
@@ -43,6 +44,7 @@ $message= $orderManger->end_order($id);
 
 if($message == True){
     echo $language['finishdone'];
+
   }
   else {
     echo $language['refresh'];
