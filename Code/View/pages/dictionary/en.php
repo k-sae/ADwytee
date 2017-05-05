@@ -10,16 +10,26 @@ $language['login'] ="Login";
 $language['contact'] ="Contact Us";
 //order
 $language['orders'] = "Orders";
-$language['pharmacyorder'] = "Pharmacy Order";
-$language['page'] ="Page";
-$language['orderpage'] ="OrderPage";
+$language['pharmacyorder'] = "Pharmacy Orders";
+$language['orderpage'] ="OrdersPage";
 $language['deletedone'] ="Delete Done successful";
-$language['edit'] ="Edit";
 $language['orderdetails'] ="Order Details";
-$language['addorder'] ="  Add Order   ";
 $language['orderername'] ="Orderer Name :";
 $language['declinedone'] ="Decline Done";
-$language['finshdone'] ="Finsh Done";
+$language['noorder'] ="No found any orders Yet";
+$language['finishdone'] ="Finish Done";
+$language['cancel'] ="Cancel";
+$language['refresh'] ="Wrong Refresh This Page";
+$language['orderid']=" order ID : ";
+$language['pharmacyname']="Pharmacy Name:";
+$language['orderstaus']="Order Status:";
+$language['orderdate']="Order Date:";
+$language['medicineinorder'] = "Medicine In Order";
+$language['amount'] = "Amount";
+$language['medicinename'] = "Medicine Name";
+$language['inprogress'] = "In Progress";
+$language['pending'] = "Pending";
+$language['pahrmacyorder'] ="Pharmacy Order";
 //search&result
 $language['search'] = "Search";
 $language['searchagain'] = "Search Again";
@@ -31,19 +41,6 @@ $language['km'] ="Km";
 $language['ordernow'] ="Order Now!";
 $language['noresults'] = "no results found";
 $language['requestdenied'] = "In Order to search,Please allow the request to know your location";
-
-$language['nopharmacyyet'] ="No Pharmacy yet";
-$language['allpharmacy']="All Pharmacy Name";
-$language['saveorder'] ="Save order";
-$language['cancel'] ="Cancel";
-$language['refresh'] ="Wrong Refresh This Page";
-$language['orderid']=" order ID : ";
-$language['pharmacyname']="Pharmacy Name:";
-$language['orderstaus']="Order Status:";
-$language['orderdate']="Order Date:";
-$language['medicineinorder'] = "Medicine In Order";
-$language['amount'] = "Amount";
-$language['medicinename'] = "Medicine Name";
 // Register labels
 $language['first_name'] ="First Name";
 $language['last_name'] ="Last Name";
@@ -68,15 +65,9 @@ $language['medicinearname'] = "Medicine Arabic name";
 $language['barcode'] = "Barcode";
 $language['desc'] = "Descritption";
 $language['amount'] = "Amount";
-
 $language['medicinename'] = "Mdicine Name";
-$language['inprogress'] = "In Progress";
-$language['pending'] = "Pending";
-
 $language['entertheamount'] = "Enter the quantity of this medicine";
 $language['add'] = "Add";
-
-
 //Medicine Page
 $language['code'] = "Code";
 $language['name'] = "Name";

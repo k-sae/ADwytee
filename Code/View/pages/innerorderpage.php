@@ -42,7 +42,7 @@ $id = $_GET["finsh"];
 $message= $orderManger->end_order($id);
 
 if($message == True){
-    echo $language['finshdone'];
+    echo $language['finishdone'];
   }
   else {
     echo $language['refresh'];

@@ -2,6 +2,7 @@
 include_once '../content/header.php';
 include_once '../../Application/orderManger.php';
 $orderManger =new orderManger();
+$_SESSION['userId'] = 1;
 ?>
 <head>
   <script src = "../js/order.js">  </script></head>
@@ -13,7 +14,7 @@ $orderManger =new orderManger();
      </tr></thead>
    <tbody>
      <?php
-     $array_order = $orderManger->return_order_pharmacy(1);
+     $array_order = $orderManger->return_order_pharmacy($_SESSION['userId'] );
 
        if($array_order !=0){
        $size = sizeof($array_order);
@@ -37,7 +38,11 @@ $orderManger =new orderManger();
           echo  '<i class=" button-order edit-order fa fa-check-square-o"  aria-hidden="true"
            onclick="finshorder('.$array_order[$i-1]->getId().',this)"> </i>';
            }
-         }}?>
+         }}
+         else {
+           echo "<tr><td  class='head-table'>".$language['noorder']."</td></tr>";
+         }
+         ?>
          </tbody>
 
    </table>
