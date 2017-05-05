@@ -20,13 +20,13 @@ class Order_Query
    public function fetch_order($id)
   {
     # code...
-    $query = "SELECT `Id`, `PharmacyId`, `status` FROM `ORDER` WHERE `UserId` = $id ";
+    $query = "SELECT `Id`, `PharmacyId`, `status` FROM `ORDER` WHERE `UserId` = $id  and status != 3 ";
     return ($this->database->fetch_query($query));
     }
     public function fetch_order_pharmacy($id)
    {
      # code...
-     $query = "SELECT `Id`, `UserId`, `status` FROM `ORDER` WHERE `PharmacyId` = $id ";
+     $query = "SELECT `Id`, `UserId`, `status` FROM `ORDER` WHERE `PharmacyId` = $id  and status != 3  ";
      return ($this->database->fetch_query($query));
      }
     public function fetch_pharmacy_name($id){
@@ -60,14 +60,55 @@ class Order_Query
       }
        return False;
     }
-  public function add()
-  {
-    $query ="INSERT INTO `USERTYPE`( `Type`) VALUES ('m5ns')";
-    $this->database->database_query($query);
-  }
+    public function end_order($id)
+    {
+      $query1 = "SELECT `status` FROM `ORDER` WHERE `Id` = $id ";
+      $status = $this->database->fetch_query($query1);
+
+      if(isset($status)){
+
+        if($status[0]['status'] == 2){
+
+          $query ="UPDATE `ORDER` SET `status`=3 WHERE `Id` = $id ";
+
+         $this->database->database_query($query);
+
+          return True;
+        }
+
+      }
+       return False;
+    }
+    public function accept_order($id)
+    {
+      $query1 = "SELECT `status` FROM `ORDER` WHERE `Id` = $id ";
+      $status = $this->database->fetch_query($query1);
+
+      if(isset($status)){
+
+        if($status[0]['status'] == 1){
+
+          $query ="UPDATE `ORDER` SET `status`=2 WHERE `Id` = $id ";
+
+         $this->database->database_query($query);
+
+          return True;
+        }
+
+      }
+       return False;
+    }
+
   public function fetch_order_details($id)
   {
-    $query1 = "SELECT `PharmacyId`, `date`, `status` FROM `ORDER` WHERE `Id` = $id";
+    $query1 = "SELECT `PharmacyId`, `date`, `status` FROM `ORDER` WHERE `Id` = $id and status != 3 ";
+
+    return ($this->database->fetch_query($query1));
+
+  }
+  public function fetch_order_pharmacy_details($id)
+  {
+    $query1 = "SELECT `UserId`, `date`, `status` FROM `ORDER` WHERE `Id` = $id and status != 3";
 
     return ($this->database->fetch_query($query1));
 
@@ -86,6 +127,19 @@ class Order_Query
   {
   $query1 = " SELECT `EnName` FROM `MEDICINE` WHERE `Code` =$id ";
   return ($this->database->fetch_query($query1));
+  }
+  public function add_new_order($order)
+  {
+  	$query1 = 	"INSERT INTO `ORDER`(`UserId`, `PharmacyId`, `date`, `status`)
+ 			   	VALUES 
+ 			   	($order->user,$order->pharmacy,25/4/2015,1)";
+  	$this->database->database_query($query1);
+  	$id = mysqli_insert_id($this->database->get_con());
+  	
+  	$query2 = "INSERT INTO `MEDICINE_ORDER`(`MedicineCode`, `OrderId`, `Amount`) 
+				VALUES
+				($order->medicine_order,$id,1)";
+  	$this->database->database_query($query2);
   }
 }
 

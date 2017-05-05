@@ -1,16 +1,25 @@
 <?php
 include_once '../content/header.php';
 include_once '../../Database/MedicineFetcher.php';
+include_once '../../Application/order.php';
+include_once '../../Application/orderManger.php';
 $medicinFetcher = new MedicineFetcher();
-if (!isset($_GET['Code']))
+if (!isset($_GET['code']))
 {
 	header("Location: index.php");
 	exit();
 }
-$arr =  $medicinFetcher->fetch($_GET['Code'])[0];
-if (isset($_GET['phar']))
+$arr =  $medicinFetcher->fetch($_GET['code'])[0];
+if (isset($_POST['newOrder']))
 {
 	//TODO
+	$order = new Order();
+	$order->medicine_order = ($_GET['code']);
+	$order->pharmacy = ($_GET["phar"]);
+	//TODO edit this according to session later
+	$order->user = (1);
+	$orderManager = new orderManger();
+	$orderManager->newOrder($order);
 }
 ?>
 
@@ -55,8 +64,11 @@ if (isset($_GET['phar']))
                       </tr>
                     </tbody>
                   </table>
-                  
-                  <a href="#" class="btn btn-primary">Order Now</a>
+                  <form method="post">
+                  <?php if (isset($_GET["phar"]))
+                   echo "
+                  <input type='submit' name='newOrder' class='btn btn-primary' value='Order Now'>"?>
+                  </form>
                 </div>
               </div>
             </div> 

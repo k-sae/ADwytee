@@ -138,7 +138,7 @@ a.sug{
   height: 500px
 }
 /*
-bind user 
+bind user
 */
 .bind{
   background:url(../images/3.jpg);
@@ -242,16 +242,12 @@ padding:0px;
   text-align: center;
   font-size: 260%;
 }
-.add-order{
-  font-size: 200%;
-  text-align: start;
-  }
-
- .button-order {
+.button-order {
   color: #aaa;
   padding-left: 3%;
   padding-right: 3%;
   font-size: 220%;
+  text-align: end;
 }
   .td-button{
     padding-bottom: 1%;
@@ -306,11 +302,11 @@ padding:0px;
 .td-order{
   font-size: 180%;
 }
-.Ordertable td:last-child {
-  text-align: end;
+/*.Ordertable td:last-child {
 
 
-}
+
+}*/
 
 .cancle-button{
 
@@ -595,4 +591,3 @@ body {
 .toppad
 {margin-top:20px;
 }
-

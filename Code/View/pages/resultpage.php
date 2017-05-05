@@ -32,7 +32,7 @@ if (!isset($_SESSION["latitude"]) || !isset($_SESSION["longitude"])) {
           
           <table class="Resulttable">
 					  <tr>
-					  	<th colspan="2"> <?php echo $language['resultsfor'] . " "."<a href='MedicinePage.php?Code=" .$medicineCode."' >". $medicine ."</a>"; ?></th>
+					  	<th colspan="2"> <?php echo $language['resultsfor'] . " "."<a href='MedicinePage.php?code=" .$medicineCode."' >". $medicine ."</a>"; ?></th>
 					  </tr>
 					  <tbody>
 
@@ -51,7 +51,7 @@ if (!isset($_SESSION["latitude"]) || !isset($_SESSION["longitude"])) {
 						                  <br>". $language['farfromyou'].": " . number_format($distance,2) . $language['km'] ."
 						                </td>
 						                <td>
-						                  <i><a href='orderPage.php'> ". $language['ordernow']." </a></i>
+						                  <i><a href='MedicinePage.php?code=".$medicineCode."&phar=".$results[$i]['PharmacyId']."'> ". $language['ordernow']." </a></i>
 						                </td>
 						              </tr>";
 						      }

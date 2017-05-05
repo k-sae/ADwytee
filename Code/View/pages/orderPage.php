@@ -2,6 +2,7 @@
 include_once '../content/header.php';
 include_once '../../Application/orderManger.php';
 $orderManger =new orderManger();
+$_SESSION['userId'] = 1;
 ?>
 <head>
   <script src = "../js/order.js">  </script></head>
@@ -10,18 +11,11 @@ $orderManger =new orderManger();
 <thead>
      <tr>
        <th colspan="3" class="head-table"> <?php echo  $language['orders']; ?></th>
-     </tr>
-     <tr>
-       <th colspan="3" data-toggle="modal" data-target="#addorder" class="add-order ">
-       <span class="fa fa-plus-square" aria-hidden="true"></span>
-       <span ><?php echo $language['addorder'] ?></span></th>
-       </tr>
-       </thead>
+     </tr></thead>
    <tbody>
      <?php
-     $array_order = $orderManger->return_order(1);
-
-       if($array_order !=0){
+    $array_order = $orderManger->return_order($_SESSION['userId']);
+    if($array_order !=0){
        $size = sizeof($array_order);
        for($i =1; $i <=$size  ;$i++){
          echo "<tr >
@@ -32,12 +26,16 @@ $orderManger =new orderManger();
          "</td>
          <td class ='td-button'>
           <i class=' button-order details-order fa fa-info-circle'  aria-hidden='true'
-          data-toggle='modal' data-target='#orderdetails' onclick=openDetails(".$array_order[$i-1]->getId().") ></i>";
+          data-toggle='modal' data-target='#orderdetails' onclick=openDetailsPatient(".$array_order[$i-1]->getId().") ></i>";
             if($array_order[$i-1]->getStatus() ==  1) {
               echo  '
           <i class=" button-order edit-order fa fa-pencil" aria-hidden="true">  </i>
            <i class=" button-order delete-order fa fa-trash"  aria-hidden="true"
-           onclick="deleteOrder('.$array_order[$i-1]->getId().',this)">  </i></td></tr>';}}}?>
+           onclick="deleteOrder('.$array_order[$i-1]->getId().',this)">  </i></td></tr>';}}}
+           else {
+             echo "<tr><td  class='head-table'>".$language['noorder']."</td></tr>";
+           }
+           ?>
          </tbody>
 
    </table>

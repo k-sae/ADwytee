@@ -4,12 +4,12 @@
  */
 class Order
 {
-  private $id;
-  private $date;
-  private $user;
-  private $pharmacy;
-  private $status;
-  private $medicine_order;
+  public $id;
+  public $date;
+  public $user;
+  public $pharmacy;
+  public $status;
+  public $medicine_order;
   public function setId($id)
   {
     $this->id =$id;

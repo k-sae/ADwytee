@@ -33,7 +33,7 @@ class DataBase
   private  function connection(){
     //connect to server
    $this ->con =mysqli_connect($this->host,$this->user,$this->password,$this->database)
-   or die ( mysqli_error($MySQL_Handle) );
+   or die ( "filed connection" );
    }
    function close_connection(){
      //close connection
