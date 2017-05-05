@@ -32,7 +32,7 @@ else if (!isset($_GET["lat"]) || !isset($_GET["lat"])) {
     <link href="../css/default.css" rel="stylesheet">
 
 
-            
+
   </head>
   <body dir = <?php echo $dir?>  style = "min-height: 100vh">
   <nav class="navbar navbar-fixed-top navbar-inverse">
@@ -51,6 +51,7 @@ else if (!isset($_GET["lat"]) || !isset($_GET["lat"])) {
             <li class="<?php if($page=="stat"){echo "active";}?>"><a href="statistics.php">Statistics</a></li>
             <li><a href="Pharmacy.php"><?php echo  $language['pharmacyprofile']?></a></li>
             <li ><a href="orderPage.php"><?php echo  $language['orderpage']?></a></li>
+              <li ><a href="pharmacyOrder.php"><?php echo  $language['pahrmacyorder']?></a></li>
             <li><a href="#about"><?php echo  $language['about']?></a></li>
             <li ><a href="" data-toggle="modal" data-target="#myModal"><?php echo  $language['login']?></a></li>
             <li><a href="#contact"><?php echo  $language['contact']?></a></li>

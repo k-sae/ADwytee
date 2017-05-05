@@ -1,7 +1,7 @@
 <?php
 include_once "../../Application/Info.php";
 include_once '../../Application/LoginInfo.php';
-include_once '../../Database/Register.php';
+include_once '../../Database/login&register.php';
  /**
  * 
  */
