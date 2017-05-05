@@ -1,6 +1,6 @@
 <?php 
 
-class PharmacyInfo
+class PharmacyInfo extends Info
 {
 	public $name;
 	public $notes;

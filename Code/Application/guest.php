@@ -1,11 +1,9 @@
 <?php
-if(isset($_POST["regp"])){
-   echo '<script>console.log(" fuck PHPHPHPHPH")</script>';
-
-  }
+include_once 'RegisterInfo.php';
+include_once 'PatientInfo.php';
 class Guest
 { 
-	public function register(){
+	public function register(RegisterInfo $reginfo,PatientInfo $info){
 
 	}
 

@@ -24,7 +24,7 @@ $('#preg-form').validate({ // initialize the plugin
             email: {
                 required: true,
                 email: true
-            },
+            }}/*,
             FName: {
                 required: true,
                 minlength: 5
@@ -49,7 +49,7 @@ $('#preg-form').validate({ // initialize the plugin
             	required:true,
             	minlenght:5}
 
-        },
+        }*/,
         messages: {
         FName: "Enter your firstname",
         LName: "Enter your lastname",
@@ -70,6 +70,16 @@ var data = $("#preg-form").serialize();
 
             type : 'POST',
             url  : '../../Application/validator.php',
-            data : data})}
+            data : data
+             ,success :  function(data)
+            {
+                if(data=="1"){
+                console.log("fuck off")	
+                }else{
+                	console.log("welcome");
+                }
 
+            }
 
+    })
+}
