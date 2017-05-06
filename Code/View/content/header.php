@@ -16,7 +16,8 @@ else if (!isset($_GET["lat"]) || !isset($_GET["lat"])) {
  $_SESSION["longitude"] = $_GET["long"];
 }
 $notification =  new NotificationManger();
-$N_Status = $notification->check_Notification(1);
+$_SESSION["notification"] = $notification->check_Notification(1);
+
 ?>
 <!DOCTYPE html>
 <html lang="<?php echo $_SESSION["language"]; ?>" style = "min-height: 100vh">
@@ -32,10 +33,8 @@ $N_Status = $notification->check_Notification(1);
     <link rel="stylesheet" href="../css/font-awesome.min.css">
     <link href="../css/bugfix.css" rel="stylesheet">
     <link href="../css/default.css" rel="stylesheet">
-
-
-
-  </head>
+     <script src = "../js/notification.js">></script>
+    </head>
   <body dir = <?php echo $dir?>  style = "min-height: 100vh">
   <nav class="navbar navbar-fixed-top navbar-inverse">
       <div class="container">
@@ -48,12 +47,35 @@ $N_Status = $notification->check_Notification(1);
           </button>
           <a class="navbar-brand" href="index.php"><?php echo  $language['logo']?></a>
         </div>
+
         <div id="navbar" class="collapse navbar-collapse">
           <ul class="nav navbar-nav">
+            <!--notification-->
+  <div class="dropdown">
+  <li class="<?php if($_SESSION["notification"] == True) echo ' n-active';?>"
+  id="dLabel" role="button" data-toggle="dropdown" data-target="#shownotification">
+  <i class="fa fa-globe fa-2x " aria-hidden="true" onclick="hidenotification()" id="notification" ></i></li>
+  <ul class="dropdown-menu notifications" role="menu" aria-labelledby="dLabel" data-target="#show">
+<div class="notification-heading"><h4 class="menu-title"><?php echo  $language['notification']?></h4>
+    </div>
+    <li class="divider"></li>
+   <div class="notifications-wrapper">
+     <a class="content" href="#">
+       <div class="notification-item">
+        <?php  $notification_value  =$notification->get_Notification(1);
+        if($notification_value  == False){
 
+          echo '<h4 class="item-title">'.$language['nonnotification'].'</h4>';
+        }
+        ?></div>
+  </a>
+  </div>
+  </ul>
+
+  </div>
             <li class="<?php if($page=="stat"){echo "active";}?>"><a href="statistics.php"><?php echo  $language['stat']?></a></li>
-            <li class="notification<?php if($N_Status == True) echo ' n-active';?>" id="noti"> <i class="fa fa-globe fa-2x " aria-hidden="true"></i></li>
-            <li ><a href="Pharmacy.php"><?php echo  $language['pharmacyprofile']?></a></li>
+            <li class="<?php if($page=="reservations"){echo "active";}?>"><a href="reservations.php"><?php echo ($language['reservations']); ?></a></li>
+           <li ><a href="Pharmacy.php"><?php echo  $language['pharmacyprofile']?></a></li>
             <li class="<?php if($page=="orderPage"){echo "active";}?>"><a href="orderPage.php"><?php echo  $language['orderpage']?></a></li>
             <li class="<?php if($page=="pharmacyorder"){echo "active";}?>"><a href="pharmacyOrder.php"><?php echo  $language['pahrmacyorder']?></a></li>
             <li><a href="#about"><?php echo  $language['about']?></a></li>
@@ -83,6 +105,7 @@ $N_Status = $notification->check_Notification(1);
                   <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span>                   </button>
                  <h4 class="modal-title" id="myModalLabel"><?php echo  $language['login']?></h4>
                 </div>
+
                 <div class="modal-body">
                   <form method="POST" id="login-form">
                    <input type="email" name="email" placeholder="Email">

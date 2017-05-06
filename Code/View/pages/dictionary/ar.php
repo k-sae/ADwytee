@@ -1,9 +1,12 @@
 <?php
 //this  file  ar word
-
+//notification
+$language['notification'] = "الاشعارات";
+$language['nonnotification'] = "لا توجد اشعارات جديدة";
 //nav
 $language['logo'] = "أدويتي";
 $language['stat'] = "الاحصائيات";
+$language['reservations'] = "الحجوزات";
 $language['pharmacyprofile'] ="صفحة الصيديلة الشخصية";
 $language['about'] ="عنّا";
 $language['register'] ="سجّل";
@@ -68,8 +71,23 @@ $language['medicinearname'] = "اسم الدواء بالعربية";
 $language['barcode'] = "الباركود";
 $language['desc'] = "الوصف";
 $language['amount'] = "الكمية";
+$language['medicinename'] = "اسم الدواء";
 $language['entertheamount'] = "ادخل كمية هذا الدواء";
 $language['add'] = "اضف";
-
+//Medicine Page
+$language['code'] = "الكود";
+$language['name'] = "الاسم";
+//reservation
+$language['addreservation'] = "اضف حجز";
+$language['upcomingreservations'] = "الحجوزات القادمة";
+$language['noreservations'] = "لا توجد حجوزات!";
+$language['reserveconsultation'] = "احجز استشارة";
+$language['choosepharmacy'] = "اختر الصيدلية";
+$language['choosedate'] = "اختر ميعاد الاستشارة";
+$language['reserve'] = "احجز";
+$language['editreservation'] = "عدّل الحجز";
+$language['editdate'] = "عدّل ميعاد الاستشارة";
+$language['edit'] = "عدّل";
+$language['date'] = "الميعاد";
 
 ?>

@@ -8,7 +8,7 @@ $arrys=$arry[0];
 if(isset($_POST['Code']) && isset($_POST['EnName']) && isset($_POST['ArName']) && isset($_POST['Description'])&& isset($_POST['amount'])){
 	include_once '../../Application/Medicine.php';
 	include_once '../../Application/RegisterMedicine.php';
-	
+
 	$medicine = new Medicine();
 	$medicine->setCode($_POST['Code']);
 	$medicine->setEnName($_POST['EnName']);
@@ -18,7 +18,7 @@ if(isset($_POST['Code']) && isset($_POST['EnName']) && isset($_POST['ArName']) &
 	$pharmacyId = 1;
 	$rm = new RegisterMedicine();
 	$rm->register($pharmacyId, $medicine, $_POST['amount']);
-
+/****************************************************************/
 }else if(isset($_POST['medicine']) && isset($_POST['amount'])){
 	include_once '../../Application/RegisterMedicine.php';
 

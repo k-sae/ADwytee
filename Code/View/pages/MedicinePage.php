@@ -37,7 +37,18 @@ if (isset($_POST['newOrder']))
             </div>
             <div class="panel-body">
               <div class="row">
-                <div class="col-md-3 col-lg-3 " align="center"> <img alt="User Pic" src="../images/m1.png" class="img-circle img-responsive"> </div>
+<!--               adding time to prevent image cashing -->
+                <div class="col-md-3 col-lg-3 " align="center"> <img alt="User Pic" src="../mimages/<?php echo $_GET['code']?>?t=<?php echo time()?>" class="img-circle img-responsive"> 
+                	<?php echo 
+                	"<form action='upload.php' method='post' enctype='multipart/form-data'>
+					    <input type='file' name='fileToUpload' class='select-file'  id='fileToUpload' >
+					    <input type='hidden' name='m_code' value='".$_GET['code']."' >
+						<input type='hidden' name='last' value='".$_SERVER['REQUEST_URI']."' >
+					    <br>
+					    <input type='submit' value='Upload' class='btn btn-primary' name='submit'>
+					</form>"
+					?>
+                 </div>
 
                 <!--<div class="col-xs-10 col-sm-10 hidden-md hidden-lg"> <br>
                   <dl>

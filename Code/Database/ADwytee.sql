@@ -248,6 +248,19 @@ CREATE TABLE `MEDICINE_ALTERNATIVES` (
   FOREIGN KEY (`M_AlternativeCode`) REFERENCES `MEDICINE`(`Code`) ON DELETE CASCADE ON UPDATE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `RESERVATION`
+--
+
+CREATE TABLE `RESERVATION` (
+  `Id` int(11) NOT NULL,
+  `UserId` int(11) DEFAULT NULL,
+  `PharmacyId` int(11) DEFAULT NULL,
+  `Date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
 
 -- --------------------------------------------------------
 
@@ -304,6 +317,16 @@ CREATE TABLE `NOTIFICATION_STATUS` (
   ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 -- --------------------------------------------------------
 --
+-- Table structure for table `notification_staus`
+--
+
+CREATE TABLE `NOTIFICATION_DESCRIPTION` (
+  `Id` int(11) NOT NULL AUTO_INCREMENT UNIQUE,
+  `Description` varchar(13) NOT NULL,
+  PRIMARY key (`Id`)
+  ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+-- --------------------------------------------------------
+--
 -- Table structure for table `notification`
 --
 
@@ -313,11 +336,13 @@ CREATE TABLE `NOTIFICATION` (
   `OrderId` int(11),
   `PatientId` Int(11) NOT NULL,
   `NStatus` Int(11) NOT NULL DEFAULT '1' ,
+  `NDescription` Int(11) NOT NULL DEFAULT '1' ,
   PRIMARY key (`Id`),
   FOREIGN KEY (`MedicineCode`) REFERENCES `MEDICINE`(`Code`) ON DELETE CASCADE ON UPDATE CASCADE,
   FOREIGN KEY (`OrderId`) REFERENCES `ORDER`(`Id`) ON DELETE CASCADE ON UPDATE CASCADE,
   FOREIGN KEY (`PatientId`) REFERENCES `USER`(`Id`) ON DELETE CASCADE ON UPDATE CASCADE,
-  FOREIGN KEY (`NStatus`) REFERENCES `NOTIFICATION_STATUS`(`Id`) ON DELETE CASCADE ON UPDATE CASCADE
+  FOREIGN KEY (`NStatus`) REFERENCES `NOTIFICATION_STATUS`(`Id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  FOREIGN KEY (`NDescription`) REFERENCES `NOTIFICATION_DESCRIPTION`(`Id`) ON DELETE CASCADE ON UPDATE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 -- --------------------------------------------------------
 --
@@ -403,6 +428,8 @@ INSERT INTO `ORDER_STATUS`( `Status`) VALUES ('inprogress');
 INSERT INTO `ORDER_STATUS`( `Status`) VALUES ('complete');
 INSERT INTO `NOTIFICATION_STATUS`( `Status`) VALUES ('active');
 INSERT INTO `NOTIFICATION_STATUS`( `Status`) VALUES ('disactive');
+INSERT INTO `NOTIFICATION_DESCRIPTION`( `Description`) VALUES ('accept');
+INSERT INTO `NOTIFICATION_DESCRIPTION`( `Description`) VALUES ('decline');
 INSERT INTO `USERTYPE`( `Type`) VALUES ('admin');
 INSERT INTO `USERTYPE`( `Type`) VALUES ('pharmacy');
 INSERT INTO `USERTYPE`( `Type`) VALUES ('patient');
