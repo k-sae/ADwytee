@@ -14,7 +14,10 @@ if(isset($_POST["submit"])) {
 		$uploadOk = 0;
 	}
 	if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
-		echo "The file ". basename( $_FILES["fileToUpload"]["name"]). " has been uploaded.";
-}
+		echo "image has been uploaded.";
+		echo "<br> redirecting...";
+		}
+		header("Location: ".$_POST['last']);
+		exit();
 }
 ?>

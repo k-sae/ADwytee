@@ -411,6 +411,13 @@ padding:0px;
 
 
 /* My Area Dont Touch!!!!!! */
+
+.select-file{
+	color:transparent;
+	 margin: 10px auto 0px auto;
+	 width: 90px
+}
+
 .reg-back{background-image: url(../images/4.jpg);background-size:cover;}
 .register-dialog{
   background-color:rgba(255,255,255,0.1);
