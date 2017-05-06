@@ -448,7 +448,7 @@ padding:0px;
 .register-dialog a{
   color: #337ab7;
 }
-
+.register-dialog select,
 .register-dialog input,.ph-reg-dialog div textarea{
   background-color: #999;
   color: #000

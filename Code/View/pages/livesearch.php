@@ -2,6 +2,7 @@
 //error_reporting(0);
 
 include_once '../../Application/livesearch.php';
+include_once '../../Database/pharmacy.php';
 
 if(isset($_GET["q"])){
 
@@ -12,6 +13,8 @@ if(isset($_GET["q"])){
 
   $m = $_GET["m"];
   search2($m);
+}else{
+  fetch_Pharmacies();
 }
 
 function search1($str){
@@ -45,6 +48,24 @@ function search2($str) {
     }
   } else {
       echo "No medcines were found";
+  }
+}
+
+function fetch_Pharmacies(){
+  include_once 'language.php';
+  $result = new Pharmacy_Query();
+
+  $pharmacies = $result->fetch_Pharmacies();
+
+  if(sizeof($pharmacies) != 0){
+    for($i = 0; $i < sizeof($pharmacies); $i++){
+
+      $result = "<option value='".$pharmacies[$i]['UserId']."'>" . $pharmacies[$i]['Name'] . "</option>";
+
+      echo $result;
+    }
+  } else {
+    echo $language['noresults'];
   }
 }
 

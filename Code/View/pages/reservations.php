@@ -5,8 +5,8 @@ include_once '../../Application/reservation.php';
 
 $reservation = new reservation();
 $userId = 1;
-if(isset($_POST['pName']) && isset($_POST['date'])){
-  $reservation->add($userId, $_POST['pName'], $_POST['date']);
+if(isset($_POST['pId']) && isset($_POST['date'])){
+  $reservation->add($userId, $_POST['pId'], $_POST['date']);
   header('Location: reservations.php');
 }elseif(isset($_POST['id']) && isset($_POST['date'])){
   $reservation->update($_POST['id'], $_POST['date']);
@@ -26,7 +26,7 @@ if(isset($_POST['pName']) && isset($_POST['date'])){
         <h1><?php echo ($language['reservations']); ?></h1>
         <br><br>
 
-        <button class="btn btn-lg btn-info" data-toggle='modal' data-target='#addreservation'><?php echo ($language['addreservation']); ?></button>
+        <button class="btn btn-lg btn-info" data-toggle='modal' data-target='#addreservation' onclick='fetchPharmacies()'><?php echo ($language['addreservation']); ?></button>
 
         <form action="" method="get">
 
@@ -81,9 +81,12 @@ if(isset($_POST['pName']) && isset($_POST['date'])){
                       <div class="row">
                         <div class="form-group">
                           <label><?php echo ($language['choosepharmacy']); ?></label>
-                          <input type="text" id="pName" name="pName" placeholder="<?php echo ($language['pharmacyname']); ?>" required="required" class="form-control">
+                          <select id="pharmacySelect" name="pId" class="form-control">
+
+                          </select>
                         </div>
                       </div>
+                      <br>
                       <div class="row">
                         <div class="form-group">
                           <label><?php echo ($language['choosedate']); ?></label>

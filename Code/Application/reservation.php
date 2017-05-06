@@ -18,9 +18,9 @@ class reservation{
 
   }
 
-  public function add($userId, $pName, $date)
+  public function add($userId, $pId, $date)
   {
-    $this->reservation->add_reservation($userId, $pName, $date);
+    $this->reservation->add_reservation($userId, $pId, $date);
   }
   public function update($id, $date)
   {

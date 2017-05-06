@@ -20,6 +20,12 @@ class Pharmacy_Query
     $result = $this->database->fetch_query($query);
     return $result;
   }
+  public function fetch_Pharmacies()
+  {
+    $query = "SELECT * FROM `PHARMACY` ORDER BY `Name`";
+    $result = $this->database->fetch_query($query);
+    return $result;
+  }
   public function fetch_PDetails($id)
   { $result=array();
     $query =" SELECT `FName`, `LName`, `Gender`, `Birthdate`, `Height`, `Weight`, `StreetNo`, `Gov`, `District`, `Telephone`, `Latitude`, `Longitude`,`Key` FROM `PATIENT` WHERE `UserId` = $id ";
