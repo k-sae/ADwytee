@@ -32,6 +32,14 @@ class reservation{
   }
   public function retrieve($userId)
   {
+    $result = $this->reservation->retrieve_reservation($userId);
+
+    for ($i=0; $i<sizeof($result); $i++){
+      if ($result[$i]['Date'] < $result[$i]['cDate']){
+        $this->delete($result[$i]['Id']);
+      }
+    }
+
     return $this->reservation->retrieve_reservation($userId);
   }
 

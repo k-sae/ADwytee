@@ -42,7 +42,7 @@ class reservation_Query
   }
   public function retrieve_reservation($userId)
   {
-    $query = "SELECT r.Id, r.PharmacyId, r.Date, p.Name
+    $query = "SELECT r.Id, r.PharmacyId, r.Date, p.Name, CURRENT_TIMESTAMP AS cDate
               FROM `RESERVATION` AS r
               INNER JOIN `PHARMACY` AS p ON p.UserId = r.PharmacyId
               WHERE r.UserId = $userId
