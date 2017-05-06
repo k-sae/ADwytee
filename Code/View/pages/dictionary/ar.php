@@ -1,6 +1,8 @@
 <?php
 //this  file  ar word
-
+//notification
+$language['notification'] = "الاشعارات";
+$language['nonnotification'] = "لا توجد اشعارات جديدة";
 //nav
 $language['logo'] = "أدويتي";
 $language['stat'] = "الاحصائيات";
@@ -13,25 +15,12 @@ $language['contact'] ="تواصل معنا";
 //order
 $language['orders'] = "الطلبات";
 $language['pharmacyorder'] = "طلبات الصيدلية";
+$language['page'] ="صفحة";
 $language['orderpage'] ="صفحة الطلبات";
 $language['deletedone'] ="تم حذف الطلب بنجاح";
+$language['edit'] ="تعديل";
 $language['orderdetails'] ="تفاصيل الطلب";
-$language['orderername'] ="اسم الا مر :";
-$language['declinedone'] ="تم الرفض بنجاح";
-$language['finshdone'] ="تم انهاء الطلب بنجاح";
-$language['noorder'] ="لا توجد طلبات حتي الان";
-$language['inprogress'] ="تحت التقدم";
-$language['pending'] = "قيد التنفيذ";
-$language['cancel'] ="الغاء";
-$language['refresh'] ="من فضللك اعد تحميل  الصفحة";
-$language['orderid']=" رقم الطلب :";
-$language['pharmacyname']="اسم الصيدلية :";
-$language['orderstaus']="حالة الطلب :";
-$language['orderdate']="تاريخ الطلب:";
-$language['medicineinorder'] ="الادوية الموجودة بالطلب";
-$language['amount'] = "الكمية";
-$language['medicinename'] = "اسم الدواء";
-$language['pahrmacyorder'] ="طلبات الصيدلية";
+$language['addorder'] ="اضافة طلب";
 //search&result
 $language['search'] = "أبحث";
 $language['searchagain'] = "أبحث مره اخري";
@@ -43,6 +32,21 @@ $language['km'] ="كم";
 $language['ordernow'] ="اطٌُلب الان!";
 $language['noresults'] = "لا توجد نتائج";
 $language['requestdenied'] = "لكي تبحث, من فضلك اقبل الطلب للحصول علي موقعك";
+
+$language['nopharmacyyet'] ="لاتوجد صيدليات حتي  الان";
+$language['allpharmacy'] ="كل  الصيدليات";
+$language['saveorder'] ="حفظ الطلب";
+ $language['inprogress'] ="تحت التقدم";
+ $language['pending'] = "قيد التنفيذ";
+$language['cancel'] ="الغاء";
+$language['refresh'] ="من فضللك اعد تحميل  الصفحة";
+$language['orderid']=" رقم الطلب :";
+$language['pharmacyname']="اسم الصيدلية :";
+$language['orderstaus']="حالة الطلب :";
+$language['orderdate']="تاريخ الطلب:";
+$language['medicineinorder'] ="الادوية الموجودة بالطلب";
+$language['amount'] = "الكمية";
+$language['medicinename'] = "اسم الدواء";
 // Register labels
 $language['first_name'] ="الاسم الاول";
 $language['last_name'] ="اسم العائلة";
