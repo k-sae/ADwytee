@@ -26,5 +26,10 @@ public function check_Notification($id)
 {
 return ($this->notification_query->check_Notification($id));
 }
+public function get_Notification($id)
+{
+
+  return ($this->notification_query->get_Notification($id));
+}
 }
 ?>

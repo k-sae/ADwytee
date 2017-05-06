@@ -42,6 +42,9 @@ $language['km'] ="Km";
 $language['ordernow'] ="Order Now!";
 $language['noresults'] = "no results found";
 $language['requestdenied'] = "In Order to search,Please allow the request to know your location";
+//notification
+$language['notification'] = "Notification";
+$language['nonnotification'] = "No new Notification";
 // Register labels
 $language['first_name'] ="First Name";
 $language['last_name'] ="Last Name";
