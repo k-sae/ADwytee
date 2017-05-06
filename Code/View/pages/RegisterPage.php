@@ -64,11 +64,11 @@ if(isset($_POST["FName"]))
 				</form> 
 				</div>
 				<div class="row regasph ph-reg-dialog" >
-				<form  method="post">
+				<form  method="post" id="phreg-form">
 					<div class="form-group row">
 						<label for="example-text-input" class="col-xs-3 col-form-label">Pharmacy Name:</label>
 						<div class="col-xs-5">
-							<input class="form-control" name="Name" type="text" placeholder="Pharmacy_Name" id="example-text-input" required="required">
+							<input class="form-control" name="Name" type="text" placeholder="Pharmacy_Name" id="example-text-input" >
 						</div>
 					</div>
 					<div class="form-group row">
@@ -81,30 +81,36 @@ if(isset($_POST["FName"]))
 					<div class="form-group row">
 						<label for="example-text-input" class="col-xs-3 col-form-label">notes :</label>
 						<div class="col-xs-8">
-							<input class="form-control" name="notes" type="text" placeholder="notes" id="example-text-input" required="required">
+							<input class="form-control" name="notes" type="text" placeholder="notes" id="example-text-input" >
 						</div>
 					</div>
 					<div class="form-group row">
 						<label for="example-text-input" class="col-xs-3 col-form-label">email :</label>
 						<div class="col-xs-8">
-							<input class="form-control" name="notes" type="email" placeholder="E_mail" id="example-text-input" required="required">
+							<input class="form-control" name="email" type="email" placeholder="E_mail" id="example-text-input">
 						</div>
 					</div>
 					<div class="form-group row">
 						<label for="example-text-input" class="col-xs-3 col-form-label">pass :</label>
 						<div class="col-xs-8">
-							<input class="form-control" name="notes" type="password" placeholder="password" id="example-text-input" required="required">
+							<input class="form-control" name="pass" type="password" placeholder="password" id="example-text-input" >
 						</div>
 					</div>
 
 					<div class="form-group row">
 						<label for="example-text-input" class="col-xs-3 col-form-label">describition :</label>
 						<div class="col-xs-8">
-							<textarea class="form-control" rows="5" name="describition" id="comment" required="required"></textarea>
+							<textarea class="form-control" rows="5" name="describition" id="comment"></textarea>
 						</div>
-					</div>	
+					</div>
+					<div class="form-group row">
+						<label for="example-text-input" class="col-xs-3 col-form-label">telephone :</label>
+						<div class="col-xs-8">
+							<input class="form-control" name="telephone"  placeholder="telephone" id="example-text-input" >
+						</div>
+					</div>		
 					<div>	
-					<button type="submit" class="btn btn-lg btn-info">Submit</button>					
+					<button type="submit" class="btn btn-lg btn-info" name="regph" onclick="registerphfunction()">Submit</button>					
 					</div>
 				</form> 
 				</div>

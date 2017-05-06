@@ -18,13 +18,17 @@ $('#preg-form').submit(function(event){
 	event.preventDefault();
 	registerfunction();
 });
+$('#phreg-form').submit(function(event){
+	event.preventDefault();
+	registerfunction();
+});
 function registerfunction(){
 $('#preg-form').validate({ // initialize the plugin
         rules: {
             email: {
                 required: true,
                 email: true
-            }}/*,
+            },
             FName: {
                 required: true,
                 minlength: 5
@@ -48,8 +52,12 @@ $('#preg-form').validate({ // initialize the plugin
             },district:{
             	required:true,
             	minlenght:5}
+            ,phone_number:{
+            	required:true,
+            	number: true
+            }
 
-        }*/,
+        },
         messages: {
         FName: "Enter your firstname",
         LName: "Enter your lastname",
@@ -74,7 +82,49 @@ var data = $("#preg-form").serialize();
              ,success :  function(data)
             {
                 if(data=="1"){
-                console.log("fuck off")	
+                console.log("fuck off");
+                }else{
+                	console.log("welcome");
+                }
+
+            }
+
+    })
+}
+function registerphfunction(){
+$('#phreg-form').validate({ // initialize the plugin
+        rules: {
+            email: {
+                required: true,
+                email: true
+            },telephone:{
+                required:true,
+            	number: true
+            }},
+        messages: {
+       
+        },
+
+
+
+
+             submitHandler: submitForm1
+    })
+
+}
+ function submitForm1()
+    {
+var data = $("#phreg-form").serialize();
+
+        $.ajax({
+
+            type : 'POST',
+            url  : '../../Application/validator.php',
+            data : data
+             ,success :  function(data)
+            {
+              if(data=="1"){
+                console.log("fuck off")	;
                 }else{
                 	console.log("welcome");
                 }
