@@ -1,6 +1,8 @@
 <?php
 //this  file  ar word
-
+//notification
+$language['notification'] = "الاشعارات";
+$language['nonnotification'] = "لا توجد اشعارات جديدة";
 //nav
 $language['logo'] = "أدويتي";
 $language['stat'] = "الاحصائيات";
