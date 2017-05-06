@@ -74,11 +74,8 @@ $_SESSION["notification"] = $notification->check_Notification(1);
 
   </div>
             <li class="<?php if($page=="stat"){echo "active";}?>"><a href="statistics.php"><?php echo  $language['stat']?></a></li>
-
             <li class="<?php if($page=="reservations"){echo "active";}?>"><a href="reservations.php"><?php echo ($language['reservations']); ?></a></li>
-            <li class="notification<?php if($N_Status == True) echo ' n-active';?>" id="noti"> <i class="fa fa-globe fa-2x " aria-hidden="true"></i></li>
-
-            <li ><a href="Pharmacy.php"><?php echo  $language['pharmacyprofile']?></a></li>
+           <li ><a href="Pharmacy.php"><?php echo  $language['pharmacyprofile']?></a></li>
             <li class="<?php if($page=="orderPage"){echo "active";}?>"><a href="orderPage.php"><?php echo  $language['orderpage']?></a></li>
             <li class="<?php if($page=="pharmacyorder"){echo "active";}?>"><a href="pharmacyOrder.php"><?php echo  $language['pahrmacyorder']?></a></li>
             <li><a href="#about"><?php echo  $language['about']?></a></li>
