@@ -4,6 +4,7 @@
 //nav
 $language['logo'] = "ADwytee";
 $language['stat'] = "Statistics";
+$language['reservations'] = "Reservations";
 $language['pharmacyprofile'] ="Pharmacy Profile";
 $language['about'] ="About us";
 $language['register'] ="Register";
@@ -17,7 +18,7 @@ $language['deletedone'] ="Delete Done successful";
 $language['orderdetails'] ="Order Details";
 $language['orderername'] ="Orderer Name :";
 $language['declinedone'] ="Decline Done";
-$language['noorder'] ="No found any orders Yet";
+$language['noorder'] ="No orders were found yet";
 $language['finishdone'] ="Finish Done";
 $language['cancel'] ="Cancel";
 $language['refresh'] ="Wrong Refresh This Page";
@@ -66,11 +67,23 @@ $language['medicinearname'] = "Medicine Arabic name";
 $language['barcode'] = "Barcode";
 $language['desc'] = "Descritption";
 $language['amount'] = "Amount";
-$language['medicinename'] = "Mdicine Name";
+$language['medicinename'] = "Medicine Name";
 $language['entertheamount'] = "Enter the quantity of this medicine";
 $language['add'] = "Add";
 //Medicine Page
 $language['code'] = "Code";
 $language['name'] = "Name";
+//reservation
+$language['addreservation'] = "Add Reservation";
+$language['upcomingreservations'] = "Upcoming Reservations";
+$language['noreservations'] = "No reservations were found!";
+$language['reserveconsultation'] = "Reserve a consultation";
+$language['choosepharmacy'] = "Choose the Pharmacy";
+$language['choosedate'] = "Choose the date of consultation";
+$language['reserve'] = "Reserve";
+$language['editreservation'] = "Edit the Reservation";
+$language['editdate'] = "Edit the consultation time";
+$language['edit'] = "Edit";
+$language['date'] = "Date";
 
 ?>

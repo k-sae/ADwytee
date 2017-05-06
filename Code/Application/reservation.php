@@ -24,7 +24,7 @@ class reservation{
   }
   public function update($id, $date)
   {
-    $this->update($id, $date);
+    $this->reservation->update_reservation($id, $date);
   }
   public function delete($id)
   {

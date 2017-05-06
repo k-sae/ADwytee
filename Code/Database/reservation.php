@@ -27,7 +27,7 @@ class reservation_Query
   public function update_reservation($id, $date)
   {
     $query = "UPDATE `RESERVATION` 
-              SET `Date` = $date
+              SET `Date` = '$date'
               WHERE `Id` = $id";
 
     $this->database->database_query($query);
