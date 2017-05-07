@@ -1,18 +1,20 @@
 <?php
 $page = "reservations";
-include '../content/header.php';
 include_once '../../Application/reservation.php';
 
 $reservation = new reservation();
 $userId = 1;
 if(isset($_POST['pId']) && isset($_POST['date'])){
   $reservation->add($userId, $_POST['pId'], $_POST['date']);
+  header("Location: reservations.php");
 }elseif(isset($_POST['id']) && isset($_POST['date'])){
   $reservation->update($_POST['id'], $_POST['date']);
+  header("Location: reservations.php");
 }elseif(isset($_GET['id'])){
   $reservation->delete($_GET['id']);
 }
 
+include '../content/header.php';
 ?>
 
 <div class="wrapper">
