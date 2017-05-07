@@ -21,7 +21,7 @@ if (isset($_POST['newOrder']))
 	$order->medicine_order = $medicine_order;
 	$order->pharmacy = ($_GET["phar"]);
 	//TODO edit this according to session later
-	$order->user = (1);
+	$order->user = ($_SESSION['userId']);
 	$orderManager = new orderManger();
 	$orderManager->newOrder($order);
 }

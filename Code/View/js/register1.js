@@ -25,6 +25,13 @@ $('#phreg-form').submit(function(event){
 function registerfunction(){
 $('#preg-form').validate({ // initialize the plugin
     rules: {
+    	email: {
+            email: true
+        },
+        password: {
+        	minlength: 8,
+        	maxlength: 16
+        }
     },
 messages: {
 
