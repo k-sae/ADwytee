@@ -21,9 +21,10 @@ else if (!isset($_GET["lat"]) || !isset($_GET["lat"])) {
  $_SESSION["longitude"] = $_GET["long"];
   header("Location: index.php");
 }
-$notification =  new NotificationManger();
-$_SESSION["notification"] = $notification->check_Notification(1);
-
+if(isset($_SESSION['userId'])) {
+  $notification = new NotificationManger();
+  $_SESSION["notification"] = $notification->check_Notification($_SESSION['userId']);
+}
 ?>
 <!DOCTYPE html>
 <html lang="<?php echo $_SESSION["language"]; ?>" style = "min-height: 100vh">
