@@ -50,6 +50,7 @@ var data = $("#preg-form").serialize();
             data : data
              ,success :  function(data)
             {
+            	 //TODO khaled
                 if(data=="1"){
                 	alert("wrong or dublicated mail");
                 }else{
@@ -89,6 +90,7 @@ var data = $("#phreg-form").serialize();
             data : data
              ,success :  function(data)
             {
+            	 //TODO khaled
               if(data=="1"){
             	  alert("wrong or dublicated mail");
                 }else{
