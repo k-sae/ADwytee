@@ -1,6 +1,7 @@
 <?php
 include_once 'language.php';
 include_once '../../Application/orderManger.php';
+include_once '../../Application/Email_Config.php';
 $orderManger =new orderManger();
 /* delete message */
 if(isset($_GET["delete"])){
@@ -15,6 +16,9 @@ if($message == True){
 }
 /* accept message */
 if(isset($_GET["accept"])){
+  $mail =new Email();
+  $from ="khaledhesham2017@hotmail.com";
+  //$mail->SendEmail($from,"reg","thanx","");
 $id = $_GET["accept"];
  $message= $orderManger->accept_order($id);
 if($message == 0){

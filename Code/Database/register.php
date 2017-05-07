@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 include_once '../Application/RegisterInfo.php';
 include_once '../Application/PatientInfo.php';
@@ -17,13 +17,13 @@ class Register_Query
 		} catch (Exception $e) {
 			echo "error in file name";
 		}
-		
+
 
      $this->database = DataBase :: getInstance($this->file_name2);
 	}
 	public function registervalidate($email)
 	{
-	$result=array();
+	  $result=array();
     $query ="SELECT `Mail` FROM `USER` WHERE `Mail` LIKE '$email' ";
     $result = $this->database->fetch_query($query);
     return $result;
@@ -41,7 +41,7 @@ class Register_Query
 		$mail=$reginfo->loginInfo->mail;
 		$pass=$reginfo->loginInfo->password;
 		$query ="INSERT INTO `USER` (`Id`, `Password`, `Mail`, `Type`, `Language`) VALUES (NULL, '$pass', '$mail', '3', '1')";
-		 $this->database->database_query($query);
+		$this->database->database_query($query);
 		$id = mysqli_insert_id($this->database->get_con());
 		$key=md5($id);
 		$fname=$pinfo->fName;
@@ -51,11 +51,11 @@ class Register_Query
 		$dis=$pinfo->district;
 		$str=$pinfo->street_No;
 		$query1="INSERT INTO `PATIENT` (`Key`, `FName`, `LName`, `Gender`, `Birthdate`, `Height`, `Weight`, `StreetNo`, `Gov`, `District`, `Telephone`, `UserId`, `Latitude`, `Longitude`) VALUES ('$key', '$fname', '$lname', '1', '2017-05-02', '0', '0', '$str', '$gov', '$dis', '$tele', '$id', '0', '0')";
-        $this->database->database_query($query1);
-        //$this->database->fetch_query($query1);
-          
-        
-   
+    $this->database->database_query($query1);
+
+    return True;      
+
+
 	}
 	public function registerph(RegisterInfo $reginfo,PharmacyInfo $pinfo)
 	{
@@ -68,9 +68,9 @@ class Register_Query
 		$query1="INSERT INTO `PHARMACY` (`Key`, `UserId`, `Name`, `Notes`, `Describition`, `Latitude`, `Longitude`, `Telephone`) VALUES ('$key', '$id', '$pinfo->name', '$pinfo->notes', '$pinfo->describition', '0', '0', '$pinfo->telephonNo');";
         $this->database->database_query($query1);
         //$this->database->fetch_query($query1);
-          
-        
-   
+
+
+
 	}
 	public function login(LoginInfo $loginfo)
 	{
