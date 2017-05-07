@@ -3,6 +3,7 @@ include_once 'RegisterInfo.php';
 include_once 'PatientInfo.php';
 include_once '../Database/register.php';
 include_once 'PharmacyInfo.php';
+include_once 'LoginInfo.php';
 class Guest
 { 
 	public function register(RegisterInfo $reginfo,PatientInfo $info){
@@ -15,8 +16,9 @@ class Guest
 	}
 
 
-	public function Login(){
-      
+	public function Login(LoginInfo $login){
+      $regp=new Register_Query();
+     return $regp->login($login);
 	}
 }
 ?>

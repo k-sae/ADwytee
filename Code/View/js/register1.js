@@ -22,6 +22,10 @@ $('#phreg-form').submit(function(event){
 	event.preventDefault();
 	registerfunction();
 });
+$('.login-form').submit(function(event){
+	event.preventDefault();
+	loginfunction();
+});
 function registerfunction(){
 $('#preg-form').validate({ // initialize the plugin
         rules: {
@@ -42,31 +46,17 @@ $('#preg-form').validate({ // initialize the plugin
             	minlength:8
             },government:{
             	required:true,
-            	minlenght:5
+            	minlength:5
             },street_no:{
             	required:true,
-            	minlenght:5
+            	minlength:5
             },phone_number:{
             	required:true,
-            	minlenght:5
+            	minlength:5
             },district:{
             	required:true,
-            	minlenght:5}
-            ,phone_number:{
-            	required:true,
-            	number: true
-            }
-
-        },
-        messages: {
-        FName: "Enter your firstname",
-        LName: "Enter your lastname",
-        },
-
-
-
-
-             submitHandler: submitForm
+            	minlength:5}
+            },submitHandler: submitForm
     })
 
 }
@@ -128,6 +118,42 @@ var data = $("#phreg-form").serialize();
                 }else{
                 	console.log("welcome");
                 }
+
+            }
+
+    })
+}
+function loginfunction(){
+$('.login-form').validate({ // initialize the plugin
+        rules: {
+            email: {
+                required: true,
+                email: true
+            },password:{
+                required:true,
+            	number: true
+            }},
+
+
+
+
+             submitHandler: submitForm2
+    })
+
+}
+
+function submitForm2()
+    {
+var data = $(".login-form").serialize();
+
+        $.ajax({
+
+            type : 'POST',
+            url  : '../../Application/validator.php',
+            data : data
+             ,success :  function(data)
+            {
+             
 
             }
 
