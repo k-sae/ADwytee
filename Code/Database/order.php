@@ -133,10 +133,10 @@ class Order_Query
   public function add_new_order($order)
   {
 
-  	$query1 = 	"INSERT INTO `ORDER`(`UserId`, `PharmacyId`, `date`, `status`)
+  	$query1 = 	"INSERT INTO `ORDER`(`UserId`, `PharmacyId`, `status`)
 
  			   	VALUES
- 			   	($order->user,$order->pharmacy,'$current_date',1)";
+ 			   	($order->user,$order->pharmacy,1)";
 
   	$this->database->database_query($query1);
   	$id = mysqli_insert_id($this->database->get_con());

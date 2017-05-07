@@ -3,7 +3,7 @@ include '../content/header.php';
 include '../../Database/pharmacy.php';
 include '../../Application/pharmacyclass.php';
 $ph=new Pharmacy_Query();
-$arry=$ph->fetch_Pharmacy('40');
+$arry=$ph->fetch_Pharmacy($_SESSION['userId']);
 $arrys=$arry[0];
 $ph1=new Pharmacy();
 $arrays=$ph1->fetchmedicine('40');

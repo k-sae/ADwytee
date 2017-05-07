@@ -24,38 +24,20 @@ $('#phreg-form').submit(function(event){
 });
 function registerfunction(){
 $('#preg-form').validate({ // initialize the plugin
-        rules: {
-            email: {
-                required: true,
-                email: true,
-                maxlenght: 64
-            },
-            FName: {
-                required: true,
-                minlength: 5
-            },
-            LName:{
-            	required:true,
-            	minlength:5
-            },
-            password:{
-            	required:true,
-            	minlength:8
-            },government:{
-            	required:true,
-            	minlength:2
-            },street_no:{
-            	required:true,
-            	minlength:2
-            },phone_number:{
-            	required:true,
-            	minlength:9
-            },district:{
-            	required:true,
-            	minlength:2}
-            },submitHandler: submitForm
-    })
+    rules: {
+    	email: {
+            email: true
+        },
+        password: {
+        	minlength: 8,
+        	maxlength: 16
+        }
+    },
+messages: {
 
+},
+     submitHandler: submitForm
+})
 }
  function submitForm()
     {
@@ -81,19 +63,6 @@ var data = $("#preg-form").serialize();
 function registerphfunction(){
 $('#phreg-form').validate({ // initialize the plugin
         rules: {
-            email: {
-                required: true,
-                email: true
-            },telephone:{
-                required:true,
-            	number: true
-            },pass:{
-            	required:true,
-            	minlength:8
-            },Name:{
-            	required:true,
-            	minlength:8
-            }
             },
         messages: {
        
@@ -131,7 +100,6 @@ $('.login-form').validate({ // initialize the plugin
                 email: true
             },password:{
                 required:true,
-            	number: true
             }},
 
 
@@ -150,14 +118,15 @@ var data = $(".login-form").serialize();
 
             type : 'POST',
             url  : '../../Application/validator.php',
-            data : data
-             ,success :  function(data)
+            data : data,
+             success :  function(data)
             {
               if(data=="0"){
                 alert("Incorrect email or password!");
               }else{
-                alert("welcome!");
-                window.location.href+="?userType=" + data;
+                var arr = JSON.parse(data);
+                alert("Welcome!");
+                window.location.href+="?userType=" + arr[0] + "&userId=" + arr[1];
               }
 
             }
