@@ -107,12 +107,12 @@ $_SESSION["notification"] = $notification->check_Notification(1);
                 </div>
 
                 <div class="modal-body">
-                  <form method="POST" id="login-form">
+                  <form method="POST" class="login-form">
                    <input type="email" name="email" placeholder="Email">
                     <br>
                     <input type="password" name="password" placeholder="Password">
                     <br>
-                    <button type="button" class="btn btn-primary" type="submit" onclick="loginfunction()" name="login"><?php echo  $language['login']?></button>
+                    <button class="btn btn-primary" type="submit" name="login"><?php echo  $language['login']?></button>
                   </form>
                   <p>No Acount yet? <a href="../pages/RegisterPage.php">Please register </a><p>
                 </div>

@@ -49,9 +49,15 @@ include_once 'PharmacyInfo.php';
              $info->telephonNo=$_POST["telephone"];
              $g->registerph($reginfo,$info);}
 
-             }  
+             }if(isset($_POST["login"])) {
+                  $g=new Guest();
+             $log=new loginInfo();
+             $log->mail=$_POST["email"];
+             $log->password=$_POST["password"];
+              print_r($g->login($log)) ;
+             }
+
             
-		
 
 
 
