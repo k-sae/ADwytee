@@ -24,39 +24,13 @@ $('#phreg-form').submit(function(event){
 });
 function registerfunction(){
 $('#preg-form').validate({ // initialize the plugin
-        rules: {
-            email: {
-                required: true,
-                email: true,
-                maxlenght: 64
-            },
-            FName: {
-                required: true,
-                minlength: 5
-            },
-            LName:{
-            	required:true,
-            	minlength:5
-            },
-            password:{
-            	required:true,
-            	minlength:8
-            },government:{
-            	required:true,
-            	minlength:2
-            },street_no:{
-            	required:true,
-            	minlength:2
-            },phone_number:{
-            	required:true,
-            	minlength:9,
-            	number: true,
-            },district:{
-            	required:true,
-            	minlength:2}
-            },submitHandler: submitForm
-    })
+    rules: {
+    },
+messages: {
 
+},
+     submitHandler: submitForm
+})
 }
  function submitForm()
     {
@@ -82,20 +56,6 @@ var data = $("#preg-form").serialize();
 function registerphfunction(){
 $('#phreg-form').validate({ // initialize the plugin
         rules: {
-            email: {
-                required: true,
-                email: true
-            },telephone:{
-                required:true,
-            	number: true,
-            	minlenght:11
-            },pass:{
-            	required:true,
-            	minlength:8
-            },Name:{
-            	required:true,
-            	minlength:8
-            }
             },
         messages: {
        
@@ -133,7 +93,6 @@ $('.login-form').validate({ // initialize the plugin
                 email: true
             },password:{
                 required:true,
-            	number: true
             }},
 
 
