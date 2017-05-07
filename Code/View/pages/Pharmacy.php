@@ -1,31 +1,32 @@
 <?php
-include '../content/header.php';
-include '../../Database/pharmacy.php';
-$ph=new Pharmacy_Query();
-$arry=$ph->fetch_Pharmacy($_SESSION['userId']);
-$arrys=$arry[0];
+
 
 if(isset($_POST['Code']) && isset($_POST['EnName']) && isset($_POST['ArName']) && isset($_POST['Description'])&& isset($_POST['amount'])){
 	include_once '../../Application/Medicine.php';
 	include_once '../../Application/RegisterMedicine.php';
-
+  session_start();
 	$medicine = new Medicine();
 	$medicine->setCode($_POST['Code']);
 	$medicine->setEnName($_POST['EnName']);
 	$medicine->setArName($_POST['ArName']);
 	$medicine->setDescription($_POST['Description']);
 
-	$pharmacyId = 1;
 	$rm = new RegisterMedicine();
-	$rm->register($pharmacyId, $medicine, $_POST['amount']);
-/****************************************************************/
+	$rm->register($_SESSION['userId'], $medicine, $_POST['amount']);
+  header("Location: Pharmacy.php");
 }else if(isset($_POST['medicine']) && isset($_POST['amount'])){
 	include_once '../../Application/RegisterMedicine.php';
-
-	$pharmacyId = 1;
+  session_start();
 	$rm = new RegisterMedicine();
-	$rm->add($pharmacyId, $_POST['medicine'], $_POST['amount']);
+	$rm->add($_SESSION['userId'], $_POST['medicine'], $_POST['amount']);
+	header("Location: Pharmacy.php");
 }
+
+include '../content/header.php';
+include '../../Database/pharmacy.php';
+$ph=new Pharmacy_Query();
+$arry=$ph->fetch_Pharmacy($_SESSION['userId']);
+$arrys=$arry[0];
 ?>
     <div class="wrapper2 container" style="margin-top:50px">
 	    <div class="details col-sm-9">
