@@ -17,14 +17,17 @@ if($message == True){
 if(isset($_GET["accept"])){
 $id = $_GET["accept"];
  $message= $orderManger->accept_order($id);
-if($message == True){
+if($message == 0){
     echo '<i class=" button-order edit-order fa fa-check-square-o"  aria-hidden="true"
      onclick="finshorder('.$id.',this)"> </i>';
+  }
+  else{ if ($message == 1) {
+     echo $language['nomedicine'];
   }
   else {
     echo $language['refresh'];
   }
-
+}
 }
 /* decline message */
 if(isset($_GET["decline"])){
