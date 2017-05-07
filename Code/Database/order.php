@@ -19,13 +19,13 @@ class Order_Query
 }
    public function fetch_order($id)
   {
-    # code...
+
     $query = "SELECT `Id`, `PharmacyId`, `status` FROM `ORDER` WHERE `UserId` = $id  and status != 3 ";
     return ($this->database->fetch_query($query));
     }
     public function fetch_order_pharmacy($id)
    {
-     # code...
+
      $query = "SELECT `Id`, `UserId`, `status` FROM `ORDER` WHERE `PharmacyId` = $id  and status != 3  ";
      return ($this->database->fetch_query($query));
      }
@@ -90,7 +90,6 @@ class Order_Query
 
           $query ="UPDATE `ORDER` SET `status`=2 WHERE `Id` = $id ";
 
-         $this->database->database_query($query);
 
           return True;
         }
@@ -132,12 +131,14 @@ class Order_Query
   {
   	$current_date = date("Y-m-d H:i:s");
   	$query1 = 	"INSERT INTO `ORDER`(`UserId`, `PharmacyId`, `date`, `status`)
- 			   	VALUES 
+
+ 			   	VALUES
  			   	($order->user,$order->pharmacy,'$current_date',1)";
+
   	$this->database->database_query($query1);
   	$id = mysqli_insert_id($this->database->get_con());
   	$code = $order->medicine_order->medicine_id;
-  	$query2 = "INSERT INTO `MEDICINE_ORDER`(`MedicineCode`, `OrderId`, `Amount`) 
+  	$query2 = "INSERT INTO `MEDICINE_ORDER`(`MedicineCode`, `OrderId`, `Amount`)
 				VALUES
 				($code,$id,1)";
   	$this->database->database_query($query2);
@@ -145,7 +146,7 @@ class Order_Query
   public function get_pending_orders($order)
   {
   	$query1 = 	"SELECT `Id`
- 				FROM `ORDER` 
+ 				FROM `ORDER`
 				WHERE `UserId` = $order->user
 				and `PharmacyId` = $order->pharmacy
   	            and `status` = 1 ";
@@ -155,28 +156,28 @@ class Order_Query
   		return $arr[0]["Id"];
   	}
   	return -1;
-  	
+
   }
   public function add_to_existing_order($order)
   {
   	$m_id = $order->medicine_order->medicine_id;
-  	$query1 = 	"SELECT `Amount` FROM `MEDICINE_ORDER` 
+  	$query1 = 	"SELECT `Amount` FROM `MEDICINE_ORDER`
 				WHERE `MedicineCode` = $m_id AND `OrderId` = $order->id";
   	$arr  = $this->database->fetch_query($query1);
-  	//if order with the same medicine exist update it 
+  	//if order with the same medicine exist update it
   	//else add new medicine order
   	if (isset($arr[0]["Amount"]))
   	{
   		$amount = ($arr[0]['Amount'] + $order->medicine_order->amount);
   		$query2 = "UPDATE `MEDICINE_ORDER`
   		SET `Amount`= $amount
-  		WHERE 
+  		WHERE
   		`MedicineCode`= $m_id
 		AND
 		`OrderId`=$order->id";
   		$this->database->database_query($query2);
   	}
-  	else 
+  	else
   	{
   		$query2 = "INSERT INTO `MEDICINE_ORDER`(`MedicineCode`, `OrderId`, `Amount`)
   		VALUES
@@ -184,7 +185,27 @@ class Order_Query
   		$this->database->database_query($query2);
   	}
   }
-  
+  public function edit_medicine_amount($id)
+  {
+    $medicine  = $this->get_medicine_order($id);
+    $size_medicine = sizeof($medicine);
+    if($size_medicine != 0){
+    $query = "SELECT  `PharmacyId` FROM `ORDER` WHERE `Id` = $id ";
+    $pharmacy_Id =$this->database->fetch_query($query)[0]['PharmacyId'];
+    for ($i=0; $i <$size_medicine ; $i++) {
+        $medicine_code =$medicine[$i]['MedicineCode'];
+        $amount = $medicine[$i]['Amount'];
+     $query1 ="UPDATE `PHARMACY_MEDICINE`  SET `Amount`= `Amount`- $amount WHERE `PharmacyId` = $pharmacy_Id
+       and  `MedicineCode` =$medicine_code";
+      $this->database->database_query($query1);
+
+    }
+
+    }
+
+  }
+
 }
+
 
  ?>

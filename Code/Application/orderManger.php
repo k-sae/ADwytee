@@ -78,11 +78,17 @@ public function return_all_pharmacy(){
  }
  public function end_order($id)
  {
-   return ($this->order_query->end_order($id));
+  $check = $this->order_query->end_order($id);
+  if ($check == True){
+    $this->order_query->edit_medicine_amount($id);
+  }
+   return ($check);
  }
  public function accept_order($id)
  {
-   return ($this->order_query->accept_order($id));
+   $accept =$this->order_query->accept_order($id);
+
+   return ($accept);
  }
  public function fech_deatails($id)
  {
@@ -125,7 +131,7 @@ public function return_all_pharmacy(){
  	else {
  		$this->order_query->add_new_order($order);
  	}
- 	
+
  }
  public function fech_deatails_pharmacy($id)
  {
