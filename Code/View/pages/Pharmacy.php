@@ -1,9 +1,17 @@
 <?php
 include '../content/header.php';
 include '../../Database/pharmacy.php';
+include '../../Application/pharmacyclass.php';
 $ph=new Pharmacy_Query();
-$arry=$ph->fetch_Pharmacy('2');
+$arry=$ph->fetch_Pharmacy('40');
 $arrys=$arry[0];
+$ph1=new Pharmacy();
+$arrays=$ph1->fetchmedicine('40');
+$medicines=array();
+foreach ($arrays as $array){
+array_push($medicines, $ph1->fetch_medicine_info($array["MedicineCode"]));
+}
+
 
 if(isset($_POST['Code']) && isset($_POST['EnName']) && isset($_POST['ArName']) && isset($_POST['Description'])&& isset($_POST['amount'])){
 	include_once '../../Application/Medicine.php';
@@ -39,66 +47,7 @@ if(isset($_POST['Code']) && isset($_POST['EnName']) && isset($_POST['ArName']) &
 			</div>
 			 <button class=" btn btn-lg btn-primary"> edit</button>
 	    </div>
-	     <div class="col-xs-6 col-sm-3 sidebar-offcanvas" id="sidebar">
-          <div class="list-group">
-            <a href="" data-toggle="modal" data-target="#bind" class="list-group-item active">Add pharmacy patient</a>
-            <a href="#" class="list-group-item">Link</a>
-          </div>
-        </div>
     </div>
-    <div class="modal fade" id="bind" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-            <div class="modal-dialog" role="document">
-              <div class="modal-content bind">
-              <div class="darklay">
-                <div class="modal-header">
-                  <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                </div>
-                <div class="modal-body">
-                 <form action="Pharmacy.php" method="post" target="_top">
-		<div class="form-group row">
-			<label for="example-text-input" class="col-xs-3 col-form-label">First Name:</label>
-			<div class="col-xs-5">
-				<input class="form-control" name="FName" type="text" placeholder="First Name" id="example-text-input" required="required">
-			</div>
-		</div>
-		<div class="form-group row">
-			<label for="example-text-input" class="col-xs-3 col-form-label">Last Name:</label>
-			<div class="col-xs-5">
-				<input class="form-control" name="LName" type="text" placeholder="Last Name" id="example-text-input" required="required">
-			</div>
-		</div>
-		<div class="form-group row">
-			<label class="checkbox-inline"><input type="checkbox" value="">Male</label>
-			<label class="checkbox-inline"><input type="checkbox" value="">Female</label>
-		</div>
-		<div class="form-group row">
-			<label for="example-text-input" class="col-xs-3 col-form-label">Height</label>
-			<div class="col-xs-5">
-				<input class="form-control" name="Height" type="text" placeholder="Height" id="example-text-input" required="required">
-			</div>
-
-		</div>
-		<div class="form-group row">
-			<label for="example-text-input" class="col-xs-3 col-form-label">weight</label>
-			<div class="col-xs-5">
-				<input class="form-control" name="weight" type="text" placeholder="weight" id="example-text-input" required="required">
-			</div>
-		</div>
-		
-		
-	</form>
-                <div class="modal-footer">
-        			<div align="center">
-  						<input type="submit" class="btn-primary btn" value="submit">
-  					</div>      
-                </div>
-              </div>
-            </div>
-            </div>
-
-         </div>
-    </div>
-    <a href="PatientHistory.php"><button class="btn btn-lg btn-primary">Patient History</button></a>
 	<div class="container col-md-12">
 		  <h2>Medicine_Table</h2>
 		  <div class="table-responsive">
@@ -110,8 +59,8 @@ if(isset($_POST['Code']) && isset($_POST['EnName']) && isset($_POST['ArName']) &
 		        <th>English name</th>
 		        <th>Arabic name</th>
 		        <th>Amount</th>
-		        <th>expire date</th>
-		        <th>edit</th>
+		        
+		      
 
 		        <!--ask about medicine amount and expire date-->
 		      </tr>
@@ -125,8 +74,12 @@ if(isset($_POST['Code']) && isset($_POST['EnName']) && isset($_POST['ArName']) &
 		        <td>35</td>
 		        <td>New York</td>
 		        <td>USA</td>
-		        <td><button class="btn-primary btn"> edit medicine</button></td>
 		      </tr>
+		      <?php
+		   
+					
+		    	
+		     ?>
 		    </tbody>
 		  </table>
 		  </div>

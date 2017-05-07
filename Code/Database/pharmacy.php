@@ -51,7 +51,20 @@ class Pharmacy_Query
     return $result;
   }
    
+  public function fetch_medicine($id)
+  {
+  $result=array();
+    $query ="SELECT `MedicineCode`, `Amount` FROM `PHARMACY_MEDICINE` WHERE `PharmacyId` = $id ";
+    $result = $this->database->fetch_query($query);
+    return $result;
+    }
   
+  public function fetch_medicine_info($code)
+  {
+  $result=array();
+    $query ="SELECT * FROM `MEDICINE` WHERE `Code` LIKE '$code'  ";
+    $result = $this->database->fetch_query($query);
+    return $result;
+    }
   }
-
   ?>
