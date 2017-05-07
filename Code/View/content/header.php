@@ -77,7 +77,7 @@ $_SESSION["notification"] = $notification->check_Notification(1);
             <li class="<?php if($page=="reservations"){echo "active";}?>"><a href="reservations.php"><?php echo ($language['reservations']); ?></a></li>
            <li ><a href="Pharmacy.php"><?php echo  $language['pharmacyprofile']?></a></li>
             <li class="<?php if($page=="orderPage"){echo "active";}?>"><a href="orderPage.php"><?php echo  $language['orderpage']?></a></li>
-            <li class="<?php if($page=="pharmacyorder"){echo "active";}?>"><a href="pharmacyOrder.php"><?php echo  $language['pahrmacyorder']?></a></li>
+            <li class="<?php if($page=="pharmacyorder"){echo "active";}?>"><a href="pharmacyOrder.php"><?php echo  $language['pharmacyorder']?></a></li>
             <li><a href="#about"><?php echo  $language['about']?></a></li>
             <li ><a href="" data-toggle="modal" data-target="#myModal"><?php echo  $language['login']?></a></li>
             <li><a href="#contact"><?php echo  $language['contact']?></a></li>

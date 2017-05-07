@@ -90,12 +90,15 @@ class Order_Query
           $query ="UPDATE `ORDER` SET `status`=2 WHERE `Id` = $id ";
 
 
-          return True;
+          return 0;
+        }
+        else{
+        return 1;
         }
         }
 
       }
-       return False;
+       return 2;
     }
 
   public function fetch_order_details($id)

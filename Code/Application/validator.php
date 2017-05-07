@@ -25,6 +25,8 @@ include_once 'PharmacyInfo.php';
              $info->goverment=$_POST["government"];
              $info->district=$_POST["district"];
              $info->street_No=$_POST["street_no"];
+             $info->latitude = $_POST['lat'];
+             $info->longitude= $_POST['long'];
              $g->register($reginfo,$info);
              
 
@@ -46,6 +48,8 @@ include_once 'PharmacyInfo.php';
              $info= new PharmacyInfo();
              $info->name=$_POST['Name'];
              $info->notes=$_POST['notes'];
+             $info->latitude = $_POST['lat'];
+             $info->longitude= $_POST['long'];
              $info->describition=$_POST['describition'];
              $info->telephonNo=$_POST["telephone"];
              $g->registerph($reginfo,$info);}
@@ -55,7 +59,6 @@ include_once 'PharmacyInfo.php';
              $log=new loginInfo();
              $log->mail=$_POST["email"];
              $log->password=$_POST["password"];
-              print_r($g->login($log)) ;
              }
 
             

@@ -13,6 +13,7 @@ $language['register'] ="سجّل";
 $language['login'] ="دخول";
 $language['contact'] ="تواصل معنا";
 //order
+$language['nomedicine']= "لا يوجد دواء  كافي ";
 $language['orders'] = "الطلبات";
 $language['pharmacyorder'] = "طلبات الصيدلية";
 $language['page'] ="صفحة";

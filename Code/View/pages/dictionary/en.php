@@ -11,6 +11,7 @@ $language['register'] ="Register";
 $language['login'] ="Login";
 $language['contact'] ="Contact Us";
 //order
+$language['nomedicine']= "NO Medicine Enough";
 $language['orders'] = "Orders";
 $language['pharmacyorder'] = "Pharmacy Orders";
 $language['orderpage'] ="OrdersPage";

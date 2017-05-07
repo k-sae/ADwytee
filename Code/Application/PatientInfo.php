@@ -9,5 +9,8 @@ class PatientInfo extends Info
 	public $goverment;
 	public $district;
 	public $streetNo;
+  public $latitude;
+  public $longitude;
+
 }
 ?>

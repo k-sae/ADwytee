@@ -59,6 +59,14 @@ if(isset($_POST["FName"]))
 						<label><?php echo  $language['password']; ?></label>
 						<input type="password" name="password" placeholder="<?php echo  $language['enter_password_here']; ?>" class="form-control">
 					</div>
+            <div class="form-group row">
+              <label>Location</label>
+              <div>
+                <label>Please make sure to allow accessing your location for better performance!<br>(we detect it automatically)</label>
+                <input name="lat" type="hidden" value="<?php echo ($_SESSION['latitude']); ?>">
+                <input name="long" type="hidden" value="<?php echo ($_SESSION['longitude']); ?>">
+              </div>
+            </div>
 					<button type="submit" class="btn btn-lg btn-info" onclick="registerfunction()" name="regp">Submit</button>					
 					</div>
 				</form> 
@@ -70,13 +78,6 @@ if(isset($_POST["FName"]))
 						<div class="col-xs-5">
 							<input class="form-control" name="Name" type="text" placeholder="Pharmacy_Name" id="example-text-input" >
 						</div>
-					</div>
-					<div class="form-group row">
-						<label for="example-text-input" class="col-xs-3 col-form-label">Location :</label>
-						<div class="col-xs-5">
-							<label>add map here</label>
-						</div>
-
 					</div>
 					<div class="form-group row">
 						<label for="example-text-input" class="col-xs-3 col-form-label">notes :</label>
@@ -108,8 +109,16 @@ if(isset($_POST["FName"]))
 						<div class="col-xs-8">
 							<input class="form-control" name="telephone"  placeholder="telephone" id="example-text-input" >
 						</div>
-					</div>		
-					<div>	
+					</div>
+          <div class="form-group row">
+            <label for="example-text-input" class="col-xs-3 col-form-label">Location :</label>
+            <div class="col-xs-5">
+              <label>Please make sure to allow accessing your location for better performance!<br>(we detect it automatically)</label>
+              <input name="lat" type="hidden" value="<?php echo ($_SESSION['latitude']); ?>">
+              <input name="long" type="hidden" value="<?php echo ($_SESSION['longitude']); ?>">
+            </div>
+          </div>
+					<div>
 					<button type="submit" class="btn btn-lg btn-info" name="regph" onclick="registerphfunction()">Submit</button>					
 					</div>
 				</form> 
