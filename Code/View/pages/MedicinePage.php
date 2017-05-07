@@ -39,15 +39,19 @@ if (isset($_POST['newOrder']))
               <div class="row">
 <!--               adding time to prevent image cashing -->
                 <div class="col-md-3 col-lg-3 " align="center"> <img alt="User Pic" src="../mimages/<?php echo $_GET['code']?>?t=<?php echo time()?>" class="img-circle img-responsive"> 
-                	<?php echo 
+                	<?php 
+                	if (isset($_SESSION["userType"]) && $_SESSION["userType"] == 2)
+                	{
+                	echo 
                 	"<form action='upload.php' method='post' enctype='multipart/form-data'>
 					    <input type='file' name='fileToUpload' class='select-file'  id='fileToUpload' >
 					    <input type='hidden' name='m_code' value='".$_GET['code']."' >
 						<input type='hidden' name='last' value='".$_SERVER['REQUEST_URI']."' >
 					    <br>
 					    <input type='submit' value='Upload' class='btn btn-primary' name='submit'>
-					</form>"
-					?>
+					</form>";
+					}
+                	?>
                  </div>
 
                 <!--<div class="col-xs-10 col-sm-10 hidden-md hidden-lg"> <br>
@@ -80,7 +84,7 @@ if (isset($_POST['newOrder']))
                     </tbody>
                   </table>
                   <form method="post">
-                  <?php if (isset($_GET["phar"]))
+                  <?php if (isset($_GET["phar"]) && isset($_SESSION['userId']))
                    echo "
                   <input type='submit' name='newOrder' class='btn btn-primary' value='Order Now'>"?>
                   </form>
