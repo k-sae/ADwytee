@@ -55,10 +55,17 @@ include_once 'PharmacyInfo.php';
              $g->registerph($reginfo,$info);}
 
              }if(isset($_POST["login"])) {
-                  $g=new Guest();
-             $log=new loginInfo();
-             $log->mail=$_POST["email"];
-             $log->password=$_POST["password"];
+              $g=new Guest();
+              $log=new loginInfo();
+              $log->mail=$_POST["email"];
+              $log->password=$_POST["password"];
+              $arr = $g->login($log);
+              if(sizeof($g->login($log)) == 0){
+                echo '0';
+              }else{
+                echo $arr[0]['Type'];
+              }
+
              }
 
             

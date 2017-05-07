@@ -77,7 +77,7 @@ class Register_Query
 	public function login(LoginInfo $loginfo)
 	{
 	$result=array();
-    $query ="SELECT `Id` FROM `USER` WHERE `Password` LIKE '$loginfo->password' AND `Mail` LIKE '$loginfo->mail' ";
+    $query ="SELECT `Id`, `Type` FROM `USER` WHERE `Password` LIKE '$loginfo->password' AND `Mail` LIKE '$loginfo->mail' ";
     $result = $this->database->fetch_query($query);
     return $result;
     }

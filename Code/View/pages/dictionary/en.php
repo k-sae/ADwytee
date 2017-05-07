@@ -9,6 +9,7 @@ $language['pharmacyprofile'] ="Pharmacy Profile";
 $language['about'] ="About us";
 $language['register'] ="Register";
 $language['login'] ="Login";
+$language['logout'] ="Logout";
 $language['contact'] ="Contact Us";
 //order
 $language['nomedicine']= "NO Medicine Enough";
