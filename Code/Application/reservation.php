@@ -18,9 +18,9 @@ class reservation{
 
   }
 
-  public function add($userId, $pName, $date)
+  public function add($userId, $pId, $date)
   {
-    $this->reservation->add_reservation($userId, $pName, $date);
+    $this->reservation->add_reservation($userId, $pId, $date);
   }
   public function update($id, $date)
   {
@@ -32,6 +32,14 @@ class reservation{
   }
   public function retrieve($userId)
   {
+    $result = $this->reservation->retrieve_reservation($userId);
+
+    for ($i=0; $i<sizeof($result); $i++){
+      if ($result[$i]['Date'] < $result[$i]['cDate']){
+        $this->delete($result[$i]['Id']);
+      }
+    }
+
     return $this->reservation->retrieve_reservation($userId);
   }
 

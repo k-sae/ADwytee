@@ -16,10 +16,10 @@ class reservation_Query
     $this->database = DataBase :: getInstance($this->file_name2);
   }
 
-  public function add_reservation($userId, $pName, $date)
+  public function add_reservation($userId, $pId, $date)
   {
     $query = "INSERT INTO `RESERVATION` (`UserId`, `PharmacyId`, `Date`)
-              VALUES ('$userId', (SELECT UserId FROM `PHARMACY` WHERE Name = '$pName'), '$date')";
+              VALUES ('$userId', '$pId', '$date')";
 
     $this->database->database_query($query);
 
@@ -42,7 +42,7 @@ class reservation_Query
   }
   public function retrieve_reservation($userId)
   {
-    $query = "SELECT r.Id, r.PharmacyId, r.Date, p.Name
+    $query = "SELECT r.Id, r.PharmacyId, r.Date, p.Name, CURRENT_TIMESTAMP AS cDate
               FROM `RESERVATION` AS r
               INNER JOIN `PHARMACY` AS p ON p.UserId = r.PharmacyId
               WHERE r.UserId = $userId

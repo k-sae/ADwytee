@@ -20,3 +20,18 @@ function deleteReservation(id,row) {
 function editReservaion(id) {
   document.getElementById("id").value= id;
 }
+
+function fetchPharmacies() {
+  if (window.XMLHttpRequest) {
+    xmlhttp=new XMLHttpRequest();
+  } else {
+    xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+  }
+  xmlhttp.onreadystatechange=function() {
+    if (this.readyState==4 && this.status==200) {
+      var x = document.getElementById("pharmacySelect").innerHTML=this.responseText;
+    }
+  }
+  xmlhttp.open("GET","livesearch.php",true);
+  xmlhttp.send();
+}
