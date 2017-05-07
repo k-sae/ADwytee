@@ -13,11 +13,17 @@ if(isset($_POST["submit"])) {
 		echo "File is not an image.";
 		$uploadOk = 0;
 	}
+	if ($_FILES["fileToUpload"]["size"] > 500000) {
+		echo "Sorry, your file is too large.";
+		$uploadOk = 0;
+	}
+	if($uploadOk != 0){
 	if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
 		echo "image has been uploaded.";
 		echo "<br> redirecting...";
 		}
 		header("Location: ".$_POST['last']);
 		exit();
+	}
 }
 ?>
