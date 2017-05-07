@@ -2,7 +2,7 @@
 include '../content/header.php';
 include '../../Database/pharmacy.php';
 $ph=new Pharmacy_Query();
-$arry=$ph->fetch_Pharmacy('2');
+$arry=$ph->fetch_Pharmacy($_SESSION['userId']);
 $arrys=$arry[0];
 
 if(isset($_POST['Code']) && isset($_POST['EnName']) && isset($_POST['ArName']) && isset($_POST['Description'])&& isset($_POST['amount'])){

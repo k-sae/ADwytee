@@ -111,14 +111,15 @@ var data = $(".login-form").serialize();
 
             type : 'POST',
             url  : '../../Application/validator.php',
-            data : data
-             ,success :  function(data)
+            data : data,
+             success :  function(data)
             {
               if(data=="0"){
                 alert("Incorrect email or password!");
               }else{
-                alert("welcome!");
-                window.location.href+="?userType=" + data;
+                var arr = JSON.parse(data);
+                alert("Welcome!");
+                window.location.href+="?userType=" + arr[0] + "&userId=" + arr[1];
               }
 
             }
