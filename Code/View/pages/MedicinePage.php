@@ -1,15 +1,15 @@
 <?php
+if (!isset($_GET['code']))
+{
+	header("Location: index.php");
+	exit();
+}
 include_once '../content/header.php';
 include_once '../../Database/MedicineFetcher.php';
 include_once '../../Application/order.php';
 include_once '../../Application/orderManger.php';
 include_once '../../Application/medicineOrder.php';
 $medicinFetcher = new MedicineFetcher();
-if (!isset($_GET['code']))
-{
-	header("Location: index.php");
-	exit();
-}
 $arr =  $medicinFetcher->fetch($_GET['code'])[0];
 if (isset($_POST['newOrder']))
 {
