@@ -63,6 +63,13 @@ var data = $("#preg-form").serialize();
 function registerphfunction(){
 $('#phreg-form').validate({ // initialize the plugin
         rules: {
+        	email: {
+                email: true
+            },
+            pass: {
+            	minlength: 8,
+            	maxlength: 16
+            }
             },
         messages: {
        

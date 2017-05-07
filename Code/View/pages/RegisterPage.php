@@ -76,7 +76,7 @@ if(isset($_POST["FName"]))
 					<div class="form-group row">
 						<label for="example-text-input" class="col-xs-3 col-form-label">Pharmacy Name:</label>
 						<div class="col-xs-5">
-							<input class="form-control" name="Name" type="text" placeholder="Pharmacy_Name" id="example-text-input" >
+							<input class="form-control" name="Name" type="text" placeholder="Pharmacy_Name" id="example-text-input" required >
 						</div>
 					</div>
 					<div class="form-group row">
@@ -88,13 +88,13 @@ if(isset($_POST["FName"]))
 					<div class="form-group row">
 						<label for="example-text-input" class="col-xs-3 col-form-label">email :</label>
 						<div class="col-xs-8">
-							<input class="form-control" name="email" type="email" placeholder="E_mail" id="example-text-input">
+							<input class="form-control" name="email" type="email" placeholder="E_mail" id="example-text-input" required >
 						</div>
 					</div>
 					<div class="form-group row">
 						<label for="example-text-input" class="col-xs-3 col-form-label">pass :</label>
 						<div class="col-xs-8">
-							<input class="form-control" name="pass" type="password" placeholder="password" id="example-text-input" >
+							<input class="form-control" name="pass" type="password" placeholder="password" id="example-text-input" required >
 						</div>
 					</div>
 
@@ -107,7 +107,7 @@ if(isset($_POST["FName"]))
 					<div class="form-group row">
 						<label for="example-text-input" class="col-xs-3 col-form-label">telephone :</label>
 						<div class="col-xs-8">
-							<input class="form-control" name="telephone"  placeholder="telephone" id="example-text-input" >
+							<input class="form-control" type="number" name="telephone"  placeholder="telephone" id="example-text-input" required >
 						</div>
 					</div>
           <div class="form-group row">
