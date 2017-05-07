@@ -53,7 +53,8 @@ $('#preg-form').validate({ // initialize the plugin
             	minlength:2
             },phone_number:{
             	required:true,
-            	minlength:9
+            	minlength:9,
+            	number: true,
             },district:{
             	required:true,
             	minlength:2}
@@ -90,7 +91,8 @@ $('#phreg-form').validate({ // initialize the plugin
                 email: true
             },telephone:{
                 required:true,
-            	number: true
+            	number: true,
+            	minlenght:11
             },pass:{
             	required:true,
             	minlength:8
