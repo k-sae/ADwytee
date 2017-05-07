@@ -421,27 +421,26 @@ CREATE TABLE `RATE` (
 -- --------------------------------------------------------
 
 
-INSERT INTO `LANGUAGE`( `Language`) VALUES ('en');
-INSERT INTO `LANGUAGE`( `Language`) VALUES ('ar');
-INSERT INTO `ORDER_STATUS`( `Status`) VALUES ('pending');
-INSERT INTO `ORDER_STATUS`( `Status`) VALUES ('inprogress');
-INSERT INTO `ORDER_STATUS`( `Status`) VALUES ('complete');
-INSERT INTO `NOTIFICATION_STATUS`( `Status`) VALUES ('active');
-INSERT INTO `NOTIFICATION_STATUS`( `Status`) VALUES ('disactive');
-INSERT INTO `NOTIFICATION_DESCRIPTION`( `Description`) VALUES ('accept');
-INSERT INTO `NOTIFICATION_DESCRIPTION`( `Description`) VALUES ('decline');
-INSERT INTO `USERTYPE`( `Type`) VALUES ('admin');
-INSERT INTO `USERTYPE`( `Type`) VALUES ('pharmacy');
-INSERT INTO `USERTYPE`( `Type`) VALUES ('patient');
-INSERT INTO `GENDER`( `Gender`) VALUES ("Male");
-INSERT INTO `GENDER`( `Gender`) VALUES ("FMale");
-INSERT INTO `GENDER`( `Gender`) VALUES ("FMale");
-INSERT INTO `PAGE_URL`( `Url`) VALUES ("index.php");
-INSERT INTO `PAGE_URL`( `Url`) VALUES ("pharmacyOrder.php");
-INSERT INTO `PAGE_URL`( `Url`) VALUES ("orderPage.php");
-INSERT INTO `PAGE_URL`( `Url`) VALUES ("RegisterPage.php");
-INSERT INTO `PAGE_URL`( `Url`) VALUES ("statistics.php");
-INSERT INTO `PAGE_URL`( `Url`) VALUES ("MedicinePage.php");
+INSERT INTO  `LANGUAGE`( `Id`, `Language`) VALUES  (1,'en');
+INSERT INTO  `LANGUAGE`( `Id`, `Language`) VALUES   (2,'ar');
+INSERT INTO  `ORDER_STATUS`( `Id` ,`Status`) VALUES  (1,'pending');
+INSERT INTO  `ORDER_STATUS`( `Id` ,`Status`) VALUES  (2,'inprogress');
+INSERT INTO  `ORDER_STATUS`( `Id` ,`Status`) VALUES  (3,'complete');
+INSERT INTO  `NOTIFICATION_STATUS`( `Id`, `Status`) VALUES (1,'active');
+INSERT INTO  `NOTIFICATION_STATUS`( `Id` ,`Status`) VALUES (2,'disactive');
+INSERT INTO  `NOTIFICATION_DESCRIPTION`( `Id` ,`Description`) VALUES (1,'accept');
+INSERT INTO  `NOTIFICATION_DESCRIPTION`(  `Id` ,`Description`) VALUES (2,'decline');
+INSERT INTO  `USERTYPE`(  `Id` ,`Type`) VALUES (1,'admin');
+INSERT INTO `USERTYPE`( `Id` ,`Type`) VALUES (2,'pharmacy');
+INSERT INTO  `USERTYPE`(`Id` ,`Type`) VALUES (3,'patient');
+INSERT INTO  `GENDER`( `Id`,`Gender`) VALUES (1,"Male");
+INSERT INTO  `GENDER`( `Id` ,`Gender`) VALUES (2,"FMale");
+INSERT INTO  `PAGE_URL`(`Id` ,`Url`) VALUES (1,"index.php");
+INSERT INTO  `PAGE_URL`( `Id` ,`Url`) VALUES (2,"pharmacyOrder.php");
+INSERT INTO `PAGE_URL`(`Id`, `Url`) VALUES (3,"orderPage.php");
+INSERT INTO  `PAGE_URL`(  `Id`, `Url`) VALUES (4,"RegisterPage.php");
+INSERT INTO `PAGE_URL`( `Id`,`Url`) VALUES (5,"statistics.php");
+INSERT INTO  `PAGE_URL`( `Id`,`Url`) VALUES (6,"MedicinePage.php");
 -- --------------------------------------------------------
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
