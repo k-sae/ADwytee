@@ -85,13 +85,13 @@ class Order_Query
       $status = $this->database->fetch_query($query1);
 
       if(isset($status)){
-
-        if($status[0]['status'] == 1){
-
+       if($status[0]['status'] == 1){
+       if ($this->check_medicine_amount($id)){
           $query ="UPDATE `ORDER` SET `status`=2 WHERE `Id` = $id ";
 
 
           return True;
+        }
         }
 
       }
@@ -129,7 +129,7 @@ class Order_Query
   }
   public function add_new_order($order)
   {
-  	$current_date = date("Y-m-d H:i:s");
+
   	$query1 = 	"INSERT INTO `ORDER`(`UserId`, `PharmacyId`, `date`, `status`)
 
  			   	VALUES
@@ -200,9 +200,30 @@ class Order_Query
       $this->database->database_query($query1);
 
     }
+  }
+}
+    public function check_medicine_amount($id)
+    {
+      $medicine  = $this->get_medicine_order($id);
+      $size_medicine = sizeof($medicine);
+      $check = True;
 
+      if($size_medicine != 0){
+      $query = "SELECT  `PharmacyId` FROM `ORDER` WHERE `Id` = $id ";
+      $pharmacy_Id =$this->database->fetch_query($query)[0]['PharmacyId'];
+      for ($i=0; $i <$size_medicine ; $i++) {
+          $medicine_code =$medicine[$i]['MedicineCode'];
+          $amount = $medicine[$i]['Amount'];
+       $query1 ="SELECT `Amount` FROM `PHARMACY_MEDICINE`  WHERE `PharmacyId` = $pharmacy_Id
+         and  `MedicineCode` =$medicine_code";
+          $amount_check = $this->database->fetch_query($query1);
+          if ($amount > $amount_check[0]['Amount']){
+            $check =False;
+          }
     }
 
+    }
+    return $check;
   }
 
 }

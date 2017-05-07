@@ -54,7 +54,7 @@ function accept(id , rowNumber) {
   }
   xmlhttp.onreadystatechange=function() {
     if (this.readyState==4 && this.status==200){
-      document.getElementById("noti").style.color = "red";
+    //  document.getElementById("noti").style.color = "red";
      document.getElementById(rowNumber).innerHTML=this.responseText;
      }
 }
