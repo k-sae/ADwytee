@@ -4,7 +4,6 @@ $page = "orderPage";
 include_once '../content/header.php';
 include_once '../../Application/orderManger.php';
 $orderManger =new orderManger();
-$_SESSION['userId'] = 3;
 ?>
 <head>
   <script src = "../js/order.js">  </script></head>

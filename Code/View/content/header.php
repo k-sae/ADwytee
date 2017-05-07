@@ -3,8 +3,9 @@
 include_once 'language.php';
 include_once '../../Application/NotificationManger.php';
 
-if(isset($_GET['userType'])){
+if(isset($_GET['userType']) && isset($_GET['userId'])){
   $_SESSION['userType'] = $_GET['userType'];
+  $_SESSION['userId'] = $_GET['userId'];
   header("Location: index.php");
 }
 
