@@ -51,9 +51,9 @@ var data = $("#preg-form").serialize();
              ,success :  function(data)
             {
                 if(data=="1"){
-                console.log("fuck off");
+                	alert("wrong or dublicated mail");
                 }else{
-                	console.log("welcome2");
+                	alert("Registered");
                 }
 
             }
@@ -90,9 +90,9 @@ var data = $("#phreg-form").serialize();
              ,success :  function(data)
             {
               if(data=="1"){
-                console.log("fuck off")	;
+            	  alert("wrong or dublicated mail");
                 }else{
-                	console.log("welcome");
+                	   alert("Registered");
                 }
 
             }
