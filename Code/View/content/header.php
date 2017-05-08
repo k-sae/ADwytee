@@ -67,6 +67,8 @@ if(isset($_SESSION['userId'])) {
             }
 
             ?>
+            <li><a href="#contact"><?php echo  $language['contact']?></a></li>
+            <li><a href="#about"><?php echo  $language['about']?></a></li>
 
             <li>
               <form method="post">
