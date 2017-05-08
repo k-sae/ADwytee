@@ -1,7 +1,10 @@
 <?php
 include '../content/header.php';?>
+<div style="background: url(../images/1.jpg); height: 100%; background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size:100% 100%;">
 <div class="aboutus">
-    <div class="container" style="margin-top:50px">
+    <div class="container" style="margin-top:20px">
         <div class="about row center">
     <div class="col-xs-12">
     <h1 class="text-center">About us</h1>
@@ -16,28 +19,29 @@ With an average of more than 31 million visits each month, Cars is the leading o
     	<h2 class="text-center">Meet our team</h2>
         <div class="row">
             <div class="teamimg col-xs-6 col-md-3">
-            <img src="images/mt-0310-about-img05.jpg">
-            <h3>Alan Smith</h3>
+            <img src="../images/aboutus/me.jpg" width="100">
+            <h3>Belal Ibrahim</h3>
             <p>Vice President of Product Department</p>
             </div>
              <div class="teamimg col-xs-6 col-md-3">
-            <img src="images/mt-0310-about-img04.jpg">
-            <h3>John McCoist</h3>
+            <img src="../images/aboutus/h.jpg" width="100">
+            <h3>Khaled Hesham</h3>
             <p>Chief Executive Officer and President</p>
             </div>
              <div class="teamimg col-xs-6 col-md-3">
-            <img src="images/mt-0310-about-img03.jpg">
-            <h3>Bradley Grosh</h3>
+            <img src="../images/aboutus/k.jpg" width="100">
+            <h3>Karim salah</h3>
 <p>Chief Marketing Officer</p>
             </div>
              <div class="teamimg col-xs-6 col-md-3">
-            <img src="images/mt-0310-about-img02.jpg">
-            <h3>Laura Stegner</h3>
+            <img src="../images/aboutus/m.jpg" width="100">
+            <h3>Mostafa Hazem</h3>
 <p>Vice President of Sales Department</p>
             </div>
         </div>
     </div>
 <div>
+</div>
 </div>
 </div>
 <?php
