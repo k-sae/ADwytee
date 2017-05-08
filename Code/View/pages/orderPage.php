@@ -30,7 +30,6 @@ $orderManger =new orderManger();
           data-toggle='modal' data-target='#orderdetails' onclick=openDetailsPatient(".$array_order[$i-1]->getId().") ></i>";
             if($array_order[$i-1]->getStatus() ==  1) {
               echo  '
-          <i class=" button-order edit-order fa fa-pencil" aria-hidden="true">  </i>
            <i class=" button-order delete-order fa fa-trash"  aria-hidden="true"
            onclick="deleteOrder('.$array_order[$i-1]->getId().',this)">  </i></td></tr>';}}}
            else {
