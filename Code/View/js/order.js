@@ -56,7 +56,7 @@ function accept(id , rowNumber) {
     if (this.readyState==4 && this.status==200){
     //  document.getElementById("noti").style.color = "red";
      document.getElementById(rowNumber).innerHTML=this.responseText;
-     
+      
      }
 }
 xmlhttp.open("GET","../pages/innerorderpage.php?accept="+id,true);

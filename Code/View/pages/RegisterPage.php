@@ -1,6 +1,6 @@
 <?php
 include_once '../content/header.php';
-include_once '../../Application/Register.php';
+
 include_once '../../Application/RegisterInfo.php';
 //remove this
 $info = new Info();
@@ -32,25 +32,25 @@ if(isset($_POST["FName"]))
 								<label><?php echo  $language['last_name']; ?></label>
 								<input type="text"  name="LName" placeholder="<?php echo  $language['enter_last_name_here']; ?>" class="form-control" pattern=".{8,16}" required>
 							</div>
-						</div>					
+						</div>
 						<div class="row">
 							<div class="col-sm-4 form-group">
 								<label><?php echo  $language['goverment']; ?></label>
 								<input type="text" name="government" placeholder="<?php echo  $language['enter_governemnt_name_here']; ?>" class="form-control" pattern=".{8,16}" required>
-							</div>	
+							</div>
 							<div class="col-sm-4 form-group">
 								<label><?php echo  $language['district']; ?></label>
 								<input type="text" name="district" placeholder="<?php echo  $language['enter_district_name_here']; ?>" class="form-control"  required>
-							</div>	
+							</div>
 							<div class="col-sm-4 form-group">
 								<label><?php echo  $language['street_no']; ?></label>
 								<input type="number" name="street_no" placeholder="<?php echo  $language['enter_street_no_here']; ?>" class="form-control" required>
-							</div>		
-						</div>			
+							</div>
+						</div>
 					<div class="form-group">
 						<label><?php echo  $language['phone_number']; ?></label>
 						<input type="number" name="phone_number" placeholder="<?php echo  $language['enter_phone_no_here']; ?>" class="form-control" required>
-					</div>		
+					</div>
 					<div class="form-group">
 						<label><?php echo  $language['email']; ?></label>
 						<input type="text" name="email" placeholder="<?php echo  $language['enter_email_here']; ?>"class="form-control" required>
@@ -67,9 +67,9 @@ if(isset($_POST["FName"]))
                 <input name="long" type="hidden" value="<?php echo ($_SESSION['longitude']); ?>">
               </div>
             </div>
-					<button type="submit" class="btn btn-lg btn-info" onclick="registerfunction()" name="regp">Submit</button>					
+					<button type="submit" class="btn btn-lg btn-info" onclick="registerfunction()" name="regp">Submit</button>
 					</div>
-				</form> 
+				</form>
 				</div>
 				<div class="row regasph ph-reg-dialog" >
 				<form  method="post" id="phreg-form">
@@ -119,9 +119,9 @@ if(isset($_POST["FName"]))
             </div>
           </div>
 					<div>
-					<button type="submit" class="btn btn-lg btn-info" name="regph" onclick="registerphfunction()">Submit</button>					
+					<button type="submit" class="btn btn-lg btn-info" name="regph" onclick="registerphfunction()">Submit</button>
 					</div>
-				</form> 
+				</form>
 				</div>
 	</div>
 	</div>
@@ -130,4 +130,3 @@ if(isset($_POST["FName"]))
 <?php
 include '../content/footer.php';
 ?>
-

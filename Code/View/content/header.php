@@ -60,6 +60,7 @@ if(isset($_SESSION['userId'])) {
 
             <?php
 
+      
             if(!isset($_SESSION['userType'])){
               include_once 'nav/nav.php';
             }else{

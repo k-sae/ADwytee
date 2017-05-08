@@ -1,6 +1,7 @@
 <?php
 include_once 'language.php';
 include_once '../../Application/orderManger.php';
+
 $orderManger =new orderManger();
 /* delete message */
 if(isset($_GET["delete"])){
@@ -15,6 +16,7 @@ if($message == True){
 }
 /* accept message */
 if(isset($_GET["accept"])){
+  
 $id = $_GET["accept"];
  $message= $orderManger->accept_order($id);
 if($message == 0){
