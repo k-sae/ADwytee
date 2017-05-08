@@ -3,8 +3,9 @@
 include_once 'language.php';
 include_once '../../Application/NotificationManger.php';
 
-if(isset($_GET['userType'])){
+if(isset($_GET['userType']) && isset($_GET['userId'])){
   $_SESSION['userType'] = $_GET['userType'];
+  $_SESSION['userId'] = $_GET['userId'];
   header("Location: index.php");
 }
 
@@ -20,9 +21,10 @@ else if (!isset($_GET["lat"]) || !isset($_GET["lat"])) {
  $_SESSION["longitude"] = $_GET["long"];
   header("Location: index.php");
 }
-$notification =  new NotificationManger();
-$_SESSION["notification"] = $notification->check_Notification(1);
-
+if(isset($_SESSION['userId'])) {
+  $notification = new NotificationManger();
+  $_SESSION["notification"] = $notification->check_Notification($_SESSION['userId']);
+}
 ?>
 <!DOCTYPE html>
 <html lang="<?php echo $_SESSION["language"]; ?>" style = "min-height: 100vh">
@@ -65,6 +67,8 @@ $_SESSION["notification"] = $notification->check_Notification(1);
             }
 
             ?>
+            <li><a href="#contact"><?php echo  $language['contact']?></a></li>
+            <li><a href="#about"><?php echo  $language['about']?></a></li>
 
             <li>
               <form method="post">

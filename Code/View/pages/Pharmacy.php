@@ -1,31 +1,37 @@
 <?php
-include '../content/header.php';
-include '../../Database/pharmacy.php';
-$ph=new Pharmacy_Query();
-$arry=$ph->fetch_Pharmacy('2');
-$arrys=$arry[0];
-
 if(isset($_POST['Code']) && isset($_POST['EnName']) && isset($_POST['ArName']) && isset($_POST['Description'])&& isset($_POST['amount'])){
 	include_once '../../Application/Medicine.php';
 	include_once '../../Application/RegisterMedicine.php';
-
+  session_start();
 	$medicine = new Medicine();
 	$medicine->setCode($_POST['Code']);
 	$medicine->setEnName($_POST['EnName']);
 	$medicine->setArName($_POST['ArName']);
 	$medicine->setDescription($_POST['Description']);
 
-	$pharmacyId = 1;
 	$rm = new RegisterMedicine();
-	$rm->register($pharmacyId, $medicine, $_POST['amount']);
-/****************************************************************/
+	$rm->register($_SESSION['userId'], $medicine, $_POST['amount']);
+  header("Location: Pharmacy.php");
 }else if(isset($_POST['medicine']) && isset($_POST['amount'])){
 	include_once '../../Application/RegisterMedicine.php';
-
-	$pharmacyId = 1;
+  session_start();
 	$rm = new RegisterMedicine();
-	$rm->add($pharmacyId, $_POST['medicine'], $_POST['amount']);
+	$rm->add($_SESSION['userId'], $_POST['medicine'], $_POST['amount']);
+	header("Location: Pharmacy.php");
 }
+
+include '../content/header.php';
+include '../../Application/pharmacyclass.php';
+
+$ph=new Pharmacy();
+$arry=$ph->fetch_Pharmacy($_SESSION['userId']);
+$arrys=$arry[0];
+$arrays=$ph->fetchmedicine($_SESSION['userId']);
+if(count($arrays)>0){
+$medicines=array();
+foreach ($arrays as $array){
+array_push($medicines, $ph->fetch_medicine_info($array["MedicineCode"]));
+}}
 ?>
     <div class="wrapper2 container" style="margin-top:50px">
 	    <div class="details col-sm-9">
@@ -37,96 +43,38 @@ if(isset($_POST['Code']) && isset($_POST['EnName']) && isset($_POST['ArName']) &
 				<h3> notes :<?php echo $arrys["Notes"];?></h3>
 				<h3>decribition :<?php echo $arrys["Describition"];?></h3>
 			</div>
-			 <button class=" btn btn-lg btn-primary"> edit</button>
 	    </div>
-	     <div class="col-xs-6 col-sm-3 sidebar-offcanvas" id="sidebar">
-          <div class="list-group">
-            <a href="" data-toggle="modal" data-target="#bind" class="list-group-item active">Add pharmacy patient</a>
-            <a href="#" class="list-group-item">Link</a>
-          </div>
-        </div>
     </div>
-    <div class="modal fade" id="bind" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-            <div class="modal-dialog" role="document">
-              <div class="modal-content bind">
-              <div class="darklay">
-                <div class="modal-header">
-                  <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                </div>
-                <div class="modal-body">
-                 <form action="Pharmacy.php" method="post" target="_top">
-		<div class="form-group row">
-			<label for="example-text-input" class="col-xs-3 col-form-label">First Name:</label>
-			<div class="col-xs-5">
-				<input class="form-control" name="FName" type="text" placeholder="First Name" id="example-text-input" required="required">
-			</div>
-		</div>
-		<div class="form-group row">
-			<label for="example-text-input" class="col-xs-3 col-form-label">Last Name:</label>
-			<div class="col-xs-5">
-				<input class="form-control" name="LName" type="text" placeholder="Last Name" id="example-text-input" required="required">
-			</div>
-		</div>
-		<div class="form-group row">
-			<label class="checkbox-inline"><input type="checkbox" value="">Male</label>
-			<label class="checkbox-inline"><input type="checkbox" value="">Female</label>
-		</div>
-		<div class="form-group row">
-			<label for="example-text-input" class="col-xs-3 col-form-label">Height</label>
-			<div class="col-xs-5">
-				<input class="form-control" name="Height" type="text" placeholder="Height" id="example-text-input" required="required">
-			</div>
-
-		</div>
-		<div class="form-group row">
-			<label for="example-text-input" class="col-xs-3 col-form-label">weight</label>
-			<div class="col-xs-5">
-				<input class="form-control" name="weight" type="text" placeholder="weight" id="example-text-input" required="required">
-			</div>
-		</div>
-		
-		
-	</form>
-                <div class="modal-footer">
-        			<div align="center">
-  						<input type="submit" class="btn-primary btn" value="submit">
-  					</div>      
-                </div>
-              </div>
-            </div>
-            </div>
-
-         </div>
-    </div>
-    <a href="PatientHistory.php"><button class="btn btn-lg btn-primary">Patient History</button></a>
 	<div class="container col-md-12">
 		  <h2>Medicine_Table</h2>
 		  <div class="table-responsive">
 		  <table class="table">
 		    <thead>
 		      <tr>
-		        <th>#</th>
 		        <th>Parcode</th>
 		        <th>English name</th>
 		        <th>Arabic name</th>
 		        <th>Amount</th>
-		        <th>expire date</th>
-		        <th>edit</th>
+		        
+		      
 
 		        <!--ask about medicine amount and expire date-->
 		      </tr>
 		    </thead>
 		    <tbody>
+		     
 		      <tr>
-		      <!--ADDed medcines displau-->
-		        <td>1</td>
-		        <td>Anna</td>
-		        <td>Pitt</td>
-		        <td>35</td>
-		        <td>New York</td>
-		        <td>USA</td>
-		        <td><button class="btn-primary btn"> edit medicine</button></td>
-		      </tr>
+		      <?php
+		   for ($x = 0; $x <sizeof($arrays); $x++) {
+    			echo "<td>".$arrays[$x]['MedicineCode']."</td>";
+    			echo "<td>".$medicines[$x][$x]["EnName"]."</td>";
+    			echo "<td>".$medicines[$x][$x]["ArName"]."</td>";
+    			echo "<td>".$arrays[$x]['Amount']."</td>";
+               }
+					
+		    	
+		     ?>
+		     </tr>
 		    </tbody>
 		  </table>
 		  </div>

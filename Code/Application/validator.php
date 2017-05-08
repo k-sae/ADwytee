@@ -63,7 +63,9 @@ include_once 'PharmacyInfo.php';
               if(sizeof($g->login($log)) == 0){
                 echo '0';
               }else{
-                echo $arr[0]['Type'];
+                $data[0] = $arr[0]['Type'];
+                $data[1] = $arr[0]['Id'];
+                print json_encode($data);
               }
 
              }
