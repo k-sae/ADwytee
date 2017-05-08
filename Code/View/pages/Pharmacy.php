@@ -37,11 +37,11 @@ array_push($medicines, $ph->fetch_medicine_info($array["MedicineCode"]));
 	    <div class="details col-sm-9">
 			<div class="img col-sm-2"></div>
 			<div class="info col-sm-10">
-				<h3>name :<?php echo $arrys["Name"];?> </h3>
-				<h3>Location : <?php echo $arrys["Latitude"] .','. $arrys["Longitude"] ;?></h3>
-				<h3>Telephone :<?php echo $arrys["Telephone"];?> </h3>
-				<h3> notes :<?php echo $arrys["Notes"];?></h3>
-				<h3>decribition :<?php echo $arrys["Describition"];?></h3>
+				<h3><?php echo $language["name"];?> :<?php echo $arrys["Name"];?> </h3>
+				<h3><?php echo $language["location"];?> : <?php echo $arrys["Latitude"] .','. $arrys["Longitude"] ;?></h3>
+				<h3><?php echo $language["telephone"];?> :<?php echo $arrys["Telephone"];?> </h3>
+				<h3><?php echo $language["notes"];?> :<?php echo $arrys["Notes"];?></h3>
+				<h3><?php echo $language["describtion"];?> :<?php echo $arrys["Describition"];?></h3>
 			</div>
 	    </div>
     </div>
@@ -51,10 +51,10 @@ array_push($medicines, $ph->fetch_medicine_info($array["MedicineCode"]));
 		  <table class="table">
 		    <thead>
 		      <tr>
-		        <th>Parcode</th>
-		        <th>English name</th>
-		        <th>Arabic name</th>
-		        <th>Amount</th>
+		        <th><?php echo $language["barcode"];?></th>
+		        <th><?php echo $language["medicineenname"];?></th>
+		        <th><?php echo $language["medicineenname"];?></th>
+		        <th><?php echo $language["amount"];?></th>
 		        
 		      
 

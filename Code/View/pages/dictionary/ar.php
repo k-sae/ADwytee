@@ -91,5 +91,10 @@ $language['editreservation'] = "عدّل الحجز";
 $language['editdate'] = "عدّل ميعاد الاستشارة";
 $language['edit'] = "عدّل";
 $language['date'] = "الميعاد";
+//pharmacypage
+$language['location'] = "الموقع";
+$language['telephone'] = "رقم الهاتف";
+$language['notes'] = "ملاحظات";
+$language['describtion'] = "الشرح";
 
 ?>

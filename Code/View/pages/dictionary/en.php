@@ -90,5 +90,10 @@ $language['editreservation'] = "Edit the Reservation";
 $language['editdate'] = "Edit the consultation time";
 $language['edit'] = "Edit";
 $language['date'] = "Date";
+//pharmacypage
+$language['location'] = "Location";
+$language['telephone'] = "Telephone";
+$language['notes'] = "notes";
+$language['describtion'] = "describtion";
 
 ?>
