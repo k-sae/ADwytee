@@ -50,10 +50,11 @@ var data = $("#preg-form").serialize();
             data : data
              ,success :  function(data)
             {
+            	 //TODO khaled
                 if(data=="1"){
-                console.log("fuck off");
+                	alert("wrong or dublicated mail");
                 }else{
-                	console.log("welcome2");
+                	alert("Registered");
                 }
 
             }
@@ -63,6 +64,13 @@ var data = $("#preg-form").serialize();
 function registerphfunction(){
 $('#phreg-form').validate({ // initialize the plugin
         rules: {
+        	email: {
+                email: true
+            },
+            pass: {
+            	minlength: 8,
+            	maxlength: 16
+            }
             },
         messages: {
        
@@ -82,10 +90,11 @@ var data = $("#phreg-form").serialize();
             data : data
              ,success :  function(data)
             {
+            	 //TODO khaled
               if(data=="1"){
-                console.log("fuck off")	;
+            	  alert("wrong or dublicated mail");
                 }else{
-                	console.log("welcome");
+                	   alert("Registered");
                 }
 
             }
