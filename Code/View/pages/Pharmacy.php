@@ -63,18 +63,20 @@ array_push($medicines, $ph->fetch_medicine_info($array["MedicineCode"]));
 		    </thead>
 		    <tbody>
 		     
-		      <tr>
+
 		      <?php
 		   for ($x = 0; $x <sizeof($arrays); $x++) {
-    			echo "<td>".$arrays[$x]['MedicineCode']."</td>";
-    			echo "<td>".$medicines[$x][$x]["EnName"]."</td>";
-    			echo "<td>".$medicines[$x][$x]["ArName"]."</td>";
-    			echo "<td>".$arrays[$x]['Amount']."</td>";
+    			echo"<tr>
+                <td>".$arrays[$x]['MedicineCode']."</td>";
+    			echo "<td>".$medicines[$x][0]["EnName"]."</td>";
+    			echo "<td>".$medicines[$x][0]["ArName"]."</td>";
+    			echo "<td>".$arrays[$x]['Amount']."</td>
+              </tr>";
                }
 					
 		    	
 		     ?>
-		     </tr>
+
 		    </tbody>
 		  </table>
 		  </div>
