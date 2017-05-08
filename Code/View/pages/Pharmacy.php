@@ -21,18 +21,17 @@ if(isset($_POST['Code']) && isset($_POST['EnName']) && isset($_POST['ArName']) &
 }
 
 include '../content/header.php';
-include '../../Database/pharmacy.php';
 include '../../Application/pharmacyclass.php';
 
-$ph=new Pharmacy_Query();
+$ph=new Pharmacy();
 $arry=$ph->fetch_Pharmacy($_SESSION['userId']);
 $arrys=$arry[0];
-$ph1=new Pharmacy();
-$arrays=$ph1->fetchmedicine($_SESSION['userId']);
+$arrays=$ph->fetchmedicine($_SESSION['userId']);
+if(count($arrays)>0){
 $medicines=array();
 foreach ($arrays as $array){
-array_push($medicines, $ph1->fetch_medicine_info($array["MedicineCode"]));
-}
+array_push($medicines, $ph->fetch_medicine_info($array["MedicineCode"]));
+}}
 ?>
     <div class="wrapper2 container" style="margin-top:50px">
 	    <div class="details col-sm-9">
@@ -44,7 +43,6 @@ array_push($medicines, $ph1->fetch_medicine_info($array["MedicineCode"]));
 				<h3> notes :<?php echo $arrys["Notes"];?></h3>
 				<h3>decribition :<?php echo $arrys["Describition"];?></h3>
 			</div>
-			 <button class=" btn btn-lg btn-primary"> edit</button>
 	    </div>
     </div>
 	<div class="container col-md-12">
@@ -53,7 +51,6 @@ array_push($medicines, $ph1->fetch_medicine_info($array["MedicineCode"]));
 		  <table class="table">
 		    <thead>
 		      <tr>
-		        <th>#</th>
 		        <th>Parcode</th>
 		        <th>English name</th>
 		        <th>Arabic name</th>
@@ -65,20 +62,19 @@ array_push($medicines, $ph1->fetch_medicine_info($array["MedicineCode"]));
 		      </tr>
 		    </thead>
 		    <tbody>
+		     
 		      <tr>
-		      <!--ADDed medcines displau-->
-		        <td>1</td>
-		        <td>Anna</td>
-		        <td>Pitt</td>
-		        <td>35</td>
-		        <td>New York</td>
-		        <td>USA</td>
-		      </tr>
 		      <?php
-		   
+		   for ($x = 0; $x <sizeof($arrays); $x++) {
+    			echo "<td>".$arrays[$x]['MedicineCode']."</td>";
+    			echo "<td>".$medicines[$x][$x]["EnName"]."</td>";
+    			echo "<td>".$medicines[$x][$x]["ArName"]."</td>";
+    			echo "<td>".$arrays[$x]['Amount']."</td>";
+               }
 					
 		    	
 		     ?>
+		     </tr>
 		    </tbody>
 		  </table>
 		  </div>

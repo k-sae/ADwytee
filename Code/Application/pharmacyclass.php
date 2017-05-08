@@ -20,6 +20,9 @@ return $this->pharmacy ->fetch_medicine($id);
 public function fetch_medicine_info($code){
 return $this->pharmacy ->fetch_medicine_info($code);
 }
+public function fetch_Pharmacy($id){
+	return $this->pharmacy ->fetch_Pharmacy($id);
+}
 }
 
 
