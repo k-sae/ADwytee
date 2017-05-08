@@ -141,7 +141,7 @@ var data = $(".login-form").serialize();
               if(data=="0"){
                 alert("Incorrect email or password!");
               }else{
-								alert(data);
+								
                var arr = JSON.parse(data);
                 alert("Welcome!");
                window.location.href+="?userType=" + arr[0] + "&userId=" + arr[1];

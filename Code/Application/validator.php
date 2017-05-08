@@ -67,7 +67,7 @@ include_once 'Email_Config.php';
               $log->mail=$_POST["email"];
               $log->password=$_POST["password"];
               $arr = $g->login($log);
-              var_dump($arr);
+              
               if(sizeof($g->login($log)) == 0){
                 echo '0';
               }else{
