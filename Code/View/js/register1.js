@@ -22,16 +22,13 @@ $('#phreg-form').submit(function(event){
 	event.preventDefault();
 	registerfunction();
 });
-$('.login-form').submit(function(event){
-	event.preventDefault();
-	loginfunction();
-});
 function registerfunction(){
 $('#preg-form').validate({ // initialize the plugin
         rules: {
             email: {
                 required: true,
-                email: true
+                email: true,
+                maxlenght: 64
             },
             FName: {
                 required: true,
@@ -46,16 +43,16 @@ $('#preg-form').validate({ // initialize the plugin
             	minlength:8
             },government:{
             	required:true,
-            	minlength:5
+            	minlength:2
             },street_no:{
             	required:true,
-            	minlength:5
+            	minlength:2
             },phone_number:{
             	required:true,
-            	minlength:5
+            	minlength:9
             },district:{
             	required:true,
-            	minlength:5}
+            	minlength:2}
             },submitHandler: submitForm
     })
 
@@ -74,7 +71,7 @@ var data = $("#preg-form").serialize();
                 if(data=="1"){
                 console.log("fuck off");
                 }else{
-                	console.log("welcome");
+                	console.log("welcome2");
                 }
 
             }
@@ -90,14 +87,17 @@ $('#phreg-form').validate({ // initialize the plugin
             },telephone:{
                 required:true,
             	number: true
-            }},
+            },pass:{
+            	required:true,
+            	minlength:8
+            },Name:{
+            	required:true,
+            	minlength:8
+            }
+            },
         messages: {
        
         },
-
-
-
-
              submitHandler: submitForm1
     })
 
@@ -153,7 +153,12 @@ var data = $(".login-form").serialize();
             data : data
              ,success :  function(data)
             {
-             
+              if(data=="0"){
+                alert("Incorrect email or password!");
+              }else{
+                alert("welcome!");
+                window.location.href+="?userType=" + data;
+              }
 
             }
 

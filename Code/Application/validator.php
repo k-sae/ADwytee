@@ -25,6 +25,8 @@ include_once 'PharmacyInfo.php';
              $info->goverment=$_POST["government"];
              $info->district=$_POST["district"];
              $info->street_No=$_POST["street_no"];
+             $info->latitude = $_POST['lat'];
+             $info->longitude= $_POST['long'];
              $g->register($reginfo,$info);
              
 
@@ -46,16 +48,24 @@ include_once 'PharmacyInfo.php';
              $info= new PharmacyInfo();
              $info->name=$_POST['Name'];
              $info->notes=$_POST['notes'];
+             $info->latitude = $_POST['lat'];
+             $info->longitude= $_POST['long'];
              $info->describition=$_POST['describition'];
              $info->telephonNo=$_POST["telephone"];
              $g->registerph($reginfo,$info);}
 
              }if(isset($_POST["login"])) {
-                  $g=new Guest();
-             $log=new loginInfo();
-             $log->mail=$_POST["email"];
-             $log->password=$_POST["password"];
-              print_r($g->login($log)) ;
+              $g=new Guest();
+              $log=new loginInfo();
+              $log->mail=$_POST["email"];
+              $log->password=$_POST["password"];
+              $arr = $g->login($log);
+              if(sizeof($g->login($log)) == 0){
+                echo '0';
+              }else{
+                echo $arr[0]['Type'];
+              }
+
              }
 
             

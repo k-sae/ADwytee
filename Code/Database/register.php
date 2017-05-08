@@ -50,12 +50,23 @@ class Register_Query
 		$gov=$pinfo->goverment;
 		$dis=$pinfo->district;
 		$str=$pinfo->street_No;
+<<<<<<< HEAD
 		$query1="INSERT INTO `PATIENT` (`Key`, `FName`, `LName`, `Gender`, `Birthdate`, `Height`, `Weight`, `StreetNo`, `Gov`, `District`, `Telephone`, `UserId`, `Latitude`, `Longitude`) VALUES ('$key', '$fname', '$lname', '1', '2017-05-02', '0', '0', '$str', '$gov', '$dis', '$tele', '$id', '0', '0')";
     $this->database->database_query($query1);
 
     return True;      
 
 
+=======
+		$lat = $pinfo->latitude;
+    $long = $pinfo->longitude;
+		$query1="INSERT INTO `PATIENT` (`Key`, `FName`, `LName`, `Gender`, `Birthdate`, `Height`, `Weight`, `StreetNo`, `Gov`, `District`, `Telephone`, `UserId`, `Latitude`, `Longitude`) VALUES ('$key', '$fname', '$lname', '1', '2017-05-02', '0', '0', '$str', '$gov', '$dis', '$tele', '$id', '$lat', '$long')";
+        $this->database->database_query($query1);
+        //$this->database->fetch_query($query1);
+          
+        
+   
+>>>>>>> develop
 	}
 	public function registerph(RegisterInfo $reginfo,PharmacyInfo $pinfo)
 	{
@@ -65,7 +76,7 @@ class Register_Query
 		 $this->database->database_query($query);
 		$id = mysqli_insert_id($this->database->get_con());
 		$key=md5($id);
-		$query1="INSERT INTO `PHARMACY` (`Key`, `UserId`, `Name`, `Notes`, `Describition`, `Latitude`, `Longitude`, `Telephone`) VALUES ('$key', '$id', '$pinfo->name', '$pinfo->notes', '$pinfo->describition', '0', '0', '$pinfo->telephonNo');";
+		$query1="INSERT INTO `PHARMACY` (`Key`, `UserId`, `Name`, `Notes`, `Describition`, `Latitude`, `Longitude`, `Telephone`) VALUES ('$key', '$id', '$pinfo->name', '$pinfo->notes', '$pinfo->describition', '$pinfo->latitude', '$pinfo->longitude', '$pinfo->telephonNo');";
         $this->database->database_query($query1);
         //$this->database->fetch_query($query1);
 
@@ -75,7 +86,7 @@ class Register_Query
 	public function login(LoginInfo $loginfo)
 	{
 	$result=array();
-    $query ="SELECT `Id` FROM `USER` WHERE `Password` LIKE '$loginfo->password' AND `Mail` LIKE '$loginfo->mail' ";
+    $query ="SELECT `Id`, `Type` FROM `USER` WHERE `Password` LIKE '$loginfo->password' AND `Mail` LIKE '$loginfo->mail' ";
     $result = $this->database->fetch_query($query);
     return $result;
     }

@@ -10,7 +10,8 @@ $language['reservations'] = "الحجوزات";
 $language['pharmacyprofile'] ="صفحة الصيديلة الشخصية";
 $language['about'] ="عنّا";
 $language['register'] ="سجّل";
-$language['login'] ="دخول";
+$language['login'] ="تسجيل الدخول";
+$language['logout'] ="تسجيل الخروج";
 $language['contact'] ="تواصل معنا";
 //order
 $language['nomedicine']= "لا يوجد دواء  كافي ";

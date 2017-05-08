@@ -3,6 +3,11 @@
 include_once 'language.php';
 include_once '../../Application/NotificationManger.php';
 
+if(isset($_GET['userType'])){
+  $_SESSION['userType'] = $_GET['userType'];
+  header("Location: index.php");
+}
+
 if ((!isset($_GET["lat"]) && !isset($_SESSION["latitude"])) || (!isset($_GET["long"]) && !isset($_SESSION["longitude"]))) {
   echo ' <script src="../js/Location.js"></script> ';
   echo ' <script> getLocation(); </script> ';
@@ -10,10 +15,10 @@ if ((!isset($_GET["lat"]) && !isset($_SESSION["latitude"])) || (!isset($_GET["lo
 else if (!isset($_GET["lat"]) || !isset($_GET["lat"])) {
   $_SESSION["latitude"] = $_SESSION["latitude"];
   $_SESSION["longitude"] = $_SESSION["longitude"];
-  //session_destroy();
 }else{
  $_SESSION["latitude"] =  $_GET["lat"];
  $_SESSION["longitude"] = $_GET["long"];
+  header("Location: index.php");
 }
 $notification =  new NotificationManger();
 $_SESSION["notification"] = $notification->check_Notification(1);
@@ -50,50 +55,28 @@ $_SESSION["notification"] = $notification->check_Notification(1);
 
         <div id="navbar" class="collapse navbar-collapse">
           <ul class="nav navbar-nav">
-            <!--notification-->
-  <div class="dropdown">
-  <li class="<?php if($_SESSION["notification"] == True) echo ' n-active';?>"
-  id="dLabel" role="button" data-toggle="dropdown" data-target="#shownotification">
-  <i class="fa fa-globe fa-2x " aria-hidden="true" onclick="hidenotification()" id="notification" ></i></li>
-  <ul class="dropdown-menu notifications" role="menu" aria-labelledby="dLabel" data-target="#show">
-<div class="notification-heading"><h4 class="menu-title"><?php echo  $language['notification']?></h4>
-    </div>
-    <li class="divider"></li>
-   <div class="notifications-wrapper">
-     <a class="content" href="#">
-       <div class="notification-item">
-        <?php  $notification_value  =$notification->get_Notification(1);
-        if($notification_value  == False){
 
-          echo '<h4 class="item-title">'.$language['nonnotification'].'</h4>';
-        }
-        ?></div>
-  </a>
-  </div>
-  </ul>
+            <?php
 
-  </div>
-            <li class="<?php if($page=="stat"){echo "active";}?>"><a href="statistics.php"><?php echo  $language['stat']?></a></li>
-            <li class="<?php if($page=="reservations"){echo "active";}?>"><a href="reservations.php"><?php echo ($language['reservations']); ?></a></li>
-           <li ><a href="Pharmacy.php"><?php echo  $language['pharmacyprofile']?></a></li>
-            <li class="<?php if($page=="orderPage"){echo "active";}?>"><a href="orderPage.php"><?php echo  $language['orderpage']?></a></li>
-            <li class="<?php if($page=="pharmacyorder"){echo "active";}?>"><a href="pharmacyOrder.php"><?php echo  $language['pharmacyorder']?></a></li>
-            <li><a href="#about"><?php echo  $language['about']?></a></li>
-            <li ><a href="" data-toggle="modal" data-target="#myModal"><?php echo  $language['login']?></a></li>
-            <li><a href="#contact"><?php echo  $language['contact']?></a></li>
+            if(!isset($_SESSION['userType'])){
+              include_once 'nav/nav.php';
+            }else{
+              include_once 'nav/nav'. $_SESSION['userType'] .'.php';
+            }
+
+            ?>
 
             <li>
-            <form method="post">
-              <select id="langlist" name="lang" onchange="this.form.submit()" class="langselect">
-                <option dir="rtl" value="ar"> عربى </option>
-                <option dir="ltr" value="en"> English </option>
-              </select>
-              <script>
-                document.getElementById('langlist').value = "<?php echo $_SESSION["language"]; ?>";
-              </script>
-            </form>
-
-          </li>
+              <form method="post">
+                <select id="langlist" name="lang" onchange="this.form.submit()" class="langselect">
+                  <option dir="rtl" value="ar"> عربى </option>
+                  <option dir="ltr" value="en"> English </option>
+                </select>
+                <script>
+                  document.getElementById('langlist').value = "<?php echo $_SESSION["language"]; ?>";
+                </script>
+              </form>
+            </li>
           </ul>
         </div>
       </div>
@@ -112,7 +95,7 @@ $_SESSION["notification"] = $notification->check_Notification(1);
                     <br>
                     <input type="password" name="password" placeholder="Password">
                     <br>
-                    <button class="btn btn-primary" type="submit" name="login"><?php echo  $language['login']?></button>
+                    <button class="btn btn-primary" type="submit" name="login" onclick="loginfunction()"><?php echo  $language['login']?></button>
                   </form>
                   <p>No Acount yet? <a href="../pages/RegisterPage.php">Please register </a><p>
                 </div>
