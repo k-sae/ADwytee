@@ -4,7 +4,7 @@ $(document).ready(function(){
 			$(".regasph").addClass("fade");
 			$(".regasph").hide();
 			$(".regasp").show();
-		
+
 	})
 	$("#regph").click(function(){
 	$(".regasph").removeClass("fade");
@@ -12,7 +12,7 @@ $(document).ready(function(){
 		$(".regasp").hide();
 		$(".regasph").show();
 	});
-	
+
 });
 $('#preg-form').submit(function(event){
 	event.preventDefault();
@@ -50,14 +50,19 @@ var data = $("#preg-form").serialize();
             data : data
              ,success :  function(data)
             {
-            	 //TODO khaled
+
                 if(data=="1"){
                 	alert("wrong or dublicated mail");
                 }else{
                 	alert("Registered");
+									 window.location.replace ( "../pages/pharmacyorder.php");
+									var arr = JSON.parse(data);
+
+								// window.location.href ="index.php?userType=" + arr[0] + "&userId=" + arr[1];
+                }
                 }
 
-            }
+
 
     })
 }
@@ -73,7 +78,7 @@ $('#phreg-form').validate({ // initialize the plugin
             }
             },
         messages: {
-       
+
         },
              submitHandler: submitForm1
     })
@@ -90,11 +95,14 @@ var data = $("#phreg-form").serialize();
             data : data
              ,success :  function(data)
             {
-            	 //TODO khaled
+
               if(data=="1"){
             	  alert("wrong or dublicated mail");
                 }else{
+									alert(data);
+									var arr = JSON.parse(data);
                 	   alert("Registered");
+										 window.location.href+="?userType=" + arr[0] + "&userId=" + arr[1];
                 }
 
             }
@@ -133,9 +141,10 @@ var data = $(".login-form").serialize();
               if(data=="0"){
                 alert("Incorrect email or password!");
               }else{
-                var arr = JSON.parse(data);
+								alert(data);
+               var arr = JSON.parse(data);
                 alert("Welcome!");
-                window.location.href+="?userType=" + arr[0] + "&userId=" + arr[1];
+               window.location.href+="?userType=" + arr[0] + "&userId=" + arr[1];
               }
 
             }

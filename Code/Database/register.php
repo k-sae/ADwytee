@@ -40,7 +40,9 @@ class Register_Query
 	{
 		$mail=$reginfo->loginInfo->mail;
 		$pass=$reginfo->loginInfo->password;
-		$query ="INSERT INTO `USER` (`Id`, `Password`, `Mail`, `Type`, `Language`) VALUES (NULL, '$pass', '$mail', '3', '1')";
+		$hasing_pass= $this->hash_pass($pass);
+
+		$query ="INSERT INTO `USER` (`Id`, `Password`, `Mail`, `Type`, `Language`) VALUES (NULL, '$hasing_pass', '$mail', '3', '1')";
 		$this->database->database_query($query);
 		$id = mysqli_insert_id($this->database->get_con());
 		$key=md5($id);
@@ -50,45 +52,59 @@ class Register_Query
 		$gov=$pinfo->goverment;
 		$dis=$pinfo->district;
 		$str=$pinfo->street_No;
-<<<<<<< HEAD
-		$query1="INSERT INTO `PATIENT` (`Key`, `FName`, `LName`, `Gender`, `Birthdate`, `Height`, `Weight`, `StreetNo`, `Gov`, `District`, `Telephone`, `UserId`, `Latitude`, `Longitude`) VALUES ('$key', '$fname', '$lname', '1', '2017-05-02', '0', '0', '$str', '$gov', '$dis', '$tele', '$id', '0', '0')";
-    $this->database->database_query($query1);
-
-    return True;      
-
-
-=======
-		$lat = $pinfo->latitude;
+    $lat = $pinfo->latitude;
     $long = $pinfo->longitude;
 		$query1="INSERT INTO `PATIENT` (`Key`, `FName`, `LName`, `Gender`, `Birthdate`, `Height`, `Weight`, `StreetNo`, `Gov`, `District`, `Telephone`, `UserId`, `Latitude`, `Longitude`) VALUES ('$key', '$fname', '$lname', '1', '2017-05-02', '0', '0', '$str', '$gov', '$dis', '$tele', '$id', '$lat', '$long')";
         $this->database->database_query($query1);
-        //$this->database->fetch_query($query1);
-          
-        
-   
->>>>>>> develop
+				$data['id']= $id;
+				$data['type'] = 3;
+    return $data;
+
+
+
+	}
+	public function hash_pass($pass){
+
+$hash = password_hash($pass,PASSWORD_DEFAULT);
+
+
+return $hash;
 	}
 	public function registerph(RegisterInfo $reginfo,PharmacyInfo $pinfo)
 	{
 		$mail=$reginfo->loginInfo->mail;
 		$pass=$reginfo->loginInfo->password;
-		$query ="INSERT INTO `USER` (`Id`, `Password`, `Mail`, `Type`, `Language`) VALUES (NULL, '$pass', '$mail', '2', '1')";
+		$hasing_pass= $this->hash_pass($pass);
+
+		$query ="INSERT INTO `USER` (`Id`, `Password`, `Mail`, `Type`, `Language`) VALUES (NULL, '$hasing_pass', '$mail', '2', '1')";
 		 $this->database->database_query($query);
 		$id = mysqli_insert_id($this->database->get_con());
 		$key=md5($id);
 		$query1="INSERT INTO `PHARMACY` (`Key`, `UserId`, `Name`, `Notes`, `Describition`, `Latitude`, `Longitude`, `Telephone`) VALUES ('$key', '$id', '$pinfo->name', '$pinfo->notes', '$pinfo->describition', '$pinfo->latitude', '$pinfo->longitude', '$pinfo->telephonNo');";
         $this->database->database_query($query1);
-        //$this->database->fetch_query($query1);
-
+      $data['id']= $id;
+			$data['type'] = 2;
+    return $data;
 
 
 	}
 	public function login(LoginInfo $loginfo)
 	{
-	$result=array();
-    $query ="SELECT `Id`, `Type` FROM `USER` WHERE `Password` LIKE '$loginfo->password' AND `Mail` LIKE '$loginfo->mail' ";
-    $result = $this->database->fetch_query($query);
-    return $result;
+	  $result=array();
+		$query ="SELECT `Password`, `Id`, `Type` FROM `USER` WHERE  `Mail` LIKE '$loginfo->mail' ";
+		$result = $this->database->fetch_query($query);
+
+		if(isset($result)){
+
+ if (password_verify($loginfo->password, $result[0]['Password'])){
+return $result;
+    }
+	}
+		else {
+			echo "false";
+			return 0;
+		}
+
     }
 }
 ?>
