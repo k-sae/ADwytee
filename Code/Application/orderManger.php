@@ -78,7 +78,7 @@ public function return_all_pharmacy(){
  }
  public function end_order($id)
  {
-  $check = True;//$this->order_query->end_order($id);
+  $check = $this->order_query->end_order($id);
   if ($check == True){
     $this->order_query->edit_medicine_amount($id);
   }
