@@ -24,11 +24,10 @@ if (isset($_POST['newOrder']))
 	$order->user = ($_SESSION['userId']);
 	$orderManager = new orderManger();
 	$orderManager->newOrder($order);
+	header("Location: orderPage.php");
 }
 ?>
-
-<div class="container medicine-page-container">
-      <div class="row">
+<div class="site-wrapper" style="margin-top:30px">
         <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xs-offset-0 col-sm-offset-0 col-md-offset-3 col-lg-offset-3 toppad" >
 
           <div class="panel panel-info medicine-page-panel">
@@ -38,7 +37,7 @@ if (isset($_POST['newOrder']))
             <div class="panel-body">
               <div class="row">
 <!--               adding time to prevent image cashing -->
-                <div class="col-md-3 col-lg-3 " align="center"> <img alt="User Pic" src="../mimages/<?php echo $_GET['code']?>?t=<?php echo time()?>" class="img-circle img-responsive"> 
+                <div class="col-md-3 col-lg-3 " align="center"> <img alt="Medicine Image" src="../mimages/<?php echo $_GET['code']?>?t=<?php echo time()?>" class="img-circle img-responsive">
                 	<?php 
                 	if (isset($_SESSION["userType"]) && $_SESSION["userType"] == 2)
                 	{
@@ -103,7 +102,6 @@ if (isset($_POST['newOrder']))
           </div>
         </div>
       </div>
-    </div>
 
 <?php
 include '../content/footer.php';
