@@ -13,18 +13,12 @@ class Order
   public function setId($id)
   {
     $this->id =$id;
+    return this;
   }
   
   public static function orderBuilder()
   {
     return new Order();
-  }
-
-  public function build()
-  {
-      include_once '../Database/order.php';
-      // add new order
-      return this;
   }
 
   public function setUser($userid)

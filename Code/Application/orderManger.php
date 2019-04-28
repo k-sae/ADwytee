@@ -97,13 +97,8 @@ public function return_all_pharmacy(){
    $order_status=$this->order_query->get_Status($order_result[0]['status'])[0]['Status'];
    $pharmacy_name = $this->return_pharmacy_name($order_result[0]['PharmacyId']);
    $medicine = $this->order_query -> get_medicine_order($id);
-    $this->order = new Order ();
-     $this->order->setId($id);
-     $this->order->setPharmacy($pharmacy_name);
-     $this->order->setStatus($order_status);
-     $this->order->setDate($order_result[0]['date']);
-     $medicine_lenght =sizeof($medicine);
-     $medicine_array;
+   $medicine_lenght =sizeof($medicine);
+     $medicine_array = [];
      if($medicine_lenght){
      for( $i=0 ;$i< $medicine_lenght ; $i++){
        $medicine_array[$i] =new MedicineOrder();
@@ -112,7 +107,12 @@ public function return_all_pharmacy(){
 
        $medicine_array[$i]->setMedicine($medicine_name[0]['EnName']);
      }
-     $this->order->setMedicine($medicine_array);
+    $this->order = new Order ();
+    $this->order->setId($id)
+        ->setPharmacy($pharmacy_name)
+        ->setStatus($order_status)
+        ->setDate($order_result[0]['date'])
+        ->setMedicine($medicine_array);
 
      }
      return $this->order;
