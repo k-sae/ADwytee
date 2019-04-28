@@ -19,7 +19,7 @@ With an average of more than 31 million visits each month, Cars is the leading o
     	<h2 class="text-center">Meet our team</h2>
         <div class="row">
             <div class="teamimg col-xs-6 col-md-3">
-            <img src="../images/aboutus/me.jpg" width="100">
+            <img src="../images/aboutus/b.jpg" width="100">
             <h3>Belal Ibrahim</h3>
             <p>Vice President of Product Department</p>
             </div>

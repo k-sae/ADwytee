@@ -89,7 +89,7 @@ class Order_Query
        if ($this->check_medicine_amount($id)){
           $query ="UPDATE `ORDER` SET `status`=2 WHERE `Id` = $id ";
 
-
+           $status =  $this->database->fetch_query($query);
           return 0;
         }
         else{
