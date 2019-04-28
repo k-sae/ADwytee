@@ -14,26 +14,44 @@ class Order
   {
     $this->id =$id;
   }
+  
+  public static function orderBuilder()
+  {
+    return new Order();
+  }
+
+  public function build()
+  {
+      include_once '../Database/order.php';
+      // add new order
+      return this;
+  }
+
   public function setUser($userid)
   {
     $this->userId =$userid;
+    return $this;
   }
 
   public function setPharmacy($pharmacyId)
   {
     $this->pharmacyId =$pharmacyId;
+    return $this;
   }
   public function setDate($date)
   {
     $this->date =$date;
+    return $this;
   }
   public function setStatus($status)
   {
     $this->status =$status;
+    return $this;
   }
   public function setMedicine($medicine)
   {
     $this->medicine_order = $medicine;
+    return $this;
   }
    public function getId()
   {
