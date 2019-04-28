@@ -598,7 +598,7 @@ body {
 }
 
 #regmedbtn{
-  /*display: none;*/
+  display: none;
   margin-top:40%;
 }
 
