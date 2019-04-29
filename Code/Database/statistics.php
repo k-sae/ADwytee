@@ -17,7 +17,7 @@ class statistics_Query
         $this->database = DataBase :: getInstance($this->file_name2);
     }
 
-    public function fetch_stat()
+    public function fetch_stat_orders()
     {
       $query = "SELECT p.Name, m.EnName, m.Code, COUNT(o.status) AS NumberOfOrders, CURRENT_TIMESTAMP AS Time
                 FROM `PHARMACY`AS p
@@ -33,6 +33,24 @@ class statistics_Query
 
       return $result;
 
+    }
+
+    public function fetch_stat_pharmacy()
+    {
+      $query = "SELECT * from pharmacy";
+
+      $result = $this->database->fetch_query($query);
+
+      return $result;
+    }
+
+    public function fetch_stat_patient()
+    {
+      $query = "SELECT * from patient";
+
+      $result = $this->database->fetch_query($query);
+
+      return $result;
     }
 }
 
