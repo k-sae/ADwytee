@@ -37,7 +37,7 @@ class reportOrder extends FPDF implements report
 
         $this->SetFont('Arial','B',20);
         $this->Cell(65);
-        $this->Cell(60,20,'Statistics',0,1,'C');
+        $this->Cell(60,20,'Orders Statistics',0,1,'C');
         $this->Cell(190,0,'','T');
     }
 

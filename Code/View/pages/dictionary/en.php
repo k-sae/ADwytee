@@ -49,6 +49,9 @@ $language['requestdenied'] = "In Order to search,Please allow the request to kno
 $language['notification'] = "Notification";
 $language['nonnotification'] = "No new Notification";
 // Register labels
+$language['patient'] ="Patient";
+$language['pharmacy'] ="Pharmacy";
+$language['last_name'] ="Last Name";
 $language['first_name'] ="First Name";
 $language['last_name'] ="Last Name";
 $language['goverment'] ="Goverment";

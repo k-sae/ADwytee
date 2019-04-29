@@ -50,6 +50,8 @@ $language['medicineinorder'] ="الادوية الموجودة بالطلب";
 $language['amount'] = "الكمية";
 $language['medicinename'] = "اسم الدواء";
 // Register labels
+$language['patient'] ="مريض";
+$language['pharmacy'] ="صيدلية";
 $language['first_name'] ="الاسم الاول";
 $language['last_name'] ="اسم العائلة";
 $language['goverment'] ="المحافظة";

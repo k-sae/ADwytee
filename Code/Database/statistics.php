@@ -37,7 +37,7 @@ class statistics_Query
 
     public function fetch_stat_pharmacy()
     {
-      $query = "SELECT * from pharmacy";
+      $query = "SELECT * FROM `PHARMACY`";
 
       $result = $this->database->fetch_query($query);
 
@@ -46,7 +46,7 @@ class statistics_Query
 
     public function fetch_stat_patient()
     {
-      $query = "SELECT * from patient";
+      $query = "SELECT * from `PATIENT`";
 
       $result = $this->database->fetch_query($query);
 

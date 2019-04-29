@@ -37,7 +37,7 @@ class reportPharmacy extends FPDF implements report
 
         $this->SetFont('Arial','B',20);
         $this->Cell(65);
-        $this->Cell(60,20,'Statistics',0,1,'C');
+        $this->Cell(60,20,'Pharmacies Statistics',0,1,'C');
         $this->Cell(190,0,'','T');
     }
 
@@ -53,7 +53,7 @@ class reportPharmacy extends FPDF implements report
       $this->Cell(15,10,"No.",1,0,'C',true);
       $this->Cell(40,10,"Name",1,0,'C',true);
       $this->Cell(50,10,"Notes",1,0,'C',true);
-      $this->Cell(40,10,"Latitude",1,0,'C',true);
+      $this->Cell(40,10,"Description",1,0,'C',true);
       $this->Cell(40,10,"Telephone",1,0,'C',true);
       $this->Ln();
 
@@ -68,7 +68,7 @@ class reportPharmacy extends FPDF implements report
           $this->Cell(15, 8, $a + 1, 'LR', 0, 'C', $fill);
           $this->Cell(40, 8, $value['Name'], 'LR', 0, 'L', $fill);
           $this->Cell(50, 8, $value['Notes'], 'LR', 0, 'L', $fill);
-          $this->Cell(40, 8, $value['Latitude'], 'LR', 0, 'L', $fill);
+          $this->Cell(40, 8, $value['Describition'], 'LR', 0, 'L', $fill);
           $this->Cell(40, 8, $value['Telephone'], 'LR', 0, 'L', $fill);
           $this->Ln();
           $fill = !$fill;
@@ -81,9 +81,6 @@ class reportPharmacy extends FPDF implements report
       $this->Cell(185,0,'','T');
 
       $this->Ln();
-
-      $this->SetFont('Arial','I',10);
-      $this->Cell(40,8,'ON:'.$array[0]['Time']);
 
     }
 

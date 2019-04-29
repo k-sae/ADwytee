@@ -37,7 +37,7 @@ class reportPatient extends FPDF implements report
 
         $this->SetFont('Arial','B',20);
         $this->Cell(65);
-        $this->Cell(60,20,'Statistics',0,1,'C');
+        $this->Cell(60,20,'Patients Statistics',0,1,'C');
         $this->Cell(190,0,'','T');
     }
 
@@ -51,8 +51,8 @@ class reportPatient extends FPDF implements report
       $this->SetTextColor(255);
 
       $this->Cell(15,10,"No.",1,0,'C',true);
-      $this->Cell(40,10,"FName",1,0,'C',true);
-      $this->Cell(50,10,"LName",1,0,'C',true);
+      $this->Cell(40,10,"Name",1,0,'C',true);
+      $this->Cell(50,10,"Address",1,0,'C',true);
       $this->Cell(40,10,"Birthdate",1,0,'C',true);
       $this->Cell(40,10,"Telephone",1,0,'C',true);
       $this->Ln();
@@ -66,8 +66,8 @@ class reportPatient extends FPDF implements report
         foreach ($array as $a => $value) {
           $this->SetFont('Times', 'I', 14);
           $this->Cell(15, 8, $a + 1, 'LR', 0, 'C', $fill);
-          $this->Cell(40, 8, $value['FName'], 'LR', 0, 'L', $fill);
-          $this->Cell(50, 8, $value['LName'], 'LR', 0, 'L', $fill);
+          $this->Cell(40, 8, $value['FName']." ".$value['LName'], 'LR', 0, 'L', $fill);
+          $this->Cell(50, 8, $value['District'].", ".$value['Gov'], 'LR', 0, 'L', $fill);
           $this->Cell(40, 8, $value['Birthdate'], 'LR', 0, 'L', $fill);
           $this->Cell(40, 8, $value['Telephone'], 'LR', 0, 'L', $fill);
           $this->Ln();
@@ -81,9 +81,6 @@ class reportPatient extends FPDF implements report
       $this->Cell(185,0,'','T');
 
       $this->Ln();
-
-      $this->SetFont('Arial','I',10);
-      $this->Cell(40,8,'ON:'.$array[0]['Time']);
 
     }
 
