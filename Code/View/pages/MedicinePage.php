@@ -6,24 +6,14 @@ if (!isset($_GET['code']))
 }
 include_once '../content/header.php';
 include_once '../../Database/MedicineFetcher.php';
-include_once '../../Application/order.php';
-include_once '../../Application/orderManger.php';
-include_once '../../Application/medicineOrder.php';
+include_once '../../Application/MedicineOrderFacade.php';
 $medicinFetcher = new MedicineFetcher();
 $arr =  $medicinFetcher->fetch($_GET['code'])[0];
 if (isset($_POST['newOrder']))
 {
-	//TODO
-	$order = new Order();
-	$medicine_order = new MedicineOrder();
-	$medicine_order->medicine_id = ($_GET['code']);
-	$medicine_order->amount = 1;
-	$order->medicine_order = $medicine_order;
-	$order->pharmacy = ($_GET["phar"]);
-	//TODO edit this according to session later
-	$order->user = ($_SESSION['userId']);
-	$orderManager = new orderManger();
-	$orderManager->newOrder($order);
+	$medicineFacade = new MedicineOrderFacade();
+	$medicineFacade->orderMedicine();
+
 	header("Location: orderPage.php");
 }
 ?>
@@ -80,13 +70,22 @@ if (isset($_POST['newOrder']))
                         <td><?php echo  $language['desc']; ?></td>
                         <td><?php echo $arr["Descripton"] ?></td>
                       </tr>
+                      <form method="post">
+                          <?php if (isset($_GET["phar"]) && isset($_SESSION['userId']))
+                              echo "
+                                <tr>
+                                    <td>".$language['amount']."</td>
+                                    <td class=\"col-sm-4\"><input type=\"number\" name=\"amount\" class=\"form-control\" required></td>
+                                </tr>
+                                <tr>
+                                <td colspan='2'>
+                                <input type='submit' name='newOrder' class='btn btn-primary' value='".$language['ordernow']."'>
+                                </td>
+                                </tr>"?>
+                      </form>
+
                     </tbody>
                   </table>
-                  <form method="post">
-                  <?php if (isset($_GET["phar"]) && isset($_SESSION['userId']))
-                   echo "
-                  <input type='submit' name='newOrder' class='btn btn-primary' value='Order Now'>"?>
-                  </form>
                 </div>
               </div>
             </div>
