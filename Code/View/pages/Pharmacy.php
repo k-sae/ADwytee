@@ -33,20 +33,21 @@ foreach ($arrays as $array){
 array_push($medicines, $ph->fetch_medicine_info($array["MedicineCode"]));
 }}
 ?>
-    <div class="wrapper2 container" style="margin-top:50px">
+<div class="reg-back" style = "min-height: 100vh">
+    <div class="wrapper2 container" style="margin-top:30px">
 	    <div class="details col-sm-9">
-			<div class="img col-sm-2"></div>
 			<div class="info col-sm-10">
-				<h3><?php echo $language["name"];?> :<?php echo $arrys["Name"];?> </h3>
-				<h3><?php echo $language["location"];?> : <?php echo $arrys["Latitude"] .','. $arrys["Longitude"] ;?></h3>
-				<h3><?php echo $language["telephone"];?> :<?php echo $arrys["Telephone"];?> </h3>
-				<h3><?php echo $language["notes"];?> :<?php echo $arrys["Notes"];?></h3>
-				<h3><?php echo $language["describtion"];?> :<?php echo $arrys["Describition"];?></h3>
+				<h3><?php echo $language["name"];?>: <?php echo $arrys["Name"];?> </h3>
+				<h3><?php echo $language["location"];?>: <?php echo $arrys["Latitude"] .','. $arrys["Longitude"] ;?></h3>
+				<h3><?php echo $language["telephone"];?>: <?php echo $arrys["Telephone"];?> </h3>
+				<h3><?php echo $language["notes"];?>: <?php echo $arrys["Notes"];?></h3>
+				<h3><?php echo $language["describtion"];?>: <?php echo $arrys["Describition"];?></h3>
 			</div>
 	    </div>
     </div>
-	<div class="container col-md-12">
-		  <h2>Medicine_Table</h2>
+    <div class="container" style="padding-bottom:50px">
+	<div class="container darklay col-md-12" style="padding-bottom:30px">
+		  <h2>Medicine Table</h2>
 		  <div class="table-responsive">
 		  <table class="table">
 		    <thead>
@@ -55,14 +56,11 @@ array_push($medicines, $ph->fetch_medicine_info($array["MedicineCode"]));
 		        <th><?php echo $language["medicineenname"];?></th>
 		        <th><?php echo $language["medicineenname"];?></th>
 		        <th><?php echo $language["amount"];?></th>
-		        
-		      
 
 		        <!--ask about medicine amount and expire date-->
 		      </tr>
 		    </thead>
 		    <tbody>
-		     
 
 		      <?php
 		   for ($x = 0; $x <sizeof($arrays); $x++) {
@@ -73,20 +71,21 @@ array_push($medicines, $ph->fetch_medicine_info($array["MedicineCode"]));
     			echo "<td>".$arrays[$x]['Amount']."</td>
               </tr>";
                }
-					
-		    	
 		     ?>
 
 		    </tbody>
 		  </table>
 		  </div>
-		  <button class=" btn btn-primary" data-toggle="modal" data-target="#check_medicine">ADD_NEW_MEDICINE</button>
+		  <button class=" btn btn-primary" data-toggle="modal" data-target="#check_medicine">ADD NEW MEDICINE</button>
 		</div>
+    </div>
+</div>
+
 		<div class="modal fade" id="check_medicine" tabindex="-1" role="dialog" aria-labelledby="check_medicineLabel" aria-hidden="true">
 		  <div class="modal-dialog" role="document">
 		    <div class="modal-content">
 		      <div class="modal-header">
-		        <h5 class="modal-title" id="check_medicineLabel">Check</h5>
+		        <h5 class="modal-title" id="check_medicineLabel" style="color: black; ">Check</h5>
 		        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
 		          <span aria-hidden="true">&times;</span>
 		        </button>
@@ -97,7 +96,7 @@ array_push($medicines, $ph->fetch_medicine_info($array["MedicineCode"]));
 		        
 		      </div>
 		      <div class="modal-footer">
-		        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+		        <button type="button" class="btn btn-secondary" style="color: black; " data-dismiss="modal">Close</button>
 		       <button type="button" class="btn btn-primary" >Save changes</button>
 		      </div>
 		    </div>

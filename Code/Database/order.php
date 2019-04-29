@@ -144,7 +144,7 @@ class Order_Query
   	$query2 = "INSERT INTO `MEDICINE_ORDER`(`MedicineCode`, `OrderId`, `Amount`)
 				VALUES
 				($code,$id,1)";
-  	$this->database->database_query($query2);
+  	return $this->database->database_query($query2);
   }
   public function get_pending_orders($order)
   {
