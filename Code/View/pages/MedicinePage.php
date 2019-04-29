@@ -6,7 +6,10 @@ if (!isset($_GET['code']))
 }
 include_once '../content/header.php';
 include_once '../../Database/MedicineFetcher.php';
+include_once '../../Application/pharmacyclass.php';
 include_once '../../Application/MedicineOrderFacade.php';
+$pharm = new pharmacy();
+$med = $pharm->fetch_medicine_pharm($_GET['phar'], $_GET['code'])[0];
 $medicinFetcher = new MedicineFetcher();
 $arr =  $medicinFetcher->fetch($_GET['code'])[0];
 if (isset($_POST['newOrder']))
@@ -75,7 +78,7 @@ if (isset($_POST['newOrder']))
                               echo "
                                 <tr>
                                     <td>".$language['amount']."</td>
-                                    <td class=\"col-sm-4\"><input type=\"number\" name=\"amount\" class=\"form-control\" required></td>
+                                    <td class=\"col-sm-4\"><input type=\"number\" name=\"amount\" min='0' max='".$med['Amount']."' class=\"form-control\" required></td>
                                 </tr>
                                 <tr>
                                 <td colspan='2'>

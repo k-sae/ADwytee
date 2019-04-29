@@ -17,6 +17,9 @@ private $file_name= '../../Database/pharmacy.php';
 public function fetchmedicine($id){
 return $this->pharmacy ->fetch_medicine($id);
 }
+public function fetch_medicine_pharm($id, $code){
+      return $this->pharmacy ->fetch_medicine($id, $code);
+  }
 public function fetch_medicine_info($code){
 return $this->pharmacy ->fetch_medicine_info($code);
 }
