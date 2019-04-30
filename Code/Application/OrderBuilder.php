@@ -2,14 +2,28 @@
 /**
  *
  */
-class Order
+class OrderBuilder
 {
-  public $id;
+  public $id = null;
   public $date;
   public $user;
   public $pharmacy;
   public $status;
   public $medicine_order;
+
+  public function build()
+  {
+      # code...
+      $order = new Order();
+      $order->setDate($this->date);
+      $order->setId($this->id);
+      $order->setMedicine($this->medicine_order);
+      $order->setStatus($this->status);
+      $order->setUser($this->user);
+      return $order;
+
+  }
+
   public function setId($id)
   {
     $this->id =$id;
