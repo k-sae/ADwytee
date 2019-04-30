@@ -136,7 +136,7 @@ public function return_all_pharmacy(){
  	}
 
  }
- public function fech_deatails_pharmacy($id)
+ public function fetch_details_pharmacy($id)
  {
    $order_result = $this->order_query->fetch_order_pharmacy_details($id);
    if(isset($order_result)){
