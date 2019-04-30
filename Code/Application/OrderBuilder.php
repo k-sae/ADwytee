@@ -2,12 +2,13 @@
 /**
  *
  */
+include_once '../../Database/order.php';
 class OrderBuilder
 {
   public $id = null;
   public $date;
-  public $user;
-  public $pharmacy;
+  public $userId;
+  public $pharmacyId;
   public $status;
   public $medicine_order;
 
@@ -19,7 +20,8 @@ class OrderBuilder
       $order->setId($this->id);
       $order->setMedicine($this->medicine_order);
       $order->setStatus($this->status);
-      $order->setUser($this->user);
+      $order->setUser($this->userId);
+      $order->setPharmacy($this->pharmacyId);
       return $order;
 
   }
@@ -27,7 +29,7 @@ class OrderBuilder
   public function setId($id)
   {
     $this->id =$id;
-    return this;
+    return $this;
   }
 
   public function setUser($userid)
@@ -90,4 +92,4 @@ class OrderBuilder
  }
 }
 
- ?>
+?>

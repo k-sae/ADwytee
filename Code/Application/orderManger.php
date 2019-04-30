@@ -7,6 +7,7 @@ class orderManger
 private $file_name = '../../Database/order.php';
 private $file_name2 = '../../Application/order.php';
 private $file_name3 = '../../Application/medicineOrder.php';
+private $file_name4 = '../../Application/OrderBuilder.php';
 private $order_query;
 private $order;
   function __construct()
@@ -15,6 +16,7 @@ private $order;
    include_once ($this->file_name) ;
    include_once ($this->file_name2) ;
    include_once ($this->file_name3) ;
+   include_once ($this->file_name4) ;
      } catch (Exception $e) {
      echo "error in file name";
 
@@ -97,6 +99,7 @@ public function return_all_pharmacy(){
    $order_status=$this->order_query->get_Status($order_result[0]['status'])[0]['Status'];
    $pharmacy_name = $this->return_pharmacy_name($order_result[0]['PharmacyId']);
    $medicine = $this->order_query -> get_medicine_order($id);
+
     $this->order = new Order ();
      $this->order->setId($id);
      $this->order->setPharmacy($pharmacy_name);
@@ -140,13 +143,14 @@ public function return_all_pharmacy(){
    $order_status=$this->order_query->get_Status($order_result[0]['status'])[0]['Status'];
    $User_name = $this->return_user_name($order_result[0]['UserId']);
    $medicine = $this->order_query -> get_medicine_order($id);
-    $this->order = new Order ();
-     $this->order->setId($id);
-     $this->order->setUser($User_name);
-     $this->order->setStatus($order_status);
-     $this->order->setDate($order_result[0]['date']);
+    $this->order = (new OrderBuilder())
+        ->setId($id)
+        ->setUser($User_name)
+        ->setStatus($order_status)
+        ->setDate($order_result[0]['date'])
+        ->build();
      $medicine_lenght =sizeof($medicine);
-     $medicine_array;
+     $medicine_array = [];
      if($medicine_lenght){
      for( $i=0 ;$i< $medicine_lenght ; $i++){
        $medicine_array[$i] =new MedicineOrder();
