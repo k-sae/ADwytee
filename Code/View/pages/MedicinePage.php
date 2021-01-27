@@ -6,29 +6,21 @@ if (!isset($_GET['code']))
 }
 include_once '../content/header.php';
 include_once '../../Database/MedicineFetcher.php';
-include_once '../../Application/order.php';
-include_once '../../Application/orderManger.php';
-include_once '../../Application/medicineOrder.php';
+include_once '../../Application/pharmacyclass.php';
+include_once '../../Application/MedicineOrderFacade.php';
+$pharm = new pharmacy();
+$med = $pharm->fetch_medicine_pharm($_GET['phar'], $_GET['code'])[0];
 $medicinFetcher = new MedicineFetcher();
 $arr =  $medicinFetcher->fetch($_GET['code'])[0];
 if (isset($_POST['newOrder']))
 {
-	//TODO
-	$order = new Order();
-	$medicine_order = new MedicineOrder();
-	$medicine_order->medicine_id = ($_GET['code']);
-	$medicine_order->amount = 1;
-	$order->medicine_order = $medicine_order;
-	$order->pharmacy = ($_GET["phar"]);
-	//TODO edit this according to session later
-	$order->user = ($_SESSION['userId']);
-	$orderManager = new orderManger();
-	$orderManager->newOrder($order);
+	$medicineFacade = new MedicineOrderFacade();
+	$medicineFacade->orderMedicine();
+
+	header("Location: orderPage.php");
 }
 ?>
-
-<div class="container medicine-page-container">
-      <div class="row">
+<div class="site-wrapper" style="margin-top:30px">
         <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xs-offset-0 col-sm-offset-0 col-md-offset-3 col-lg-offset-3 toppad" >
 
           <div class="panel panel-info medicine-page-panel">
@@ -38,7 +30,7 @@ if (isset($_POST['newOrder']))
             <div class="panel-body">
               <div class="row">
 <!--               adding time to prevent image cashing -->
-                <div class="col-md-3 col-lg-3 " align="center"> <img alt="User Pic" src="../mimages/<?php echo $_GET['code']?>?t=<?php echo time()?>" class="img-circle img-responsive"> 
+                <div class="col-md-3 col-lg-3 " align="center"> <img alt="Medicine Image" src="../mimages/<?php echo $_GET['code']?>?t=<?php echo time()?>" class="img-circle img-responsive">
                 	<?php 
                 	if (isset($_SESSION["userType"]) && $_SESSION["userType"] == 2)
                 	{
@@ -81,13 +73,22 @@ if (isset($_POST['newOrder']))
                         <td><?php echo  $language['desc']; ?></td>
                         <td><?php echo $arr["Descripton"] ?></td>
                       </tr>
+                      <form method="post">
+                          <?php if (isset($_GET["phar"]) && isset($_SESSION['userId']))
+                              echo "
+                                <tr>
+                                    <td>".$language['amount']."</td>
+                                    <td class=\"col-sm-4\"><input type=\"number\" name=\"amount\" min='0' max='".$med['Amount']."' class=\"form-control\" required></td>
+                                </tr>
+                                <tr>
+                                <td colspan='2'>
+                                <input type='submit' name='newOrder' class='btn btn-primary' value='".$language['ordernow']."'>
+                                </td>
+                                </tr>"?>
+                      </form>
+
                     </tbody>
                   </table>
-                  <form method="post">
-                  <?php if (isset($_GET["phar"]) && isset($_SESSION['userId']))
-                   echo "
-                  <input type='submit' name='newOrder' class='btn btn-primary' value='Order Now'>"?>
-                  </form>
                 </div>
               </div>
             </div>
@@ -103,7 +104,6 @@ if (isset($_POST['newOrder']))
           </div>
         </div>
       </div>
-    </div>
 
 <?php
 include '../content/footer.php';

@@ -7,7 +7,8 @@ $orderManger =new orderManger();
 ?>
 <head>
   <script src = "../js/order.js">  </script></head>
-  <!-- order tabale -->
+<div class="site-wrapper">
+  <!-- order table -->
 <table class="Ordertable" id ="order-table">
 <thead>
      <tr>
@@ -64,6 +65,7 @@ $orderManger =new orderManger();
         </div>
       </div>
     </div>
+</div>
 </div>
 
  <?php

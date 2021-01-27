@@ -15,7 +15,7 @@ $language['contact'] ="Contact Us";
 $language['nomedicine']= "NO Medicine Enough";
 $language['orders'] = "Orders";
 $language['pharmacyorder'] = "Pharmacy Orders";
-$language['orderpage'] ="OrdersPage";
+$language['orderpage'] ="Orders";
 $language['deletedone'] ="Delete Done successful";
 $language['orderdetails'] ="Order Details";
 $language['orderername'] ="Orderer Name :";
@@ -33,7 +33,7 @@ $language['amount'] = "Amount";
 $language['medicinename'] = "Medicine Name";
 $language['inprogress'] = "In Progress";
 $language['pending'] = "Pending";
-$language['pahrmacyorder'] ="Pharmacy Order";
+$language['pahrmacyorder'] ="Pharmacy Orders";
 //search&result
 $language['search'] = "Search";
 $language['searchagain'] = "Search Again";
@@ -49,6 +49,9 @@ $language['requestdenied'] = "In Order to search,Please allow the request to kno
 $language['notification'] = "Notification";
 $language['nonnotification'] = "No new Notification";
 // Register labels
+$language['patient'] ="Patient";
+$language['pharmacy'] ="Pharmacy";
+$language['last_name'] ="Last Name";
 $language['first_name'] ="First Name";
 $language['last_name'] ="Last Name";
 $language['goverment'] ="Goverment";

@@ -58,6 +58,13 @@ class Pharmacy_Query
     $result = $this->database->fetch_query($query);
     return $result;
     }
+
+    public function fetch_medicine_pharm($id, $code)
+    {
+        $query ="SELECT `MedicineCode`, `Amount` FROM `PHARMACY_MEDICINE` WHERE `PharmacyId` = $id AND `MedicineCode` = $code";
+        $result = $this->database->fetch_query($query);
+        return $result;
+    }
   
   public function fetch_medicine_info($code)
   {

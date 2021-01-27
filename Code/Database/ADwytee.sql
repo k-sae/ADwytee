@@ -433,6 +433,7 @@ INSERT INTO  `NOTIFICATION_DESCRIPTION`(  `Id` ,`Description`) VALUES (2,'declin
 INSERT INTO  `USERTYPE`(  `Id` ,`Type`) VALUES (1,'admin');
 INSERT INTO `USERTYPE`( `Id` ,`Type`) VALUES (2,'pharmacy');
 INSERT INTO  `USERTYPE`(`Id` ,`Type`) VALUES (3,'patient');
+INSERT INTO `USER` (`Id`, `Password`, `Mail`, `Type`, `Language`) VALUES (1, 'admin', 'admin@g.com', 1, 1);
 INSERT INTO  `GENDER`( `Id`,`Gender`) VALUES (1,"Male");
 INSERT INTO  `GENDER`( `Id` ,`Gender`) VALUES (2,"FMale");
 INSERT INTO  `PAGE_URL`(`Id` ,`Url`) VALUES (1,"index.php");

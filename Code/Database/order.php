@@ -89,7 +89,7 @@ class Order_Query
        if ($this->check_medicine_amount($id)){
           $query ="UPDATE `ORDER` SET `status`=2 WHERE `Id` = $id ";
 
-
+           $status =  $this->database->fetch_query($query);
           return 0;
         }
         else{
@@ -141,10 +141,11 @@ class Order_Query
   	$this->database->database_query($query1);
   	$id = mysqli_insert_id($this->database->get_con());
   	$code = $order->medicine_order->medicine_id;
+  	$amount= $order->medicine_order->amount;
   	$query2 = "INSERT INTO `MEDICINE_ORDER`(`MedicineCode`, `OrderId`, `Amount`)
 				VALUES
-				($code,$id,1)";
-  	$this->database->database_query($query2);
+				($code,$id,$amount)";
+  	return $this->database->database_query($query2);
   }
   public function get_pending_orders($order)
   {

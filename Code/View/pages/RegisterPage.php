@@ -17,8 +17,8 @@ if(isset($_POST["FName"]))
 	<div class="col-lg-12 well register-dialog" >
 	<div>
 		<h3>Register As</h3>
-		<button class="btn btn-lg btn-primary" id="regp">Patient</button>
-		<button class="btn btn-lg btn-primary" id="regph">Pharamacy</button>
+		<button class="btn btn-lg btn-primary" id="regp"><?php echo  $language['patient']; ?></button>
+		<button class="btn btn-lg btn-primary" id="regph"><?php echo  $language['pharmacy']; ?></button>
 	</div>
 	<div class="row regasp" >
 				<form method="post"  id="preg-form">

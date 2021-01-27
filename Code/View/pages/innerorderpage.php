@@ -98,7 +98,7 @@ else {
 /*details pharmacy show*/
 if(isset($_GET["detailspharmacy"])){
 $id = $_GET["detailspharmacy"];
-$order =  $orderManger->fech_deatails_pharmacy($id);
+$order =  $orderManger->fetch_details_pharmacy($id);
 
 if ($order != False){
 echo '<div class="label-details">

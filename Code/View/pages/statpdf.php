@@ -1,11 +1,13 @@
 <?php
 
 include_once '../../Application/livesearch.php';
-include_once '../../Application/statpdf.php';
+include_once '../../Application/reportFactory.php';
 
-$pdf = new PDF();
-//$pdf->AddPage();
-
-$pdf->Output();
+if(isset($_GET['reportType']))
+{
+    $reportFactory = new reportFactory();
+    $report = $reportFactory->getReport($_GET['reportType']);
+    $report->CreateReport();
+}
 
 ?>
